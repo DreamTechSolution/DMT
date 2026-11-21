@@ -160,10 +160,10 @@ const ex=x=>x===1?1:1-Math.pow(2,-10*x);
 function rnd(s){let x=Math.sin(s*12.9898)*43758.5453;return x-Math.floor(x)}
 
 // [id, start, end]
-// timed to the voiceover (VO starts at 0.6s)
-const S=[['s0',0,0.9],['s1',0.9,2.0],['s2',2.0,4.7],['s3',4.7,7.5],['s4',7.5,11.7],['s5',11.7,16.4],
- ['s6',16.4,17.7],['s7',17.7,26.7],['s8',26.7,29.2],['s9',29.2,31.7],['s10',31.7,36.2],['s11',36.2,41.0]];
-const DUR=41.0;
+// timed to the ElevenLabs voiceover (VO at 0.8s, atempo 1.12)
+const S=[['s0',0,0.75],['s1',0.75,2.0],['s2',2.0,5.0],['s3',5.0,8.15],['s4',8.15,13.15],['s5',13.15,18.45],
+ ['s6',18.45,19.9],['s7',19.9,29.9],['s8',29.9,32.55],['s9',32.55,35.4],['s10',35.4,40.3],['s11',40.3,45.0]];
+const DUR=45.0;
 
 // "appear" helper: blur + rise + fade
 function ap(el,t,t0,d=.35,dy=40,sc=1){const k=eo(P(t,t0,t0+d));el.style.opacity=k;
@@ -230,11 +230,11 @@ function buildLed(){let h='';LED.forEach(([n,v,note,hat],i)=>{const val=parseFlo
 R.s7=lt=>{if(!$('ledger').children.length)buildLed();words($('s7a'),lt,.05,.07);
  const rows=[...$('ledger').children];rows.forEach((r,i)=>{const t0=1.5+i*.5;const k=eo(P(lt,t0,t0+.35));r.style.opacity=k;r.style.transform=`translateX(${(1-k)*-60}px)`;
   const bar=r.querySelector('.bar');if(bar){const kb=eio(P(lt,t0+.1,t0+.8));const w=bar.dataset.w*kb;bar.style.width=w+'px';const am=r.querySelector('.amt');am.style.left=(w+18)+'px';am.style.opacity=P(lt,t0+.5,t0+.8)}});
- pop($('s7b'),lt,.25,.4);$('s7num').textContent=Math.round(900*ex(P(lt,.3,1.8)));ap($('s7c'),lt,7.0,.5,20);ap($('s7leg'),lt,7.4,.5,10);ap($('s7src'),lt,7.6,.5,10);};
+ pop($('s7b'),lt,.25,.4);$('s7num').textContent=Math.round(900*ex(P(lt,.3,1.8)));ap($('s7c'),lt,7.7,.5,20);ap($('s7leg'),lt,8.1,.5,10);ap($('s7src'),lt,8.3,.5,10);};
 R.s8=lt=>{words($('s8a'),lt,.05);words($('s8b'),lt,1.2);pop($('s8c'),lt,1.65,.45);
  const sh=lt>1.7&&lt<1.9?Math.sin(lt*140)*7:0;$('s8c').style.transform+=` translate(${sh}px,0)`;};
 R.s9=lt=>{words($('s9a'),lt,.05);const c=$('s9card');const k=eback(P(lt,.4,.9));c.style.opacity=cl((lt-.4)*5);c.style.transform=`translateX(-50%) translateY(${(1-k)*300}px) rotate(${(1-k)*8}deg)`;};
-R.s10=lt=>{words($('s10a'),lt,.05,.07);pop($('s10b'),lt,1.45,.4);ap($('s10card'),lt,1.8,.45,80);
+R.s10=lt=>{words($('s10a'),lt,.05,.07);pop($('s10b'),lt,1.6,.4);ap($('s10card'),lt,1.8,.45,80);
  const pr=$('s10price');if(lt<2.5)pr.textContent='20 $';else if(lt<3.1){const f=Math.floor(lt*24)%3;pr.textContent=['?0 $','2? $','?? $'][f];pr.style.color='#e2683c'}else{pr.textContent='?? $';pr.style.color='#e2683c'}
  const bars=$('s10bars');if(!bars.children.length)for(let i=0;i<6;i++){const b=document.createElement('div');b.style.cssText='width:26px;background:#e2683c;border-radius:4px';bars.appendChild(b)}
  [...bars.children].forEach((b,i)=>{const grow=P(lt,2.5+i*.08,3.2+i*.08);b.style.height=(18+grow*(30+i*22))+'px';b.style.opacity=.4+.6*grow});
