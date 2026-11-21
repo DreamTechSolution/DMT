@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<style>
+:root{--dark:#121014;--cream:#f3ebde;--orange:#e2683c;--orange2:#c94f2a;--brown:#9a5a3a;--blue:#26405f;--paper:#efe6d6}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--dark)}
+#stage{position:relative;width:1080px;height:1920px;overflow:hidden}
+.scene{position:absolute;inset:0;display:none;overflow:hidden}
+.abs{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center}
+.serif{font-family:'Instrument Serif',serif;font-style:italic;font-size:78px;color:#e9e1d6;letter-spacing:-.5px}
+.bold{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-3px;line-height:.92}
+.mono{font-family:'JetBrains Mono',monospace}
+.w{display:inline-block;margin:0 .12em}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+.vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(0,0,0,.45) 100%)}
+</style></head><body><div id="stage">
+
+<!-- S0 intro burst -->
+<div class="scene" id="s0" style="background:var(--dark)">
+ <svg id="burst" width="1080" height="1920" style="position:absolute;inset:0"></svg>
+</div>
+
+<!-- S1 MA CHE ROBA -->
+<div class="scene" id="s1" style="background:var(--dark)">
+ <div class="abs bold" id="s1a" style="top:720px;font-size:170px;color:#fff">MA CHE<br>ROBA</div>
+ <div class="abs serif" id="s1b" style="top:1060px;font-size:150px;color:var(--orange)">è?!</div>
+</div>
+
+<!-- S2 IN BORSA -->
+<div class="scene" id="s2" style="background:var(--dark)">
+ <div class="abs serif" id="s2a" style="top:610px">i creatori di Claude</div>
+ <div class="abs bold" id="s2b" style="top:745px;font-size:128px;color:#fff;letter-spacing:-2px">Anthropic</div>
+ <div class="abs" id="s2c" style="top:900px"><div class="bold" style="background:var(--orange);color:#fff;font-size:150px;padding:22px 46px 14px;border-radius:26px;border:8px solid #fff;box-shadow:0 20px 60px rgba(226,104,60,.45)">IN BORSA!</div></div>
+ <div class="abs serif" id="s2d" style="top:1150px;font-size:64px;color:#bdb3a6">Nasdaq · ticker <span class="mono" style="font-style:normal;color:var(--orange);font-size:56px">ANT</span></div>
+</div>
+
+<!-- S3 TI RIGUARDA -->
+<div class="scene" id="s3" style="background:radial-gradient(ellipse at 50% 40%,#e88a5e,#c95a33)">
+ <div class="abs" id="s3n" style="top:330px">
+  <div style="display:flex;gap:26px;align-items:center;background:rgba(250,243,233,.96);border-radius:34px;padding:28px 40px;width:820px;box-shadow:0 30px 80px rgba(0,0,0,.25);text-align:left">
+   <div style="width:92px;height:92px;border-radius:22px;background:#151515;display:flex;align-items:center;justify-content:center"><svg width="56" height="56" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8" stroke="#3ccf6e" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h6v6" stroke="#3ccf6e" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></div>
+   <div style="flex:1;font-family:Inter,sans-serif"><div style="font-weight:700;font-size:34px;color:#111">Ultim'ora · Borsa <span style="float:right;font-weight:400;color:#999;font-size:28px">ora</span></div>
+   <div style="font-size:32px;color:#333;margin-top:6px;white-space:normal">Anthropic debutta al Nasdaq: +34% all'apertura</div></div>
+  </div>
+ </div>
+ <div class="abs serif" id="s3a" style="top:690px;color:#2a1410">e questa notizia</div>
+ <div class="abs bold" id="s3b" style="top:810px;font-size:128px;color:var(--cream);text-shadow:0 10px 0 rgba(120,40,15,.35)">TI RIGUARDA</div>
+ <svg id="s3o" width="1080" height="400" style="position:absolute;left:0;top:740px"><path id="s3path" d="M120 250 C 160 120, 760 90, 980 150 C 1060 175, 1020 280, 700 300 C 420 320, 90 310, 110 230 C 125 180, 300 140, 420 130" stroke="#f6efe4" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+ <div class="abs serif" id="s3c" style="top:1000px;color:#2a1410">più di quanto pensi.</div>
+</div>
+
+<!-- S4 1.800 MILIARDI -->
+<div class="scene" id="s4" style="background:radial-gradient(ellipse at 50% 45%,#ec9a72,#cf6640)">
+ <div id="s4band" style="position:absolute;left:-100px;width:1280px;top:820px;height:300px;background:repeating-linear-gradient(-45deg,#d14a26 0 26px,transparent 26px 60px);opacity:.85"></div>
+ <div class="abs serif" id="s4a" style="top:660px;color:#2a1410">valutata</div>
+ <div class="abs" id="s4b" style="top:800px"><div class="bold" style="background:#141215;color:#fff;font-size:200px;padding:30px 60px 18px;border-radius:24px;border:6px solid #fff"><span id="s4num">0</span></div></div>
+ <div class="abs" id="s4c" style="top:1075px"><div class="bold" style="background:#fff;color:#141215;font-size:62px;letter-spacing:0;padding:12px 30px 8px;border-radius:10px;transform:rotate(-2deg)">MILIARDI DI $</div></div>
+ <div class="abs serif" id="s4d" style="top:1220px;color:#2a1410;font-size:64px">alla chiusura del primo giorno.</div>
+</div>
+
+<!-- S5 chart -->
+<div class="scene" id="s5" style="background:var(--dark)">
+ <div class="abs serif" id="s5a" style="top:430px">raccolti in</div>
+ <div class="abs bold" id="s5b" style="top:540px;font-size:104px;color:var(--orange)">UN SOLO GIORNO!</div>
+ <div class="abs" id="s5card" style="top:760px">
+  <div style="width:900px;height:620px;background:#1c1a1f;border:2px solid #2e2b33;border-radius:30px;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.6);text-align:left">
+   <div class="mono" style="position:absolute;left:44px;top:36px;color:#fff;font-size:44px;font-weight:700">ANT <span style="color:#8a8590;font-weight:500;font-size:30px">· NASDAQ</span></div>
+   <div class="mono" id="s5price" style="position:absolute;right:44px;top:36px;color:#3ccf6e;font-size:44px;font-weight:700">$83,00</div>
+   <svg width="900" height="620" style="position:absolute;left:0;top:0">
+    <defs><linearGradient id="gfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2683c" stop-opacity=".45"/><stop offset="1" stop-color="#e2683c" stop-opacity="0"/></linearGradient>
+    <clipPath id="chclip"><rect id="chclipr" x="0" y="0" width="0" height="620"/></clipPath></defs>
+    <g stroke="#2e2b33" stroke-width="2"><line x1="60" y1="250" x2="840" y2="250"/><line x1="60" y1="370" x2="840" y2="370"/><line x1="60" y1="490" x2="840" y2="490"/></g>
+    <line x1="60" y1="500" x2="840" y2="500" stroke="#8a8590" stroke-dasharray="8 10" stroke-width="2"/>
+    <text x="64" y="540" fill="#8a8590" font-family="JetBrains Mono" font-size="24">prezzo IPO $83</text>
+    <g clip-path="url(#chclip)">
+     <path id="chfill" fill="url(#gfill)"/>
+     <path id="chline" fill="none" stroke="#e2683c" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+    </g>
+    <g id="chtags" font-family="JetBrains Mono" font-size="26" font-weight="700"></g>
+   </svg>
+  </div>
+ </div>
+ <div class="abs" id="s5badge" style="top:1430px"><div class="bold" style="background:#fff;color:#141215;font-size:64px;letter-spacing:0;padding:14px 34px 8px;border-radius:12px;transform:rotate(-2deg)">81,3 MILIARDI RACCOLTI</div></div>
+ <div class="abs serif" id="s5c" style="top:1560px;font-size:56px;color:#8a8590">la più grande IPO della storia.</div>
+</div>
+
+<!-- S6 sphere -->
+<div class="scene" id="s6" style="background:var(--dark)">
+ <div class="abs serif" id="s6a" style="top:560px">ma sai cosa c'è dietro?</div>
+ <canvas id="sph" width="1080" height="900" style="position:absolute;left:0;top:700px"></canvas>
+</div>
+
+<!-- S7 umbrella network -->
+<div class="scene" id="s7" style="background:var(--paper)">
+ <div class="abs serif" id="s7a" style="top:200px;color:#26405f;font-size:70px">contratti per la potenza di calcolo</div>
+ <svg id="net" width="1080" height="1920" style="position:absolute;inset:0"></svg>
+ <div class="abs bold" id="s7b" style="top:1470px;font-size:120px;color:var(--orange2);letter-spacing:-2px">≈ <span id="s7num">0</span> MILIARDI</div>
+ <div class="abs serif" id="s7c" style="top:1610px;color:#26405f;font-size:66px">di dollari, da pagare nei prossimi anni.</div>
+ <div class="abs" id="s7leg" style="top:1745px;font-family:Inter,sans-serif;font-size:30px;color:#26405f;display:flex;gap:56px">
+  <span><span style="display:inline-block;width:46px;height:4px;background:#26405f;vertical-align:middle;margin-right:12px"></span>Capitale</span>
+  <span><span style="display:inline-block;width:46px;height:4px;background:#9a5a3a;vertical-align:middle;margin-right:12px"></span>Contratti</span>
+  <span><span style="display:inline-block;width:46px;height:0;border-top:4px dashed #b0705a;vertical-align:middle;margin-right:12px"></span>Condizionali</span>
+ </div>
+</div>
+
+<!-- S8 obblighi restano -->
+<div class="scene" id="s8" style="background:var(--dark)">
+ <div class="abs serif" id="s8a" style="top:700px">la festa passa.</div>
+ <div class="abs serif" id="s8b" style="top:820px;color:#bdb3a6">gli obblighi</div>
+ <div class="abs bold" id="s8c" style="top:940px;font-size:160px;color:var(--cream)">RESTANO.</div>
+</div>
+
+<!-- S9 Claude costa -->
+<div class="scene" id="s9" style="background:#f4f2ee">
+ <div class="abs serif" id="s9a" style="top:600px;color:#555">oggi Claude Pro costa</div>
+ <div class="abs" id="s9card" style="top:760px">
+  <div style="width:400px;height:480px;background:#fff;border-radius:30px;box-shadow:0 30px 80px rgba(0,0,0,.14);padding:44px;text-align:left;font-family:Inter,sans-serif">
+   <div style="font-size:34px;color:#555;font-weight:600"><span style="color:var(--orange)">✳</span> Claude Pro</div>
+   <div class="bold" style="font-size:130px;color:var(--orange);margin-top:40px;letter-spacing:-2px">20 $</div>
+   <div class="serif" style="font-size:52px;color:#777">al mese</div>
+   <div style="margin-top:44px;height:14px;width:70%;background:#eee;border-radius:7px"></div>
+   <div style="margin-top:16px;height:14px;width:50%;background:#eee;border-radius:7px"></div>
+  </div>
+ </div>
+</div>
+
+<!-- S10 azionisti -->
+<div class="scene" id="s10" style="background:var(--dark)">
+ <div class="abs serif" id="s10a" style="top:440px">ma ora deve rispondere agli</div>
+ <div class="abs bold" id="s10b" style="top:550px;font-size:150px;color:var(--orange)">AZIONISTI,</div>
+ <div class="abs" id="s10card" style="top:760px">
+  <div style="width:760px;height:400px;background:linear-gradient(160deg,#3a3633,#24211f);border-radius:28px;border:2px solid #4a4541;padding:40px 50px;text-align:left;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6)">
+   <div class="mono" style="color:#a49c94;font-size:28px;letter-spacing:2px">COSTO DELL'AI · AL MESE</div>
+   <div class="bold" id="s10price" style="font-size:170px;color:#fff;margin-top:40px;letter-spacing:-2px">20 $</div>
+   <div id="s10bars" style="position:absolute;right:50px;bottom:60px;display:flex;gap:12px;align-items:flex-end"></div>
+  </div>
+ </div>
+ <div class="abs serif" id="s10c" style="top:1240px">e a 900 miliardi di <span style="color:var(--orange)">impegni.</span></div>
+</div>
+
+<!-- S11 outro mosaic -->
+<div class="scene" id="s11" style="background:#f4f0ea">
+ <canvas id="mos" width="1080" height="1920" style="position:absolute;inset:0"></canvas>
+ <div class="abs serif" id="s11a" style="top:620px;color:#3a2a24">cosa cambia per te?</div>
+ <div class="abs" id="s11b" style="top:760px"><div class="bold" style="background:#141215;color:var(--orange);font-size:150px;padding:30px 54px 18px;border-radius:14px">SEGUIMI, →</div></div>
+ <div class="abs serif" id="s11c" style="top:1000px;color:#3a2a24;font-size:62px">te lo spiego nel prossimo video.</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const cl=x=>Math.max(0,Math.min(1,x));
+const P=(t,a,b)=>cl((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3), eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const eback=x=>{const c1=1.9,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const ex=x=>x===1?1:1-Math.pow(2,-10*x);
+function rnd(s){let x=Math.sin(s*12.9898)*43758.5453;return x-Math.floor(x)}
+
+// [id, start, end]
+const S=[['s0',0,1.6],['s1',1.6,3.4],['s2',3.4,6.3],['s3',6.3,9.4],['s4',9.4,12.0],['s5',12.0,15.4],
+ ['s6',15.4,17.4],['s7',17.4,23.0],['s8',23.0,25.4],['s9',25.4,27.6],['s10',27.6,31.2],['s11',31.2,35.0]];
+const DUR=35.0;
+
+// "appear" helper: blur + rise + fade
+function ap(el,t,t0,d=.35,dy=40,sc=1){const k=eo(P(t,t0,t0+d));el.style.opacity=k;
+ el.style.filter=`blur(${(1-k)*14}px)`;el.style.transform=`translateX(-50%) translateY(${(1-k)*dy}px) scale(${sc+(1-sc)*k})`;}
+function pop(el,t,t0,d=.45,rot=0){const k=P(t,t0,t0+d);const e=eback(k);el.style.opacity=cl(k*4);
+ el.style.filter=`blur(${(1-cl(k*3))*10}px)`;el.style.transform=`translateX(-50%) scale(${.2+.8*e}) rotate(${rot*(1-e)}deg)`;}
+// word-by-word serif
+const wcache={};
+function words(el,t,t0,per=.09){if(!wcache[el.id]){wcache[el.id]=1;el.innerHTML=el.innerHTML.split(/(<span[^>]*>.*?<\/span>|\s+)/).filter(s=>s&&!/^\s+$/.test(s)).map(w=>`<span class="w">${w}</span>`).join('')}
+ el.style.transform='translateX(-50%)';[...el.children].forEach((w,i)=>{const k=eo(P(t,t0+i*per,t0+i*per+.35));w.style.opacity=k;w.style.filter=`blur(${(1-k)*12}px)`;w.style.transform=`translateY(${(1-k)*24}px)`})}
+
+// ---------- scene renderers (lt = local time) ----------
+const R={};
+R.s0=lt=>{const svg=$('burst');let h='';const cx=540,cy=900;
+ const k=eo(P(lt,.1,.8)),rot=lt*90;const n=12;
+ for(let i=0;i<n;i++){const a=(i/n)*Math.PI*2+rot*Math.PI/180;const r1=20*k,r2=(70+40*Math.sin(lt*6+i))*k;
+  h+=`<line x1="${cx+Math.cos(a)*r1}" y1="${cy+Math.sin(a)*r1}" x2="${cx+Math.cos(a)*r2}" y2="${cy+Math.sin(a)*r2}" stroke="#e2683c" stroke-width="14" stroke-linecap="round"/>`}
+ const rr=eo(P(lt,.7,1.5));if(rr>0){for(let j=0;j<3;j++){const r=60+rr*(200+j*60);h+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#e9e1d6" stroke-opacity="${(1-rr)*.6}" stroke-width="${4-j}"/>`}}
+ svg.innerHTML=h;};
+R.s1=lt=>{pop($('s1a'),lt,.05,.4);pop($('s1b'),lt,.4,.45,-15);
+ const sh=lt>.05&&lt<.35?Math.sin(lt*120)*6:0;$('s1').style.transform=`translate(${sh}px,${-sh}px)`;};
+R.s2=lt=>{words($('s2a'),lt,.05);ap($('s2b'),lt,.45,.4,60);pop($('s2c'),lt,1.15,.4,-18);
+ const c=$('s2c');if(lt>1.15)c.style.transform+=' rotate(-4deg)';ap($('s2d'),lt,1.7,.4,20);};
+R.s3=lt=>{const n=$('s3n');const k=eback(P(lt,.05,.6));n.style.transform=`translateX(-50%) translateY(${(1-k)*-260}px)`;n.style.opacity=cl(lt*5);
+ words($('s3a'),lt,.6);pop($('s3b'),lt,1.05,.45);
+ const p=$('s3path');const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L*(1-eio(P(lt,1.4,2.1)));
+ ap($('s3c'),lt,2.0,.4,20);};
+R.s4=lt=>{const b=$('s4band');b.style.transform=`translateX(${(1-eo(P(lt,0,.5)))*-1300 + lt*30}px)`;
+ words($('s4a'),lt,.05);pop($('s4b'),lt,.35,.4);
+ $('s4num').textContent=String(Math.round(1800*ex(P(lt,.45,1.5)))).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+ pop($('s4c'),lt,1.0,.4,10);if(lt>1.0)$('s4c').style.transform+=' rotate(-2deg)';ap($('s4d'),lt,1.5,.4,20);};
+// chart data
+const CH=(()=>{const pts=[];const N=90;for(let i=0;i<=N;i++){const x=i/N;let v;
+ if(x<.08)v=83;else if(x<.18)v=83+(111.5-83)*eo((x-.08)/.1);else v=111.5-(111.5-97.17)*Math.pow((x-.18)/.82,.7);
+ v+= (x>.08?(rnd(i)-.5)*4*(1-x*.5):0);if(i===N)v=97.17;pts.push([60+x*780,500-(v-83)*12.5])}return pts})();
+R.s5=lt=>{words($('s5a'),lt,.05);pop($('s5b'),lt,.3,.4);ap($('s5card'),lt,.55,.45,80);
+ const k=eio(P(lt,.9,2.4));$('chclipr').setAttribute('width',60+k*800);
+ const d='M'+CH.map(p=>p.join(',')).join(' L');$('chline').setAttribute('d',d);$('chfill').setAttribute('d',d+` L840,560 L60,560 Z`);
+ const idx=Math.min(CH.length-1,Math.floor(k*(CH.length-1)));const y=CH[idx][1];const pr=83+(500-y)/12.5;
+ $('s5price').textContent='$'+pr.toFixed(2).replace('.',',');$('s5price').style.color=pr>=83?'#3ccf6e':'#ff5a5a';
+ let tg='';const tags=[[.18,'apertura $111,50',1],[1,'chiusura $97,17',1]];
+ tags.forEach(([f,txt])=>{if(k>=f-.001){const i=Math.round(f*(CH.length-1));const [x,yy]=CH[i];const a=eo(P(lt,.9+f*1.5,1.2+f*1.5));
+  tg+=`<g opacity="${a}"><circle cx="${x}" cy="${yy}" r="12" fill="#fff"/><text x="${f===1?x:x+26}" y="${f===1?yy+50:yy+8}" fill="#fff" text-anchor="${f===1?'end':'start'}">${txt}</text></g>`}});
+ $('chtags').innerHTML=tg;pop($('s5badge'),lt,2.4,.4,8);if(lt>2.4)$('s5badge').style.transform+=' rotate(-2deg)';ap($('s5c'),lt,2.7,.4,20);};
+// sphere
+const SP=(()=>{const a=[];const n=900;for(let i=0;i<n;i++){const y=1-(i/(n-1))*2;const r=Math.sqrt(1-y*y);const th=i*2.399963;a.push([Math.cos(th)*r,y,Math.sin(th)*r])}return a})();
+R.s6=lt=>{words($('s6a'),lt,.05,.1);const c=$('sph'),g=c.getContext('2d');g.clearRect(0,0,1080,900);
+ const k=eo(P(lt,.2,.9));const R0=300*k,rot=lt*.8;
+ for(const [x,y,z] of SP){const xr=x*Math.cos(rot)+z*Math.sin(rot),zr=-x*Math.sin(rot)+z*Math.cos(rot);
+  const yr=y*Math.cos(.35)-zr*Math.sin(.35),z2=y*Math.sin(.35)+zr*Math.cos(.35);
+  const a=.15+.85*((z2+1)/2);g.fillStyle=`rgba(226,${150+60*a|0},${120+40*a|0},${a})`;g.beginPath();g.arc(540+xr*R0,450+yr*R0,2.2+2*a,0,7);g.fill()}
+ const gl=g.createRadialGradient(540,450,0,540,450,R0*1.3);gl.addColorStop(0,`rgba(226,104,60,${.18*k})`);gl.addColorStop(1,'rgba(226,104,60,0)');g.fillStyle=gl;g.fillRect(0,0,1080,900);};
+// network
+const NET={cx:540,cy:860,R:500,parts:[
+ ['Microsoft / Azure','44,9',-90,['c','d']],['Broadcom','161',-55,['c','d']],['AMD','20',-22,['c','d']],
+ ['Nscale','44,6',12,['c']],['Lambda','41,3',48,['c']],['SpaceX','120,5',88,['c']],
+ ['NVIDIA','inv. 10',125,['d']],['Google','114,5',160,['k','c','d']],['Amazon AWS','110',195,['k','c','d']]]};
+function buildNet(){const {cx,cy,R}=NET;let h=`<defs></defs>`;
+ h+=`<circle id="rim" cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="#b57a52" stroke-width="4"/>`;
+ h+='<g id="ribs" stroke="#d9cbb6" stroke-width="2">';for(let i=0;i<24;i++){const a=i/24*Math.PI*2;h+=`<line x1="${cx}" y1="${cy}" x2="${cx+Math.cos(a)*R}" y2="${cy+Math.sin(a)*R}"/>`}h+='</g>';
+ h+='<g id="nibs" fill="#a0603d">';for(let i=0;i<24;i++){const a=i/24*Math.PI*2+Math.PI/24;const x=cx+Math.cos(a)*R,y=cy+Math.sin(a)*R;h+=`<rect x="${x-9}" y="${y-14}" width="18" height="28" rx="4" transform="rotate(${a*180/Math.PI+90} ${x} ${y})"/>`}h+='</g>';
+ NET.parts.forEach(([name,amt,deg,types],i)=>{const a=deg*Math.PI/180;const lr=R*.70;const lx=cx+Math.cos(a)*lr,ly=cy+Math.sin(a)*lr;
+  const ex2=cx+Math.cos(a)*(lr-70),ey2=cy+Math.sin(a)*(lr-70)+ (Math.sin(a)>.5?-50:Math.sin(a)<-.5?50:0);
+  types.forEach((ty,j)=>{const off=(j-(types.length-1)/2)*12;const nx=-Math.sin(a)*off,ny=Math.cos(a)*off;
+   const sx=cx+Math.cos(a)*120+nx,sy=cy+Math.sin(a)*70+ny;const qx=(sx+ex2)/2+Math.cos(a+1.2)*60+nx,qy=(sy+ey2)/2+Math.sin(a+1.2)*60+ny;
+   const col=ty==='k'?'#26405f':ty==='c'?'#9a5a3a':'#b0705a';const d=`M${sx},${sy} Q${qx},${qy} ${ex2+nx},${ey2+ny}`;
+   h+=`<mask id="m${i}_${j}"><path class="mk" data-i="${i}" d="${d}" stroke="#fff" stroke-width="12" fill="none"/></mask>`;
+   h+=`<path mask="url(#m${i}_${j})" d="${d}" stroke="${col}" stroke-width="4" fill="none" ${ty==='d'?'stroke-dasharray="10 9"':''}/>`;
+   h+=`<circle class="dot" data-i="${i}" cx="${ex2+nx}" cy="${ey2+ny}" r="6" fill="${col}"/>`;});
+  h+=`<g class="lab" data-i="${i}"><text x="${lx}" y="${ly+ (Math.sin(a)>.5?40:Math.sin(a)<-.5?-20:10)}" text-anchor="middle" font-family="Inter" font-weight="800" font-size="36" fill="#26405f">${name}</text>
+   <text x="${lx}" y="${ly+(Math.sin(a)>.5?82:Math.sin(a)<-.5?22:52)}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#c94f2a">${amt==='inv. 10'?'investe 10 mld':'$'+amt+' mld'}</text></g>`;});
+ h+=`<g id="core"><rect x="${cx-190}" y="${cy-48}" width="380" height="96" rx="48" fill="#141215"/><text x="${cx}" y="${cy+16}" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#f3ebde" letter-spacing="2">ANTHROPIC</text></g>`;
+ $('net').innerHTML=h;
+ document.querySelectorAll('.mk').forEach(m=>{const L=m.getTotalLength();m.dataset.L=L;m.style.strokeDasharray=L});}
+R.s7=lt=>{if(!NET.built){buildNet();NET.built=1}
+ words($('s7a'),lt,.05,.07);const rim=$('rim');const C=2*Math.PI*NET.R;rim.style.strokeDasharray=C;rim.style.strokeDashoffset=C*(1-eio(P(lt,.1,1.0)));
+ $('ribs').style.opacity=eo(P(lt,.5,1.1));$('nibs').style.opacity=eo(P(lt,.8,1.2));
+ const core=$('core');const kc=eback(P(lt,.3,.7));core.style.transformOrigin=`${NET.cx}px ${NET.cy}px`;core.style.transform=`scale(${kc})`;
+ const t0=i=>.9+i*.28;
+ document.querySelectorAll('.mk').forEach(m=>{const i=+m.dataset.i;m.style.strokeDashoffset=m.dataset.L*(1-eio(P(lt,t0(i),t0(i)+.55)))});
+ document.querySelectorAll('.dot').forEach(d=>{d.style.opacity=P(lt,t0(+d.dataset.i)+.5,t0(+d.dataset.i)+.6)});
+ document.querySelectorAll('.lab').forEach(l=>{const i=+l.dataset.i;const k=eo(P(lt,t0(i)+.35,t0(i)+.7));l.style.opacity=k;l.style.filter=`blur(${(1-k)*8}px)`});
+ const kn=P(lt,1.2,3.8);$('s7num').textContent=Math.round(900*ex(kn));pop($('s7b'),lt,1.1,.4);ap($('s7c'),lt,3.4,.5,20);ap($('s7leg'),lt,3.8,.5,10);
+ const z=1+lt*.012;$('net').style.transform=`scale(${z})`;$('net').style.transformOrigin='540px 860px';};
+R.s8=lt=>{words($('s8a'),lt,.05);words($('s8b'),lt,.75);pop($('s8c'),lt,1.15,.45);
+ const sh=lt>1.2&&lt<1.4?Math.sin(lt*140)*7:0;$('s8c').style.transform+=` translate(${sh}px,0)`;};
+R.s9=lt=>{words($('s9a'),lt,.05);const c=$('s9card');const k=eback(P(lt,.4,.9));c.style.opacity=cl((lt-.4)*5);c.style.transform=`translateX(-50%) translateY(${(1-k)*300}px) rotate(${(1-k)*8}deg)`;};
+R.s10=lt=>{words($('s10a'),lt,.05,.07);pop($('s10b'),lt,.45,.4);ap($('s10card'),lt,.8,.45,80);
+ const pr=$('s10price');if(lt<1.7)pr.textContent='20 $';else if(lt<2.4){const f=Math.floor(lt*24)%3;pr.textContent=['?0 $','2? $','?? $'][f];pr.style.color='#e2683c'}else{pr.textContent='?? $';pr.style.color='#e2683c'}
+ const bars=$('s10bars');if(!bars.children.length)for(let i=0;i<6;i++){const b=document.createElement('div');b.style.cssText='width:26px;background:#e2683c;border-radius:4px';bars.appendChild(b)}
+ [...bars.children].forEach((b,i)=>{const grow=P(lt,1.7+i*.08,2.4+i*.08);b.style.height=(18+grow*(30+i*22))+'px';b.style.opacity=.4+.6*grow});
+ words($('s10c'),lt,2.3,.09);};
+const MC=['#e2683c','#c94f2a','#f0a088','#f6c9b8','#9a2f1c','#141215','#e9b39f','#d6705a'];
+R.s11=lt=>{const c=$('mos'),g=c.getContext('2d');g.clearRect(0,0,1080,1920);const s=36;
+ for(let cx=0;cx<30;cx++){const base=1920-(eo(P(lt,0,1.2))*(560+170*Math.sin(cx*.45+lt*2)+90*Math.sin(cx*1.3)));
+  for(let ry=0;ry<54;ry++){const y=ry*s;if(y<base)continue;const dep=(y-base)/400;const r=rnd(cx*91+ry*7+Math.floor(lt*6)*0.37);
+   if(dep<.5&&r>dep*2)continue;g.fillStyle=MC[Math.floor(rnd(cx*13+ry*31)*MC.length)];g.globalAlpha=Math.min(1,.5+dep);g.fillRect(cx*s+2,y+2,s-4,s-4)}}
+ g.globalAlpha=1;words($('s11a'),lt,.3);pop($('s11b'),lt,.7,.45,-8);ap($('s11c'),lt,1.3,.45,20);
+ const blink=lt>1.8?(Math.floor(lt*2.5)%2?1:.25):1;$('s11b').firstChild.style.color=blink===1?'#e2683c':'#f3a07c';};
+
+// ---------- master render ----------
+window.render=function(t){
+ S.forEach(([id,a,b])=>{const el=$(id);if(t>=a&&t<b){el.style.display='block';const lt=t-a,d=b-a;
+   // transition in/out: push blur
+   const kin=eo(P(lt,0,.18)),kout=P(lt,d-.14,d);const last=id==='s11';
+   el.style.filter=`blur(${(1-kin)*16+(last?0:kout*18)}px)`;
+   el.style.transform=`scale(${1.06-.06*kin+(last?0:kout*.08)}) translateY(${(last?0:kout*-40)}px)`;
+   R[id](lt);
+   if(last){const f=P(lt,d-.5,d);el.style.opacity=1-f}}
+  else el.style.display='none';});
+};
+window.DUR=DUR;window.SCENES=S;
+window.ready=document.fonts.ready.then(()=>{render(0);return true});
+</script></body></html>
