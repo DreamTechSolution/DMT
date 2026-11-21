@@ -1,8 +1,8 @@
 # Original synthesized soundtrack: dark pulse bed + whoosh/impact on every cut.
 import numpy as np, wave, sys
-sr=48000; dur=35.0; n=int(sr*dur); t=np.arange(n)/sr
-cuts=[1.6,3.4,6.3,9.4,12.0,15.4,17.4,23.0,25.4,27.6,31.2]
-pops=[1.65,2.0,4.55,7.35,9.75,14.4,18.5,24.15,26.0,28.05,31.9]
+sr=48000; dur=41.0; n=int(sr*dur); t=np.arange(n)/sr
+cuts=[0.9,2.0,4.7,7.5,11.7,16.4,17.7,26.7,29.2,31.7,36.2]
+pops=[0.95,3.55,5.8,7.85,12.0,14.0,17.95,28.35,29.65,33.15,37.55]
 out=np.zeros(n)
 bpm=84; beat=60/bpm
 # drone (Am-ish) with slow swell
@@ -10,13 +10,13 @@ for f,a in [(55,.22),(110,.10),(164.8,.05),(220,.035)]:
     out+=a*np.sin(2*np.pi*f*t+0.3*np.sin(2*np.pi*.1*t))
 out*=np.clip(t/2,0,1)*(0.75+0.25*np.sin(2*np.pi*t/8))
 # kick-ish pulse from 1.6s
-for k in np.arange(1.6,34,beat):
+for k in np.arange(0.9,39.5,beat):
     i=int(k*sr); L=int(.35*sr); tt=np.arange(L)/sr
     s=np.sin(2*np.pi*(45+80*np.exp(-tt*30))*tt)*np.exp(-tt*9)*.55
     out[i:i+L]+=s[:n-i]
 # hats on off-beats
 rng=np.random.default_rng(1)
-for k in np.arange(1.6+beat/2,34,beat):
+for k in np.arange(0.9+beat/2,39.5,beat):
     i=int(k*sr); L=int(.06*sr); s=rng.standard_normal(L)*np.exp(-np.arange(L)/sr*60)*.06
     s=np.diff(np.concatenate([[0],s])); out[i:i+L]+=s[:n-i]
 # whoosh into each cut
