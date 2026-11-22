@@ -1,0 +1,1 @@
+window.HOOKS={"1": {"t1": "SE UN AGENTE IA<br>SBAGLIA, CHI PAGA?", "t2": "COSA FANNO LE BANCHE USA", "fs": 80}, "2": {"t1": "AGENTI IA E PAGAMENTI:<br>LE REGOLE UE", "t2": "E COSA FARE OGGI", "fs": 72}};

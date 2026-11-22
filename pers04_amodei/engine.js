@@ -37,7 +37,7 @@ const R = {};
 R.I = lt => { pop($('Ia'), lt, .05, .4, -6); words($('Ib'), lt, .85, .1); pop($('Ic'), lt, 1.3, .45, 4); drawPath($('Iu'), lt, 1.55, 2.0) };
 
 // ---- voice-driven timing ----
-const LEAD = .35, GAP = .45, PRE = .25, TAIL = 1.6;
+const LEAD = .35, GAP = .45, PRE = .25, TAIL = 1.6, HOOK_ADV = .6; // HOOK_ADV: first scene animates ahead so frame 0 already shows text
 function buildTiming() {
   const W = {}, starts = {}; let t = LEAD;
   ORDER.forEach((k, i) => { starts[k] = t; W[k] = [i === 0 ? 0 : t - PRE, null]; t += DURS[k] + GAP });
@@ -50,16 +50,27 @@ window.render = function (t) {
     const el = $(id), [a, b] = TM.W[id];
     if (t >= a && t < b) {
       el.style.display = 'block'; const lt = t - a, d = b - a, last = id === ORDER[ORDER.length - 1];
-      const kin = eo(P(lt, 0, .18)), kout = P(lt, d - .14, d);
+      const first = id === ORDER[0], kin = first ? 1 : eo(P(lt, 0, .18)), kout = P(lt, d - .14, d);
       el.style.filter = `blur(${(1 - kin) * 16 + (last ? 0 : kout * 18)}px)`;
       el.style.transform = `scale(${1.06 - .06 * kin + (last ? 0 : kout * .08)}) translateY(${last ? 0 : kout * -40}px)`;
-      R[id](lt, d); if (last) el.style.opacity = 1 - P(lt, d - .5, d);
+      R[id](first ? lt + HOOK_ADV : lt, d); if (last) el.style.opacity = 1 - P(lt, d - .5, d);
     } else el.style.display = 'none';
   });
+  const hkEl = $('HK'); if (hkEl) { const k = P(t, 1.45, 1.9); hkEl.style.opacity = 1 - k; hkEl.style.filter = `blur(${k * 14}px)`; hkEl.style.display = k >= 1 ? 'none' : 'block'; }
   if (window.afterRender) window.afterRender(t);
 };
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('stage').insertAdjacentHTML('afterbegin', INTRO_HTML);
+  // hook first: the first content sentence opens the video, the signature intro follows it
+  if (window.HOOK_FIRST !== false && ORDER[0] === 'I' && ORDER.length > 1) { ORDER.splice(0, 1); ORDER.splice(1, 0, 'I'); }
+  // hook card: the cover headline over the first scene for the first ~1.5 s (frame 0 = readable hook)
+  const hk = window.HOOKS && HOOKS[(location.pathname.match(/v(\d)\.html/) || [])[1]];
+  if (hk) {
+    const longest = Math.max(...hk.t1.split('<br>').map(x => x.length)), fs = Math.min(hk.fs ? hk.fs * 1.25 : 130, Math.floor(1450 / longest));
+    document.getElementById('stage').insertAdjacentHTML('beforeend', `<div id="HK" style="position:absolute;inset:0;z-index:50;background:rgba(12,10,14,.86)">
+ <div class="abs bold" style="top:640px;width:980px;font-size:${fs}px;line-height:1.02;color:#fff;text-align:center">${hk.t1}</div>
+ <div class="abs mono" id="HK2" style="top:${640 + fs * 1.02 * hk.t1.split('<br>').length + 50}px;width:980px;font-size:44px;letter-spacing:2px;color:var(--orange);text-align:center">${hk.t2}</div></div>`);
+  }
   TM = buildTiming(); window.DUR = TM.dur; window.TIMING = TM;
 });
 window.ready = new Promise(r => window.addEventListener('load', () => document.fonts.ready.then(() => { render(0); r(true) })));

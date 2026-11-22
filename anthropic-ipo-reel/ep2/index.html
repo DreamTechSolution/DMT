@@ -259,15 +259,17 @@ R.H=t=>{const bm=$('Hbm');const k=eio(P(t,Q.Ha-.2,Q.Ha+.4));bm.setAttribute('fil
 
 window.render=function(t){
  SC.forEach(([id,a,b])=>{const el=$(id);if(t>=a&&t<b){el.style.display='block';const lt=t-a,d=b-a;
-   const kin=eo(P(lt,0,.18)),kout=P(lt,d-.14,d);const last=id==='H';
+   const kin=id==='A'?1:eo(P(lt,0,.18)),kout=P(lt,d-.14,d);const last=id==='H';
    el.style.filter=`blur(${(1-kin)*16+(last?0:kout*18)}px)`;
    el.style.transform=`scale(${1.06-.06*kin+(last?0:kout*.08)}) translateY(${(last?0:kout*-40)}px)`;
-   R[id](t);if(last){el.style.opacity=1-P(lt,d-.5,d)}}
+   R[id](id==='A'?t+.6:t);if(last){el.style.opacity=1-P(lt,d-.5,d)}}
   else el.style.display='none';});
+ const hk=$('HK');if(hk){const k=P(t,1.45,1.9);hk.style.opacity=1-k;hk.style.filter=`blur(${k*14}px)`;hk.style.display=k>=1?'none':'block';}
  // chapter progress (sections 01-05 = scenes B..F)
  const segs=['B','C','D','E','F'];const pr=$('prog');pr.style.opacity=t<T.B[0]-.2||t>T.G[0]?0:1;
  [...pr.children].forEach((d,i)=>{const [a,b]=T[segs[i]];d.firstChild.style.width=(P(t,a,b)*100)+'%'});
 };
 window.DUR=DUR;
 window.ready=document.fonts.ready.then(()=>{render(0);return true});
+document.getElementById('stage')?.insertAdjacentHTML('beforeend',`<div id="HK" style="position:absolute;inset:0;z-index:50;background:rgba(12,10,14,.86)"><div class="abs bold" style="top:660px;font-size:100px;line-height:1.02;color:#fff;text-align:center">USI CLAUDE?<br>ORA È IN BORSA</div><div class="abs mono" style="top:940px;font-size:44px;letter-spacing:2px;color:var(--orange);text-align:center">COSA CAMBIA PER TE</div></div>`);
 </script></body></html>

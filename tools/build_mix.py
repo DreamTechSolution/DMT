@@ -4,6 +4,7 @@ e.g. python3 tools/build_mix.py serie05 1 I,A,B,C,H A:.3 B:2.1
 Writes <serie_dir>/tmp_mix<n>.wav and prints the duration."""
 import sys, os, json, subprocess, tempfile
 sd, n, order = sys.argv[1], sys.argv[2], sys.argv[3].split(',')
+if order[0] == 'I' and len(order) > 1: order = [order[1], 'I'] + order[2:]  # hook first, same rule as engine.js
 pops_local = {a.split(':')[0]: float(a.split(':')[1]) for a in sys.argv[4:]}
 d = json.load(open(os.path.join(sd, f'voce{n}', 'durations.json')))
 LEAD, GAP, PRE, TAIL = .35, .45, .25, 1.6; W = {}; st = {}; t = LEAD

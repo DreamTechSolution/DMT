@@ -2,7 +2,7 @@
 Scene windows follow the voice; cues authored in T0 are remapped proportionally."""
 import json, re, sys
 durs = json.load(open(sys.argv[1])); out = sys.argv[2]
-order = ["I","A","B","C","D","E","F","G","H"]
+order = ["A","I","B","C","D","E","F","G","H"]  # hook first, signature intro second
 LEAD, GAP, TAIL = 0.35, 0.45, 1.6      # silence before first word, between sections, after last
 # T0 windows/cues as authored (without intro shift)
 T0 = {"A":[0,5.2],"B":[5.2,22],"C":[22,38],"D":[38,52],"E":[52,69],"F":[69,89],"G":[89,99],"H":[99,105.5]}
@@ -13,7 +13,7 @@ T, starts, t = {}, {}, LEAD
 for k in order:
     starts[k] = t                       # first word of section k
     end = t + durs[k]
-    a = 0 if k == "I" else t - 0.25     # cut slightly before the voice
+    a = 0 if k == order[0] else t - 0.25     # cut slightly before the voice
     T[k] = [round(a, 3), None]; t = end + GAP
 for i, k in enumerate(order):
     T[k][1] = round(T[order[i+1]][0] if i+1 < len(order) else starts[k] + durs[k] + TAIL, 3)
