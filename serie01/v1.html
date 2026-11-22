@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · market thermometer -->
+<div class="scene" id="A" style="background:var(--dark)">
+ <div class="abs serif" id="Aa" style="top:330px">in sei settimane</div>
+ <div class="abs bold" id="Ab" style="top:430px;font-size:96px;color:#fff;line-height:1">DAI RECORD<br><span style="color:var(--orange)">ALLA CORREZIONE</span></div>
+ <svg id="thermo" width="1080" height="780" style="position:absolute;left:0;top:660px">
+  <rect x="470" y="40" width="140" height="600" rx="70" fill="#1c1a1f" stroke="#3a363d" stroke-width="4"/>
+  <circle cx="540" cy="660" r="100" fill="#1c1a1f" stroke="#3a363d" stroke-width="4"/>
+  <rect id="merc" x="500" y="80" width="80" height="560" rx="40" fill="#e2683c"/>
+  <circle cx="540" cy="660" r="72" fill="#e2683c"/>
+  <g font-family="JetBrains Mono" font-weight="700" font-size="30">
+   <line x1="620" y1="90" x2="700" y2="90" stroke="#3ccf6e" stroke-width="4"/><text id="lRec" x="715" y="100" fill="#3ccf6e">RECORD · 6/10</text>
+   <line x1="380" y1="330" x2="460" y2="330" stroke="#ff5a5a" stroke-width="4"/><text id="lCor" x="365" y="340" fill="#ff5a5a" text-anchor="end">−10% CORREZIONE</text>
+  </g>
+ </svg>
+</div>
+
+<!-- B · org chart: CEO swap -->
+<div class="scene" id="B" style="background:#f4f2ee">
+ <div class="abs kick" id="Bk" style="top:300px">NVIDIA · 12 NOVEMBRE</div>
+ <div class="abs" id="Bbox" style="top:400px"><div style="width:760px;background:#fff;border:4px solid #141215;border-radius:28px;padding:40px 50px;box-shadow:0 30px 80px rgba(0,0,0,.12);text-align:left;position:relative">
+  <div class="mono" style="font-size:28px;color:#8a7a6c;letter-spacing:3px">AMMINISTRATORE DELEGATO</div>
+  <div style="position:relative;height:120px;margin-top:16px">
+   <div id="Bold" class="sans" style="position:absolute;left:0;top:0;font-size:76px;font-weight:800;color:#141215">Jensen Huang</div>
+   <svg id="Bstrike" width="620" height="120" style="position:absolute;left:-10px;top:0"><path id="Bsp" d="M0 62 L600 50" stroke="#ff5a5a" stroke-width="10" stroke-linecap="round" fill="none"/></svg>
+   <div id="Bnew" class="sans" style="position:absolute;left:0;top:0;font-size:76px;font-weight:800;color:var(--orange2);opacity:0">Colette Kress</div>
+  </div>
+  <div id="Btag" class="mono" style="display:inline-block;margin-top:14px;font-size:28px;background:#ffd34d;color:#141215;padding:8px 16px;border-radius:8px;opacity:0">AD INTERIM · ex direttrice finanziaria</div>
+ </div></div>
+ <div class="abs" id="Bstamp" style="top:860px"><div class="bold" style="font-size:72px;color:#ff5a5a;border:8px solid #ff5a5a;padding:14px 30px 6px;border-radius:14px;letter-spacing:0">EFFETTO IMMEDIATO</div></div>
+</div>
+
+<!-- C · shrinking coin stack -->
+<div class="scene" id="C" style="background:var(--dark)">
+ <div class="abs serif" id="Ca" style="top:330px">da inizio ottobre Nvidia ha perso</div>
+ <svg id="coins" width="1080" height="640" style="position:absolute;left:0;top:450px"></svg>
+ <div class="abs bold" id="Cb" style="top:1120px;font-size:130px;color:var(--red)">−<span id="Cn">0</span> MLD $</div>
+ <div class="abs mono" id="Cs" style="top:1280px;font-size:24px;color:#8a8590">valore di Borsa · dato al 13/11 · CNBC</div>
+</div>
+
+<!-- D · newspaper clippings -->
+<div class="scene" id="D" style="background:#1a1412">
+ <div class="abs" id="Dc1" style="top:300px"><div style="width:840px;background:#f3ebde;padding:30px 40px;text-align:left;transform:rotate(-2deg);box-shadow:0 20px 50px rgba(0,0,0,.5)">
+  <div class="mono" style="font-size:24px;color:#6b5a4c">17 NOVEMBRE · WALL STREET JOURNAL</div>
+  <div style="font-family:'Instrument Serif';font-size:60px;color:#141215;line-height:1.05;margin-top:8px;white-space:normal">La SEC apre un'indagine su Nvidia</div></div></div>
+ <div class="abs" id="Dc2" style="top:560px"><div style="width:840px;background:#f3ebde;padding:30px 40px;text-align:left;transform:rotate(1.5deg);box-shadow:0 20px 50px rgba(0,0,0,.5)">
+  <div class="mono" style="font-size:24px;color:#6b5a4c">20 NOVEMBRE · REUTERS</div>
+  <div style="font-family:'Instrument Serif';font-size:60px;color:#141215;line-height:1.05;margin-top:8px;white-space:normal">L'indagine riguarda la contabilità</div></div></div>
+ <div class="abs" id="Dst" style="top:860px"><div class="bold" style="font-size:76px;color:#f3ebde;border:8px solid #f3ebde;padding:14px 30px 6px;border-radius:14px;letter-spacing:0">INDAGINE ≠ ACCUSA</div></div>
+ <div class="abs bold" id="Dp" style="top:1040px;font-size:200px;color:var(--red)">−14%</div>
+ <div class="abs serif" id="Dps" style="top:1250px;font-size:56px;color:#bdb3a6">il titolo, venerdì 20 novembre</div>
+</div>
+
+<!-- E · fund managers bars -->
+<div class="scene" id="E" style="background:var(--paper)">
+ <div class="abs serif" id="Ea" style="top:310px;color:var(--blue)">i grandi gestori scappano</div>
+ <div class="abs mono" id="Eb" style="top:410px;font-size:26px;color:#8a7a6c;letter-spacing:2px">QUANTO PUNTANO SUL TECH · SONDAGGIO BANK OF AMERICA</div>
+ <svg id="bars" width="1080" height="700" style="position:absolute;left:0;top:480px">
+  <line x1="200" y1="600" x2="880" y2="600" stroke="#141215" stroke-width="4"/>
+  <rect id="b37" x="290" y="600" width="200" height="0" fill="#26405f" rx="8"/>
+  <rect id="b12" x="590" y="600" width="200" height="0" fill="#c94f2a" rx="8"/>
+  <text id="t37" x="390" y="0" text-anchor="middle" font-family="Archivo Black" font-size="80" fill="#26405f">37%</text>
+  <text id="t12" x="690" y="0" text-anchor="middle" font-family="Archivo Black" font-size="80" fill="#c94f2a">12%</text>
+  <text x="390" y="650" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#141215">OTTOBRE</text>
+  <text x="690" y="650" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#141215">NOVEMBRE</text>
+ </svg>
+ <div class="abs" id="Etag" style="top:1220px"><div class="bold" style="background:#141215;color:#f3ebde;font-size:52px;letter-spacing:0;padding:14px 30px 8px;border-radius:12px">IL TAGLIO PIÙ FORTE DAL 2006</div></div>
+</div>
+
+<!-- F · hanging price tags -->
+<div class="scene" id="F" style="background:var(--dark)">
+ <div class="abs serif" id="Fa" style="top:320px">venerdì 20 novembre</div>
+ <svg id="tags" width="1080" height="900" style="position:absolute;left:0;top:400px"></svg>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:var(--dark)">
+ <svg id="etf" width="1080" height="600" style="position:absolute;left:0;top:340px">
+  <g id="box"><rect x="360" y="200" width="360" height="280" rx="20" fill="#c94f2a"/><rect x="340" y="160" width="400" height="70" rx="16" fill="#e2683c"/>
+  <text x="540" y="380" text-anchor="middle" font-family="Archivo Black" font-size="90" fill="#f3ebde">ETF</text></g>
+  <text id="q" x="540" y="120" text-anchor="middle" font-family="Archivo Black" font-size="140" fill="#f3ebde">?</text>
+ </svg>
+ <div class="abs bold" id="Ha" style="top:1000px;font-size:96px;color:#fff;line-height:1">E IL TUO ETF<br><span style="color:var(--orange)">SUL MONDO?</span></div>
+ <div class="abs bold" id="Hb" style="top:1250px;font-size:64px;color:#141215;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+ <div class="abs mono" id="Hd" style="top:1390px;font-size:24px;color:#8a8590">Non è consulenza finanziaria.</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+R.A=(t,d)=>{words($('Aa'),t,.25);ap($('Ab'),t,.9,.4,50);
+ const k=eio(P(t,.6,3.6));$('merc').setAttribute('y',80+k*240);$('merc').setAttribute('height',560-k*240);
+ $('lRec').style.opacity=P(t,.3,.6);$('lCor').style.opacity=P(t,3.2,3.6);};
+R.B=(t,d)=>{ap($('Bk'),t,.2,.3,10);ap($('Bbox'),t,.3,.45,60);
+ drawPath($('Bsp'),t,1.6,2.1);$('Bold').style.opacity=1-P(t,4.6,5.0);
+ const kn=eo(P(t,4.9,5.4));$('Bnew').style.opacity=kn;$('Bnew').style.transform=`translateY(${(1-kn)*30}px)`;
+ $('Bstrike').style.opacity=1-P(t,4.6,5.0);$('Btag').style.opacity=P(t,6.6,7.0);
+ pop($('Bstamp'),t,3.0,.4,-10,-3);if(t>4.6)$('Bstamp').style.opacity=1-P(t,4.6,5.0);};
+R.C=(t,d)=>{words($('Ca'),t,.25,.07);const sv=$('coins');let h='';
+ for(let c=0;c<7;c++){const full=14,keep=Math.round(full*(0.45+0.15*rnd(c+3)));for(let i=0;i<full;i++){const y=600-i*38,x=150+c*120;
+  let op=1,dy=0,col='#e2683c',top='#f0a088';
+  if(i>=keep){const t0=1.2+(full-1-i)*0.16+c*0.05;const k=P(t,t0,t0+.6);op=1-k;dy=-k*160;if(k>0){col='#ff5a5a';top='#ff8a7a'}}
+  if(op<=0.01)continue;
+  h+=`<g opacity="${op}"><ellipse cx="${x+50}" cy="${y+dy}" rx="50" ry="16" fill="${col}"/><ellipse cx="${x+50}" cy="${y-8+dy}" rx="50" ry="16" fill="${top}"/></g>`}}
+ sv.innerHTML=h;pop($('Cb'),t,1.0,.4);$('Cn').textContent=fmt(1700*ex(P(t,1.2,4.0)));ap($('Cs'),t,3.5,.4,10);};
+R.D=(t,d)=>{const s=(el,t0,r)=>{const k=eback(P(t,t0,t0+.5));el.style.opacity=cl((t-t0)*5);el.style.transform=`translateX(-50%) translateX(${(1-k)*(r>0?700:-700)}px)`};
+ s($('Dc1'),.3,-1);s($('Dc2'),4.0,1);pop($('Dst'),t,7.3,.45,-12,-2);pop($('Dp'),t,9.6,.5);ap($('Dps'),t,10.2,.4,20);
+ const sh=t>9.65&&t<9.9?Math.sin(t*150)*8:0;$('Dp').style.transform+=` translate(${sh}px,0)`;};
+R.E=(t,d)=>{words($('Ea'),t,.25);ap($('Eb'),t,1.0,.4,10);
+ const h37=eio(P(t,1.6,2.8))*370*1.3,h12=eio(P(t,3.2,4.4))*120*1.3;
+ $('b37').setAttribute('y',600-h37);$('b37').setAttribute('height',h37);$('b12').setAttribute('y',600-h12);$('b12').setAttribute('height',h12);
+ $('t37').setAttribute('y',580-h37);$('t37').style.opacity=P(t,2.6,2.9);$('t12').setAttribute('y',580-h12);$('t12').style.opacity=P(t,4.2,4.5);
+ pop($('Etag'),t,5.6,.45,-6,-1.5);};
+R.F=(t,d)=>{words($('Fa'),t,.15);const sv=$('tags');let h='';
+ [[300,'S&P 500','−10%','dal record · correzione',.6],[780,'NASDAQ','−18%','dal record del 6/10',4.4]].forEach(([x,n,v,s,t0])=>{const k=P(t,t0,t0+.9);if(k<=0)return;
+  const sw=Math.sin((t-t0)*5)*14*Math.exp(-(t-t0)*1.6);const y=-300+eback(cl(k*1.2))*300;
+  h+=`<g transform="translate(${x} ${y}) rotate(${sw})"><line x1="0" y1="-400" x2="0" y2="40" stroke="#bdb3a6" stroke-width="3"/>
+   <path d="M-190 40 h380 v330 a24 24 0 0 1 -24 24 h-332 a24 24 0 0 1 -24 -24 z" fill="#f3ebde"/><circle cx="0" cy="80" r="16" fill="#121014"/>
+   <text y="170" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="40" fill="#141215">${n}</text>
+   <text y="290" text-anchor="middle" font-family="Archivo Black" font-size="110" fill="#c94f2a">${v}</text>
+   <text y="350" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#6b5a4c">${s}</text></g>`});
+ sv.innerHTML=h;};
+R.H=(t,d)=>{const b=$('box');const k=eback(P(t,.1,.6));b.setAttribute('transform',`translate(540 340) scale(${k}) translate(-540 -340)`);
+ const q=$('q');q.style.opacity=P(t,.6,.9);q.setAttribute('transform',`translate(0 ${Math.sin(t*4)*8})`);
+ ap($('Ha'),t,.3,.4,40);pop($('Hb'),t,1.9,.4,-6,-2);ap($('Hd'),t,2.3,.4,10);};
+</script></body></html>
