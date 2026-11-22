@@ -32,3 +32,15 @@ MFA con app o passkey (non SMS) · non inserire codici dopo un link · cambiare 
 
 ## Fonti
 cnbc.com/2026/11/17/deutsche-bank-leak-epstein-trump.html · en.ilsole24ore.com (inchiesta Deutsche Bank) · euronews.com/2026/11/18/data-watchdog-probes-massive-deutsche-bank-leak-of-15m-files · forbes.com (582 mln Epstein) · thepaypers.com (multa BaFin 8 mln) · db.com/news/detail/20261117-deutsche-bank-statement-on-recent-media-reports · businessinsurance.com (JPMorgan/Visa/Mastercard, Reuters) · aljazeera.com (blackout banche USA) · securityweek.com (Tajani; Amplifon) · agi.it (DIA) · internazionale.it (Reuters, Piantedosi 19/11) · ansa.it (supermercati, alert ACN) · en.ilsole24ore.com (banche e assicurazioni, ACN)
+
+## Addendum — il "tesoretto" di Deutsche Bank Italia (FT, 18-19/11/2026)
+- Deutsche Bank S.p.A. (Milano) avrebbe usato una riserva occulta ("tesoretto") per nascondere perdite sui mutui "fino a 800 mln €", tramite derivati e "contabilità ombra", per oltre 10 anni fino al 2018. Emerso nel 2018 da una segnalazione interna; indagine interna "Project Aetos" mai resa pubblica. [CONFIRMED, ma tutte le fonti derivano da FT e dai file trapelati]
+- Meccanismo (FTM su FT): protezione pagata su mutui già rimborsati; accantonamenti manipolati per nascondere il mancato raggiungimento degli obiettivi. Alla BCE comunicato un impatto di 522 mln €, perdite totali fino a 779 mln € [PARTLY — verificare sull'FT originale]. Usata per gli obiettivi 2011, 2014, 2016 (Affaritaliani, fonte singola).
+- Revisore KPMG: non ha rilevato lo schema; nessuna riesposizione dei bilanci necessaria (la banca conferma il "no restatement").
+- Risposta della banca: fatti passati (alcuni dal 2008), correzioni e misure di responsabilità, vigilanza competente informata, impatto non materiale per il gruppo quindi nessuna comunicazione al mercato.
+- BCE (Claudia Buch): se emergono fatti nuovi, valuteremo. Nessuna azione specifica di BCE, Banca d'Italia o BaFin.
+- La capogruppo ha iniettato ~1 mld € nella controllata italiana tra 2018 e 2023 (da verificare sul bilancio 2023).
+- Calo del titolo del 19-20/11 (-3,2%) NON attribuibile al tesoretto (crollo generale dei mercati).
+- Controversie separate (solo accuse): esame BCE sul netting dopo la lettera dell'ex manager Schiraldi (MF, 25/11/2025); causa a Londra da ~700 mln £ di 4 ex banker guidati da Faissola sui documenti MPS/Santorini (MF, 3/4/2026), la banca la definisce "totalmente priva di merito".
+- Da NON dire: "dati nascosti nell'ultimo anno" (→ "perdite nascoste per oltre 10 anni, emerse solo ora"); "800 mln rubati ai clienti"; "nascosto alla vigilanza" (la banca dice di averla informata: mancò la comunicazione al mercato); multe per il tesoretto (non esistono).
+Fonti: teleborsa.it (19/11) · affaritaliani.it · ftm.eu · europeanbusinessmagazine.com · milanofinanza.it (25/11/2025; 3/4/2026)
