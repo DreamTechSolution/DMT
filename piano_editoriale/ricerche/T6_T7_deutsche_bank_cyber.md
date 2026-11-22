@@ -44,3 +44,14 @@ cnbc.com/2026/11/17/deutsche-bank-leak-epstein-trump.html · en.ilsole24ore.com 
 - Controversie separate (solo accuse): esame BCE sul netting dopo la lettera dell'ex manager Schiraldi (MF, 25/11/2025); causa a Londra da ~700 mln £ di 4 ex banker guidati da Faissola sui documenti MPS/Santorini (MF, 3/4/2026), la banca la definisce "totalmente priva di merito".
 - Da NON dire: "dati nascosti nell'ultimo anno" (→ "perdite nascoste per oltre 10 anni, emerse solo ora"); "800 mln rubati ai clienti"; "nascosto alla vigilanza" (la banca dice di averla informata: mancò la comunicazione al mercato); multe per il tesoretto (non esistono).
 Fonti: teleborsa.it (19/11) · affaritaliani.it · ftm.eu · europeanbusinessmagazine.com · milanofinanza.it (25/11/2025; 3/4/2026)
+
+## Verifica diretta sull'articolo FT "Inside Deutsche Bank" (screenshot del titolare, 22/11/2026)
+Fonte primaria letta dal titolare: Financial Times, serie "Inside Deutsche Bank".
+- CONFERMATO FT: l'unità italiana ha usato derivati e "shadow bookkeeping" per nascondere fino a 800 mln € di perdite; i manager l'avevano chiamata "tesoretto"; serviva a nascondere il mancato raggiungimento degli obiettivi di utile; è durato più di dieci anni, fino alla segnalazione di un whistleblower nel 2018.
+- CONFERMATO FT: Deutsche non ha mai reso pubblico lo scandalo né i risultati dell'indagine interna "Project Aetos", che ha trovato carenze nelle operazioni bancarie di base e nella gestione del rischio sui mutui.
+- CONFERMATO FT: nessun dipendente coinvolto licenziato; ad alcuni dirigenti in uscita buonuscite "a sette cifre" (documenti interni); la banca ha deciso di non recuperare 5,25 mln € di compensi differiti.
+- CONFERMATO FT: cinque dipendenti hanno ricevuto un richiamo scritto collettivo, tra cui l'allora capo dell'unità italiana (12 anni), il CFO italiano e il responsabile locale del private banking. Tutti e tre "scagionati da condotta personale scorretta", richiamati per "carenze nello svolgimento delle proprie funzioni manageriali". Due hanno lasciato nel 2020 (la banca voleva una nuova guida per l'Italia), il terzo nel 2021 per motivi non legati ad Aetos. → In video: NON fare nomi (o, se si fanno, dire sempre che sono stati scagionati da condotta personale scorretta).
+- CONFERMATO FT: fonte anonima: Aetos "ha causato un vero terremoto nella banca, e i regolatori erano furiosi".
+- CONFERMATO FT: dal 2012 Deutsche ha sostenuto 18,6 mld € di costi legali per scandali, tra cui presunte perdite nascoste (risolto il conflitto: dal 2012). Nel 2015 ha pagato 55 mln $ per chiudere accuse USA di aver sottostimato i rischi sui derivati durante la crisi.
+- CONFERMATO FT: tra il 2018 e il 2023 la sede centrale ha iniettato 1 mld € di capitale fresco nell'unità italiana (bilancio 2023).
+- ANCORA DA VERIFICARE: le cifre 522 mln € (comunicati alla BCE) e 779 mln € (perdite totali) non compaiono negli screenshot → usare solo "fino a 800 milioni".
