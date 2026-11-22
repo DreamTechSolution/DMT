@@ -2,126 +2,154 @@
 <html lang="it"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
 <style>
-:root{--dark:#121014;--cream:#f3ebde;--orange:#e2683c;--orange2:#c94f2a;--blue:#26405f;--paper:#efe6d6;--red:#ff5a5a}
+:root{--dark:#121014;--cream:#f3ebde;--orange:#e2683c;--orange2:#c94f2a;--blue:#26405f;--paper:#efe6d6;--red:#ff5a5a;--green:#3ccf6e;--mute:#8a8590}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;overflow:hidden;background:var(--dark)}
 #stage{position:relative;width:1080px;height:1920px;overflow:hidden}
 .scene{position:absolute;inset:0;display:none;overflow:hidden}
 .abs{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center}
-.serif{font-family:'Instrument Serif',serif;font-style:italic;font-size:76px;color:#e9e1d6;letter-spacing:-.5px}
+.serif{font-family:'Instrument Serif',serif;font-style:italic;font-size:72px;color:#e9e1d6;letter-spacing:-.5px}
 .bold{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-3px;line-height:.92}
 .mono{font-family:'JetBrains Mono',monospace}
+.sans{font-family:Inter,sans-serif}
 .w{display:inline-block;margin:0 .12em}
-.chip{display:inline-flex;align-items:center;justify-content:center;width:120px;height:120px;border-radius:60px;background:var(--orange);color:#fff;font-family:'Archivo Black';font-size:72px}
+.kick{font-family:'JetBrains Mono';font-weight:700;font-size:30px;letter-spacing:6px;color:var(--orange)}
 .grain{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
 .vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 42%,transparent 45%,rgba(0,0,0,.45) 100%)}
-#tag{position:absolute;left:50%;top:190px;transform:translateX(-50%);white-space:nowrap;font-family:'JetBrains Mono';font-weight:700;font-size:26px;letter-spacing:3px;color:#f3ebde;background:rgba(226,104,60,.9);padding:10px 24px;border-radius:40px;z-index:5}
+#prog{position:absolute;left:90px;right:90px;top:200px;height:6px;display:flex;gap:10px;z-index:6}
+#prog div{flex:1;background:rgba(243,235,222,.25);border-radius:3px;overflow:hidden}
+#prog i{display:block;height:100%;width:0;background:var(--orange)}
 </style></head><body><div id="stage">
 
-<!-- E0 hook -->
-<div class="scene" id="e0" style="background:var(--dark)">
- <div class="abs serif" id="e0a" style="top:640px">Anthropic è in Borsa.</div>
- <div class="abs bold" id="e0b" style="top:775px;font-size:98px;color:#fff">MA COSA CAMBIA</div>
- <div class="abs bold" id="e0c" style="top:915px;font-size:150px;color:var(--orange)">PER TE?</div>
- <svg class="ell" width="1080" height="1920" style="position:absolute;inset:0;overflow:visible"><path id="e0p1" stroke="#f3ebde" stroke-width="5" fill="none" stroke-linecap="round"/><path id="e0p2" stroke="#f3ebde" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/></svg>
-</div>
-
-<!-- E1 stock fell -->
-<div class="scene" id="e1" style="background:var(--dark)">
- <div class="abs" id="e1n" style="top:360px"><span class="chip">1</span></div>
- <div class="abs bold" id="e1a" style="top:520px;font-size:92px;color:#fff;line-height:1">IL TITOLO È<br><span style="color:var(--orange)">GIÀ SCESO</span></div>
- <div class="abs" id="e1card" style="top:780px">
-  <div style="width:900px;height:560px;background:#1c1a1f;border:2px solid #2e2b33;border-radius:30px;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.6);text-align:left">
-   <div class="mono" style="position:absolute;left:44px;top:34px;color:#fff;font-size:42px;font-weight:700">ANT <span style="color:#8a8590;font-weight:500;font-size:28px">· NASDAQ</span></div>
-   <div class="mono" id="e1price" style="position:absolute;right:44px;top:34px;color:#3ccf6e;font-size:42px;font-weight:700">$97,17</div>
-   <svg width="900" height="560" style="position:absolute;left:0;top:0">
-    <defs><clipPath id="c1"><rect id="c1r" x="0" y="0" width="0" height="560"/></clipPath>
-    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff5a5a" stop-opacity=".35"/><stop offset="1" stop-color="#ff5a5a" stop-opacity="0"/></linearGradient></defs>
-    <line x1="60" y1="470" x2="840" y2="470" stroke="#8a8590" stroke-dasharray="8 10" stroke-width="2"/>
-    <text x="64" y="510" fill="#8a8590" font-family="JetBrains Mono" font-size="24">prezzo IPO $83</text>
-    <g clip-path="url(#c1)"><path id="e1fill" fill="url(#g1)"/><path id="e1line" fill="none" stroke="#ff5a5a" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/></g>
-    <g id="e1tags" font-family="JetBrains Mono" font-size="28" font-weight="700"></g>
-   </svg>
+<!-- A · hook + agenda -->
+<div class="scene" id="A" style="background:var(--dark)">
+ <div id="tape" class="mono" style="position:absolute;top:300px;left:0;white-space:nowrap;font-size:40px;font-weight:700;color:#f3ebde;opacity:.9"></div>
+ <div class="abs serif" id="Aa" style="top:470px">Anthropic è in Borsa.</div>
+ <div class="abs bold" id="Ab" style="top:580px;font-size:108px;color:#fff;line-height:1">ECCO COSA<br><span style="color:var(--orange);font-size:90px">CAMBIA DAVVERO</span></div>
+ <div class="abs" id="Ac" style="top:860px;text-align:left">
+  <div class="agenda sans" style="font-size:44px;font-weight:700;color:#f3ebde;line-height:1">
+   <div class="ag" style="display:flex;gap:30px;align-items:center;padding:22px 0;border-bottom:2px solid #2e2b33"><span class="mono" style="color:var(--orange);font-size:34px">01</span>come guadagna</div>
+   <div class="ag" style="display:flex;gap:30px;align-items:center;padding:22px 0;border-bottom:2px solid #2e2b33"><span class="mono" style="color:var(--orange);font-size:34px">02</span>i numeri veri</div>
+   <div class="ag" style="display:flex;gap:30px;align-items:center;padding:22px 0;border-bottom:2px solid #2e2b33"><span class="mono" style="color:var(--orange);font-size:34px">03</span>il vero nodo</div>
+   <div class="ag" style="display:flex;gap:30px;align-items:center;padding:22px 0;border-bottom:2px solid #2e2b33"><span class="mono" style="color:var(--orange);font-size:34px">04</span>cosa cambia per te</div>
+   <div class="ag" style="display:flex;gap:30px;align-items:center;padding:22px 0"><span class="mono" style="color:var(--orange);font-size:34px">05</span>se vuoi investire</div>
   </div>
  </div>
- <div class="abs serif" id="e1c" style="top:1370px;font-size:56px;color:#8a8590">ancora sopra il prezzo di partenza, per ora.</div>
 </div>
 
-<!-- E2 revenue mix -->
-<div class="scene" id="e2" style="background:var(--paper)">
- <div class="abs" id="e2n" style="top:300px"><span class="chip">2</span></div>
- <div class="abs bold" id="e2a" style="top:450px;font-size:84px;color:var(--blue);line-height:1">NON SEI IL CLIENTE<br><span style="color:var(--orange2)">PRINCIPALE</span></div>
- <svg id="donut" width="1080" height="640" style="position:absolute;left:0;top:700px">
-  <circle cx="540" cy="320" r="230" fill="none" stroke="#e0d4c2" stroke-width="80"/>
-  <circle id="d79" cx="540" cy="320" r="230" fill="none" stroke="#c94f2a" stroke-width="80" transform="rotate(-90 540 320)"/>
-  <circle id="d21" cx="540" cy="320" r="230" fill="none" stroke="#26405f" stroke-width="80" transform="rotate(-90 540 320)"/>
-  <text id="dpct" x="540" y="335" text-anchor="middle" font-family="Archivo Black" font-size="120" fill="#c94f2a">0%</text>
-  <text id="dlab" x="540" y="395" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#26405f">aziende e sviluppatori</text>
+<!-- B · how it makes money -->
+<div class="scene" id="B" style="background:var(--paper)">
+ <div class="abs kick" id="Bk" style="top:290px">01 · COME GUADAGNA</div>
+ <div class="abs serif" id="Ba" style="top:360px;color:var(--blue);font-size:70px">da dove arrivano i soldi</div>
+ <div class="abs" id="Bbar" style="top:500px">
+  <div style="width:900px;height:200px;border-radius:24px;overflow:hidden;display:flex;border:4px solid #141215;background:#e0d4c2">
+   <div id="B79" style="width:0;background:var(--orange2);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Archivo Black';font-size:84px">79%</div>
+   <div id="B21" style="width:0;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Archivo Black';font-size:52px">21%</div>
+  </div>
+  <div style="display:flex;width:900px;margin-top:18px;font-family:Inter,sans-serif;font-weight:700;font-size:32px;color:#26405f;text-align:left">
+   <div id="Bl1" style="width:79%">aziende e sviluppatori<br><span class="mono" style="font-weight:500;font-size:24px;color:#8a7a6c">pagano a consumo (API)</span></div>
+   <div id="Bl2" style="width:21%">abbonamenti<br><span class="mono" style="font-weight:500;font-size:24px;color:#8a7a6c">tu sei qui</span></div>
+  </div>
+ </div>
+ <div class="abs serif" id="Bc" style="top:900px;color:var(--blue);font-size:66px">e solo</div>
+ <div class="abs" id="Bd" style="top:990px;display:flex;gap:22px"></div>
+ <div class="abs bold" id="Be" style="top:1200px;font-size:88px;color:var(--orange2)">= ¼ DEL FATTURATO</div>
+ <div class="abs mono" id="Bs" style="top:1330px;font-size:22px;color:#9b8c7e">primi 9 mesi 2026 · prospetto S-1, sintesi degli analisti</div>
+</div>
+
+<!-- C · the numbers -->
+<div class="scene" id="C" style="background:var(--dark)">
+ <div class="abs kick" id="Ck" style="top:290px">02 · I NUMERI VERI</div>
+ <div class="abs serif" id="Ca" style="top:360px;font-size:62px">primi nove mesi del 2026</div>
+ <div class="abs" id="Crev" style="top:480px"><div style="width:900px;border-radius:26px;background:#162119;border:2px solid #24452f;padding:30px 44px;text-align:left">
+  <div class="mono" style="font-size:28px;color:var(--green);letter-spacing:3px">RICAVI</div>
+  <div style="display:flex;align-items:baseline;gap:26px"><div class="bold" style="font-size:150px;color:#fff;letter-spacing:-4px"><span id="Crn">0</span><span style="font-size:60px;letter-spacing:0"> MLD $</span></div>
+  <div id="Cx" class="bold" style="font-size:64px;color:var(--green);letter-spacing:0">×13</div></div>
+  <div class="mono" style="font-size:26px;color:#7fa98a">rispetto allo stesso periodo del 2025</div></div></div>
+ <div class="abs" id="Closs" style="top:860px"><div style="width:900px;border-radius:26px;background:#24161a;border:2px solid #4a2630;padding:30px 44px;text-align:left">
+  <div class="mono" style="font-size:28px;color:var(--red);letter-spacing:3px">PERDITA NETTA</div>
+  <div class="bold" style="font-size:130px;color:#fff;letter-spacing:-4px"><span id="Cln">0</span><span style="font-size:56px;letter-spacing:0"> MLD $</span></div>
+  <div style="margin-top:22px;height:70px;border-radius:12px;overflow:hidden;display:flex;background:#3a2328">
+   <div id="Cacc" style="width:0;background:repeating-linear-gradient(-45deg,#6b5f66 0 10px,#574c53 10px 20px);display:flex;align-items:center;padding-left:18px;color:#fff;font-family:'JetBrains Mono';font-weight:700;font-size:26px;white-space:nowrap">≈94 contabili</div>
+   <div id="Ccash" style="width:0;background:var(--red)"></div></div>
+  <div id="Cnote" class="sans" style="font-size:34px;font-weight:700;color:#f3ebde;margin-top:20px">non sono soldi usciti dalla cassa</div>
+  <div class="mono" style="font-size:22px;color:#8a7a7c;margin-top:6px">variazioni di valore di convertibili e strumenti finanziari</div></div></div>
+</div>
+
+<!-- D · the knot -->
+<div class="scene" id="D" style="background:#1a1412">
+ <div class="abs kick" id="Dk" style="top:290px">03 · IL VERO NODO</div>
+ <div class="abs bold" id="Da" style="top:370px;font-size:96px;color:#fff;line-height:1">≈ <span id="Dn">0</span> MILIARDI<br><span style="color:var(--orange);font-size:52px;letter-spacing:-1px">DI IMPEGNI PER IL CALCOLO</span></div>
+ <div id="Dgrid" style="position:absolute;left:150px;top:600px;width:780px;height:520px"></div>
+ <div class="abs" id="Dleg" style="top:1140px;display:flex;gap:40px;font-family:Inter,sans-serif;font-size:32px;font-weight:700;color:#f3ebde">
+  <span><span style="display:inline-block;width:30px;height:30px;background:var(--orange);border-radius:6px;vertical-align:middle;margin-right:12px"></span>oltre 400 non cancellabili 🔒</span>
+  <span><span style="display:inline-block;width:30px;height:30px;border:3px solid #6b5a4c;border-radius:6px;vertical-align:middle;margin-right:12px"></span>resto</span></div>
+ <div class="abs" id="Dq" style="top:1230px"><div style="width:880px;border-left:8px solid var(--orange);background:#241c19;padding:26px 34px;text-align:left">
+  <div class="mono" style="font-size:22px;color:#9b8c7e;letter-spacing:2px">DAL PROSPETTO · IN SINTESI</div>
+  <div class="mono" id="Dtype" style="font-size:36px;color:#f3ebde;margin-top:10px;white-space:normal;min-height:96px"></div></div></div>
+</div>
+
+<!-- E · for you -->
+<div class="scene" id="E" style="background:#f4f2ee">
+ <div class="abs kick" id="Ek" style="top:290px">04 · COSA CAMBIA PER TE</div>
+ <div class="abs" id="Ephone" style="top:360px"><div style="width:620px;background:#fff;border-radius:46px;border:10px solid #141215;padding:40px 40px 36px;text-align:left;box-shadow:0 30px 80px rgba(0,0,0,.16)">
+  <div class="sans" style="font-size:30px;font-weight:700;color:#141215"><span style="color:var(--orange)">✳</span> Claude Pro · <span id="Eprice">20 $/mese</span></div>
+  <div class="mono" id="Etoday" style="display:inline-block;margin-top:14px;font-size:24px;color:#2b7a45;background:#e3f4e8;padding:6px 14px;border-radius:8px">oggi: prezzo invariato</div>
+  <div class="sans" style="margin-top:30px;font-size:26px;color:#777">utilizzo della settimana</div>
+  <div style="margin-top:12px;height:34px;background:#eee;border-radius:17px;overflow:hidden"><div id="Emeter" style="height:100%;width:0;background:linear-gradient(90deg,#e2683c,#c94f2a)"></div></div>
+  <div class="sans" id="Elim" style="margin-top:14px;font-size:26px;font-weight:700;color:#c94f2a;opacity:0">limite raggiunto · riprova più tardi</div></div></div>
+ <div class="abs" id="Eq" style="top:870px"><div class="mono" style="font-size:28px;color:#141215;background:#ffd34d;padding:10px 22px;border-radius:8px">conti pubblici ogni trimestre → pressione sui margini</div></div>
+ <div class="abs mono" id="Et" style="top:960px;font-size:26px;letter-spacing:3px;color:#9a5a3a">SCENARI POSSIBILI · NON CERTEZZE</div>
+ <div class="abs" id="Ecards" style="top:1020px;display:flex;gap:22px">
+  <div class="ec" style="width:280px;height:300px;background:#141215;border-radius:24px;padding:26px;text-align:left;color:#f3ebde"><svg width="80" height="80" viewBox="0 0 80 80"><rect x="8" y="34" width="64" height="14" rx="7" fill="#3a3633"/><rect x="8" y="34" width="34" height="14" rx="7" fill="#e2683c"/><line x1="44" y1="22" x2="44" y2="60" stroke="#f3ebde" stroke-width="4"/></svg><div class="sans" style="font-size:36px;font-weight:800;margin-top:18px;white-space:normal;line-height:1.1">limiti d'uso più stretti</div></div>
+  <div class="ec" style="width:280px;height:300px;background:#141215;border-radius:24px;padding:26px;text-align:left;color:#f3ebde"><svg width="80" height="80" viewBox="0 0 80 80"><rect x="8" y="52" width="18" height="20" fill="#e2683c" opacity=".5"/><rect x="31" y="36" width="18" height="36" fill="#e2683c" opacity=".75"/><rect x="54" y="16" width="18" height="56" fill="#e2683c"/></svg><div class="sans" style="font-size:36px;font-weight:800;margin-top:18px;white-space:normal;line-height:1.1">piani a più livelli</div></div>
+  <div class="ec" style="width:280px;height:300px;background:#141215;border-radius:24px;padding:26px;text-align:left;color:#f3ebde"><svg width="80" height="80" viewBox="0 0 80 80"><path d="M40 8 L48 30 L72 30 L52 44 L60 68 L40 54 L20 68 L28 44 L8 30 L32 30 Z" fill="#e2683c"/></svg><div class="sans" style="font-size:36px;font-weight:800;margin-top:18px;white-space:normal;line-height:1.1">funzioni top a chi paga di più</div></div>
+ </div>
+</div>
+
+<!-- F · investing -->
+<div class="scene" id="F" style="background:var(--dark)">
+ <div class="abs kick" id="Fk" style="top:290px">05 · SE VUOI INVESTIRE</div>
+ <svg id="Fsteps" width="1080" height="560" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs" id="Flock" style="top:960px"><div style="width:900px;background:#1c1a1f;border:2px solid #2e2b33;border-radius:26px;padding:30px 40px;text-align:left">
+  <div style="display:flex;align-items:center;gap:20px"><svg width="64" height="76" viewBox="0 0 110 130"><path id="Fshack" d="M25 60 V40 a30 30 0 0 1 60 0 V60" stroke="#e2683c" stroke-width="12" fill="none"/><rect x="8" y="58" width="94" height="68" rx="14" fill="#e2683c"/></svg>
+  <div class="sans" style="font-size:40px;font-weight:800;color:#fff">azioni ancora bloccate (lock-up)</div></div>
+  <div id="Frows" class="mono" style="margin-top:18px;font-size:28px;color:#cfc6bb;line-height:1.7">
+   <div class="fr"><span style="color:var(--orange)">▸</span> insider: fino al 10% nei primi giorni</div>
+   <div class="fr"><span style="color:var(--orange)">▸</span> altro 35% dopo i conti del 2026</div>
+   <div class="fr"><span style="color:var(--orange)">▸</span> fondatori: dopo ~180 giorni</div></div></div></div>
+ <div class="abs" id="Fd" style="top:1380px"><div class="mono" style="font-size:28px;color:#f3ebde;border:2px solid #4a4541;border-radius:12px;padding:14px 26px">⚠ Questo non è un consiglio finanziario.</div></div>
+</div>
+
+<!-- G · summary scale -->
+<div class="scene" id="G" style="background:var(--paper)">
+ <div class="abs serif" id="Ga" style="top:330px;color:var(--blue)">in sintesi</div>
+ <svg id="scale" width="1080" height="640" style="position:absolute;left:0;top:430px">
+  <polygon points="540,120 500,560 580,560" fill="#141215"/><rect x="420" y="560" width="240" height="22" rx="8" fill="#141215"/>
+  <g id="beam"><rect x="150" y="108" width="780" height="16" rx="8" fill="#141215"/>
+   <g id="panL"><line x1="200" y1="116" x2="150" y2="300" stroke="#141215" stroke-width="4"/><line x1="200" y1="116" x2="250" y2="300" stroke="#141215" stroke-width="4"/><path d="M110 300 h180 a90 40 0 0 1 -180 0z" fill="#3ccf6e"/>
+    <text x="200" y="332" text-anchor="middle" font-family="Archivo Black" font-size="34" fill="#141215">×13</text><text x="200" y="390" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#26405f">cresce velocissima</text></g>
+   <g id="panR"><line x1="880" y1="116" x2="830" y2="300" stroke="#141215" stroke-width="4"/><line x1="880" y1="116" x2="930" y2="300" stroke="#141215" stroke-width="4"/><path d="M790 300 h180 a90 40 0 0 1 -180 0z" fill="#c94f2a"/>
+    <text x="880" y="332" text-anchor="middle" font-family="Archivo Black" font-size="30" fill="#fff">900 MLD</text><text x="880" y="390" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#26405f">promessi da spendere</text></g></g>
  </svg>
- <div class="abs" id="e2tag" style="top:1300px"><div class="bold" style="background:var(--blue);color:#fff;font-size:46px;letter-spacing:0;padding:14px 30px 8px;border-radius:12px">ABBONAMENTI ≈ 1/5 · TU SEI QUI</div></div>
- <div class="abs mono" id="e2src" style="top:1420px;font-size:22px;color:#9b8c7e">quota sui ricavi dei primi 9 mesi 2026 · dati dal prospetto, via analisti</div>
+ <div class="abs serif" id="Gb" style="top:1110px;color:var(--blue);font-size:62px">da oggi, ogni trimestre</div>
+ <div class="abs" id="Gq" style="top:1200px;display:flex;gap:18px"></div>
+ <div class="abs bold" id="Gc" style="top:1330px;font-size:66px;color:var(--orange2)">I CONTI DEVONO TORNARE.</div>
 </div>
 
-<!-- E3 prospectus -->
-<div class="scene" id="e3" style="background:var(--dark)">
- <div class="abs" id="e3n" style="top:300px"><span class="chip">3</span></div>
- <div class="abs bold" id="e3a" style="top:450px;font-size:84px;color:#fff;line-height:1">È SCRITTO NEL<br><span style="color:var(--orange)">PROSPETTO</span></div>
- <div class="abs" id="e3doc" style="top:690px">
-  <div style="width:820px;background:#f4f0ea;border-radius:16px;padding:44px 52px;text-align:left;box-shadow:0 30px 90px rgba(0,0,0,.6);transform:rotate(-1.5deg)">
-   <div class="mono" style="font-size:24px;color:#8a7a6c;letter-spacing:2px">FORM S-1 · FATTORI DI RISCHIO · IN SINTESI</div>
-   <div style="margin-top:28px;height:14px;width:92%;background:#ddd4c8;border-radius:7px"></div>
-   <div style="margin-top:16px;height:14px;width:78%;background:#ddd4c8;border-radius:7px"></div>
-   <div style="position:relative;margin-top:26px;font-family:Inter,sans-serif;font-size:40px;font-weight:700;color:#141215;line-height:1.25;white-space:normal">
-    <div id="e3hl" style="position:absolute;left:-10px;top:4px;height:calc(100% - 4px);width:0;background:#ffd34d;opacity:.85;border-radius:6px;z-index:0"></div>
-    <span style="position:relative;z-index:1">la nuova capacità di calcolo potrebbe comprimere i margini</span></div>
-   <div style="margin-top:26px;height:14px;width:85%;background:#ddd4c8;border-radius:7px"></div>
-   <div style="margin-top:16px;height:14px;width:60%;background:#ddd4c8;border-radius:7px"></div>
-  </div>
- </div>
- <div class="abs serif" id="e3b" style="top:1150px">e chi risponde agli azionisti</div>
- <div class="abs serif" id="e3c" style="top:1240px;color:#bdb3a6;font-size:64px">prima o poi ritocca</div>
- <div class="abs bold" id="e3d" style="top:1330px;font-size:110px;color:var(--orange)">PREZZI E LIMITI.</div>
+<!-- H · CTA (Instagram-native) -->
+<div class="scene" id="H" style="background:var(--dark)">
+ <div class="abs" id="Hsave" style="top:420px"><svg width="200" height="240" viewBox="0 0 200 240"><path id="Hbm" d="M30 20 h140 v200 l-70 -50 l-70 50 z" stroke="#f3ebde" stroke-width="12" fill="none" stroke-linejoin="round"/></svg></div>
+ <div class="abs bold" id="Ha" style="top:700px;font-size:120px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hc" style="top:880px"><div style="width:860px;background:#1c1a1f;border:2px solid #2e2b33;border-radius:30px;padding:28px 34px;text-align:left;display:flex;gap:22px;align-items:flex-start">
+  <div style="width:76px;height:76px;border-radius:38px;background:linear-gradient(135deg,#e2683c,#9a2f1c);flex:none"></div>
+  <div><div class="sans" style="font-size:30px;font-weight:700;color:#fff">tu <span style="font-weight:400;color:#8a8590">· adesso</span></div>
+  <div class="sans" id="Htype" style="font-size:40px;color:#f3ebde;margin-top:6px;white-space:normal;min-height:52px"></div></div></div></div>
+ <div class="abs serif" id="Hb" style="top:1110px;font-size:62px">scrivimi quale azienda analizzo dopo</div>
 </div>
 
-<!-- E4 scenarios -->
-<div class="scene" id="e4" style="background:#f4f2ee">
- <div class="abs bold" id="e4a" style="top:340px;font-size:140px;color:#141215">QUINDI?</div>
- <div class="abs" id="e4card" style="top:520px">
-  <div style="width:460px;background:#fff;border-radius:28px;box-shadow:0 30px 80px rgba(0,0,0,.14);padding:36px 44px;text-align:left;font-family:Inter,sans-serif">
-   <div style="font-size:32px;color:#555;font-weight:600"><span style="color:var(--orange)">✳</span> Claude Pro · oggi</div>
-   <div class="bold" style="font-size:120px;color:var(--orange);margin-top:22px;letter-spacing:-2px">20 $</div>
-   <div class="serif" style="font-size:48px;color:#777">al mese, come sempre</div>
-  </div>
- </div>
- <div class="abs mono" id="e4t" style="top:960px;font-size:28px;letter-spacing:3px;color:#9a5a3a">↓ SCENARI POSSIBILI, NON CERTEZZE ↓</div>
- <div class="abs" id="e4s1" style="top:1030px"><div style="width:860px;background:#141215;color:#f3ebde;border-radius:22px;padding:30px 40px;text-align:left;font-family:Inter,sans-serif;font-size:46px;font-weight:700"><span style="color:var(--orange)">A ·</span> limiti d'uso più stretti</div></div>
- <div class="abs" id="e4s2" style="top:1180px"><div style="width:860px;background:#141215;color:#f3ebde;border-radius:22px;padding:30px 40px;text-align:left;font-family:Inter,sans-serif;font-size:46px;font-weight:700"><span style="color:var(--orange)">B ·</span> piani più cari</div></div>
-</div>
-
-<!-- E5 investors -->
-<div class="scene" id="e5" style="background:var(--dark)">
- <div class="abs serif" id="e5a" style="top:430px">e se pensi di comprare il titolo</div>
- <div class="abs" id="e5b" style="top:570px"><div class="bold" style="background:#ff5a5a;color:#fff;font-size:150px;padding:22px 46px 14px;border-radius:24px;border:8px solid #fff">VOLATILE</div></div>
- <div class="abs" id="e5c" style="top:860px">
-  <div style="display:flex;align-items:center;gap:34px;background:#1c1a1f;border:2px solid #2e2b33;border-radius:26px;padding:34px 46px;text-align:left">
-   <svg width="110" height="130" viewBox="0 0 110 130"><path d="M25 60 V40 a30 30 0 0 1 60 0 V60" stroke="#e2683c" stroke-width="12" fill="none"/><rect x="8" y="58" width="94" height="68" rx="14" fill="#e2683c"/><circle cx="55" cy="88" r="10" fill="#1c1a1f"/><rect x="51" y="92" width="8" height="18" rx="3" fill="#1c1a1f"/></svg>
-   <div><div style="font-family:Inter,sans-serif;font-weight:800;font-size:46px;color:#fff">molte azioni ancora bloccate</div>
-   <div class="mono" style="font-size:28px;color:#8a8590;margin-top:8px">lock-up: possono arrivare sul mercato più avanti</div></div>
-  </div>
- </div>
- <div class="abs" id="e5d" style="top:1170px"><div class="mono" style="font-size:30px;color:#f3ebde;border:2px solid #4a4541;border-radius:12px;padding:16px 28px">⚠ Questo non è un consiglio finanziario.</div></div>
-</div>
-
-<!-- E6 CTA -->
-<div class="scene" id="e6" style="background:#f4f0ea">
- <canvas id="mos" width="1080" height="1920" style="position:absolute;inset:0"></canvas>
- <div class="abs" id="e6a" style="top:560px"><div class="bold" style="background:#141215;color:var(--orange);font-size:104px;padding:30px 44px 18px;border-radius:14px">SALVA IL VIDEO</div></div>
- <div class="abs serif" id="e6b" style="top:800px;color:#3a2a24">e seguimi per la</div>
- <div class="abs bold" id="e6c" style="top:900px;font-size:150px;color:var(--orange2)">PARTE 3 →</div>
-</div>
-
-<div id="tag">PARTE 2 · ANTHROPIC IN BORSA</div>
+<div id="prog"><div><i></i></div><div><i></i></div><div><i></i></div><div><i></i></div><div><i></i></div></div>
 <div class="grain"></div><div class="vig"></div>
 </div>
 <script>
@@ -132,10 +160,22 @@ const eo=x=>1-Math.pow(1-x,3), eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
 const eback=x=>{const c1=1.9,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
 const ex=x=>x===1?1:1-Math.pow(2,-10*x);
 function rnd(s){let x=Math.sin(s*12.9898)*43758.5453;return x-Math.floor(x)}
+const fmt=(v,d=0)=>v.toFixed(d).replace('.',',');
 
-// scene timing, aligned to the voiceover (VO at 0.5s, atempo 1.12)
-const S=[['e0',0,4.4],['e1',4.4,10.9],['e2',10.9,20.2],['e3',20.2,29.4],['e4',29.4,36.2],['e5',36.2,42.9],['e6',42.9,47.5]];
-const DUR=47.5;
+// ===== timing table: scene windows + cue points (absolute seconds). Retime here only. =====
+const T=window.TIMING||{
+ A:[0,5.2], B:[5.2,22], C:[22,38], D:[38,52], E:[52,69], F:[69,89], G:[89,99], H:[99,105.5],
+ cue:{ Ab:1.6, Ac:3.0,
+  Bbar:8.5, B21:12.5, Bc:15.5, Bd:16.5, Be:19,
+  Crev:25.5, Cx:29.5, Closs:31, Cacc:33.5,
+  Dn:40.5, Dlock:44, Dq:47,
+  Ephone:53, Eq:57.5, Emeter:60, Ecards:62.5, Ec2:64.5, Ec3:66.5,
+  F1:70.5, F2:72, F3:73.5, F4:75, Flock:77.5, Fd:85.5,
+  Gscale:89.5, Gb:93.5, Gc:96.5,
+  Ha:99.5, Htype:101.5 } };
+const SC=[['A',...T.A],['B',...T.B],['C',...T.C],['D',...T.D],['E',...T.E],['F',...T.F],['G',...T.G],['H',...T.H]];
+const DUR=T.H[1];
+const Q=T.cue;
 
 function ap(el,t,t0,d=.35,dy=40,sc=1){const k=eo(P(t,t0,t0+d));el.style.opacity=k;
  el.style.filter=`blur(${(1-k)*14}px)`;el.style.transform=`translateX(-50%) translateY(${(1-k)*dy}px) scale(${sc+(1-sc)*k})`;}
@@ -144,58 +184,74 @@ function pop(el,t,t0,d=.45,rot=0,final=0){const k=P(t,t0,t0+d);const e=eback(k);
 const wcache={};
 function words(el,t,t0,per=.09){if(!wcache[el.id]){wcache[el.id]=1;el.innerHTML=el.innerHTML.split(/(<span[^>]*>.*?<\/span>|\s+)/).filter(s=>s&&!/^\s+$/.test(s)).map(w=>`<span class="w">${w}</span>`).join('')}
  el.style.transform='translateX(-50%)';[...el.children].forEach((w,i)=>{const k=eo(P(t,t0+i*per,t0+i*per+.35));w.style.opacity=k;w.style.filter=`blur(${(1-k)*12}px)`;w.style.transform=`translateY(${(1-k)*24}px)`})}
-// hand-drawn double ellipse sized from the word's real box
-const ellDone={};
-function ellipse(wordId,p1,p2,t,t0){if(!ellDone[wordId]){const w=$(wordId);const fs=parseFloat(getComputedStyle(w).fontSize),capH=fs*0.72;
-  const cx=540,cy=w.offsetTop+w.offsetHeight*0.5+2,ry=capH/2+38,rx=(w.offsetWidth/2+48)/Math.sqrt(1-Math.pow(capH/2/ry,2));
-  const mk=(ph,turns,grow,tilt)=>{let d='';const N=160;for(let i=0;i<=N;i++){const u=i/N;const th=Math.PI*0.92+ph+u*Math.PI*2*turns;
-   const k=1+grow*(u-.5)+0.012*Math.sin(th*3+ph);const x=Math.cos(th)*rx*k,y=Math.sin(th)*ry*k;const a=tilt*Math.PI/180;
-   d+=(i?'L':'M')+(cx+x*Math.cos(a)-y*Math.sin(a)).toFixed(1)+','+(cy+x*Math.sin(a)+y*Math.cos(a)).toFixed(1)}return d};
-  $(p1).setAttribute('d',mk(0,1.1,.05,-1.5));$(p2).setAttribute('d',mk(.25,1.06,-.04,-1));ellDone[wordId]=1}
- [[p1,t0,t0+.6],[p2,t0+.15,t0+.75]].forEach(([id,a,b])=>{const p=$(id);const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L*(1-eio(P(t,a,b)))});}
+function typeT(el,txt,t,t0,cps=28){const n=Math.floor(Math.max(0,t-t0)*cps);el.innerHTML=txt.slice(0,n)+(n<txt.length&&t>=t0?'<span style="opacity:'+(Math.floor(t*3)%2)+'">▍</span>':'')}
 
 const R={};
-R.e0=lt=>{words($('e0a'),lt,.1,.1);ap($('e0b'),lt,1.75,.35,50);pop($('e0c'),lt,2.75,.45);ellipse('e0c','e0p1','e0p2',lt,3.05);};
-// chart: 97.17 at debut -> 88.91 next day close
-const CH=(()=>{const pts=[];const N=80;for(let i=0;i<=N;i++){const x=i/N;let v=97.17-(97.17-88.91)*eio(x)+(i&&i<N?(rnd(i*3)-.5)*2.6:0);
- pts.push([60+x*780,470-(v-83)*22])}return pts})();
-R.e1=lt=>{pop($('e1n'),lt,.05,.4);ap($('e1a'),lt,.45,.4,50);ap($('e1card'),lt,1.6,.45,80);
- const k=eio(P(lt,2.6,6.0));$('c1r').setAttribute('width',60+k*800);
- const d='M'+CH.map(p=>p.join(',')).join(' L');$('e1line').setAttribute('d',d);$('e1fill').setAttribute('d',d+' L840,540 L60,540 Z');
- const idx=Math.min(CH.length-1,Math.floor(k*(CH.length-1)));const pr=83+(470-CH[idx][1])/22;
- $('e1price').textContent='$'+pr.toFixed(2).replace('.',',');$('e1price').style.color=pr>=96.5?'#3ccf6e':'#ff5a5a';
- let tg='';[[0,'debutto $97,17','start',2.6],[1,'giorno dopo $88,91','end',5.8]].forEach(([f,txt,anc,ta])=>{const a=eo(P(lt,ta,ta+.35));if(a>0){const [x,y]=CH[Math.round(f*(CH.length-1))];
-  tg+=`<g opacity="${a}"><circle cx="${x}" cy="${y}" r="12" fill="#fff"/><text x="${anc==='end'?x:x+24}" y="${anc==='end'?y+52:y-22}" fill="#fff" text-anchor="${anc}">${txt}</text></g>`}});
- $('e1tags').innerHTML=tg;ap($('e1c'),lt,6.0,.4,20);};
-R.e2=lt=>{pop($('e2n'),lt,.05,.4);ap($('e2a'),lt,.7,.4,50);
- const C=2*Math.PI*230;const k79=eio(P(lt,2.9,4.6));const d79=$('d79');d79.style.strokeDasharray=`${C*.79*k79} ${C}`;
- $('dpct').textContent=Math.round(79*k79)+'%';$('donut').style.opacity=eo(P(lt,2.6,3.0));
- const k21=eio(P(lt,6.4,7.3));const d21=$('d21');d21.style.strokeDasharray=`0 ${C*.79} ${C*.21*k21} ${C}`;
- pop($('e2tag'),lt,7.3,.4,8,-2);ap($('e2src'),lt,7.8,.4,10);};
-R.e3=lt=>{pop($('e3n'),lt,.05,.4);ap($('e3a'),lt,.7,.4,50);ap($('e3doc'),lt,2.1,.45,80);
- $('e3hl').style.width=`calc(${eio(P(lt,2.9,4.6))*100}% + 20px)`;
- words($('e3b'),lt,5.2,.09);words($('e3c'),lt,6.6,.09);pop($('e3d'),lt,7.5,.45);};
-R.e4=lt=>{pop($('e4a'),lt,.15,.45);const c=$('e4card');const k=eback(P(lt,.85,1.35));c.style.opacity=cl((lt-.85)*5);c.style.transform=`translateX(-50%) translateY(${(1-k)*200}px) rotate(${(1-k)*6}deg)`;
- ap($('e4t'),lt,3.3,.35,10);ap($('e4s1'),lt,3.6,.4,60);ap($('e4s2'),lt,5.9,.4,60);};
-R.e5=lt=>{words($('e5a'),lt,.15,.09);pop($('e5b'),lt,2.0,.45,-12,-3);
- const sh=lt>2.05&&lt<2.3?Math.sin(lt*150)*8:0;$('e5b').style.transform+=` translate(${sh}px,0)`;
- ap($('e5c'),lt,2.8,.45,60);ap($('e5d'),lt,4.9,.4,20);};
-const MC=['#e2683c','#c94f2a','#f0a088','#f6c9b8','#9a2f1c','#141215','#e9b39f','#d6705a'];
-R.e6=lt=>{const c=$('mos'),g=c.getContext('2d');g.clearRect(0,0,1080,1920);const s=36;
- for(let cx=0;cx<30;cx++){const base=1920-(eo(P(lt,0,1.2))*(560+170*Math.sin(cx*.45+lt*2)+90*Math.sin(cx*1.3)));
-  for(let ry=0;ry<54;ry++){const y=ry*s;if(y<base)continue;const dep=(y-base)/400;const r=rnd(cx*91+ry*7+Math.floor(lt*6)*0.37);
-   if(dep<.5&&r>dep*2)continue;g.fillStyle=MC[Math.floor(rnd(cx*13+ry*31)*MC.length)];g.globalAlpha=Math.min(1,.5+dep);g.fillRect(cx*s+2,y+2,s-4,s-4)}}
- g.globalAlpha=1;pop($('e6a'),lt,.35,.45,-6);words($('e6b'),lt,1.1,.09);pop($('e6c'),lt,1.55,.45);};
+// A
+const TAPE='ANT ▲ $111,50 apertura   ·   IPO $83   ·   NASDAQ   ·   980 MLN AZIONI   ·   81,3 MLD RACCOLTI   ·   ';
+R.A=t=>{const tp=$('tape');if(!tp.textContent)tp.textContent=TAPE.repeat(4);tp.style.transform=`translateX(${-((t*140)%1400)}px)`;tp.style.opacity=.85*eo(P(t,0,.4));
+ words($('Aa'),t,.15,.1);ap($('Ab'),t,Q.Ab,.4,50);ap($('Ac'),t,Q.Ac-.1,.3,0);
+ document.querySelectorAll('#A .ag').forEach((r,i)=>{const k=eo(P(t,Q.Ac+i*.22,Q.Ac+i*.22+.35));r.style.opacity=k;r.style.transform=`translateX(${(1-k)*-50}px)`});};
+// B
+R.B=t=>{ap($('Bk'),t,T.B[0]+.1,.3,10);words($('Ba'),t,T.B[0]+.3);ap($('Bbar'),t,Q.Bbar-.4,.4,40);
+ const k1=eio(P(t,Q.Bbar,Q.Bbar+1.2));$('B79').style.width=(79*k1)+'%';$('B21').style.width=(21*eio(P(t,Q.B21,Q.B21+.7)))+'%';
+ $('Bl1').style.opacity=P(t,Q.Bbar+.8,Q.Bbar+1.2);$('Bl2').style.opacity=P(t,Q.B21+.4,Q.B21+.8);
+ words($('Bc'),t,Q.Bc);const bd=$('Bd');if(!bd.children.length){for(let i=0;i<5;i++)bd.innerHTML+=`<svg width="140" height="170" viewBox="0 0 140 170"><rect x="20" y="30" width="100" height="140" rx="8" fill="#26405f"/>${[0,1,2].map(r=>[0,1].map(c=>`<rect x="${40+c*40}" y="${50+r*36}" width="22" height="22" rx="3" fill="#f3ebde"/>`).join('')).join('')}<text x="70" y="22" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="22" fill="#c94f2a">cliente ${i+1}</text></svg>`}
+ [...bd.children].forEach((c,i)=>{const k=eback(P(t,Q.Bd+i*.18,Q.Bd+i*.18+.4));c.style.opacity=cl(P(t,Q.Bd+i*.18,Q.Bd+i*.18+.1)*1);c.style.transform=`translateY(${(1-k)*80}px)`});
+ pop($('Be'),t,Q.Be,.45);ap($('Bs'),t,Q.Be+.6,.4,10);};
+// C
+R.C=t=>{ap($('Ck'),t,T.C[0]+.1,.3,10);words($('Ca'),t,T.C[0]+.4);ap($('Crev'),t,Q.Crev-.4,.4,60);
+ $('Crn').textContent=fmt(33.2*ex(P(t,Q.Crev,Q.Crev+2.2)),1);pop($('Cx'),t,Q.Cx,.4,0);$('Cx').style.transform=$('Cx').style.transform.replace('translateX(-50%) ','');
+ ap($('Closs'),t,Q.Closs-.3,.4,60);$('Cln').textContent=Math.round(104*ex(P(t,Q.Closs,Q.Closs+1.6)));
+ $('Cacc').style.width=(94/104*100*eio(P(t,Q.Cacc,Q.Cacc+1.2)))+'%';$('Ccash').style.width=(10/104*100*eio(P(t,Q.Cacc+1.1,Q.Cacc+1.6)))+'%';
+ const n=$('Cnote');n.style.opacity=P(t,Q.Cacc+1.4,Q.Cacc+1.8);n.nextElementSibling.style.opacity=P(t,Q.Cacc+1.7,Q.Cacc+2.1);};
+// D: 100-cell grid = 900 bn; 46 cells locked (≈417)
+R.D=t=>{ap($('Dk'),t,T.D[0]+.1,.3,10);ap($('Da'),t,T.D[0]+.4,.4,40);$('Dn').textContent=Math.round(900*ex(P(t,Q.Dn,Q.Dn+2)));
+ const g=$('Dgrid');if(!g.children.length){for(let i=0;i<100;i++){const d=document.createElement('div');const x=i%10,y=Math.floor(i/10);d.style.cssText=`position:absolute;left:${x*78}px;top:${y*52}px;width:70px;height:44px;border-radius:6px;border:3px solid #6b5a4c`;g.appendChild(d)}}
+ [...g.children].forEach((d,i)=>{const k=eo(P(t,Q.Dn+i*.018,Q.Dn+i*.018+.25));d.style.opacity=k;d.style.transform=`scale(${.5+.5*k})`;
+  const locked=i<46;const kl=P(t,Q.Dlock+i*.03,Q.Dlock+i*.03+.2);d.style.background=locked&&kl>0?`rgba(226,104,60,${kl})`:'transparent';d.style.borderColor=locked&&kl>0?'#e2683c':'#6b5a4c'});
+ ap($('Dleg'),t,Q.Dlock+1.2,.4,10);ap($('Dq'),t,Q.Dq-.3,.35,30);typeT($('Dtype'),'tutta la nuova capacità di calcolo può comprimere i margini.',t,Q.Dq,26);};
+// E
+R.E=t=>{ap($('Ek'),t,T.E[0]+.1,.3,10);const ph=$('Ephone');const k=eback(P(t,Q.Ephone,Q.Ephone+.5));ph.style.opacity=cl((t-Q.Ephone)*5);ph.style.transform=`translateX(-50%) translateY(${(1-k)*240}px)`;
+ $('Etoday').style.opacity=P(t,Q.Ephone+1,Q.Ephone+1.3);pop($('Eq'),t,Q.Eq,.4);
+ const m=eio(P(t,Q.Emeter,Q.Emeter+1.8));$('Emeter').style.width=(m*100)+'%';$('Elim').style.opacity=m>=1?(Math.floor(t*4)%2?1:.5):0;
+ ap($('Et'),t,Q.Ecards-.4,.3,10);ap($('Ecards'),t,Q.Ecards-.2,.1,0);
+ [...document.querySelectorAll('#E .ec')].forEach((c,i)=>{const t0=[Q.Ecards,Q.Ec2,Q.Ec3][i];const k=eback(P(t,t0,t0+.45));c.style.opacity=cl((t-t0)*5);c.style.transform=`translateY(${(1-k)*140}px) rotate(${(1-k)*(i-1)*6}deg)`});};
+// F: price staircase
+const FP=[['IPO','83',83],['apertura','111,50',111.5],['chiusura','97,17',97.17],['giorno dopo','88,91',88.91]];
+R.F=t=>{ap($('Fk'),t,T.F[0]+.1,.3,10);const sv=$('Fsteps');const y=v=>470-(v-80)*11;let h='';const xs=[150,410,670,930];
+ h+=`<line x1="90" y1="${y(83)}" x2="990" y2="${y(83)}" stroke="#4a4541" stroke-dasharray="10 10" stroke-width="2"/>`;
+ const cs=[Q.F1,Q.F2,Q.F3,Q.F4];
+ for(let i=1;i<4;i++){const k=eio(P(t,cs[i]-.4,cs[i]));if(k>0){const x0=xs[i-1],y0=y(FP[i-1][2]),x1=x0+(xs[i]-x0)*k,y1=y0+(y(FP[i][2])-y0)*k;
+  h+=`<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="${FP[i][2]>FP[i-1][2]?'#3ccf6e':'#ff5a5a'}" stroke-width="8" stroke-linecap="round"/>`}}
+ FP.forEach(([lab,txt,v],i)=>{const k=eback(P(t,cs[i],cs[i]+.4));if(k<=0)return;const c=i===0?'#f3ebde':(v>FP[i-1][2]?'#3ccf6e':'#ff5a5a');
+  h+=`<g transform="translate(${xs[i]} ${y(v)}) scale(${k})"><circle r="18" fill="${c}"/><text y="-44" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#fff">$${txt}</text><text y="64" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="38" fill="#bdb3a6">${lab}</text></g>`});
+ sv.innerHTML=h;ap($('Flock'),t,Q.Flock,.45,60);
+ const sh=$('Fshack');sh.setAttribute('transform',`translate(0 ${-14*eo(P(t,Q.Flock+4.5,Q.Flock+5))})`);
+ [...document.querySelectorAll('#F .fr')].forEach((r,i)=>{const k=eo(P(t,Q.Flock+.8+i*1.1,Q.Flock+1.2+i*1.1));r.style.opacity=k;r.style.transform=`translateX(${(1-k)*-40}px)`});
+ ap($('Fd'),t,Q.Fd,.4,20);};
+// G
+R.G=t=>{words($('Ga'),t,T.G[0]+.1);const sc=$('scale');sc.style.opacity=eo(P(t,Q.Gscale,Q.Gscale+.4));
+ const tilt=8*eio(P(t,Q.Gscale+.8,Q.Gscale+2.2))+Math.sin(t*3)*.6;$('beam').setAttribute('transform',`rotate(${tilt} 540 116)`);
+ ['panL','panR'].forEach((id,i)=>{const px=i?880:200;$(id).setAttribute('transform',`rotate(${-tilt} ${px} 116)`)});
+ words($('Gb'),t,Q.Gb);const gq=$('Gq');if(!gq.children.length)['T1','T2','T3','T4'].forEach(q=>gq.innerHTML+=`<div class="mono" style="width:150px;padding:14px 0;border-radius:12px;border:3px solid #141215;font-size:34px;font-weight:700;color:#141215;text-align:center">${q}</div>`);
+ [...gq.children].forEach((c,i)=>{const k=P(t,Q.Gb+.8+i*.35,Q.Gb+.95+i*.35);c.style.opacity=.25+.75*k;c.style.background=k>=1?'#141215':'transparent';c.style.color=k>=1?'#f3ebde':'#141215'});
+ pop($('Gc'),t,Q.Gc,.45);};
+// H
+R.H=t=>{const bm=$('Hbm');const k=eio(P(t,Q.Ha-.2,Q.Ha+.4));bm.setAttribute('fill',k>.9?'#e2683c':'none');bm.setAttribute('stroke',k>.9?'#e2683c':'#f3ebde');
+ pop($('Hsave'),t,Q.Ha-.3,.45);pop($('Ha'),t,Q.Ha,.45);ap($('Hc'),t,Q.Htype-.5,.4,40);
+ typeT($('Htype'),'analizza la prossima! 👀',t,Q.Htype,16);words($('Hb'),t,Q.Htype+1.2);};
 
 window.render=function(t){
- S.forEach(([id,a,b])=>{const el=$(id);if(t>=a&&t<b){el.style.display='block';const lt=t-a,d=b-a;
-   const kin=eo(P(lt,0,.18)),kout=P(lt,d-.14,d);const last=id==='e6';
+ SC.forEach(([id,a,b])=>{const el=$(id);if(t>=a&&t<b){el.style.display='block';const lt=t-a,d=b-a;
+   const kin=eo(P(lt,0,.18)),kout=P(lt,d-.14,d);const last=id==='H';
    el.style.filter=`blur(${(1-kin)*16+(last?0:kout*18)}px)`;
    el.style.transform=`scale(${1.06-.06*kin+(last?0:kout*.08)}) translateY(${(last?0:kout*-40)}px)`;
-   R[id](lt);if(last){el.style.opacity=1-P(lt,d-.5,d)}}
+   R[id](t);if(last){el.style.opacity=1-P(lt,d-.5,d)}}
   else el.style.display='none';});
- // series tag: visible on dark/light scenes except CTA
- const tg=$('tag');tg.style.opacity=t<42.9?cl(t*4):1-P(t,42.9,43.2);
+ // chapter progress (sections 01-05 = scenes B..F)
+ const segs=['B','C','D','E','F'];const pr=$('prog');pr.style.opacity=t<T.B[0]-.2||t>T.G[0]?0:1;
+ [...pr.children].forEach((d,i)=>{const [a,b]=T[segs[i]];d.firstChild.style.width=(P(t,a,b)*100)+'%'});
 };
 window.DUR=DUR;
 window.ready=document.fonts.ready.then(()=>{render(0);return true});
