@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121014}
+#c{position:relative;width:1080px;height:1920px;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#221a1a 0%,#121014 65%)}
+.abs{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center}
+.bold{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-3px;line-height:.95}
+.serif{font-family:'Instrument Serif',serif;font-style:italic}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:700}
+/* safe area guide (not rendered): grid crop ~ y 240..1680 */
+.grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+</style></head><body><div id="c">
+ <div class="abs mono" id="tag" style="top:420px;font-size:30px;letter-spacing:5px;color:#f3ebde;background:#e2683c;padding:12px 28px;border-radius:40px"></div>
+ <div class="abs bold" id="t1" style="top:540px;font-size:128px;color:#fff"></div>
+ <div class="abs bold" id="t2" style="top:680px;font-size:112px;color:#e2683c"></div>
+ <svg id="viz" width="1080" height="420" style="position:absolute;left:0;top:860px"></svg>
+ <div class="abs serif" style="top:1330px;font-size:60px;color:#bdb3a6">te lo spiega <span style="color:#e2683c;font-size:76px">Claudio</span></div>
+ <div class="grain"></div>
+</div>
+<script>
+const V={
+ p1:{tag:'PARTE 1 DI 2',t1:'INFLAZIONE<br>AL 5,5%',t2b:'PERCHÉ I PREZZI SALGONO',viz:'thermo'},
+ p2:{tag:'PARTE 2 DI 2',t1:'INFLAZIONE:<br>COME DIFENDERTI',t2b:'STIPENDIO, BOLLETTE, RISPARMI',viz:'receipt'}
+};
+const v=V[new URLSearchParams(location.search).get('v')||'p2'];
+tag.textContent=v.tag;t1.innerHTML=v.t1;
+t1.style.top='500px';t1.style.fontSize=v.viz==='receipt'?'88px':'96px';t2.style.top='770px';t2.style.fontSize=v.viz==='receipt'?'48px':'58px';t2.style.letterSpacing='-1px';t2.textContent=v.t2b;
+let h='';
+if(v.viz==='thermo'){
+ h+=`<rect x="500" y="20" width="80" height="300" rx="40" fill="#2a2428" stroke="#f3ebde" stroke-width="6"/><circle cx="540" cy="350" r="62" fill="#e2683c" stroke="#f3ebde" stroke-width="6"/><rect x="520" y="70" width="40" height="290" rx="20" fill="#e2683c"/>
+  <text x="460" y="120" text-anchor="end" font-family="Archivo Black" font-size="110" fill="#fff">5,5%</text>
+  <g transform="translate(790 230)"><path d="M0 -90 C40 -40 60 -10 46 30 C36 60 -36 60 -46 30 C-60 -10 -20 -40 0 -90 Z" fill="#e2683c"/><path d="M0 -30 C18 -6 24 10 18 26 C12 38 -12 38 -18 26 C-24 10 -6 -6 0 -30 Z" fill="#ffe08a"/></g>
+  <text x="790" y="340" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#f2c14e">ENERGIA +61,6%</text>`;
+}else{
+ h+=`<path d="M340 0 H740 V360 L715 380 L690 360 L665 380 L640 360 L615 380 L590 360 L565 380 L540 360 L515 380 L490 360 L465 380 L440 360 L415 380 L390 360 L365 380 L340 360 Z" fill="#f3ebde"/>
+  <text x="360" y="80" font-family="JetBrains Mono" font-size="26" fill="#5a4a3a">2025</text><text x="710" y="80" text-anchor="end" font-family="Archivo Black" font-size="50" fill="#121014">1.000 €</text>
+  <line x1="510" y1="64" x2="720" y2="64" stroke="#c94f2a" stroke-width="6"/>
+  <text x="360" y="200" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#c94f2a">2026</text><text x="715" y="205" text-anchor="end" font-family="Archivo Black" font-size="56" fill="#c94f2a">1.055 €</text>
+  <text x="540" y="310" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#5a4a3a">stesse cose</text>`;
+}
+viz.innerHTML=h;
+window.ready=document.fonts.ready.then(()=>true);
+</script></body></html>
