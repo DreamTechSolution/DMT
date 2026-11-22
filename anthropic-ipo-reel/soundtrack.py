@@ -3,6 +3,9 @@ import numpy as np, wave, sys
 sr=48000; dur=45.0; n=int(sr*dur); t=np.arange(n)/sr
 cuts=[0.75,2.0,5.0,8.15,13.15,18.45,19.9,29.9,32.55,35.4,40.3]
 pops=[0.8,3.55,6.05,8.5,13.45,15.45,20.15,32.2,37.0,41.65]
+import os as _o, json as _j
+if _o.environ.get('CFG'):
+    _c=_j.loads(_o.environ['CFG']); dur=_c['dur']; n=int(sr*dur); t=np.arange(n)/sr; cuts=_c['cuts']; pops=_c['pops']
 out=np.zeros(n)
 bpm=84; beat=60/bpm
 import os
