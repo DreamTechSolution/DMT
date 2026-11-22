@@ -9,7 +9,8 @@ for arg in sys.argv[3:]:
         'silenceremove=start_periods=1:start_threshold=-45dB,areverse,silenceremove=start_periods=1:start_threshold=-45dB,areverse,atempo=1.12',
         '-ar', '48000', '-ac', '2', os.path.join(vd, f'{k}.wav')], check=True); os.remove(tmp)
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-shutil.copy(os.path.join(root, 'serie01/voce1/I.wav'), os.path.join(vd, 'I.wav'))
+src_i, dst_i = os.path.join(root, 'serie01/voce1/I.wav'), os.path.join(vd, 'I.wav')
+if os.path.abspath(src_i) != os.path.abspath(dst_i): shutil.copy(src_i, dst_i)
 d = {}
 for f in sorted(os.listdir(vd)):
     if f.endswith('.wav'):
