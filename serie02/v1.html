@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · document rain -->
+<div class="scene" id="A" style="background:#0e1630">
+ <canvas id="rain" width="1080" height="1920" style="position:absolute;inset:0"></canvas>
+ <div class="abs mono" id="Ak" style="top:300px;font-size:28px;letter-spacing:5px;color:#8fa3c0">INSIDE DEUTSCHE BANK · 17 NOVEMBRE</div>
+ <div class="abs bold" id="Aa" style="top:380px;font-size:150px;color:#fff"><span id="An">0</span></div>
+ <div class="abs serif" id="Ab" style="top:540px;color:#c9d6ea">documenti interni</div>
+ <div class="abs" id="Ac" style="top:670px"><div class="mono" style="font-size:34px;font-weight:700;color:#0e1630;background:#c9d6ea;padding:12px 24px;border-radius:10px">→ oltre 200 giornalisti</div></div>
+ <div class="abs" id="Ad" style="top:1080px"><div style="display:flex;align-items:center;gap:22px;background:#f3ebde;padding:20px 34px;border-radius:16px">
+  <div style="display:flex;width:84px;height:56px;border-radius:6px;overflow:hidden"><div style="flex:1;background:#2f8f4e"></div><div style="flex:1;background:#fff"></div><div style="flex:1;background:#d23b3b"></div></div>
+  <div class="bold" style="font-size:64px;color:#141215;letter-spacing:-1px">UN FILONE È ITALIANO</div></div></div>
+</div>
+
+<!-- B · ledger with a covered row -->
+<div class="scene" id="B" style="background:#f4f0e8">
+ <div class="abs mono" id="Bk" style="top:290px;font-size:26px;letter-spacing:4px;color:#8a7a6c">FINANCIAL TIMES · FILIALE ITALIANA</div>
+ <div class="abs" id="Bbook" style="top:360px"><div style="width:860px;background:#fffdf8;border:3px solid #141215;border-radius:12px;padding:30px 40px;text-align:left;font-family:'JetBrains Mono';font-size:34px;color:#141215;box-shadow:0 30px 70px rgba(0,0,0,.15)">
+  <div style="font-weight:700;border-bottom:3px solid #141215;padding-bottom:12px;margin-bottom:12px">CONTO ECONOMICO</div>
+  <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed #bbb"><span>Ricavi</span><span>████</span></div>
+  <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed #bbb"><span>Costi</span><span>███</span></div>
+  <div style="position:relative;display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed #bbb;color:#c62828;font-weight:700"><span>Perdite sui mutui</span><span>fino a −800 mln €</span>
+   <div id="Bcover" style="position:absolute;left:-14px;top:2px;bottom:2px;width:0;background:#141215;border-radius:6px"></div></div>
+  <div style="display:flex;justify-content:space-between;padding:12px 0"><span style="font-weight:700">Utile</span><span id="Butile" style="font-weight:700">obiettivo ✓</span></div>
+ </div></div>
+ <div class="abs" id="Btag" style="top:900px"><div class="mono" style="font-size:30px;font-weight:700;background:#ffd34d;color:#141215;padding:12px 22px;border-radius:10px">derivati + contabilità parallela</div></div>
+ <div class="abs bold" id="Bbig" style="top:1020px;font-size:88px;color:#c62828">FINO A 800 MLN €</div>
+ <div class="abs serif" id="Bs" style="top:1150px;font-size:56px;color:#6b5a4c">di perdite nascoste</div>
+</div>
+
+<!-- C · treasure chest + timeline -->
+<div class="scene" id="C" style="background:#1a1412">
+ <div class="abs serif" id="Ca" style="top:300px">la chiamavano</div>
+ <div class="abs bold" id="Cb" style="top:390px;font-size:140px;color:#f2c14e">"TESORETTO"</div>
+ <svg id="chest" width="1080" height="520" style="position:absolute;left:0;top:560px"></svg>
+ <div class="abs" id="Ctl" style="top:1130px"><div style="width:860px;text-align:left">
+  <div style="position:relative;height:24px;background:#3a2e28;border-radius:12px;overflow:hidden"><div id="Cbar" style="height:100%;width:0;background:linear-gradient(90deg,#8a6a2e,#f2c14e)"></div></div>
+  <div style="display:flex;justify-content:space-between;margin-top:14px;font-family:'JetBrains Mono';font-weight:700;font-size:30px;color:#f3ebde"><span>oltre 10 anni…</span><span>→ 2018</span></div></div></div>
+ <div class="abs serif" id="Cs" style="top:1290px;font-size:52px;color:#bdb3a6">per coprire gli obiettivi di utile mancati</div>
+</div>
+
+<!-- D · whistle → folder → stamp -->
+<div class="scene" id="D" style="background:#121014">
+ <div class="abs" id="Dw" style="top:300px"><div style="display:flex;align-items:center;gap:22px;background:#1c1a1f;border:2px solid #3a363d;border-radius:20px;padding:22px 30px">
+  <div style="font-size:64px">📣</div><div style="text-align:left"><div class="mono" style="font-size:26px;color:#e2683c;font-weight:700">2018</div><div class="sans" style="font-size:42px;font-weight:800;color:#fff">segnalazione interna</div></div></div></div>
+ <svg id="Dfold" width="1080" height="560" style="position:absolute;left:0;top:520px">
+  <path d="M190 110 h260 l40 50 h400 v360 a20 20 0 0 1 -20 20 h-660 a20 20 0 0 1 -20 -20 z" fill="#c9a46a"/>
+  <rect x="190" y="170" width="700" height="370" rx="20" fill="#e0bf86"/>
+  <text x="540" y="330" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="#5a4224">INDAGINE INTERNA</text>
+  <text x="540" y="410" text-anchor="middle" font-family="Archivo Black" font-size="62" fill="#3a2a14">PROJECT AETOS</text>
+ </svg>
+ <div class="abs" id="Dst" style="top:1110px"><div class="bold" style="font-size:84px;color:#ff5a5a;border:9px solid #ff5a5a;padding:16px 34px 8px;border-radius:14px;letter-spacing:0">MAI PUBBLICATO</div></div>
+</div>
+
+<!-- E · two counters -->
+<div class="scene" id="E" style="background:#f4f0e8">
+ <div class="abs serif" id="Ea" style="top:300px;color:#26405f">e i responsabili?</div>
+ <div class="abs" id="E1" style="top:420px"><div style="width:840px;background:#fff;border:3px solid #141215;border-radius:24px;padding:30px 40px;text-align:left">
+  <div class="mono" style="font-size:30px;font-weight:700;color:#6b5a4c;letter-spacing:3px">LICENZIAMENTI</div>
+  <div class="bold" style="font-size:180px;color:#141215">0</div></div></div>
+ <div class="abs" id="E2" style="top:830px"><div style="width:840px;background:#141215;border-radius:24px;padding:30px 40px;text-align:left">
+  <div class="mono" style="font-size:30px;font-weight:700;color:#f2c14e;letter-spacing:3px">BUONUSCITE A ALCUNI DIRIGENTI</div>
+  <div class="bold" style="font-size:120px;color:#fff;letter-spacing:-2px">A 7 CIFRE</div>
+  <div class="mono" style="font-size:25px;color:#bdb3a6">= da 1.000.000 € in su · documenti interni (FT)</div></div></div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#0e1630">
+ <div class="abs bold" id="Ha" style="top:620px;font-size:120px;color:#fff;line-height:1">E I TUOI<br><span style="color:#f2c14e">SOLDI?</span></div>
+ <div class="abs bold" id="Hb" style="top:960px;font-size:64px;color:#0e1630;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+R.A=(t,d)=>{const c=$('rain'),g=c.getContext('2d');g.clearRect(0,0,1080,1920);
+ for(let i=0;i<140;i++){const sp=180+rnd(i)*220,x=rnd(i*7)*1080,y=((t*sp+rnd(i*3)*2400)%2400)-300,r=(rnd(i*5)-.5)*0.8+t*(rnd(i*9)-.5);
+  g.save();g.translate(x,y);g.rotate(r);g.globalAlpha=.18+.25*rnd(i*11);g.fillStyle='#c9d6ea';g.fillRect(-28,-38,56,76);g.fillStyle='#0e1630';for(let l=0;l<4;l++)g.fillRect(-20,-26+l*14,40-(l%2)*12,4);g.restore()}
+ ap($('Ak'),t,.1,.3,10);pop($('Aa'),t,.25,.4);$('An').textContent=fmt(15000000*ex(P(t,.3,2.6)));words($('Ab'),t,1.2);
+ pop($('Ac'),t,2.8,.4,-4,0);pop($('Ad'),t,5.2,.45,-6,-1.5);};
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);ap($('Bbook'),t,.25,.45,50);ap($('Btag'),t,3.0,.4,20);
+ $('Bcover').style.width=(eio(P(t,4.2,5.0))*(100))+'%';$('Bcover').style.width=`calc(${eio(P(t,4.2,5.0))*100}% + 28px)`;
+ pop($('Bbig'),t,6.0,.45);ap($('Bs'),t,6.6,.4,20);};
+R.C=(t,d)=>{words($('Ca'),t,.2);pop($('Cb'),t,.6,.45,-4);const sv=$('chest');const o=eio(P(t,1.3,2.1));let h='';
+ for(let i=0;i<26;i++){const k=eo(P(t,1.6+i*.05,2.4+i*.05));if(k<=0)continue;const ang=-Math.PI/2+(rnd(i)-.5)*1.6;const r=k*(120+rnd(i*3)*160);
+  h+=`<circle cx="${540+Math.cos(ang)*r}" cy="${250+Math.sin(ang)*r*0.8+k*k*60}" r="${14+rnd(i*5)*8}" fill="#f2c14e" stroke="#a7791e" stroke-width="3" opacity="${1-k*.3}"/>`}
+ h+=`<rect x="330" y="250" width="420" height="230" rx="18" fill="#7a4a24"/><rect x="330" y="330" width="420" height="20" fill="#5a3418"/><rect x="510" y="300" width="60" height="80" rx="8" fill="#f2c14e"/>
+  <g transform="rotate(${-o*28} 330 250)"><path d="M330 250 v-60 a210 90 0 0 1 420 0 v60 z" fill="#8a5a2c"/></g>`;
+ sv.innerHTML=h;ap($('Ctl'),t,3.6,.4,20);$('Cbar').style.width=(eio(P(t,4.0,6.4))*100)+'%';ap($('Cs'),t,1.8,.4,20);};
+R.D=(t,d)=>{pop($('Dw'),t,.3,.45,-5,0);const f=$('Dfold');const k=eback(P(t,3.0,3.6));f.style.opacity=cl((t-3)*4);f.style.transform=`translateY(${(1-k)*200}px)`;
+ pop($('Dst'),t,7.3,.45,-14,-4);const sh=t>7.35&&t<7.6?Math.sin(t*150)*8:0;$('Dst').style.transform+=` translate(${sh}px,0)`;};
+R.E=(t,d)=>{words($('Ea'),t,.2);pop($('E1'),t,1.3,.45,-4,0);pop($('E2'),t,3.2,.45,4,0);};
+R.H=(t,d)=>{ap($('Ha'),t,.2,.45,40);pop($('Hb'),t,2.6,.4,-6,-2);};
+</script></body></html>

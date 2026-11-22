@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · the bank's statement -->
+<div class="scene" id="A" style="background:#0e1630">
+ <div class="abs serif" id="Aa" style="top:300px;color:#c9d6ea">la versione della banca</div>
+ <div class="abs" id="Acard" style="top:410px"><div style="width:860px;background:#f3ebde;border-radius:20px;padding:34px 40px;text-align:left">
+  <div class="mono" style="font-size:26px;color:#6b5a4c;letter-spacing:3px">DEUTSCHE BANK · DICHIARAZIONE</div>
+  <div id="Alist" class="sans" style="margin-top:18px;font-size:42px;font-weight:800;color:#141215;line-height:1.9"></div></div></div>
+</div>
+
+<!-- B · supervisor sees, market doesn't -->
+<div class="scene" id="B" style="background:#121014">
+ <div class="abs bold" id="Ba" style="top:300px;font-size:90px;color:#fff">IL PUNTO</div>
+ <div id="Bl" style="position:absolute;left:70px;top:450px;width:450px;height:560px;border-radius:26px;background:#14223a;border:3px solid #3a4a62;text-align:center">
+  <div style="font-size:150px;margin-top:70px">👁️</div><div class="bold" style="font-size:54px;color:#fff;margin-top:30px;letter-spacing:-1px">VIGILANZA</div>
+  <div class="serif" style="font-size:50px;color:#8fd0a0">poteva sapere</div></div>
+ <div id="Br" style="position:absolute;left:560px;top:450px;width:450px;height:560px;border-radius:26px;background:#2a1a1a;border:3px solid #5a3030;text-align:center;overflow:hidden">
+  <div style="font-size:150px;margin-top:70px">🙈</div><div class="bold" style="font-size:54px;color:#fff;margin-top:30px;letter-spacing:-1px">MERCATO</div>
+  <div class="serif" style="font-size:50px;color:#ff8a7a">no</div>
+  <div id="Bcurt" style="position:absolute;left:0;top:0;width:100%;height:0;background:repeating-linear-gradient(90deg,#5a1e1e 0 30px,#4a1616 30px 60px)"></div></div>
+ <div class="abs" id="Bn" style="top:1080px"><div style="width:860px;background:#ffd34d;border-radius:14px;padding:20px 28px;text-align:left">
+  <div class="sans" style="font-size:36px;font-weight:800;color:#141215;white-space:normal">impatto "non rilevante" per il gruppo → nessuna comunicazione al mercato</div></div></div>
+</div>
+
+<!-- C · capital injection Frankfurt → Milan -->
+<div class="scene" id="C" style="background:#f4f0e8">
+ <div class="abs mono" id="Ck" style="top:300px;font-size:28px;letter-spacing:4px;color:#8a7a6c">2018 – 2023 · BILANCIO 2023</div>
+ <svg id="Cmap" width="1080" height="800" style="position:absolute;left:0;top:380px"></svg>
+ <div class="abs bold" id="Cb" style="top:1180px;font-size:120px;color:#26405f">1 MILIARDO €</div>
+ <div class="abs serif" id="Cs" style="top:1320px;font-size:54px;color:#6b5a4c">di capitale fresco alla filiale italiana</div>
+</div>
+
+<!-- D · how a hidden reserve smooths profits -->
+<div class="scene" id="D" style="background:#121014">
+ <div class="abs bold" id="Da" style="top:290px;font-size:70px;color:#fff;line-height:1">COME FUNZIONA<br><span style="color:#f2c14e">UNA RISERVA NASCOSTA</span></div>
+ <svg id="Dc" width="1080" height="720" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs" id="Dleg" style="top:1260px;display:flex;gap:40px;font-family:Inter,sans-serif;font-weight:700;font-size:32px;color:#f3ebde">
+  <span><span style="display:inline-block;width:40px;border-top:6px dashed #ff8a7a;vertical-align:middle;margin-right:10px"></span>utile reale</span>
+  <span><span style="display:inline-block;width:40px;border-top:6px solid #3ccf6e;vertical-align:middle;margin-right:10px"></span>utile mostrato</span></div>
+</div>
+
+<!-- E · deposit guarantee -->
+<div class="scene" id="E" style="background:#0e1630">
+ <div class="abs bold" id="Ea" style="top:300px;font-size:100px;color:#fff">E I TUOI SOLDI?</div>
+ <div class="abs" id="Eok" style="top:450px"><div class="sans" style="font-size:38px;font-weight:700;color:#8fd0a0">✓ nessun segnale di problemi di solidità</div></div>
+ <svg id="Esafe" width="1080" height="560" style="position:absolute;left:0;top:540px">
+  <rect x="290" y="40" width="500" height="460" rx="40" fill="#26405f" stroke="#c9d6ea" stroke-width="8"/>
+  <rect x="340" y="90" width="400" height="360" rx="26" fill="#1b2f4c"/>
+  <g id="Edial"><circle cx="540" cy="270" r="90" fill="#c9d6ea"/><circle cx="540" cy="270" r="60" fill="#26405f"/><rect x="532" y="170" width="16" height="50" rx="6" fill="#26405f"/></g>
+ </svg>
+ <div class="abs bold" id="Eb" style="top:1110px;font-size:110px;color:#f2c14e">100.000 €</div>
+ <div class="abs serif" id="Es" style="top:1240px;font-size:54px;color:#c9d6ea">garantiti per banca e per cliente, in Europa</div>
+</div>
+
+<!-- F · three folders + stock -->
+<div class="scene" id="F" style="background:#1a1412">
+ <div class="abs serif" id="Fa" style="top:290px">il resto dell'inchiesta</div>
+ <div id="Ff" style="position:absolute;left:90px;top:390px;width:900px"></div>
+ <div class="abs" id="Fs" style="top:1180px"><div style="display:flex;align-items:center;gap:26px"><div class="mono" style="font-size:32px;font-weight:700;color:#bdb3a6">TITOLO · 17/11</div><div class="bold" style="font-size:130px;color:#ff5a5a">−6%</div></div></div>
+</div>
+
+<!-- G · legal costs counter -->
+<div class="scene" id="G" style="background:#121014">
+ <div class="abs mono" id="Gk" style="top:330px;font-size:28px;letter-spacing:4px;color:#8a8590">COSTI LEGALI PER SCANDALI · DAL 2012</div>
+ <div class="abs bold" id="Gb" style="top:420px;font-size:170px;color:#fff"><span id="Gn">0</span> MLD €</div>
+ <div id="Gtape" class="mono" style="position:absolute;top:900px;left:0;white-space:nowrap;font-size:56px;font-weight:700;color:#121014;background:#f2c14e;padding:18px 0;transform:rotate(-4deg)"></div>
+</div>
+
+<!-- H · save + comment -->
+<div class="scene" id="H" style="background:#0e1630">
+ <div class="abs" id="Hs" style="top:400px"><svg width="200" height="240" viewBox="0 0 200 240"><path id="Hbm" d="M30 20 h140 v200 l-70 -50 l-70 50 z" stroke="#f3ebde" stroke-width="12" fill="none" stroke-linejoin="round"/></svg></div>
+ <div class="abs bold" id="Ha" style="top:690px;font-size:120px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hc" style="top:880px"><div style="width:860px;background:#14223a;border:2px solid #3a4a62;border-radius:30px;padding:28px 34px;text-align:left;display:flex;gap:22px">
+  <div style="width:76px;height:76px;border-radius:38px;background:linear-gradient(135deg,#f2c14e,#a7791e);flex:none"></div>
+  <div><div class="sans" style="font-size:30px;font-weight:700;color:#fff">tu <span style="font-weight:400;color:#8fa3c0">· adesso</span></div>
+  <div class="sans" id="Ht" style="font-size:40px;color:#f3ebde;margin-top:6px;min-height:52px"></div></div></div></div>
+ <div class="abs serif" id="Hb" style="top:1110px;font-size:62px;color:#c9d6ea">quale banca analizzo dopo?</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+const CHK=[['fatti vecchi',1.6],['vigilanza informata',3.0],['bilanci da non correggere',4.6]];
+R.A=(t,d)=>{words($('Aa'),t,.15);ap($('Acard'),t,.4,.45,50);
+ $('Alist').innerHTML=CHK.map(([s,t0])=>{const k=eo(P(t,t0,t0+.35));return `<div style="opacity:${k};transform:translateX(${(1-k)*-40}px)"><span style="color:#2f8f4e">✓</span> ${s}</div>`}).join('');};
+R.B=(t,d)=>{pop($('Ba'),t,.2,.4);const a=eback(P(t,.9,1.4)),b=eback(P(t,2.4,2.9));
+ $('Bl').style.opacity=cl((t-.9)*5);$('Bl').style.transform=`translateY(${(1-a)*120}px)`;$('Br').style.opacity=cl((t-2.4)*5);$('Br').style.transform=`translateY(${(1-b)*120}px)`;
+ $('Bcurt').style.height=(eio(P(t,3.0,3.8))*38)+'%';pop($('Bn'),t,4.3,.45,-3,0);};
+R.C=(t,d)=>{ap($('Ck'),t,.2,.3,10);const sv=$('Cmap');const k=eio(P(t,1.6,4.6));let h='';
+ const A=[760,180],B=[330,600];
+ h+=`<path d="M${A[0]} ${A[1]} Q 760 520 ${B[0]} ${B[1]}" stroke="#bdb3a6" stroke-width="5" stroke-dasharray="14 12" fill="none"/>`;
+ [[A,'FRANCOFORTE','casa madre'],[B,'MILANO','filiale italiana']].forEach(([[x,y],n,s],i)=>{h+=`<circle cx="${x}" cy="${y}" r="22" fill="${i?'#c62828':'#26405f'}"/>
+  <text x="${x}" y="${y-44}" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">${n}</text><text x="${x}" y="${y+66}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="38" fill="#6b5a4c">${s}</text>`});
+ for(let i=0;i<6;i++){const u=cl(k*1.25-i*.05);if(u<=0||u>=1)continue;const x=(1-u)*(1-u)*A[0]+2*(1-u)*u*760+u*u*B[0],y=(1-u)*(1-u)*A[1]+2*(1-u)*u*520+u*u*B[1];
+  h+=`<g transform="translate(${x} ${y})"><circle r="30" fill="#f2c14e" stroke="#a7791e" stroke-width="4"/><text y="11" text-anchor="middle" font-family="Archivo Black" font-size="30" fill="#7a5a14">€</text></g>`}
+ sv.innerHTML=h;pop($('Cb'),t,3.4,.45);ap($('Cs'),t,4.0,.4,20);};
+// real profit (zigzag) vs shown profit (flat), jar level in sync
+const YR=[ .9, .3, 1.0, .2, .8, .1, .7];
+R.D=(t,d)=>{ap($('Da'),t,.2,.4,30);const sv=$('Dc');const n=YR.length,k=P(t,1.5,8.5),m=k*(n-1);let h='';const X=i=>130+i*(560/(n-1)),Y=v=>520-v*380;
+ h+=`<line x1="110" y1="520" x2="720" y2="520" stroke="#4a4541" stroke-width="3"/>`;
+ let dr='',ds='',jar=.3;for(let i=0;i<n&&i<=m+1e-6;i++){dr+=(i?'L':'M')+X(i)+','+Y(YR[i]);ds+=(i?'L':'M')+X(i)+','+Y(.55);}
+ const fi=Math.floor(m),fr=m-fi;if(fi<n-1&&fr>0){const v=YR[fi]+(YR[fi+1]-YR[fi])*fr;dr+='L'+(X(fi)+(X(fi+1)-X(fi))*fr)+','+Y(v);ds+='L'+(X(fi)+(X(fi+1)-X(fi))*fr)+','+Y(.55);}
+ for(let i=0;i<=Math.min(m,n-1);i++)jar+=(YR[i]-.55)*0.35;const cur=YR[Math.min(n-1,Math.round(m))];
+ h+=`<path d="${dr}" stroke="#ff8a7a" stroke-width="7" stroke-dasharray="14 10" fill="none"/><path d="${ds}" stroke="#3ccf6e" stroke-width="9" fill="none"/>`;
+ const lvl=cl(jar);h+=`<g transform="translate(860 160)"><rect x="-90" y="0" width="180" height="360" rx="30" fill="none" stroke="#f3ebde" stroke-width="8"/>
+  <rect x="-80" y="${350-lvl*340}" width="160" height="${lvl*340}" rx="22" fill="#f2c14e"/>
+  <text y="420" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde">RISERVA</text>
+  <text y="-30" text-anchor="middle" font-family="Archivo Black" font-size="34" fill="${cur>.55?'#3ccf6e':'#ff8a7a'}">${k>0&&k<1?(cur>.55?'+ METTI DA PARTE':'− COPRI'):''}</text></g>`;
+ sv.innerHTML=h;ap($('Dleg'),t,8.6,.4,10);};
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);ap($('Eok'),t,1.4,.4,10);$('Esafe').style.opacity=P(t,.8,1.2);
+ $('Edial').setAttribute('transform',`rotate(${eio(P(t,1.2,3.2))*270} 540 270)`);pop($('Eb'),t,4.2,.45);ap($('Es'),t,4.9,.4,20);};
+const FOL=[['EPSTEIN','582 mln $ di operazioni segnalate come sospette',.4],['TRUMP','dati fiscali inviati per errore (2017)',6.6],['RUSSIA','affari con oligarchi fino al 2022',9.4]];
+R.F=(t,d)=>{words($('Fa'),t,.1);$('Ff').innerHTML=FOL.map(([a,b,t0],i)=>{const k=eback(P(t,t0,t0+.5));return `<div style="position:relative;margin-bottom:30px;opacity:${cl((t-t0)*4)};transform:translateX(${(1-k)*700}px) rotate(${(i-1)*1.2}deg)">
+  <div style="width:240px;height:40px;background:#c9a46a;border-radius:12px 12px 0 0"></div>
+  <div style="background:#e0bf86;border-radius:0 16px 16px 16px;padding:26px 30px;text-align:left"><div class="bold" style="font-size:60px;color:#3a2a14;letter-spacing:-1px">${a}</div>
+  <div class="sans" style="font-size:32px;font-weight:700;color:#5a4224;margin-top:6px">${b}</div></div></div>`}).join('');
+ pop($('Fs'),t,13.0,.45);};
+R.G=(t,d)=>{ap($('Gk'),t,.2,.3,10);pop($('Gb'),t,.4,.4);$('Gn').textContent=fmt(18.6*ex(P(t,.5,3.4)),1);
+ const tp=$('Gtape');if(!tp.textContent)tp.textContent='  NUOVE PUNTATE IN ARRIVO  ·  '.repeat(6);tp.style.opacity=P(t,5.4,5.8);tp.style.transform=`rotate(-4deg) translateX(${-((t*160)%900)}px)`;};
+R.H=(t,d)=>{const bm=$('Hbm');const k=P(t,.2,.6);bm.setAttribute('fill',k>.9?'#f2c14e':'none');bm.setAttribute('stroke',k>.9?'#f2c14e':'#f3ebde');
+ pop($('Hs'),t,.05,.4);pop($('Ha'),t,.25,.4);ap($('Hc'),t,1.0,.4,40);typeT($('Ht'),'analizza…',t,1.4,10);words($('Hb'),t,2.0);};
+</script></body></html>
