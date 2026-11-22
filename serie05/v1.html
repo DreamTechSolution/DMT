@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · thermometer -->
+<div class="scene" id="A" style="background:#121014">
+ <div class="abs mono" id="Ak" style="top:300px;font-size:28px;letter-spacing:4px;color:#bdb3a6">ITALIA · PREZZI AL CONSUMO · OTTOBRE</div>
+ <svg id="At" width="1080" height="900" style="position:absolute;left:0;top:380px"></svg>
+ <div class="abs mono" id="As" style="top:1320px;font-size:24px;color:#8a8590">Fonte: Istat, dato definitivo 17/11/2026 (indice NIC)</div>
+</div>
+
+<!-- B · bulb + flame -->
+<div class="scene" id="B" style="background:#0d1022">
+ <div class="abs" id="Bs" style="top:300px;display:flex;gap:26px;align-items:center">
+  <div class="mono" style="font-size:34px;color:#8fa3c0;font-weight:700">SET <span style="color:#fff">4,2%</span></div>
+  <div class="mono" style="font-size:40px;color:#e2683c">→</div>
+  <div class="mono" style="font-size:34px;color:#8fa3c0;font-weight:700">OTT <span style="color:#e2683c">5,5%</span></div></div>
+ <svg id="Bb" width="1080" height="720" style="position:absolute;left:0;top:380px"></svg>
+ <div class="abs mono" id="Bl" style="top:1110px;font-size:32px;letter-spacing:3px;color:#c9d6ea">LUCE E GAS A PREZZO REGOLATO</div>
+ <div class="abs bold" id="Bn" style="top:1170px;font-size:150px;color:#f2c14e">+61,6%</div>
+ <div class="abs serif" id="Bc" style="top:1330px;font-size:44px;color:#8fa3c0">in un anno · Istat</div>
+</div>
+
+<!-- C · balance -->
+<div class="scene" id="C" style="background:#f4f0e8">
+ <div class="abs bold" id="Ca" style="top:290px;font-size:80px;color:#141215;line-height:1">IL PROBLEMA È<br><span style="color:#c94f2a">CONCENTRATO</span></div>
+ <svg id="Cs" width="1080" height="760" style="position:absolute;left:0;top:470px"></svg>
+ <div class="abs" id="Cc" style="top:1280px;display:flex;gap:18px"></div>
+</div>
+
+<!-- D · pipeline + gauge -->
+<div class="scene" id="D" style="background:#071410">
+ <div class="abs mono" id="Dk" style="top:300px;font-size:28px;letter-spacing:3px;color:#8fc0a8">GUERRA CON L'IRAN · DA FINE FEBBRAIO</div>
+ <div class="abs bold" id="Da" style="top:360px;font-size:76px;color:#fff">PETROLIO E GAS ↑</div>
+ <svg id="Dg" width="1080" height="820" style="position:absolute;left:0;top:470px"></svg>
+ <div class="abs mono" id="Ds" style="top:1330px;font-size:24px;color:#6f9a86">Gas TTF Amsterdam, €/MWh · Teleborsa, Soldionline</div>
+</div>
+
+<!-- E · euro area vs Italy -->
+<div class="scene" id="E" style="background:#121014">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:84px;color:#fff">E IN EUROPA?</div>
+ <svg id="Ec" width="1080" height="880" style="position:absolute;left:0;top:400px"></svg>
+ <div class="abs mono" id="Es" style="top:1320px;font-size:22px;color:#8a8590">Indice armonizzato (IPCA/HICP) · Eurostat 18/11, Istat 17/11/2026</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#121014">
+ <div class="abs bold" id="Ha" style="top:560px;font-size:118px;color:#fff;line-height:1">E IL TUO<br><span style="color:#e2683c">STIPENDIO?</span></div>
+ <div class="abs serif" id="Hc" style="top:840px;font-size:60px;color:#bdb3a6">e i tuoi risparmi</div>
+ <div class="abs bold" id="Hb" style="top:1000px;font-size:64px;color:#121014;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// A: thermometer 0..6%
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);ap($('As'),t,6.6,.4,10);
+ const top=60,bot=640,Y=v=>bot-(v/6)*(bot-top);
+ const k1=eio(P(t,1.4,4.4)),k2=eio(P(t,8.9,9.8));const v=5.4*k1+0.1*k2;
+ let h=`<rect x="440" y="${top-30}" width="90" height="${bot-top+60}" rx="45" fill="#2a2428" stroke="#f3ebde" stroke-width="6"/>
+ <circle cx="485" cy="${bot+70}" r="80" fill="#e2683c" stroke="#f3ebde" stroke-width="6"/>
+ <rect x="462" y="${Y(v)}" width="46" height="${bot-Y(v)+40}" rx="23" fill="#e2683c"/>`;
+ for(let i=0;i<=6;i++){h+=`<line x1="530" y1="${Y(i)}" x2="${i%1?550:570}" y2="${Y(i)}" stroke="#bdb3a6" stroke-width="4"/><text x="584" y="${Y(i)+10}" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#8a8590">${i}%</text>`}
+ h+=`<text x="410" y="${Y(v)+30}" text-anchor="end" font-family="Archivo Black" font-size="${120}" fill="#fff">${fmt(v,1)}%</text>`;
+ // stamp
+ const ks=eback(P(t,6.2,6.7));if(ks>0)h+=`<g transform="translate(800 ${Y(5.5)+10}) rotate(-10) scale(${ks})"><rect x="-150" y="-50" width="300" height="100" rx="12" fill="none" stroke="#3ccf6e" stroke-width="6"/><text y="16" text-anchor="middle" font-family="Archivo Black" font-size="40" fill="#3ccf6e">DEFINITIVO</text></g>`;
+ const kp=P(t,8.1,8.5);if(kp>0)h+=`<g opacity="${kp}"><text x="800" y="${Y(5.5)+120}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="42" fill="#bdb3a6">prima stima: 5,4%</text></g>`;
+ $('At').innerHTML=h;};
+// B: bulb with flame inside
+R.B=(t,d)=>{pop($('Bs'),t,.2,.4);const k=P(t,3.6,4.4),g=eo(k);
+ let h=`<g transform="translate(540 330)">`;
+ for(let i=0;i<12;i++){const a=i*Math.PI/6,r1=230,r2=230+60*g;h+=`<line x1="${Math.cos(a)*r1}" y1="${Math.sin(a)*r1-40}" x2="${Math.cos(a)*r2}" y2="${Math.sin(a)*r2-40}" stroke="#f2c14e" stroke-width="10" stroke-linecap="round" opacity="${g}"/>`}
+ h+=`<circle cy="-40" r="${200}" fill="#f2c14e" opacity="${.12*g}"/>
+ <path d="M-120 60 C-200 -20 -170 -220 0 -230 C170 -220 200 -20 120 60 L90 150 H-90 Z" fill="${g>0?'#3a3220':'#1c2238'}" stroke="#f3ebde" stroke-width="8"/>
+ <rect x="-90" y="160" width="180" height="30" rx="8" fill="#8fa3c0"/><rect x="-80" y="200" width="160" height="30" rx="8" fill="#8fa3c0"/><rect x="-50" y="240" width="100" height="24" rx="10" fill="#5a6a82"/>`;
+ const fl=1+.06*Math.sin(t*14);h+=`<g transform="translate(0 20) scale(${g*fl} ${g*(2-fl)})"><path d="M0 -170 C60 -100 90 -50 70 10 C55 55 -55 55 -70 10 C-90 -50 -30 -80 0 -170 Z" fill="#e2683c"/><path d="M0 -80 C30 -40 40 -10 30 15 C20 35 -20 35 -30 15 C-40 -10 -10 -30 0 -80 Z" fill="#ffe08a"/></g></g>`;
+ $('Bb').innerHTML=h;ap($('Bl'),t,4.6,.35,20);pop($('Bn'),t,6.9,.45);ap($('Bc'),t,8.6,.4,10);};
+// C: balance scale
+const CHIPS=[['💡','bollette',7.3],['⛽','carburanti',7.9],['🥬','cibo fresco',8.6]];
+R.C=(t,d)=>{ap($('Ca'),t,5.1,.4,30);const a=-14*eio(P(t,2.2,3.6))+0;let h='';
+ const cx=540,cy=120;h+=`<path d="M${cx-90} 600 H${cx+90} L${cx+20} 540 V${cy} H${cx-20} V540 Z" fill="#141215"/><circle cx="${cx}" cy="${cy}" r="22" fill="#c94f2a"/>`;
+ h+=`<g transform="translate(${cx} ${cy}) rotate(${-a})"><rect x="-360" y="-8" width="720" height="16" rx="8" fill="#141215"/>`;
+ [[-340,'DI FONDO','2,0%','#26405f',.6],[340,'BENI ENERGETICI','+31,9%','#c94f2a',1.6]].forEach(([x,l,v,c,t0])=>{const k=eo(P(t,t0,t0+.5));
+  h+=`<g transform="translate(${x} 0) rotate(${a})"><line x1="-120" y1="230" x2="0" y2="0" stroke="#141215" stroke-width="4"/><line x1="120" y1="230" x2="0" y2="0" stroke="#141215" stroke-width="4"/>
+  <path d="M-150 230 H150 Q120 290 0 290 Q-120 290 -150 230 Z" fill="#141215"/>
+  <g opacity="${k}"><text y="345" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="${c}">${l}</text><text y="420" text-anchor="middle" font-family="Archivo Black" font-size="66" fill="${c}">${v}</text><rect x="-${v.length>5?70:45}" y="${v.length>5?120:170}" width="${v.length>5?140:90}" height="${v.length>5?110:60}" rx="12" fill="${c}"/></g></g>`});
+ h+=`</g>`;$('Cs').innerHTML=h;
+ $('Cc').innerHTML=CHIPS.map(([e,l,t0])=>{const k=eback(P(t,t0,t0+.4));return `<div style="opacity:${cl((t-t0)*4)};transform:scale(${.3+.7*k});background:#141215;color:#f3ebde;border-radius:40px;padding:14px 26px;font:800 34px Inter,sans-serif">${e} ${l}</div>`}).join('');};
+// D: pipeline + gauge 0..120 €/MWh
+R.D=(t,d)=>{ap($('Dk'),t,.6,.35,10);pop($('Da'),t,3.4,.45);ap($('Ds'),t,9.5,.4,10);
+ const cx=540,cy=360,R0=260,ang=v=>Math.PI*(1+v/120);
+ const v=eio(P(t,5.2,7.6))*100-eio(P(t,9.6,11.4))*15;
+ let h=`<rect x="0" y="${cy+200}" width="1080" height="70" fill="#1d3a2f"/><rect x="0" y="${cy+200}" width="1080" height="14" fill="#2d5a47"/>`;
+ for(let x=-((t*120)%180);x<1080;x+=180)h+=`<rect x="${x}" y="${cy+190}" width="24" height="90" rx="6" fill="#2d5a47"/>`;
+ h+=`<rect x="${cx-20}" y="${cy+20}" width="40" height="140" fill="#2d5a47"/><circle cx="${cx}" cy="${cy}" r="${R0+30}" fill="#0f241c" stroke="#8fc0a8" stroke-width="8"/>`;
+ // danger arc 90-120
+ const arc=(a0,a1,c)=>`<path d="M${cx+Math.cos(ang(a0))*R0} ${cy+Math.sin(ang(a0))*R0} A${R0} ${R0} 0 0 1 ${cx+Math.cos(ang(a1))*R0} ${cy+Math.sin(ang(a1))*R0}" stroke="${c}" stroke-width="26" fill="none"/>`;
+ h+=arc(0,60,'#2d5a47')+arc(60,90,'#c9a53a')+arc(90,120,'#c94f2a');
+ for(let i=0;i<=120;i+=20){const a=ang(i);h+=`<text x="${cx+Math.cos(a)*(R0-62)}" y="${cy+Math.sin(a)*(R0-62)+10}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#8fc0a8">${i}</text>`}
+ const a=ang(v);h+=`<line x1="${cx}" y1="${cy}" x2="${cx+Math.cos(a)*(R0-20)}" y2="${cy+Math.sin(a)*(R0-20)}" stroke="#f3ebde" stroke-width="12" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="26" fill="#f3ebde"/>`;
+ h+=`<text x="${cx}" y="${cy+110}" text-anchor="middle" font-family="Archivo Black" font-size="64" fill="#fff">${t<9.4?'~':'~'}${fmt(v)} €</text>`;
+ const lb=t<9.4?'OTTOBRE · MASSIMI':'METÀ NOVEMBRE';h+=`<text x="${cx}" y="${cy+400}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="${t<9.4?'#ff8a6a':'#c9a53a'}" opacity="${P(t,5.4,5.8)}">${lb}</text>`;
+ if(t>12)h+=`<text x="${cx}" y="${cy+450}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#bfe0d0" opacity="${P(t,12.1,12.5)}">ma resta caro</text>`;
+ $('Dg').innerHTML=h;};
+// E: two columns
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);ap($('Es'),t,6.5,.4,10);const base=760,sc=120;let h=`<line x1="140" y1="${base}" x2="940" y2="${base}" stroke="#f3ebde" stroke-width="5"/>`;
+ h+=`<line x1="140" y1="${base-2*sc}" x2="990" y2="${base-2*sc}" stroke="#3ccf6e" stroke-width="3" stroke-dasharray="14 10"/><text x="990" y="${base-2*sc-40}" text-anchor="end" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#3ccf6e">OBIETTIVO</text><text x="990" y="${base-2*sc-12}" text-anchor="end" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#3ccf6e">BCE 2%</text>`;
+ [['AREA EURO',4.0,'#8fa3c0',1.6,300],['ITALIA',5.6,'#e2683c',8.0,700]].forEach(([l,v,c,t0,x])=>{const k=eio(P(t,t0,t0+1));const hh=v*sc*k;
+  h+=`<rect x="${x-120}" y="${base-hh}" width="240" height="${hh}" rx="14" fill="${c}"/>
+  <text x="${x}" y="${base+56}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="#f3ebde">${l}</text>
+  <text x="${x}" y="${base-hh-26}" text-anchor="middle" font-family="Archivo Black" font-size="84" fill="${c}" opacity="${P(t,t0+.7,t0+1)}">${fmt(v,1)}%</text>`});
+ h+=`<text x="300" y="${base+110}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#bdb3a6" opacity="${P(t,4.4,4.8)}">il più alto da 3 anni</text>`;
+ $('Ec').innerHTML=h;};
+R.H=(t,d)=>{pop($('Ha'),t,.2,.45);ap($('Hc'),t,2.4,.4,20);pop($('Hb'),t,3.4,.4,-6,-2);};
+</script></body></html>

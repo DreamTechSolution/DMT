@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+<style>
+.card{width:900px;border-radius:26px;padding:26px 36px;text-align:left}
+.lab{font-family:'JetBrains Mono';font-weight:700;font-size:26px;letter-spacing:3px}
+.row{display:flex;align-items:baseline;gap:18px}
+</style>
+</head><body><div id="stage">
+
+<!-- A-D · partner map (shared, growing) -->
+<div class="scene" id="A" style="background:#0d1022">
+ <div class="abs mono" id="Ak" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">LA MAPPA · 1/4</div>
+ <svg id="Am" width="1080" height="640" style="position:absolute;left:0;top:350px"></svg>
+ <div class="abs" id="Ac" style="top:1010px"><div class="card" style="background:#2a1414;border:3px solid #ff6b5a">
+  <div class="lab" style="color:#ff9f94">ORACLE · POTENZA DI CALCOLO</div>
+  <div class="row"><div class="bold" id="Ac1" style="font-size:130px;color:#fff">~300</div><div class="bold" style="font-size:60px;color:#ff9f94">MLD $</div></div>
+  <div class="row" style="gap:16px;margin-top:8px">
+   <div id="Ac2" class="mono" style="font-size:32px;color:#f3ebde;background:#4a1f1f;border-radius:12px;padding:8px 18px">~5 anni dal 2027</div>
+   <div id="Ac3" class="mono" style="font-size:32px;font-weight:700;color:#2a1414;background:#ff9f94;border-radius:12px;padding:8px 18px">4,5 GW</div></div>
+ </div></div>
+</div>
+<div class="scene" id="B" style="background:#0d1022">
+ <div class="abs mono" id="Bk" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">LA MAPPA · 2/4</div>
+ <svg id="Bm" width="1080" height="640" style="position:absolute;left:0;top:350px"></svg>
+ <div class="abs" id="Bc" style="top:1010px"><div class="card" style="background:#10202e;border:3px solid #39b6e6">
+  <div class="lab" style="color:#8fd6f2">COREWEAVE · CONTRATTI</div>
+  <div class="row"><div class="bold" style="font-size:130px;color:#fff">~22,4</div><div class="bold" style="font-size:60px;color:#8fd6f2">MLD $</div></div>
+  <div id="Bc2" class="sans" style="font-size:34px;font-weight:700;color:#f3ebde;margin-top:6px">Nvidia, azionista, compra la sua capacità invenduta</div>
+ </div></div>
+</div>
+<div class="scene" id="C" style="background:#0d1022">
+ <div class="abs mono" id="Ck" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">LA MAPPA · 3/4</div>
+ <svg id="Cm" width="1080" height="640" style="position:absolute;left:0;top:350px"></svg>
+ <div class="abs" id="Cc" style="top:1010px"><div class="card" style="background:#1a1a1a;border:3px solid #e8e8e8">
+  <div class="lab" style="color:#bbb">AMD · 6 GW DI CHIP</div>
+  <div class="row" id="Cc1"><div class="sans" style="font-size:34px;font-weight:700;color:#f3ebde">in cambio: fino a</div><div class="bold" style="font-size:96px;color:#fff">160 MLN</div></div>
+  <div class="row" id="Cc2"><div class="sans" style="font-size:34px;font-weight:700;color:#f3ebde">azioni AMD a</div><div class="bold" style="font-size:80px;color:#3ccf6e">0,01 $</div></div>
+  <div id="Cc3" class="mono" style="font-size:28px;color:#0d1022;background:#f2c14e;border-radius:10px;padding:8px 16px;display:inline-block;margin-top:8px">SOLO SE: consegne + prezzo del titolo</div>
+ </div></div>
+</div>
+<div class="scene" id="D" style="background:#0d1022">
+ <div class="abs mono" id="Dk" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">LA MAPPA · 4/4</div>
+ <svg id="Dm" width="1080" height="640" style="position:absolute;left:0;top:350px"></svg>
+ <div class="abs" id="Dc" style="top:1010px"><div class="card" style="background:#2a2410;border:3px solid #f2c14e;display:flex;gap:30px;align-items:center">
+  <div style="flex:1"><div class="lab" style="color:#f2d98a">SOFTBANK</div>
+   <div class="row" id="Dc1"><div class="bold" style="font-size:96px;color:#fff">40</div><div class="mono" style="font-size:28px;color:#f2d98a">round guidato · 2025</div></div>
+   <div class="row" id="Dc2"><div class="bold" style="font-size:96px;color:#fff">+30</div><div class="mono" style="font-size:28px;color:#f2d98a">MLD $ · 2026</div></div></div>
+  <div id="Dc3" style="width:250px;text-align:center"><svg id="Dhg" width="120" height="160" viewBox="0 0 120 160"></svg>
+   <div class="mono" style="font-size:24px;color:#f2d98a;white-space:normal">prestito ponte: scade</div><div class="bold" style="font-size:44px;color:#ff5a5a;letter-spacing:-1px">MAR 2027</div></div>
+ </div></div>
+</div>
+
+<!-- E · balance -->
+<div class="scene" id="E" style="background:#f4f0e8">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:110px;color:#141215">I CONTI</div>
+ <svg id="Es" width="1080" height="820" style="position:absolute;left:0;top:430px"></svg>
+ <div class="abs mono" id="Ef" style="top:1330px;font-size:22px;color:#8a7a6c">Ricavi annualizzati a fine settembre 2026 · fonte: Financial Times</div>
+</div>
+
+<!-- F · valuation, filing, maybe 2027 -->
+<div class="scene" id="F" style="background:#121014">
+ <div class="abs mono" id="Fk" style="top:290px;font-size:28px;letter-spacing:4px;color:#bdb3a6">VALUTAZIONE · ULTIMO ROUND (MARZO 2026)</div>
+ <div class="abs bold" id="Fa" style="top:350px;font-size:190px;color:#fff"><span id="Fn">0</span><span style="font-size:80px;color:#e2683c"> MLD $</span></div>
+ <div class="abs" id="Fd" style="top:640px"><div style="position:relative;width:640px;height:420px;background:#f3ebde;border-radius:10px;padding:34px 40px;text-align:left;transform:rotate(-2deg)">
+  <div class="bold" style="font-size:72px;color:#121014">FORM S-1</div>
+  <div class="mono" style="font-size:24px;color:#6b5a4c;margin:6px 0 20px">richiesta di quotazione · OpenAI</div>
+  <div style="height:14px;width:90%;background:#d8cdbb;border-radius:7px;margin-bottom:16px"></div><div style="height:14px;width:76%;background:#d8cdbb;border-radius:7px;margin-bottom:16px"></div><div style="height:14px;width:84%;background:#d8cdbb;border-radius:7px;margin-bottom:16px"></div><div style="height:14px;width:60%;background:#d8cdbb;border-radius:7px"></div>
+  <div id="Fst" class="bold" style="position:absolute;right:-40px;bottom:30px;border:8px solid #c94f2a;color:#c94f2a;border-radius:12px;padding:8px 18px;background:#f3ebde;font-size:46px;letter-spacing:-1px;line-height:1.05;text-align:center">RISERVATA<br><span class="mono" style="font-size:26px;letter-spacing:0">annunciata l'8 giugno 2026</span></div>
+ </div></div>
+ <div class="abs" id="Fq" style="top:1140px"><div style="display:flex;gap:24px;align-items:center;background:#1d2438;border:3px solid #8fa3c0;border-radius:22px;padding:20px 30px">
+  <div class="bold" style="font-size:90px;color:#f2c14e">2027?</div>
+  <div style="text-align:left"><div class="mono" style="font-size:24px;color:#8fa3c0">SECONDO IL NEW YORK TIMES</div><div class="sans" style="font-size:36px;font-weight:700;color:#fff">potrebbe aspettare</div><div class="mono" style="font-size:24px;color:#f2c14e">nessuna data ufficiale</div></div></div></div>
+</div>
+
+<!-- G · dominoes + disclaimer -->
+<div class="scene" id="G" style="background:#0d1022">
+ <div class="abs bold" id="Ga" style="top:290px;font-size:84px;color:#fff;line-height:1">PERCHÉ<br><span style="color:#e2683c">TI RIGUARDA</span></div>
+ <svg id="Gs" width="1080" height="560" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs bold" id="Gm" style="top:1090px;font-size:70px;color:#f2c14e">SCENARI, NON CERTEZZE</div>
+ <div class="abs" id="Gd" style="top:1220px"><div class="mono" style="font-size:28px;color:#f3ebde;border:3px solid #f3ebde;border-radius:12px;padding:12px 24px">⚠ Questo non è un consiglio finanziario.</div></div>
+</div>
+
+<!-- H · save + comment -->
+<div class="scene" id="H" style="background:#121014">
+ <div class="abs" id="Hs" style="top:380px"><svg width="300" height="220" viewBox="0 0 300 220"><g id="Hch" fill="none" stroke-width="22"><rect x="20" y="60" width="160" height="100" rx="50" stroke="#bdb3a6"/><rect x="120" y="60" width="160" height="100" rx="50" stroke="#e2683c"/></g></svg></div>
+ <div class="abs bold" id="Ha" style="top:660px;font-size:104px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hc" style="top:850px"><div style="width:860px;background:#1e1a20;border:2px solid #3c343e;border-radius:30px;padding:28px 34px;text-align:left;display:flex;gap:22px">
+  <div style="width:76px;height:76px;border-radius:38px;background:linear-gradient(135deg,#e2683c,#26405f);flex:none"></div>
+  <div><div class="sans" style="font-size:30px;font-weight:700;color:#fff">tu <span style="font-weight:400;color:#8a8590">· adesso</span></div>
+  <div class="sans" id="Ht" style="font-size:40px;color:#f3ebde;margin-top:6px;min-height:52px"></div></div></div></div>
+ <div class="abs serif" id="Hb" style="top:1080px;font-size:62px;color:#bdb3a6">quale anello ti preoccupa di più?</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+const q=(id,f)=>.25+DURS[id]*f;
+const MAP=[['ORACLE','~300 mld $',210,90,'#ff6b5a'],['COREWEAVE','~22,4 mld $',870,90,'#39b6e6'],['AMD','6 GW',210,520,'#e8e8e8'],['SOFTBANK','40 + 30 mld $',870,520,'#f2c14e']];
+function map(svg,t,n,t0){const cx=540,cy=305;let h='';
+ MAP.slice(0,n+1).forEach(([nm,v,x,y,c],i)=>{const cur=i===n;const k=cur?P(t,t0,t0+.9):1;const ke=eio(k);
+  h+=`<line x1="${cx}" y1="${cy}" x2="${cx+(x-cx)*ke}" y2="${cy+(y-cy)*ke}" stroke="${c}" stroke-width="${cur?10:5}" opacity="${cur?1:.45}" stroke-dasharray="${cur?'0':'10 10'}"/>`;
+  if(k>.6){const s=eback(P(t,t0+.5,t0+.9));const sc=cur?s:1;
+   h+=`<g transform="translate(${x} ${y}) scale(${sc})" opacity="${cur?1:.5}"><rect x="-170" y="-62" width="340" height="124" rx="22" fill="${cur?c:'#1d2438'}" stroke="${c}" stroke-width="4"/>
+   <text y="4" text-anchor="middle" font-family="Archivo Black" font-size="${nm.length>8?40:50}" fill="${cur?'#0d1022':c}">${nm}</text><text y="42" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="${cur?'#0d1022':c}">${v}</text></g>`}});
+ if(n===1){const k=P(t,q('B',.5),q('B',.5)+.5);if(k>0)h+=`<g opacity="${k}"><line x1="870" y1="152" x2="870" y2="${152+60*eio(k)}" stroke="#7ccf3c" stroke-width="6"/><g transform="translate(870 255) scale(${eback(k)})"><rect x="-120" y="-42" width="240" height="84" rx="18" fill="#7ccf3c"/><text y="14" text-anchor="middle" font-family="Archivo Black" font-size="40" fill="#0d1022">NVIDIA</text></g></g>`}
+ h+=`<g transform="translate(${cx} ${cy})"><circle r="92" fill="#f3ebde"/><text y="14" text-anchor="middle" font-family="Archivo Black" font-size="38" fill="#0d1022">OPENAI</text></g>`;
+ svg.innerHTML=h;}
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);map($('Am'),t,0,q('A',.15));pop($('Ac'),t,q('A',.3),.45);
+ $('Ac1').textContent='~'+Math.round(300*ex(P(t,q('A',.3),q('A',.5))));pop($('Ac2'),t,q('A',.58),.4,0,0,'');pop($('Ac3'),t,q('A',.82),.4,0,0,'');};
+R.B=(t,d)=>{ap($('Bk'),t,0,.01,0);map($('Bm'),t,1,q('B',.05));pop($('Bc'),t,q('B',.2),.45);ap($('Bc2'),t,q('B',.55),.4,20,1,'');};
+R.C=(t,d)=>{ap($('Ck'),t,0,.01,0);map($('Cm'),t,2,q('C',.02));pop($('Cc'),t,q('C',.15),.45);ap($('Cc1'),t,q('C',.4),.4,20,1,'');ap($('Cc2'),t,q('C',.58),.4,20,1,'');pop($('Cc3'),t,q('C',.8),.4,0,0,'');};
+R.D=(t,d)=>{ap($('Dk'),t,0,.01,0);map($('Dm'),t,3,q('D',.02));pop($('Dc'),t,q('D',.15),.45);ap($('Dc1'),t,q('D',.15),.4,20,1,'');ap($('Dc2'),t,q('D',.45),.4,20,1,'');pop($('Dc3'),t,q('D',.72),.45,0,0,'');
+ const s=P(t,q('D',.75),d);$('Dhg').innerHTML=`<path d="M20 10 H100 M20 150 H100" stroke="#f2c14e" stroke-width="8" stroke-linecap="round"/><path d="M28 14 C28 60 92 60 92 14 Z" fill="#f2c14e" opacity="${1-s}"/><path d="M28 14 L92 14 L60 78 L92 146 L28 146 L60 78 Z" fill="none" stroke="#f2c14e" stroke-width="5"/><path d="M60 ${146-50*s} L${60+30*s} 146 L${60-30*s} 146 Z" fill="#f2c14e"/>`;};
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);const k1=P(t,q('E',.3),q('E',.3)+.4),k2=P(t,q('E',.62),q('E',.62)+.4);const tilt=12*eio(P(t,q('E',.66),q('E',.9)));
+ const cx=540,cy=170,L=360;const a=tilt*Math.PI/180;const lx=cx-L*Math.cos(a),ly=cy-L*Math.sin(a),rx=cx+L*Math.cos(a),ry=cy+L*Math.sin(a);
+ let h=`<rect x="520" y="${cy}" width="40" height="560" fill="#141215"/><rect x="380" y="720" width="320" height="40" rx="12" fill="#141215"/><circle cx="${cx}" cy="${cy}" r="26" fill="#c94f2a"/>
+ <line x1="${lx}" y1="${ly}" x2="${rx}" y2="${ry}" stroke="#141215" stroke-width="18" stroke-linecap="round"/>`;
+ const pan=(x,y,lab,val,sub,c,k)=>`<line x1="${x}" y1="${y}" x2="${x-120}" y2="${y+200}" stroke="#141215" stroke-width="4"/><line x1="${x}" y1="${y}" x2="${x+120}" y2="${y+200}" stroke="#141215" stroke-width="4"/>
+  <path d="M${x-150} ${y+200} H${x+150} Q${x+130} ${y+260} ${x} ${y+262} Q${x-130} ${y+260} ${x-150} ${y+200} Z" fill="#141215"/>
+  <g opacity="${cl(k*3)}" transform="translate(${x} ${y+190}) scale(${eback(k)})"><rect x="-150" y="-150" width="300" height="150" rx="18" fill="${c}"/>
+  <text y="-108" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#fff">${lab}</text><text y="-46" text-anchor="middle" font-family="Archivo Black" font-size="${val.length>5?46:62}" fill="#fff">${val}</text><text y="-14" text-anchor="middle" font-family="JetBrains Mono" font-size="22" fill="#fff">${sub}</text></g>`;
+ h+=pan(lx,ly,'RICAVI','~50','mld $ l\'anno','#1f7a45',k1)+pan(rx,ry,'IMPEGNI','CENTINAIA','di mld $','#c94f2a',k2);
+ $('Es').innerHTML=h;ap($('Ef'),t,q('E',.4),.4,10);};
+R.F=(t,d)=>{ap($('Fk'),t,.1,.3,10);pop($('Fa'),t,q('F',.08),.4);$('Fn').textContent=Math.round(852*ex(P(t,q('F',.1),q('F',.3))));
+ pop($('Fd'),t,q('F',.36),.45,-4,0);const st=P(t,q('F',.5),q('F',.5)+.35);const s=$('Fst');s.style.opacity=cl(st*4);s.style.transform=`rotate(-10deg) scale(${2.2-1.2*eback(st)})`;
+ pop($('Fq'),t,q('F',.72),.45);};
+const DOM=['RICAVI','OPENAI','ORACLE','COREWEAVE','NVIDIA','NEI FONDI'];
+R.G=(t,d)=>{ap($('Ga'),t,.2,.4,30);let h=`<line x1="40" y1="470" x2="1040" y2="470" stroke="#3a4a62" stroke-width="4"/>`;
+ DOM.forEach((n,i)=>{const x=110+i*150,t0=q('G',.12)+i*.32;const k=eio(P(t,t0,t0+.45));const ang=k*29;const last=i===DOM.length-1;
+  h+=`<g transform="translate(${x} 470) rotate(${ang})"><rect x="-38" y="-300" width="76" height="300" rx="10" fill="${last?'#e2683c':i===0?'#f2c14e':'#f3ebde'}"/>
+  <text transform="translate(12 -150) rotate(-90)" text-anchor="middle" font-family="Archivo Black" font-size="${n.length>8?30:34}" fill="#0d1022">${n}</text></g>`});
+ $('Gs').innerHTML=h;pop($('Gm'),t,q('G',.68),.45);pop($('Gd'),t,q('G',.84),.45);};
+R.H=(t,d)=>{pop($('Hs'),t,.05,.4);const k=eio(P(t,.4,1.0));$('Hch').children[1].setAttribute('transform',`translate(${-40*(1-k)} 0)`);
+ pop($('Ha'),t,.25,.4);ap($('Hc'),t,.9,.4,40);typeT($('Ht'),'Oracle? SoftBank? …',t,1.2,12);words($('Hb'),t,1.8);};
+</script></body></html>
