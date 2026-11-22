@@ -46,9 +46,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--dark)}
   </div>
  </div>
  <div class="abs serif" id="s3a" style="top:690px;color:#2a1410">e questa notizia</div>
- <div class="abs bold" id="s3b" style="top:810px;font-size:128px;color:var(--cream);text-shadow:0 10px 0 rgba(120,40,15,.35)">TI RIGUARDA</div>
- <svg id="s3o" width="1080" height="400" style="position:absolute;left:0;top:740px"><path id="s3path" d="M120 250 C 160 120, 760 90, 980 150 C 1060 175, 1020 280, 700 300 C 420 320, 90 310, 110 230 C 125 180, 300 140, 420 130" stroke="#f6efe4" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
- <div class="abs serif" id="s3c" style="top:1000px;color:#2a1410">più di quanto pensi.</div>
+ <div class="abs bold" id="s3b" style="top:815px;font-size:104px;color:var(--cream);text-shadow:0 10px 0 rgba(120,40,15,.35)">TI RIGUARDA</div>
+ <svg id="s3o" width="1080" height="1920" style="position:absolute;left:0;top:0;overflow:visible"><path id="s3path" stroke="#f6efe4" stroke-width="5" fill="none" stroke-linecap="round" opacity=".95"/><path id="s3path2" stroke="#f6efe4" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".75"/></svg>
+ <div class="abs serif" id="s3c" style="top:990px;color:#2a1410">più di quanto pensi.</div>
 </div>
 
 <!-- S4 1.800 MILIARDI -->
@@ -189,7 +189,13 @@ R.s2=lt=>{words($('s2a'),lt,.05);ap($('s2b'),lt,.7,.4,60);pop($('s2c'),lt,1.55,.
  const c=$('s2c');if(lt>1.55)c.style.transform+=' rotate(-4deg)';ap($('s2d'),lt,2.0,.4,20);};
 R.s3=lt=>{const n=$('s3n');const k=eback(P(lt,.05,.6));n.style.transform=`translateX(-50%) translateY(${(1-k)*-260}px)`;n.style.opacity=cl(lt*5);
  words($('s3a'),lt,.6);pop($('s3b'),lt,1.05,.45);
- const p=$('s3path');const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L*(1-eio(P(lt,1.4,2.1)));
+ if(!window._ell){const w=$('s3b');const fs=parseFloat(getComputedStyle(w).fontSize),capH=fs*0.72;const cx=540,cy=w.offsetTop+w.offsetHeight*0.5+2,ry=capH/2+38;const rx=(w.offsetWidth/2+48)/Math.sqrt(1-Math.pow(capH/2/ry,2));
+  // hand-drawn ellipse: a little over one turn, slowly spiralling so the ends overshoot like a pen stroke
+  const mk=(ph,turns,grow,tilt)=>{let d='';const N=160;for(let i=0;i<=N;i++){const u=i/N;const th=Math.PI*0.92+ph+u*Math.PI*2*turns;
+    const k=1+grow*(u-.5)+0.012*Math.sin(th*3+ph);const x=Math.cos(th)*rx*k,y=Math.sin(th)*ry*k;const a=tilt*Math.PI/180;
+    d+=(i?'L':'M')+(cx+x*Math.cos(a)-y*Math.sin(a)).toFixed(1)+','+(cy+x*Math.sin(a)+y*Math.cos(a)).toFixed(1)}return d};
+  $('s3path').setAttribute('d',mk(0,1.1,.05,-1.5));$('s3path2').setAttribute('d',mk(.25,1.06,-.04,-1));window._ell=1}
+ [['s3path',1.35,2.0],['s3path2',1.5,2.15]].forEach(([id,a,b])=>{const p=$(id);const L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L*(1-eio(P(lt,a,b)))});
  ap($('s3c'),lt,1.55,.4,20);};
 R.s4=lt=>{const b=$('s4band');b.style.transform=`translateX(${(1-eo(P(lt,0,.5)))*-1300 + lt*30}px)`;
  words($('s4a'),lt,.05);pop($('s4b'),lt,.35,.4);
