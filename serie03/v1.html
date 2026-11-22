@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>.term{font-family:'JetBrains Mono';color:#7CFFB2}.cy{--g:#7CFFB2}</style>
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · radar -->
+<div class="scene" id="A" style="background:#071410">
+ <div class="abs bold" id="Aa" style="top:300px;font-size:96px;color:#fff">IN DUE SETTIMANE</div>
+ <svg id="radar" width="1080" height="760" style="position:absolute;left:0;top:440px"></svg>
+ <div class="abs serif" id="Ab" style="top:1230px;color:#bfe9d2">ma non sempre dove pensi</div>
+</div>
+
+<!-- B · supply chain -->
+<div class="scene" id="B" style="background:#0b0f14">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:28px;letter-spacing:4px;color:#7CFFB2">19 NOVEMBRE</div>
+ <svg id="chain" width="1080" height="640" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs" id="Bt" style="top:1040px;display:flex;gap:24px">
+  <div id="Bt1" class="sans" style="font-size:40px;font-weight:800;color:#0b0f14;background:#7CFFB2;padding:14px 24px;border-radius:12px">rubati: nomi ed email</div>
+  <div id="Bt2" class="sans" style="font-size:40px;font-weight:800;color:#fff;background:#3a1a1a;border:3px solid #ff5a5a;padding:12px 22px;border-radius:12px">soldi: no</div></div>
+</div>
+
+<!-- C · minister's data into the dark -->
+<div class="scene" id="C" style="background:#000">
+ <div id="Cdark" style="position:absolute;left:0;right:0;top:0;bottom:0;background:radial-gradient(ellipse at 50% 70%,#1a0f2a 0%,#000 60%)"></div>
+ <div class="abs mono" id="Ck" style="top:300px;font-size:28px;letter-spacing:4px;color:#b58cff">ITALIA · DARK WEB</div>
+ <div class="abs" id="Ccard" style="top:400px"><div style="width:760px;background:#f3ebde;border-radius:22px;padding:30px 36px;text-align:left;box-shadow:0 30px 80px rgba(120,60,255,.3)">
+  <div class="mono" style="font-size:24px;color:#6b5a4c;letter-spacing:3px">DATI PERSONALI · MINISTRO DEGLI ESTERI</div>
+  <div style="display:flex;gap:24px;margin-top:20px;align-items:center"><div style="width:120px;height:140px;border-radius:12px;background:#d8cfc2"></div>
+  <div style="flex:1"><div style="height:18px;background:#141215;border-radius:6px;width:90%"></div><div style="height:18px;background:#141215;border-radius:6px;width:70%;margin-top:14px"></div><div style="height:18px;background:#141215;border-radius:6px;width:80%;margin-top:14px"></div></div></div></div></div>
+ <div class="abs" id="Cq" style="top:850px"><div class="serif" style="font-size:60px;color:#e9e1d6">la premier: <span style="color:#b58cff">"hacker filorussi"</span></div></div>
+ <div class="abs" id="Cst" style="top:1000px"><div class="bold" style="font-size:44px;color:#ffd34d;border:7px solid #ffd34d;padding:14px 26px 6px;border-radius:12px;letter-spacing:0">RESPONSABILE NON CONFERMATO</div></div>
+</div>
+
+<!-- D · two locks -->
+<div class="scene" id="D" style="background:#0b0f14">
+ <div class="abs bold" id="Da" style="top:300px;font-size:84px;color:#fff;line-height:1">IL "FURTO"<br><span style="color:#7CFFB2">ALLA DIA</span></div>
+ <svg id="locks" width="1080" height="640" style="position:absolute;left:0;top:520px"></svg>
+</div>
+
+<!-- E · schools + fridges -->
+<div class="scene" id="E" style="background:#121014">
+ <div class="abs mono" id="Ek" style="top:300px;font-size:28px;letter-spacing:4px;color:#e2683c">16 NOVEMBRE · FALSE MINACCE BOMBA</div>
+ <div class="abs bold" id="Ea" style="top:370px;font-size:170px;color:#fff"><span id="En">0</span></div>
+ <div class="abs serif" id="Eb" style="top:560px">scuole</div>
+ <svg id="fridge" width="1080" height="560" style="position:absolute;left:0;top:700px"></svg>
+ <div class="abs" id="Ec" style="top:1290px"><div class="sans" style="font-size:40px;font-weight:800;color:#141215;background:#bfe9ff;padding:14px 26px;border-radius:12px">oltre 20 supermercati in Sicilia</div></div>
+</div>
+
+<!-- F · fake news debunk -->
+<div class="scene" id="F" style="background:#0b0f14">
+ <div class="abs" id="Fn" style="top:380px"><div style="width:860px;background:#f3ebde;padding:34px 40px;text-align:left;transform:rotate(-1.5deg)">
+  <div class="mono" style="font-size:24px;color:#6b5a4c">16 NOVEMBRE · USA</div>
+  <div style="font-family:'Instrument Serif';font-size:72px;color:#141215;line-height:1.05;white-space:normal">Blackout delle banche: colpa degli hacker?</div></div></div>
+ <div class="abs" id="Fst" style="top:820px"><div class="bold" style="font-size:96px;color:#7CFFB2;border:10px solid #7CFFB2;padding:16px 34px 8px;border-radius:16px;letter-spacing:0">NO: UN BUG</div></div>
+ <div class="abs serif" id="Fs" style="top:1040px;color:#bfe9d2;font-size:56px">un errore nel software, dice JPMorgan</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#071410">
+ <div class="abs bold" id="Ha" style="top:620px;font-size:120px;color:#fff;line-height:1">COME TI<br><span style="color:#7CFFB2">DIFENDI?</span></div>
+ <div class="abs bold" id="Hb" style="top:960px;font-size:64px;color:#071410;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+const BL=[[-2.4,.75,'BANCHE',1.4],[2.3,.7,'MINISTRI',2.3],[-.6,.72,'SUPERMERCATI',3.2]];
+R.A=(t,d)=>{pop($('Aa'),t,.2,.4);const sv=$('radar');const cx=540,cy=380,R0=330;let h='';
+ for(let r=1;r<=3;r++)h+=`<circle cx="${cx}" cy="${cy}" r="${R0*r/3}" fill="none" stroke="#1d4a36" stroke-width="3"/>`;
+ h+=`<line x1="${cx-R0}" y1="${cy}" x2="${cx+R0}" y2="${cy}" stroke="#1d4a36" stroke-width="2"/><line x1="${cx}" y1="${cy-R0}" x2="${cx}" y2="${cy+R0}" stroke="#1d4a36" stroke-width="2"/>`;
+ const a=t*2.2;h+=`<path d="M${cx} ${cy} L${cx+Math.cos(a)*R0} ${cy+Math.sin(a)*R0} A${R0} ${R0} 0 0 0 ${cx+Math.cos(a-.6)*R0} ${cy+Math.sin(a-.6)*R0} Z" fill="rgba(124,255,178,.18)"/>`;
+ BL.forEach(([ang,rr,l,t0])=>{const k=eback(P(t,t0,t0+.4));if(k<=0)return;const x=cx+Math.cos(ang)*R0*rr,y=cy+Math.sin(ang)*R0*rr;const pulse=1+.25*Math.sin(t*8);
+  h+=`<circle cx="${x}" cy="${y}" r="${22*k*pulse}" fill="#ff5a5a" opacity=".35"/><circle cx="${x}" cy="${y}" r="${12*k}" fill="#ff5a5a"/>
+   <text x="${x}" y="${y-36}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="#fff" opacity="${P(t,t0,t0+.3)}">${l}</text>`});
+ sv.innerHTML=h;words($('Ab'),t,4.2);};
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);const sv=$('chain');let h='';
+ const k1=eo(P(t,.2,.6)),k2=eo(P(t,2.0,2.4)),br=P(t,2.8,3.3);
+ h+=`<g opacity="${k1}"><rect x="140" y="60" width="800" height="170" rx="24" fill="#16202b" stroke="#3a4a5a" stroke-width="3"/>
+  <text x="540" y="168" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#fff">JPMORGAN · VISA · MASTERCARD</text></g>`;
+ h+=`<g opacity="${k2}"><rect x="290" y="420" width="500" height="160" rx="24" fill="#2a1414" stroke="#ff5a5a" stroke-width="4"/>
+  <text x="540" y="520" text-anchor="middle" font-family="Archivo Black" font-size="62" fill="#ff8a7a">FORNITORI</text></g>`;
+ for(let i=0;i<4;i++){const y=250+i*42;const off=i===2?br*30:0;h+=`<rect x="${515-off}" y="${y}" width="50" height="34" rx="17" fill="none" stroke="${i===2&&br>0?'#ff5a5a':'#8aa0b4'}" stroke-width="8" opacity="${k2}" transform="rotate(${i===2?br*25:0} 540 ${y+17})"/>`}
+ sv.innerHTML=h;pop($('Bt1'),t,4.4,.4,0,0,'');pop($('Bt2'),t,5.6,.4,0,0,'');};
+R.C=(t,d)=>{ap($('Ck'),t,.1,.3,10);const c=$('Ccard');const k=eio(P(t,1.6,3.4));c.style.opacity=1-k*.7;c.style.filter=`blur(${k*6}px)`;c.style.transform=`translateX(-50%) translateY(${k*80}px) scale(${1-k*.25})`;
+ ap($('Cq'),t,3.6,.4,20);pop($('Cst'),t,6.3,.45,-10,-2);};
+R.D=(t,d)=>{ap($('Da'),t,.2,.4,30);const sv=$('locks');let h='';
+ [[300,'SITO PUBBLICO','violato',true,1.6],[780,'DATI RISERVATI','al sicuro',false,3.4]].forEach(([x,l,s,open,t0])=>{const k=eback(P(t,t0,t0+.45));if(k<=0)return;const c=open?'#ff5a5a':'#7CFFB2';const lift=open?eio(P(t,t0+.4,t0+.9))*-50:0;
+  h+=`<g transform="translate(${x} 260) scale(${k})"><path d="M-70 -20 V-90 a70 70 0 0 1 140 0 V-20" transform="translate(0 ${lift})" stroke="${c}" stroke-width="22" fill="none"/>
+   <rect x="-110" y="-30" width="220" height="190" rx="26" fill="${c}"/><circle cx="0" cy="50" r="20" fill="#0b0f14"/><rect x="-7" y="55" width="14" height="45" rx="5" fill="#0b0f14"/>
+   <text y="230" text-anchor="middle" font-family="Archivo Black" font-size="40" fill="#fff">${l}</text><text y="285" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="${c}">${s}</text></g>`});
+ sv.innerHTML=h;};
+R.E=(t,d)=>{ap($('Ek'),t,.1,.3,10);pop($('Ea'),t,.3,.4);$('En').textContent=fmt(7500*ex(P(t,.4,2.6)));words($('Eb'),t,1.0);
+ const sv=$('fridge');const k=eo(P(t,4.2,4.6));const temp=eio(P(t,4.6,7.6));let h='';
+ h+=`<g opacity="${k}" transform="translate(540 270)"><rect x="-170" y="-230" width="340" height="460" rx="30" fill="#dfe8ee" stroke="#9fb4c2" stroke-width="6"/><line x1="-170" y1="-60" x2="170" y2="-60" stroke="#9fb4c2" stroke-width="6"/>
+  <rect x="120" y="-200" width="14" height="80" rx="7" fill="#9fb4c2"/><rect x="120" y="-20" width="14" height="120" rx="7" fill="#9fb4c2"/>
+  <rect x="210" y="-200" width="40" height="320" rx="20" fill="#1a2a33"/><rect x="216" y="${120-temp*300}" width="28" height="${temp*300}" rx="14" fill="${temp>.5?'#ff5a5a':'#5ab0ff'}"/>
+  <text x="230" y="170" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#fff">${temp>.5?'⚠':'❄'}</text></g>`;
+ sv.innerHTML=h;pop($('Ec'),t,5.0,.4,-3,0);};
+R.F=(t,d)=>{const n=$('Fn');const k=eback(P(t,.2,.7));n.style.opacity=cl((t-.2)*4);n.style.transform=`translateX(-50%) scale(${.6+.4*k})`;
+ pop($('Fst'),t,3.2,.45,-14,-3);ap($('Fs'),t,3.8,.4,20);};
+R.H=(t,d)=>{ap($('Ha'),t,.15,.45,40);pop($('Hb'),t,1.6,.4,-6,-2);};
+</script></body></html>

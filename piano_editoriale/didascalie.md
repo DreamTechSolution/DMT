@@ -115,3 +115,39 @@ Contenuto informativo, non è consulenza finanziaria.
 
 ## Commento da fissare sotto ogni parte 1 (dopo aver pubblicato la parte 2)
 👉 La parte 2 è qui: [incolla il link del Reel]
+
+---
+
+## Attacchi informatici — Parte 1
+In due settimane gli hacker hanno colpito banche, ministri e supermercati. Ma non sempre dove pensi 🕵️
+
+▪️ JPMorgan, Visa, Mastercard: attaccati i loro fornitori. Rubati nomi ed email, non soldi.
+▪️ I dati personali del ministro Tajani sono finiti sul dark web. La premier parla di hacker filorussi, ma nessun responsabile è stato confermato.
+▪️ DIA: violato solo il sito pubblico, nessun dato riservato.
+▪️ 16 novembre: false minacce bomba a quasi 7.500 scuole. In Sicilia attacchi ai sistemi di refrigerazione di oltre 20 supermercati.
+▪️ Il blackout delle banche americane del 16 novembre? Non erano hacker: era un errore nel software.
+
+Ad oggi in Italia non risultano attacchi che abbiano bloccato banche, ospedali o servizi pubblici in questo periodo.
+
+👉 Come ti difendi davvero? Te lo spiego nella parte 2.
+
+Fonti: Reuters, ministero dell'Interno (audizione del 19/11), Agenzia per la Cybersicurezza Nazionale, AGI, Sky TG24.
+
+#Cybersecurity #Hacker #Sicurezza #Privacy #Italia
+
+---
+
+## Attacchi informatici — Parte 2
+4 cose da fare oggi per difenderti dagli hacker 🔐
+
+1️⃣ Attiva la verifica in due passaggi con un'app o una passkey, non con l'SMS. E non inserire mai codici dopo aver cliccato un link.
+2️⃣ Se i tuoi dati sono usciti, cambia quella password e tutte quelle uguali. Controlla su haveibeenpwned.com.
+3️⃣ Diffida di chi ti chiede di cambiare IBAN o ti chiama fingendosi la tua banca. Riattacca e richiama il numero ufficiale.
+4️⃣ Se pensi di essere stato truffato, denuncia alla Polizia Postale (commissariatodips.it) e avvisa subito la tua banca.
+
+Il punto debole spesso non è la grande azienda ma il suo fornitore. E l'email resta la porta d'ingresso principale (Agenzia per la Cybersicurezza Nazionale).
+
+Hai perso la parte 1? È nel profilo.
+📲 Salvalo e mandalo a chi ne ha bisogno.
+
+#Cybersecurity #Truffe #SicurezzaOnline #Password #Phishing

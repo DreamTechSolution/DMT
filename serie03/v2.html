@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>.tip{position:absolute;left:50%;top:290px;transform:translateX(-50%);display:flex;align-items:center;gap:18px;white-space:nowrap}.tip .bold{font-size:52px!important}
+.tipn{width:90px;height:90px;border-radius:45px;background:#7CFFB2;color:#071410;font-family:'Archivo Black';font-size:52px;display:flex;align-items:center;justify-content:center}</style>
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · web of companies -->
+<div class="scene" id="A" style="background:#071410">
+ <div class="abs bold" id="Aa" style="top:290px;font-size:76px;color:#fff;line-height:1">IL PUNTO DEBOLE?<br><span style="color:#7CFFB2">IL FORNITORE</span></div>
+ <svg id="web" width="1080" height="820" style="position:absolute;left:0;top:500px"></svg>
+</div>
+
+<!-- B · email hook -->
+<div class="scene" id="B" style="background:#0b0f14">
+ <svg id="mail" width="1080" height="700" style="position:absolute;left:0;top:300px"></svg>
+ <div class="abs bold" id="Ba" style="top:1000px;font-size:80px;color:#fff;line-height:1">L'EMAIL È LA<br><span style="color:#7CFFB2">PORTA D'INGRESSO N. 1</span></div>
+ <div class="abs mono" id="Bs" style="top:1230px;font-size:24px;color:#8aa0b4">Agenzia per la Cybersicurezza Nazionale · audizione 5/11/2026</div>
+</div>
+
+<!-- C · tip 1: 2FA -->
+<div class="scene" id="C" style="background:#071410">
+ <div class="tip" id="Ct"><div class="tipn">1</div><div class="bold" style="font-size:64px;color:#fff;letter-spacing:-1px">VERIFICA IN DUE PASSAGGI</div></div>
+ <div class="abs" id="Cph" style="top:430px"><div style="width:440px;height:620px;border-radius:56px;background:#0f1d18;border:10px solid #2a4a3c;padding:50px 34px;text-align:center">
+  <div class="mono" style="font-size:26px;color:#8fd0a0">APP DI AUTENTICAZIONE</div>
+  <div id="Ccode" class="mono" style="font-size:92px;font-weight:700;color:#7CFFB2;margin-top:70px;letter-spacing:6px">482 913</div>
+  <div style="height:12px;background:#1d3a2e;border-radius:6px;margin-top:40px;overflow:hidden"><div id="Cbar" style="height:100%;background:#7CFFB2;width:100%"></div></div>
+  <div class="sans" style="font-size:32px;font-weight:700;color:#fff;margin-top:60px">o una passkey 🔑</div></div></div>
+ <div class="abs" id="Csms" style="top:1100px"><div class="sans" style="font-size:44px;font-weight:800;color:#ff8a7a;text-decoration:line-through;text-decoration-thickness:6px">codice via SMS</div></div>
+ <div class="abs" id="Cw" style="top:1200px"><div class="sans" style="font-size:38px;font-weight:800;color:#141215;background:#ffd34d;padding:14px 24px;border-radius:12px">⚠ mai codici dopo aver cliccato un link</div></div>
+</div>
+
+<!-- D · tip 2: passwords -->
+<div class="scene" id="D" style="background:#0b0f14">
+ <div class="tip" id="Dt"><div class="tipn">2</div><div class="bold" style="font-size:64px;color:#fff;letter-spacing:-1px">CAMBIA LE PASSWORD</div></div>
+ <div class="abs" id="Dlist" style="top:440px"></div>
+ <div class="abs" id="Dchip" style="top:1150px"><div class="mono" style="font-size:40px;font-weight:700;color:#071410;background:#7CFFB2;padding:16px 28px;border-radius:14px">haveibeenpwned.com</div></div>
+ <div class="abs serif" id="Ds" style="top:1260px;font-size:50px;color:#bfe9d2">controlla se la tua email è uscita</div>
+</div>
+
+<!-- E · tip 3: fake bank call -->
+<div class="scene" id="E" style="background:#071410">
+ <div class="tip" id="Et"><div class="tipn">3</div><div class="bold" style="font-size:64px;color:#fff;letter-spacing:-1px">FALSA BANCA</div></div>
+ <div class="abs" id="Ecall" style="top:420px"><div style="width:520px;height:700px;border-radius:60px;background:#101a16;border:10px solid #2a4a3c;padding:60px 30px;text-align:center;position:relative">
+  <div class="sans" style="font-size:30px;color:#8fd0a0">chiamata in arrivo</div>
+  <div class="sans" style="font-size:56px;font-weight:800;color:#fff;margin-top:20px">"La tua banca"</div>
+  <div id="Ebadge" class="mono" style="display:inline-block;margin-top:20px;font-size:28px;font-weight:700;color:#fff;background:#c62828;padding:8px 16px;border-radius:8px">SOSPETTO</div>
+  <div id="Ebubble" style="margin:40px auto 0;width:400px;background:#1f2e28;border-radius:22px;padding:20px;font-family:Inter;font-size:34px;color:#fff">"Deve cambiare l'IBAN…"</div>
+  <div style="position:absolute;left:0;right:0;bottom:60px;display:flex;justify-content:center"><div id="Ehang" style="width:130px;height:130px;border-radius:65px;background:#c62828;display:flex;align-items:center;justify-content:center;font-size:64px">📞</div></div></div></div>
+ <div class="abs" id="Eok" style="top:1180px"><div class="sans" style="font-size:40px;font-weight:800;color:#071410;background:#7CFFB2;padding:14px 24px;border-radius:12px">riattacca → richiama il numero ufficiale</div></div>
+</div>
+
+<!-- F · tip 4: report -->
+<div class="scene" id="F" style="background:#0b0f14">
+ <div class="tip" id="Ft"><div class="tipn">4</div><div class="bold" style="font-size:64px;color:#fff;letter-spacing:-1px">DENUNCIA SUBITO</div></div>
+ <div id="Frows" style="position:absolute;left:110px;top:460px;width:860px"></div>
+ <div class="abs mono" id="Fs" style="top:1180px;font-size:30px;color:#8aa0b4">commissariatodips.it</div>
+</div>
+
+<!-- H · save + share -->
+<div class="scene" id="H" style="background:#071410">
+ <div class="abs" id="Hi" style="top:430px;display:flex;gap:80px">
+  <svg width="200" height="240" viewBox="0 0 200 240"><path id="Hbm" d="M30 20 h140 v200 l-70 -50 l-70 50 z" stroke="#f3ebde" stroke-width="12" fill="none" stroke-linejoin="round"/></svg>
+  <svg width="240" height="240" viewBox="0 0 240 240"><path id="Hsh" d="M30 120 L210 30 L160 210 L120 140 Z M120 140 L210 30" stroke="#f3ebde" stroke-width="12" fill="none" stroke-linejoin="round"/></svg></div>
+ <div class="abs bold" id="Ha" style="top:740px;font-size:110px;color:#fff;line-height:1">SALVALO<br><span style="color:#7CFFB2">E MANDALO</span></div>
+ <div class="abs serif" id="Hb" style="top:1000px;font-size:62px;color:#bfe9d2">a chi ne ha bisogno</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+const CO=['banca','e-commerce','telefono','palestra','assicurazione','streaming','social','corriere','luce e gas','app di viaggio','supermercato','comune'];
+R.A=(t,d)=>{ap($('Aa'),t,.2,.4,30);const sv=$('web');const cx=540,cy=400;let h='';
+ CO.forEach((c,i)=>{const a=i/CO.length*Math.PI*2-Math.PI/2;const r=300+(i%2)*50;const x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r*.95;const k=eo(P(t,.6+i*.12,.9+i*.12));if(k<=0)return;
+  const bad=i===7&&t>3.6;h+=`<line x1="${cx}" y1="${cy}" x2="${cx+(x-cx)*k}" y2="${cy+(y-cy)*k}" stroke="${bad?'#ff5a5a':'#1d4a36'}" stroke-width="${bad?6:3}"/>
+  <g opacity="${k}"><circle cx="${x}" cy="${y}" r="${bad?20:14}" fill="${bad?'#ff5a5a':'#7CFFB2'}"/><text x="${x}" y="${y+(y<cy?-30:48)}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="${bad?'#ff8a7a':'#bfe9d2'}">${bad?'fornitore ✗':c}</text></g>`});
+ h+=`<circle cx="${cx}" cy="${cy}" r="70" fill="#f3ebde"/><text x="${cx}" y="${cy+16}" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#071410">TU</text>`;
+ sv.innerHTML=h;};
+R.B=(t,d)=>{const sv=$('mail');const k=eback(P(t,.2,.7));const hook=eio(P(t,1.0,2.0));let h='';
+ h+=`<g transform="translate(540 380) scale(${k})"><rect x="-260" y="-170" width="520" height="340" rx="26" fill="#f3ebde"/><path d="M-260 -170 L0 40 L260 -170" stroke="#9a8a7a" stroke-width="10" fill="none"/></g>`;
+ h+=`<line x1="540" y1="0" x2="540" y2="${-60+hook*230}" stroke="#bfe9d2" stroke-width="5"/><path d="M540 ${-60+hook*230} v60 a40 40 0 0 1 -80 0" stroke="#bfe9d2" stroke-width="10" fill="none" stroke-linecap="round"/>`;
+ sv.innerHTML=h;ap($('Ba'),t,1.6,.4,30);ap($('Bs'),t,3.0,.4,10);};
+R.C=(t,d)=>{pop($('Ct'),t,.2,.4,0,0);ap($('Cph'),t,.6,.45,60);const cyc=(t%3)/3;$('Cbar').style.width=((1-cyc)*100)+'%';
+ const codes=['482 913','107 466','935 208','661 350'];$('Ccode').textContent=codes[Math.floor(t/3)%4];
+ pop($('Csms'),t,3.4,.4,0,0);pop($('Cw'),t,5.8,.45,-3,0);};
+const PW=[['email','Gatto2019!'],['negozio online','Gatto2019!'],['social','Gatto2019!']];
+R.D=(t,d)=>{pop($('Dt'),t,.2,.4,0,0);const ch=t>2.2;
+ $('Dlist').innerHTML=`<div style="width:820px">`+PW.map(([s,p],i)=>{const k=eo(P(t,.6+i*.25,.9+i*.25));const sw=P(t,2.2+i*.35,2.6+i*.35);
+  return `<div style="display:flex;justify-content:space-between;align-items:center;background:#16202b;border:3px solid ${sw>=1?'#7CFFB2':'#ff5a5a'};border-radius:18px;padding:24px 30px;margin-bottom:22px;opacity:${k}">
+   <span class="sans" style="font-size:38px;font-weight:800;color:#fff">${s}</span>
+   <span class="mono" style="font-size:36px;font-weight:700;color:${sw>=1?'#7CFFB2':'#ff8a7a'}">${sw>=1?'••••••••••• ✓':p+' ⚠'}</span></div>`}).join('')+`</div>`;
+ pop($('Dchip'),t,4.8,.45,-3,0);ap($('Ds'),t,5.4,.4,20);};
+R.E=(t,d)=>{pop($('Et'),t,.2,.4,0,0);const c=$('Ecall');const sh=t>.6&&t<2.5?Math.sin(t*40)*4:0;ap(c,t,.4,.45,60);c.style.transform+=` translateX(${sh}px)`;
+ $('Ebadge').style.opacity=P(t,1.2,1.5);$('Ebubble').style.opacity=P(t,1.8,2.2);
+ const hg=eback(P(t,4.0,4.5));$('Ehang').style.transform=`scale(${t>4?1+.2*Math.sin(hg*Math.PI):1})`;pop($('Eok'),t,4.6,.45,-3,0);};
+const RP=[['🛡️','Polizia Postale','denuncia, anche online',.9],['🏦','La tua banca','chiama subito il numero ufficiale',2.8]];
+R.F=(t,d)=>{pop($('Ft'),t,.2,.4,0,0);$('Frows').innerHTML=RP.map(([ic,a,b,t0])=>{const k=eo(P(t,t0,t0+.45));
+  return `<div style="display:flex;gap:28px;align-items:center;background:#16202b;border:3px solid #2a4a3c;border-radius:22px;padding:30px 34px;margin-bottom:30px;opacity:${k};transform:translateX(${(1-k)*-80}px)">
+  <div style="font-size:84px">${ic}</div><div><div class="sans" style="font-size:48px;font-weight:800;color:#fff">${a}</div><div class="sans" style="font-size:32px;color:#bfe9d2;margin-top:6px">${b}</div></div></div>`}).join('');
+ ap($('Fs'),t,3.6,.4,10);};
+R.H=(t,d)=>{const k=P(t,.1,.5);$('Hbm').setAttribute('fill',k>.9?'#7CFFB2':'none');$('Hsh').setAttribute('stroke',P(t,.5,.9)>.9?'#7CFFB2':'#f3ebde');
+ pop($('Hi'),t,.05,.4);pop($('Ha'),t,.3,.4);words($('Hb'),t,.9);};
+</script></body></html>
