@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · Ritter counter -->
+<div class="scene" id="A" style="background:#f4f0e8">
+ <div class="abs mono" id="Ak" style="top:290px;font-size:26px;letter-spacing:3px;color:#8a7a6c">JAY RITTER · UNIVERSITY OF FLORIDA · IPO STATISTICS</div>
+ <div class="abs bold" id="Aa" style="top:380px;font-size:170px;color:#141215"><span id="An">0</span></div>
+ <div class="abs serif" id="Ab" style="top:570px;color:#26405f">quotazioni americane dal 1980</div>
+ <div class="abs" id="Ac" style="top:760px"><div style="background:#26405f;border-radius:28px;padding:40px 60px">
+  <div class="mono" style="font-size:30px;color:#c9d6ea;letter-spacing:3px">PRIMO GIORNO, IN MEDIA</div>
+  <div class="bold" style="font-size:200px;color:#3ccf6e">+19%</div></div></div>
+</div>
+
+<!-- B,C,D · bars vs market (one shared chart, growing) -->
+<div class="scene" id="B" style="background:#121014">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:28px;letter-spacing:3px;color:#bdb3a6">RENDIMENTO A 3 ANNI · RISPETTO AL MERCATO</div>
+ <svg id="Bb" width="1080" height="1000" style="position:absolute;left:0;top:380px"></svg>
+</div>
+<div class="scene" id="C" style="background:#121014">
+ <div class="abs mono" id="Ck" style="top:300px;font-size:28px;letter-spacing:3px;color:#bdb3a6">RENDIMENTO A 3 ANNI · RISPETTO AL MERCATO</div>
+ <svg id="Cb" width="1080" height="1000" style="position:absolute;left:0;top:380px"></svg>
+</div>
+<div class="scene" id="D" style="background:#121014">
+ <div class="abs mono" id="Dk" style="top:300px;font-size:28px;letter-spacing:3px;color:#bdb3a6">RENDIMENTO A 3 ANNI · RISPETTO AL MERCATO</div>
+ <svg id="Db" width="1080" height="1000" style="position:absolute;left:0;top:380px"></svg>
+</div>
+
+<!-- E · lock-up -->
+<div class="scene" id="E" style="background:#0d1022">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:110px;color:#fff">LOCK-UP</div>
+ <svg id="El" width="1080" height="440" style="position:absolute;left:0;top:430px"></svg>
+ <div class="abs serif" id="Eb" style="top:880px;color:#c9d6ea;font-size:52px;white-space:normal;width:900px">dopo circa 6 mesi gli investitori iniziali possono vendere</div>
+ <div class="abs" id="Ec" style="top:1070px;display:flex;gap:30px">
+  <div id="Ec1" style="background:#2a1414;border:3px solid #ff5a5a;border-radius:20px;padding:24px 32px;text-align:center"><div class="bold" style="font-size:90px;color:#ff5a5a">−1,5%</div><div class="mono" style="font-size:26px;color:#ffb0a8">in 3 giorni</div></div>
+  <div id="Ec2" style="background:#14223a;border:3px solid #8fa3c0;border-radius:20px;padding:24px 32px;text-align:center"><div class="bold" style="font-size:90px;color:#c9d6ea">+40%</div><div class="mono" style="font-size:26px;color:#c9d6ea">scambi</div></div></div>
+ <div class="abs mono" id="Es" style="top:1320px;font-size:22px;color:#8fa3c0">Field & Hanka, Journal of Finance, 2001 · 1.948 IPO</div>
+</div>
+
+<!-- F · SpaceX calendar -->
+<div class="scene" id="F" style="background:#0b0b0e">
+ <div class="abs bold" id="Fa" style="top:290px;font-size:72px;color:#fff">SPACEX LO STA VIVENDO</div>
+ <div class="abs" id="Fc" style="top:470px;display:flex;gap:40px"></div>
+</div>
+
+<!-- G · dispersion -->
+<div class="scene" id="G" style="background:#f4f0e8">
+ <div class="abs bold" id="Ga" style="top:290px;font-size:84px;color:#141215;line-height:1">MEDIE,<br><span style="color:#c94f2a">NON DESTINI</span></div>
+ <svg id="Gs" width="1080" height="640" style="position:absolute;left:0;top:520px"></svg>
+ <div class="abs" id="Gm" style="top:1180px"><div class="sans" style="font-size:40px;font-weight:800;color:#141215">il botto del 1° giorno quasi mai è per te</div></div>
+ <div class="abs" id="Gd" style="top:1270px"><div class="mono" style="font-size:28px;color:#141215;border:3px solid #141215;border-radius:12px;padding:12px 24px">⚠ Questo non è un consiglio finanziario.</div></div>
+</div>
+
+<!-- H · save + comment -->
+<div class="scene" id="H" style="background:#0d1022">
+ <div class="abs" id="Hs" style="top:400px"><svg width="200" height="240" viewBox="0 0 200 240"><path id="Hbm" d="M30 20 h140 v200 l-70 -50 l-70 50 z" stroke="#f3ebde" stroke-width="12" fill="none" stroke-linejoin="round"/></svg></div>
+ <div class="abs bold" id="Ha" style="top:690px;font-size:120px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hc" style="top:880px"><div style="width:860px;background:#14223a;border:2px solid #3a4a62;border-radius:30px;padding:28px 34px;text-align:left;display:flex;gap:22px">
+  <div style="width:76px;height:76px;border-radius:38px;background:linear-gradient(135deg,#f2c14e,#e2683c);flex:none"></div>
+  <div><div class="sans" style="font-size:30px;font-weight:700;color:#fff">tu <span style="font-weight:400;color:#8fa3c0">· adesso</span></div>
+  <div class="sans" id="Ht" style="font-size:40px;color:#f3ebde;margin-top:6px;min-height:52px"></div></div></div></div>
+ <div class="abs serif" id="Hb" style="top:1110px;font-size:62px;color:#c9d6ea">quale quotazione analizzo?</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);pop($('Aa'),t,2.4,.4);$('An').textContent=fmt(9345*ex(P(t,2.5,4.6)));words($('Ab'),t,3.0);pop($('Ac'),t,6.3,.5);};
+const BARS=[['compri dopo il botto','alla chiusura del 1° giorno',-20.5,'#ff5a5a'],['al prezzo di quotazione','chi riceve le azioni all\'IPO',-3.3,'#f2c14e'],['piccole, poche vendite','sotto 10 mln $ di ricavi',-52.3,'#c62828']];
+function bars(svg,t,n,cues){let h='';const x0=940,sc=11;
+ h+=`<line x1="${x0}" y1="40" x2="${x0}" y2="${80+n*260}" stroke="#f3ebde" stroke-width="5"/><text x="${x0}" y="24" text-anchor="end" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde">MERCATO = 0</text>`;
+ BARS.slice(0,n).forEach(([a,b,v,c],i)=>{const k=eio(P(t,cues[i],cues[i]+1.0));const y=90+i*260;const w=-v*sc*k;
+  h+=`<text x="80" y="${y+20}" font-family="Inter" font-weight="800" font-size="34" fill="#fff">${a}</text><text x="80" y="${y+62}" font-family="Instrument Serif" font-style="italic" font-size="32" fill="#bdb3a6">${b}</text>
+   <rect x="${x0-w}" y="${y+90}" width="${w}" height="80" rx="10" fill="${c}"/><text x="${x0-w-20}" y="${y+148}" text-anchor="end" font-family="Archivo Black" font-size="56" fill="${c}" opacity="${P(t,cues[i]+.8,cues[i]+1.1)}">${fmt(v,1)}%</text>`});
+ svg.innerHTML=h;}
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);bars($('Bb'),t,1,[1.2]);};
+R.C=(t,d)=>{ap($('Ck'),t,0,.01,0);bars($('Cb'),t,2,[-5,1.2]);};
+R.D=(t,d)=>{ap($('Dk'),t,0,.01,0);bars($('Db'),t,3,[-5,-5,1.0]);};
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);const sv=$('El');const o=eio(P(t,1.2,2.2));
+ sv.innerHTML=`<g transform="translate(540 230)"><path d="M-80 -30 V-110 a80 80 0 0 1 160 0 V-30" transform="translate(${o*60} ${-o*60}) rotate(${o*20})" stroke="#f2c14e" stroke-width="26" fill="none"/>
+  <rect x="-130" y="-40" width="260" height="220" rx="30" fill="#f2c14e"/><text y="90" text-anchor="middle" font-family="Archivo Black" font-size="56" fill="#0d1022">~180 gg</text></g>`;
+ ap($('Eb'),t,1.8,.4,20);pop($('Ec1'),t,5.4,.4,0,0,'');pop($('Ec2'),t,8.2,.4,0,0,'');ap($('Ec'),t,5.3,.01,0);ap($('Es'),t,9.0,.4,10);};
+const CAL=[['22','OTT','~1,3 mld di azioni sbloccate','−9%','#ff5a5a',1.0],['8','DIC','prossimo sblocco','?','#f2c14e',6.6]];
+R.F=(t,d)=>{ap($('Fa'),t,.2,.4,30);$('Fc').innerHTML=CAL.map(([dd,mm,s,v,c,t0])=>{const k=eback(P(t,t0,t0+.5));return `<div style="width:420px;opacity:${cl((t-t0)*4)};transform:scale(${.5+.5*k})">
+  <div style="background:${c};border-radius:24px 24px 0 0;padding:14px;text-align:center" class="mono"><span style="font-size:40px;font-weight:700;color:#0b0b0e">${mm}</span></div>
+  <div style="background:#f3ebde;border-radius:0 0 24px 24px;padding:20px 24px 30px;text-align:center"><div class="bold" style="font-size:150px;color:#0b0b0e">${dd}</div>
+  <div class="sans" style="font-size:30px;font-weight:700;color:#5a4a3a;white-space:normal">${s}</div><div class="bold" style="font-size:80px;color:${c==='#f2c14e'?'#a7791e':c};margin-top:10px">${v}</div></div></div>`}).join('');};
+R.G=(t,d)=>{ap($('Ga'),t,.2,.4,30);const sv=$('Gs');let h=`<line x1="80" y1="380" x2="1000" y2="380" stroke="#141215" stroke-width="3"/><text x="90" y="370" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#6b5a4c">MERCATO</text>`;
+ for(let i=0;i<70;i++){const k=eo(P(t,.8+i*.02,1.1+i*.02));if(k<=0)continue;const x=100+rnd(i*3)*880;let v=(rnd(i*7)-.62)*300;if(i%23===5)v=-300-rnd(i)*40;
+  h+=`<circle cx="${x}" cy="${380+v*k}" r="${i%23===5?16:10}" fill="${v<0?'#3ccf6e':'#ff5a5a'}" opacity=".85"/>`}
+ h+=`<text x="560" y="40" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#2f8f4e" opacity="${P(t,3.0,3.4)}">alcune hanno moltiplicato il valore</text>`;
+ sv.innerHTML=h;pop($('Gm'),t,5.6,.45);pop($('Gd'),t,8.4,.45);};
+R.H=(t,d)=>{const bm=$('Hbm');const k=P(t,.2,.6);bm.setAttribute('fill',k>.9?'#f2c14e':'none');bm.setAttribute('stroke',k>.9?'#f2c14e':'#f3ebde');
+ pop($('Hs'),t,.05,.4);pop($('Ha'),t,.25,.4);ap($('Hc'),t,.9,.4,40);typeT($('Ht'),'analizza…',t,1.2,10);words($('Hb'),t,1.8);};
+</script></body></html>
