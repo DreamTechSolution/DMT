@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121014}
+#c{position:relative;width:1080px;height:1920px;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#221a1a 0%,#121014 65%)}
+.abs{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center}
+.bold{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-3px;line-height:.95}
+.serif{font-family:'Instrument Serif',serif;font-style:italic}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:700}
+/* safe area guide (not rendered): grid crop ~ y 240..1680 */
+.grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+</style></head><body><div id="c">
+ <div class="abs mono" id="tag" style="top:420px;font-size:30px;letter-spacing:5px;color:#f3ebde;background:#e2683c;padding:12px 28px;border-radius:40px"></div>
+ <div class="abs bold" id="t1" style="top:540px;font-size:128px;color:#fff"></div>
+ <div class="abs bold" id="t2" style="top:680px;font-size:112px;color:#e2683c"></div>
+ <svg id="viz" width="1080" height="420" style="position:absolute;left:0;top:860px"></svg>
+ <div class="abs serif" style="top:1330px;font-size:60px;color:#bdb3a6">te lo spiega <span style="color:#e2683c;font-size:76px">Claudio</span></div>
+ <div class="grain"></div>
+</div>
+<script>
+const V={
+ p1:{tag:'PARTE 1 DI 2',t1:'OPENAI:<br>SOLDI IN CERCHIO',t2b:'INVESTITORI = FORNITORI',viz:'ring'},
+ p2:{tag:'PARTE 2 DI 2',t1:'OPENAI: LA MAPPA<br>E LA BORSA',t2b:'SE UN ANELLO SI ROMPE',viz:'chain'}
+};
+const v=V[new URLSearchParams(location.search).get('v')||'p2'];
+tag.textContent=v.tag;t1.innerHTML=v.t1;
+// t1 is two lines -> push subtitle below it
+t1.style.top='500px';t1.style.fontSize='90px';t2.style.top='770px';t2.style.fontSize='64px';t2.style.letterSpacing='-1px';t2.textContent=v.t2b;
+let h='';
+if(v.viz==='ring'){
+ h+=`<g transform="translate(540 250) scale(.85) translate(-540 -210)"><circle cx="540" cy="210" r="180" fill="none" stroke="#3a3040" stroke-width="18"/><path d="M540 30 A180 180 0 1 1 360 210" fill="none" stroke="#f2c14e" stroke-width="10" stroke-dasharray="18 14"/>
+ <g transform="translate(540 210)"><rect x="-130" y="-50" width="260" height="100" rx="24" fill="#f3ebde"/><text y="16" text-anchor="middle" font-family="Archivo Black" font-size="48" fill="#121014">OPENAI</text></g>
+ <g transform="translate(360 210)"><circle r="36" fill="#f2c14e"/><text y="15" text-anchor="middle" font-family="Archivo Black" font-size="40" fill="#6b4a10">$</text></g>`;
+ [['NVIDIA','#7ccf3c',-90],['AMAZON','#f2a541',30],['MICROSOFT','#3a7bd5',150]].forEach(([n,c,a])=>{const r=a*Math.PI/180,x=540+180*Math.cos(r)*1.55,y=210+180*Math.sin(r);
+  h+=`<g transform="translate(${x} ${y})"><rect x="-120" y="-34" width="240" height="68" rx="16" fill="${c}"/><text y="12" text-anchor="middle" font-family="Archivo Black" font-size="${n.length>7?30:36}" fill="#121014">${n}</text></g>`});h+='</g>';
+}else{
+ const L=(x,c,r)=>`<g transform="translate(${x} 210) rotate(${r})"><rect x="-130" y="-60" width="260" height="120" rx="60" fill="none" stroke="${c}" stroke-width="28"/></g>`;
+ h+=L(250,'#bdb3a6',0)+L(830,'#bdb3a6',0)+`<g transform="translate(-30 30)">${L(540,'#e2683c',-14)}</g><g stroke="#f2c14e" stroke-width="7" stroke-linecap="round"><line x1="600" y1="110" x2="650" y2="60"/><line x1="630" y1="140" x2="700" y2="120"/><line x1="580" y1="90" x2="585" y2="30"/></g>
+ <text x="540" y="390" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="32" fill="#bdb3a6">852 MLD $ · IPO: FORSE 2027</text>`;
+}
+viz.innerHTML=h;
+window.ready=document.fonts.ready.then(()=>true);
+</script></body></html>

@@ -48,7 +48,7 @@
  <svg id="Dm" width="1080" height="640" style="position:absolute;left:0;top:350px"></svg>
  <div class="abs" id="Dc" style="top:1010px"><div class="card" style="background:#2a2410;border:3px solid #f2c14e;display:flex;gap:30px;align-items:center">
   <div style="flex:1"><div class="lab" style="color:#f2d98a">SOFTBANK</div>
-   <div class="row" id="Dc1"><div class="bold" style="font-size:96px;color:#fff">40</div><div class="mono" style="font-size:28px;color:#f2d98a">round guidato · 2025</div></div>
+   <div class="row" id="Dc1"><div class="bold" style="font-size:96px;color:#fff">40</div><div class="mono" style="font-size:28px;color:#f2d98a">MLD $ · round guidato 2025</div></div>
    <div class="row" id="Dc2"><div class="bold" style="font-size:96px;color:#fff">+30</div><div class="mono" style="font-size:28px;color:#f2d98a">MLD $ · 2026</div></div></div>
   <div id="Dc3" style="width:250px;text-align:center"><svg id="Dhg" width="120" height="160" viewBox="0 0 120 160"></svg>
    <div class="mono" style="font-size:24px;color:#f2d98a;white-space:normal">prestito ponte: scade</div><div class="bold" style="font-size:44px;color:#ff5a5a;letter-spacing:-1px">MAR 2027</div></div>
@@ -102,11 +102,12 @@
 const q=(id,f)=>.25+DURS[id]*f;
 const MAP=[['ORACLE','~300 mld $',210,90,'#ff6b5a'],['COREWEAVE','~22,4 mld $',870,90,'#39b6e6'],['AMD','6 GW',210,520,'#e8e8e8'],['SOFTBANK','40 + 30 mld $',870,520,'#f2c14e']];
 function map(svg,t,n,t0){const cx=540,cy=305;let h='';
- MAP.slice(0,n+1).forEach(([nm,v,x,y,c],i)=>{const cur=i===n;const k=cur?P(t,t0,t0+.9):1;const ke=eio(k);
-  h+=`<line x1="${cx}" y1="${cy}" x2="${cx+(x-cx)*ke}" y2="${cy+(y-cy)*ke}" stroke="${c}" stroke-width="${cur?10:5}" opacity="${cur?1:.45}" stroke-dasharray="${cur?'0':'10 10'}"/>`;
-  if(k>.6){const s=eback(P(t,t0+.5,t0+.9));const sc=cur?s:1;
-   h+=`<g transform="translate(${x} ${y}) scale(${sc})" opacity="${cur?1:.5}"><rect x="-170" y="-62" width="340" height="124" rx="22" fill="${cur?c:'#1d2438'}" stroke="${c}" stroke-width="4"/>
-   <text y="4" text-anchor="middle" font-family="Archivo Black" font-size="${nm.length>8?40:50}" fill="${cur?'#0d1022':c}">${nm}</text><text y="42" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="${cur?'#0d1022':c}">${v}</text></g>`}});
+ let L='',N='';MAP.slice(0,n+1).forEach(([nm,v,x,y,c],i)=>{const cur=i===n;const k=cur?P(t,t0,t0+.9):1;const ke=eio(k);
+  L+=`<line x1="${cx}" y1="${cy}" x2="${cx+(x-cx)*ke}" y2="${cy+(y-cy)*ke}" stroke="${c}" stroke-width="${cur?10:5}" opacity="${cur?1:.45}" stroke-dasharray="${cur?'0':'10 10'}"/>`;
+  if(k>.6){const sc=cur?eback(P(t,t0+.5,t0+.9)):1;
+   N+=`<g transform="translate(${x} ${y}) scale(${sc})"><rect x="-170" y="-62" width="340" height="124" rx="22" fill="${cur?c:'#151b2c'}" stroke="${c}" stroke-opacity="${cur?1:.5}" stroke-width="4"/>
+   <g opacity="${cur?1:.55}"><text y="4" text-anchor="middle" font-family="Archivo Black" font-size="${nm.length>8?40:50}" fill="${cur?'#0d1022':c}">${nm}</text><text y="42" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="${cur?'#0d1022':c}">${v}</text></g></g>`}});
+ h+=L+N;
  if(n===1){const k=P(t,q('B',.5),q('B',.5)+.5);if(k>0)h+=`<g opacity="${k}"><line x1="870" y1="152" x2="870" y2="${152+60*eio(k)}" stroke="#7ccf3c" stroke-width="6"/><g transform="translate(870 255) scale(${eback(k)})"><rect x="-120" y="-42" width="240" height="84" rx="18" fill="#7ccf3c"/><text y="14" text-anchor="middle" font-family="Archivo Black" font-size="40" fill="#0d1022">NVIDIA</text></g></g>`}
  h+=`<g transform="translate(${cx} ${cy})"><circle r="92" fill="#f3ebde"/><text y="14" text-anchor="middle" font-family="Archivo Black" font-size="38" fill="#0d1022">OPENAI</text></g>`;
  svg.innerHTML=h;}

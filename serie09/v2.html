@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · the rule today -->
+<div class="scene" id="A" style="background:#0b1a2c">
+ <div class="abs mono" id="Ak" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fb3d9">LE REGOLE DI OGGI</div>
+ <div class="abs" id="Al" style="top:350px;display:flex;gap:24px">
+  <div id="Al1" style="background:#173a63;border:3px solid #f2c14e;border-radius:18px;padding:18px 30px;text-align:center"><div class="mono" style="font-size:24px;color:#f2c14e">UE · DIRETTIVA</div><div class="bold" style="font-size:76px;color:#fff">PSD2</div></div>
+  <div id="Al2" style="background:#173a63;border:3px solid #3ccf6e;border-radius:18px;padding:18px 30px;text-align:center"><div class="mono" style="font-size:24px;color:#3ccf6e">ITALIA · DECRETO</div><div class="bold" style="font-size:76px;color:#fff">D.LGS. 11/2010</div></div>
+ </div>
+ <svg id="As" width="1080" height="700" style="position:absolute;left:0;top:600px"></svg>
+</div>
+
+<!-- B · 50 euro cap -->
+<div class="scene" id="B" style="background:#f4f0e8">
+ <div class="abs mono" id="Bk" style="top:290px;font-size:28px;letter-spacing:4px;color:#8a7a6c">QUANTO RESTA A TE</div>
+ <div class="abs" id="Bc" style="top:360px"><div style="width:880px;background:#fff;border:4px solid #141215;border-radius:28px;padding:30px 40px;text-align:center">
+  <div class="mono" style="font-size:28px;color:#8a7a6c">AL MASSIMO</div>
+  <div class="bold" style="font-size:220px;color:#141215;letter-spacing:-6px"><span id="Bn">0</span> €</div>
+  <div style="height:30px;background:#eee6d8;border-radius:15px;overflow:hidden;margin-top:10px"><div id="Bbar" style="height:100%;width:0;background:#1f7a45"></div></div></div></div>
+ <div class="abs bold" id="Bm" style="top:860px;font-size:60px;color:#c94f2a">A MENO CHE…</div>
+ <div class="abs" id="Bx" style="top:960px;display:flex;gap:30px">
+  <div id="Bx1" style="background:#c62828;border-radius:20px;padding:22px 40px"><div class="bold" style="font-size:72px;color:#fff">FRODE</div></div>
+  <div id="Bx2" style="background:#141215;border-radius:20px;padding:22px 40px"><div class="bold" style="font-size:72px;color:#ff8a7a">COLPA GRAVE</div></div></div>
+ <div class="abs sans" id="Bz" style="top:1150px;font-size:38px;font-weight:700;color:#141215">→ il limite dei 50 € non vale</div>
+</div>
+
+<!-- C · handing over the key -->
+<div class="scene" id="C" style="background:#121014">
+ <div class="abs bold" id="Ca" style="top:290px;font-size:84px;color:#fff;line-height:1">CUSTODISCI<br><span style="color:#f2c14e">LE CREDENZIALI</span></div>
+ <svg id="Cs" width="1080" height="560" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs bold" id="Cq" style="top:1060px;font-size:110px;color:#ff5a5a">COLPA GRAVE?</div>
+ <div class="abs" id="Cn" style="top:1210px"><div class="mono" style="font-size:28px;color:#bdb3a6;border:2px dashed #6b5f63;border-radius:12px;padding:12px 22px">ragionamento giuridico · nessuna sentenza</div></div>
+</div>
+
+<!-- D · authorised providers -->
+<div class="scene" id="D" style="background:#f4f0e8">
+ <div class="abs bold" id="Da" style="top:290px;font-size:80px;color:#141215;line-height:1">ACCESSO DI TERZI<br><span style="color:#1f7a45">SÌ, MA…</span></div>
+ <svg id="Ds" width="1080" height="760" style="position:absolute;left:0;top:500px"></svg>
+</div>
+
+<!-- E · Banca d'Italia quote -->
+<div class="scene" id="E" style="background:#0b1a2c">
+ <div class="abs mono" id="Ek" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fb3d9">BANCA D'ITALIA · 12 NOVEMBRE 2026</div>
+ <div class="abs" id="Eq" style="top:360px"><div style="width:900px;border-left:10px solid #f2c14e;padding:10px 0 10px 40px;text-align:left">
+  <div class="serif" style="font-size:58px;color:#f3ebde;white-space:normal;line-height:1.15">«accertare che l'agente sia stato autorizzato dall'utente non basta sempre a risolvere il problema della responsabilità»</div></div></div>
+ <div class="abs" id="Ec" style="top:800px;display:flex;gap:24px">
+  <div id="Ec1" class="mono" style="font-size:34px;font-weight:700;color:#0b1a2c;background:#8fb3d9;border-radius:40px;padding:14px 30px">l'agente devia</div>
+  <div id="Ec2" class="mono" style="font-size:34px;font-weight:700;color:#0b1a2c;background:#ff8a7a;border-radius:40px;padding:14px 30px">l'agente è hackerato</div></div>
+ <div class="abs bold" id="Ea" style="top:960px;font-size:140px;color:#f2c14e">COMPLESSA</div>
+ <div class="abs serif" id="Eb" style="top:1110px;font-size:50px;color:#8fb3d9">l'imputazione delle responsabilità</div>
+ <div class="abs mono" id="Es" style="top:1330px;font-size:22px;color:#8fb3d9">Banca d'Italia, intervento di C. Scotti · Palermo, 12/11/2026</div>
+</div>
+
+<!-- F · timeline -->
+<div class="scene" id="F" style="background:#121014">
+ <div class="abs bold" id="Fa" style="top:290px;font-size:84px;color:#fff;line-height:1">LE NUOVE REGOLE<br><span style="color:#e2683c">PSD3 + PSR</span></div>
+ <svg id="Fs" width="1080" height="880" style="position:absolute;left:0;top:500px"></svg>
+</div>
+
+<!-- G · what to do -->
+<div class="scene" id="G" style="background:#f4f0e8">
+ <div class="abs bold" id="Ga" style="top:290px;font-size:96px;color:#141215">NEL FRATTEMPO</div>
+ <div class="abs" id="G1" style="top:440px"></div>
+ <div class="abs" id="G2" style="top:690px"></div>
+ <div class="abs" id="G3" style="top:900px"></div>
+ <div class="abs" id="Gd" style="top:1160px"><div class="mono" style="font-size:26px;color:#141215;border:3px solid #141215;border-radius:12px;padding:12px 24px">Contenuto informativo · non è consulenza legale.</div></div>
+</div>
+
+<!-- H · save + switch question -->
+<div class="scene" id="H" style="background:#0b1a2c">
+ <div class="abs bold" id="Ha" style="top:400px;font-size:110px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs serif" id="Hb" style="top:580px;font-size:60px;color:#8fb3d9">lasceresti pagare un'IA al posto tuo?</div>
+ <svg id="Hs" width="1080" height="300" style="position:absolute;left:0;top:720px"></svg>
+ <div class="abs mono" id="Hc" style="top:1060px;font-size:34px;color:#f3ebde">scrivimelo nei commenti 💬</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+const q=(id,f)=>.25+DURS[id]*f;
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);ap($('Al'),t,0,.01,0);pop($('Al1'),t,q('A',.05),.4,-3,0,'');pop($('Al2'),t,q('A',.2),.4,3,0,'');
+ const day=(x,top,lab,sub,c,k)=>`<g transform="translate(${x} 260) scale(${eback(k)})" opacity="${cl(k*4)}"><rect x="-200" y="-200" width="400" height="400" rx="26" fill="#f3ebde"/><rect x="-200" y="-200" width="400" height="90" rx="26" fill="${c}"/><rect x="-200" y="-140" width="400" height="30" fill="${c}"/>
+  <text y="-140" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#fff">${top}</text><text y="20" text-anchor="middle" font-family="Archivo Black" font-size="64" fill="#0b1a2c">${lab}</text>
+  ${sub.map((s,i)=>`<text y="${90+i*42}" text-anchor="middle" font-family="Inter" font-weight="700" font-size="32" fill="#4a5a6a">${s}</text>`).join('')}</g>`;
+ let h=day(290,'GIORNO 1','✕ 120 €',['pagamento','non autorizzato'],'#c62828',P(t,q('A',.55),q('A',.55)+.45));
+ const ka=P(t,q('A',.75),q('A',.75)+.4);h+=`<path d="M510 260 H${510+60*eio(ka)}" stroke="#f2c14e" stroke-width="14" stroke-linecap="round"/>${ka>=1?'<path d="M580 260 l-26 -22 v44 z" fill="#f2c14e"/>':''}`;
+ h+=day(800,'GIORNO LAV. DOPO','↺ 120 €',['rimborso','dalla banca'],'#1f7a45',P(t,q('A',.8),q('A',.8)+.45));
+ h+=`<text x="540" y="560" text-anchor="middle" font-family="JetBrains Mono" font-size="24" fill="#8fb3d9" opacity="${P(t,q('A',.9),q('A',.95))}">esempio illustrativo</text>`;
+ $('As').innerHTML=h;};
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);pop($('Bc'),t,.15,.4);const k=ex(P(t,q('B',.1),q('B',.38)));$('Bn').textContent=Math.round(50*k);$('Bbar').style.width=(100*k)+'%';
+ ap($('Bm'),t,q('B',.45),.35,20);pop($('Bx1'),t,q('B',.62),.4,-4,0,'');pop($('Bx2'),t,q('B',.8),.4,4,0,'');ap($('Bx'),t,0,.01,0);ap($('Bz'),t,q('B',.92),.4,10);};
+function person(x,y,c){return `<g transform="translate(${x} ${y})"><circle cy="-70" r="50" fill="${c}"/><path d="M-80 90 Q-80 -10 0 -10 Q80 -10 80 90 Z" fill="${c}"/></g>`}
+function bot(x,y,c){return `<g transform="translate(${x} ${y})"><rect x="-70" y="-120" width="140" height="100" rx="26" fill="${c}"/><circle cx="-28" cy="-70" r="13" fill="#121014"/><circle cx="28" cy="-70" r="13" fill="#121014"/><line x1="0" y1="-120" x2="0" y2="-145" stroke="${c}" stroke-width="7"/><circle cy="-150" r="10" fill="#ff5a5a"/><rect x="-60" y="-10" width="120" height="100" rx="22" fill="${c}"/></g>`}
+R.C=(t,d)=>{ap($('Ca'),t,.2,.4,30);let h=person(230,300,'#f3ebde')+`<text x="230" y="450" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#f3ebde">TU</text>`;
+ const kb=P(t,q('C',.3),q('C',.4));h+=`<g opacity="${cl(kb*3)}">${bot(850,300,'#9fb3c0')}<text x="850" y="450" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#9fb3c0">agente IA</text><text x="850" y="485" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#ff8a7a">NON autorizzato</text></g>`;
+ const km=eio(P(t,q('C',.38),q('C',.52)));const kx=320+330*km,ky=330-170*Math.sin(km*Math.PI);
+ h+=`<g transform="translate(${kx} ${ky}) rotate(${-30+km*60})"><circle r="34" fill="none" stroke="#f2c14e" stroke-width="14"/><rect x="30" y="-8" width="110" height="16" rx="6" fill="#f2c14e"/><rect x="110" y="6" width="14" height="26" fill="#f2c14e"/><rect x="88" y="6" width="12" height="20" fill="#f2c14e"/></g>`;
+ if(P(t,.4,q('C',.3))>0&&km===0)h+=`<circle cx="${kx}" cy="${ky}" r="${60+8*Math.sin(t*6)}" fill="#f2c14e" opacity=".15"/>`;
+ $('Cs').innerHTML=h;pop($('Cq'),t,q('C',.58),.45,-4);pop($('Cn'),t,q('C',.78),.4);};
+R.D=(t,d)=>{ap($('Da'),t,.2,.4,30);let h='';
+ h+=`<rect x="760" y="80" width="250" height="520" rx="24" fill="#26405f"/><text x="885" y="200" text-anchor="middle" font-size="100">🏦</text><text x="885" y="290" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="32" fill="#fff">IL TUO</text><text x="885" y="330" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="32" fill="#fff">CONTO</text>`;
+ const k1=P(t,q('D',.35),q('D',.35)+.45),go=eio(P(t,q('D',.45),q('D',.7)));
+ h+=`<g transform="translate(${70+180*go} 160) scale(${eback(k1)})" opacity="${cl(k1*4)}"><rect width="440" height="170" rx="22" fill="#1f7a45"/><text x="220" y="62" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#cfeedd">PRESTATORE</text><text x="220" y="118" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#fff">AUTORIZZATO ✓</text><text x="220" y="152" text-anchor="middle" font-family="JetBrains Mono" font-size="22" fill="#cfeedd">es. servizi AISP / PISP</text></g>`;
+ const k2=P(t,q('D',.72),q('D',.72)+.45);
+ h+=`<g transform="translate(250 470) scale(${eback(k2)})" opacity="${cl(k2*4)}"><rect x="-180" y="-80" width="360" height="160" rx="80" fill="#141215"/><text y="-6" text-anchor="middle" font-family="Archivo Black" font-size="56" fill="#f2c14e">SCA 🔐</text><text y="40" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#f3ebde">autenticazione forte</text></g>`;
+ $('Ds').innerHTML=h;};
+R.E=(t,d)=>{ap($('Ek'),t,.1,.3,10);ap($('Eq'),t,.3,.5,30);pop($('Ec1'),t,q('E',.6),.4,0,0,'');pop($('Ec2'),t,q('E',.7),.4,0,0,'');ap($('Ec'),t,0,.01,0);
+ pop($('Ea'),t,q('E',.88),.45,-4);ap($('Eb'),t,q('E',.9),.4,10);ap($('Es'),t,q('E',.4),.4,10);};
+const TL=[['APRILE 2026','testi di compromesso','#8fb3d9',.0],['DIC 2026 – GEN 2027','Gazzetta Ufficiale UE (attesa)','#f2c14e',.3],['+ CIRCA 21 MESI','poi si applicano','#3ccf6e',.72]];
+R.F=(t,d)=>{ap($('Fa'),t,.2,.4,30);const sv=$('Fs');const ys=[90,370,650];let h='';const kl=eio(P(t,.3,q('F',.8)));
+ h+=`<line x1="160" y1="90" x2="160" y2="650" stroke="#3a3238" stroke-width="10" stroke-linecap="round"/><line x1="160" y1="90" x2="160" y2="${90+560*kl}" stroke="#e2683c" stroke-width="10" stroke-linecap="round"/>`;
+ TL.forEach(([a,b,c,f],i)=>{const k=P(t,q('F',f),q('F',f)+.45);if(k<=0&&i)return;const e=eback(k);
+  h+=`<circle cx="160" cy="${ys[i]}" r="${30*e}" fill="${c}"/><g opacity="${cl(k*3)}" transform="translate(${230+(1-e)*-40} ${ys[i]})"><text y="-8" font-family="Archivo Black" font-size="${a.length>14?54:60}" fill="${c}">${a}</text><text y="52" font-family="Instrument Serif" font-style="italic" font-size="50" fill="#e9e1d6">${b}</text></g>`});
+ h+=`<text x="540" y="800" text-anchor="middle" font-family="JetBrains Mono" font-size="24" fill="#8a8590" opacity="${P(t,q('F',.5),q('F',.6))}">Fonte: EBA · date attese, non ancora ufficiali</text>`;
+ sv.innerHTML=h;};
+const TODO=[['✕','Password della banca a un chatbot','#c62828',.08],['✓','Strumenti della tua banca','#1f7a45',.6],['✓','Servizi autorizzati','#1f7a45',.85]];
+R.G=(t,d)=>{pop($('Ga'),t,.15,.4);TODO.forEach(([s,txt,c,f],i)=>{const el=$('G'+(i+1));el.innerHTML=`<div style="display:flex;align-items:center;gap:26px;width:880px;background:#fff;border:4px solid ${c};border-radius:24px;padding:24px 30px;text-align:left">
+  <div class="bold" style="flex:none;width:100px;height:100px;border-radius:50px;background:${c};color:#fff;font-size:64px;display:flex;align-items:center;justify-content:center;letter-spacing:0">${s}</div>
+  <div class="sans" style="font-size:42px;font-weight:800;color:#141215;white-space:normal;${i===0?'text-decoration:line-through;text-decoration-color:#c62828;text-decoration-thickness:5px':''}">${txt}</div></div>`;pop(el,t,q('G',f),.45)});ap($('Gd'),t,q('G',.9),.4,10);};
+R.H=(t,d)=>{pop($('Ha'),t,.15,.4);words($('Hb'),t,.6,.08);const k=eio(P(t,1.6,2.0));const k2=eio(P(t,2.6,3.0));const pos=k-k2*.5;
+ $('Hs').innerHTML=`<g transform="translate(540 150)"><rect x="-230" y="-90" width="460" height="180" rx="90" fill="${pos>.6?'#1f7a45':pos>.3?'#6b5f63':'#c62828'}"/><circle cx="${-140+280*pos}" r="72" fill="#f3ebde"/>
+  <text x="-330" y="22" text-anchor="middle" font-family="Archivo Black" font-size="60" fill="#ff8a7a">NO</text><text x="330" y="22" text-anchor="middle" font-family="Archivo Black" font-size="60" fill="#3ccf6e">SÌ</text></g>`;
+ ap($('Hc'),t,1.2,.4,20);};
+</script></body></html>

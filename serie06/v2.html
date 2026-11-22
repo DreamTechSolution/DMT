@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · two tracks -->
+<div class="scene" id="A" style="background:#0d1022">
+ <div class="abs bold" id="Aa" style="top:290px;font-size:84px;color:#fff">VARIABILE O FISSO?</div>
+ <svg id="At" width="1080" height="900" style="position:absolute;left:0;top:420px"></svg>
+</div>
+
+<!-- B · loan card -->
+<div class="scene" id="B" style="background:#f4f0e8">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:28px;letter-spacing:3px;color:#8a7a6c">ESEMPIO · MUTUO VARIABILE</div>
+ <div class="abs" id="Bc" style="top:370px"><div style="width:880px;background:#fff;border:4px solid #141215;border-radius:28px;padding:34px 44px;text-align:left">
+  <div id="B1" style="display:flex;justify-content:space-between;border-bottom:2px dashed #d9ccb6;padding:18px 0"><span class="mono" style="font-size:32px;color:#6b5a4c;font-weight:700">CAPITALE</span><span class="bold" style="font-size:56px;color:#141215;letter-spacing:-1px">150.000 €</span></div>
+  <div id="B2" style="display:flex;justify-content:space-between;border-bottom:2px dashed #d9ccb6;padding:18px 0"><span class="mono" style="font-size:32px;color:#6b5a4c;font-weight:700">DURATA</span><span class="bold" style="font-size:56px;color:#141215;letter-spacing:-1px">25 ANNI</span></div>
+  <div id="B3" style="display:flex;justify-content:space-between;padding:18px 0 4px"><span class="mono" style="font-size:32px;color:#6b5a4c;font-weight:700">TAN VARIABILE</span><span class="bold" style="font-size:56px;color:#26405f;letter-spacing:-1px">2,94%</span></div>
+  <div id="B3s" class="serif" style="font-size:34px;color:#8a7a6c;text-align:right">media di ottobre · MutuiOnline</div></div></div>
+ <div class="abs" id="Br" style="top:1000px"><div style="background:#26405f;border-radius:28px;padding:26px 60px;text-align:center">
+  <div class="mono" style="font-size:30px;color:#c9d6ea;letter-spacing:3px;font-weight:700">RATA AL MESE</div>
+  <div class="bold" style="font-size:130px;color:#fff;letter-spacing:-2px"><span id="Bn">0</span> €</div></div></div>
+</div>
+
+<!-- C · formula + difference -->
+<div class="scene" id="C" style="background:#121014">
+ <div class="abs" id="Cf" style="top:290px"><div style="border:3px solid #4a4146;border-radius:22px;padding:22px 34px;text-align:center">
+  <div class="mono" style="font-size:44px;color:#f3ebde;font-weight:700">Rata = C · i / (1 − (1+i)<sup style="font-size:28px">−n</sup>)</div>
+  <div class="mono" style="font-size:26px;color:#8a8590;margin-top:10px">C = 150.000 € · i = TAN / 12 · n = 300 rate</div></div></div>
+ <svg id="Cr" width="1080" height="560" style="position:absolute;left:0;top:520px"></svg>
+ <div class="abs bold" id="Cd" style="top:1080px;font-size:120px;color:#ff5a5a">+19,59 €</div>
+ <div class="abs serif" id="Ce" style="top:1220px;font-size:56px;color:#f3ebde">al mese · circa <span style="color:#ff5a5a">+235 €</span> l'anno</div>
+</div>
+
+<!-- D · variable vs fixed notes -->
+<div class="scene" id="D" style="background:#071410">
+ <div class="abs bold" id="Da" style="top:290px;font-size:84px;color:#fff">ATTENZIONE</div>
+ <div class="abs" id="D1" style="top:420px"><div style="width:900px;background:#0f241c;border:3px solid #3ccf6e;border-radius:26px;padding:28px 34px;text-align:left;display:flex;gap:28px;align-items:center">
+  <svg width="140" height="100" style="flex:none"><path d="M5 60 C25 10 45 10 65 50 S105 90 135 20" stroke="#3ccf6e" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M118 14 L138 18 L132 38" stroke="#3ccf6e" stroke-width="8" fill="none"/></svg>
+  <div><div class="mono" style="font-size:28px;color:#8fc0a8;font-weight:700;letter-spacing:2px">VARIABILE · SEGUE L'EURIBOR</div>
+  <div class="sans" style="font-size:42px;font-weight:800;color:#fff;white-space:normal">spesso si muove prima della BCE: anticipa le attese</div></div></div></div>
+ <div class="abs" id="D2" style="top:790px"><div style="width:900px;background:#f3ebde;border-radius:26px;padding:28px 34px;text-align:left;display:flex;gap:28px;align-items:center">
+  <svg width="140" height="140" style="flex:none"><path d="M40 62 V40 a30 30 0 0 1 60 0 V62" stroke="#071410" stroke-width="12" fill="none"/><rect x="22" y="60" width="96" height="74" rx="14" fill="#071410"/><circle cx="70" cy="94" r="10" fill="#f3ebde"/></svg>
+  <div><div class="mono" style="font-size:28px;color:#2d5a47;font-weight:700;letter-spacing:2px">FISSO · RATA BLOCCATA</div>
+  <div class="sans" style="font-size:42px;font-weight:800;color:#071410">chi ce l'ha già: nulla cambia</div>
+  <div class="sans" id="D3" style="font-size:36px;font-weight:700;color:#c94f2a;margin-top:6px">nuovi fissi, media di ottobre: 3,62%</div></div></div></div>
+ <div class="abs mono" id="Ds" style="top:1330px;font-size:22px;color:#6f9a86">TAN medi al 31/10/2026 · MutuiOnline</div>
+</div>
+
+<!-- E · coin stacks -->
+<div class="scene" id="E" style="background:#16121c">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:80px;color:#fff;line-height:1">L'ALTRO LATO</div>
+ <div class="abs serif" id="Eb" style="top:390px;font-size:50px;color:#c9c0d6">salgono anche i rendimenti</div>
+ <svg id="Ec" width="1080" height="760" style="position:absolute;left:0;top:480px"></svg>
+ <div class="abs mono" id="Es" style="top:1330px;font-size:22px;color:#8a8590">Massimi delle offerte, settembre 2026 · Facile.it / QuiFinanza</div>
+</div>
+
+<!-- F · checklist -->
+<div class="scene" id="F" style="background:#0d1022">
+ <div class="abs bold" id="Fa" style="top:290px;font-size:84px;color:#fff">COSA GUARDARE</div>
+ <div class="abs" id="Fl" style="top:440px;width:900px;text-align:left"></div>
+</div>
+
+<!-- G · disclaimer -->
+<div class="scene" id="G" style="background:#f4f0e8">
+ <div class="abs bold" id="Ga" style="top:290px;font-size:84px;color:#141215;line-height:1">SCENARI,<br><span style="color:#c94f2a">NON CERTEZZE</span></div>
+ <svg id="Gd" width="1080" height="560" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs" id="Gx" style="top:1140px"><div class="mono" style="font-size:30px;color:#141215;border:3px solid #141215;border-radius:12px;padding:14px 26px">⚠ Questo non è un consiglio finanziario.</div></div>
+</div>
+
+<!-- H · save + poll -->
+<div class="scene" id="H" style="background:#0d1022">
+ <div class="abs bold" id="Ha" style="top:420px;font-size:110px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs serif" id="Hq" style="top:600px;font-size:62px;color:#c9d6ea">e scrivimi: il tuo mutuo è…</div>
+ <div class="abs" id="Hp" style="top:760px;display:flex;flex-direction:column;gap:26px">
+  <div id="Hp1" style="width:760px;height:120px;border-radius:60px;background:#26405f;border:3px solid #8fa3c0;position:relative;overflow:hidden"><div class="bold" style="position:relative;font-size:58px;color:#fff;line-height:120px;letter-spacing:0">FISSO</div></div>
+  <div id="Hp2" style="width:760px;height:120px;border-radius:60px;background:#e2683c;border:3px solid #f2a07c;position:relative;overflow:hidden"><div class="bold" style="position:relative;font-size:58px;color:#fff;line-height:120px;letter-spacing:0">VARIABILE</div></div></div>
+ <div class="abs mono" id="Hc" style="top:1080px;font-size:30px;color:#8fa3c0;font-weight:700">↓ rispondi nei commenti</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// A: tracks
+R.A=(t,d)=>{pop($('Aa'),t,.2,.4);let h='';
+ const k1=eo(P(t,.6,1.2)),k2=eo(P(t,5.3,5.9));
+ const row=(y,label,sub,c,wave,k)=>{let p='';for(let x=80;x<=1000;x+=10){const yy=y+(wave?Math.sin((x/120)+t*2.2)*60*Math.min(1,(x-80)/200):0);p+=(x===80?'M':'L')+x+' '+yy}
+  return `<g opacity="${k}"><text x="80" y="${y-130}" font-family="Archivo Black" font-size="56" fill="${c}">${label}</text><text x="80" y="${y-88}" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#c9d6ea">${sub}</text>
+  <path d="${p}" stroke="${c}" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="1200" stroke-dashoffset="${1200*(1-k)}"/></g>`};
+ h+=row(260,'VARIABILE','la rata segue l\'Euribor: sale e scende','#e2683c',true,k1);
+ h+=row(680,'FISSO','la rata resta uguale fino all\'ultima','#8fa3c0',false,k2);
+ // coins riding
+ const ride=(y,wave,k,c)=>{if(k<=0)return'';const x=80+((t*160)%920);const yy=y+(wave?Math.sin((x/120)+t*2.2)*60*Math.min(1,(x-80)/200):0);return `<circle cx="${x}" cy="${yy}" r="26" fill="#f3ebde" stroke="${c}" stroke-width="6"/><text x="${x}" y="${yy+11}" text-anchor="middle" font-family="Archivo Black" font-size="30" fill="${c}">€</text>`};
+ h+=ride(260,true,k1,'#e2683c')+ride(680,false,k2,'#8fa3c0');
+ $('At').innerHTML=h;};
+// B: loan card
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);ap($('Bc'),t,.2,.4,30);['B1','B2','B3'].forEach((id,i)=>{const el=$(id);const k=eo(P(t,[1.8,3.4,5.4][i],[1.8,3.4,5.4][i]+.4));el.style.opacity=.15+.85*k});
+ $('B3s').style.opacity=P(t,8.4,8.8);pop($('Br'),t,10.4,.45);$('Bn').textContent=fmt(706.64*ex(P(t,10.5,12.0)),2);};
+// C: two rows
+R.C=(t,d)=>{ap($('Cf'),t,.1,.4,20);let h='';const rows=[['2,94%',706.64,'#8fa3c0',.4],['3,19%',726.23,'#ff5a5a',3.2]];
+ rows.forEach(([r,v,c,t0],i)=>{const k=eo(P(t,t0,t0+.5)),y=20+i*230;const w=(v-500)*3.6*eio(P(t,t0+.2,t0+1.2));
+  h+=`<g opacity="${k}"><text x="110" y="${y+44}" font-family="JetBrains Mono" font-weight="700" font-size="40" fill="${c}">TAN ${r}</text>
+  <rect x="110" y="${y+64}" width="${Math.max(w,1)}" height="100" rx="14" fill="${c}"/><text x="${110+w-24}" y="${y+134}" text-anchor="end" font-family="Archivo Black" font-size="54" fill="#121014" opacity="${P(t,t0+1.0,t0+1.3)}">${fmt(v,2)} €</text></g>`});
+ const ka=P(t,1.0,1.5);h+=`<text x="970" y="${240}" text-anchor="end" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#ff8a6a" opacity="${P(t,1.0,1.6)}">+0,25 punti ↓</text>`;
+ $('Cr').innerHTML=h;pop($('Cd'),t,7.5,.45);ap($('Ce'),t,9.6,.4,20);};
+// D
+R.D=(t,d)=>{pop($('Da'),t,.2,.4);ap($('D1'),t,.8,.45,40);ap($('D2'),t,5.1,.45,40);pop($('D3'),t,8.4,.4,0,0,'');ap($('Ds'),t,9,.4,10);};
+// E: coin stacks
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);ap($('Eb'),t,1.6,.4,20);ap($('Es'),t,8,.4,10);let h='';
+ const stack=(x,n,t0,c,lab)=>{let s='';for(let i=0;i<n;i++){const k=eback(P(t,t0+i*.08,t0+i*.08+.3));if(k<=0)continue;const y=560-i*40-(1-cl(k))*200;
+  s+=`<ellipse cx="${x}" cy="${y+12}" rx="110" ry="30" fill="#a7791e"/><ellipse cx="${x}" cy="${y}" rx="110" ry="30" fill="${c}" stroke="#a7791e" stroke-width="4"/>`}
+  s+=`<text x="${x}" y="660" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#c9c0d6">${lab}</text>`;return s};
+ h+=stack(300,5,3.2,'#d9b45a','PRIMA DEI RIALZI')+stack(760,10,5.6,'#f2c14e','DOPO I RIALZI');
+ const kt=eback(P(t,8.8,9.4));h+=`<g transform="translate(760 70) scale(${kt})"><rect x="-200" y="-70" width="400" height="140" rx="70" fill="#3ccf6e"/><text y="-12" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#0b2a16">FINO A · 12 MESI · LORDO</text><text y="50" text-anchor="middle" font-family="Archivo Black" font-size="62" fill="#0b2a16">3,5%</text></g>`;
+ $('Ec').innerHTML=h;};
+// F: checklist
+const CK=[['17 DICEMBRE','decisione e nuove previsioni BCE',1.1],['EURIBOR 3 MESI','muove le rate dei variabili',5.6],['ENERGIA','petrolio e gas spingono l\'inflazione',6.5]];
+R.F=(t,d)=>{pop($('Fa'),t,.2,.4);$('Fl').style.transform='translateX(-50%)';$('Fl').innerHTML=CK.map(([a,b,t0])=>{const k=eo(P(t,t0,t0+.4)),c=P(t,t0+.4,t0+.7);
+ return `<div style="display:flex;gap:30px;align-items:center;margin-bottom:46px;opacity:${k};transform:translateX(${(1-k)*-60}px)"><div style="width:110px;height:110px;flex:none;border-radius:24px;border:6px solid #f2c14e;display:flex;align-items:center;justify-content:center"><svg width="70" height="60"><path d="M6 32 L26 52 L64 8" stroke="#f2c14e" stroke-width="12" fill="none" stroke-linecap="round" stroke-dasharray="90" stroke-dashoffset="${90*(1-c)}"/></svg></div>
+ <div><div class="bold" style="font-size:56px;color:#fff;letter-spacing:-1px">${a}</div><div class="serif" style="font-size:44px;color:#c9d6ea">${b}</div></div></div>`}).join('');};
+// G: written offer doc
+R.G=(t,d)=>{ap($('Ga'),t,.2,.4,30);const k=eback(P(t,3.3,3.8));let h=`<g transform="translate(540 260) rotate(3) scale(${k})"><rect x="-280" y="-230" width="560" height="440" rx="18" fill="#fff" stroke="#141215" stroke-width="4"/>
+ <text x="-240" y="-160" font-family="Archivo Black" font-size="40" fill="#141215">OFFERTA SCRITTA</text>`;
+ [0,1,2].forEach(i=>h+=`<rect x="-240" y="${-120+i*50}" width="${380-i*60}" height="20" rx="6" fill="#e6dccb"/>`);
+ const kh=P(t,5.4,6.0);h+=`<rect x="-250" y="40" width="${500*kh}" height="80" rx="10" fill="#f2c14e" opacity=".7"/><text x="-235" y="95" font-family="JetBrains Mono" font-weight="700" font-size="40" fill="#141215">TAEG ........ ?%</text></g>`;
+ $('Gd').innerHTML=h;pop($('Gx'),t,6.4,.45);};
+R.H=(t,d)=>{pop($('Ha'),t,.2,.4);words($('Hq'),t,1.3);ap($('Hp'),t,2.9,.4,40);pop($('Hp1'),t,3.0,.4,0,0,'');pop($('Hp2'),t,3.5,.4,0,0,'');ap($('Hc'),t,4.0,.4,10);};
+</script></body></html>

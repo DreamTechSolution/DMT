@@ -1,5 +1,6 @@
 # Serie 9 — "Se un agente IA sbaglia un pagamento, chi paga?" — COPIONE
 Fonti: `../ricerche/T4_T5_lavoro_agenti_pagamenti.md` (condizioni Citi sez. H, TechCrunch 18/11/2026, American Banker 13/10/2026, D.lgs. 11/2010, EBA, Banca d'Italia – Scotti 12/11/2026). Non è consulenza legale.
+Voce: grafia fonetica secondo `../PRONUNCIA.md` — inviati alla voce "Sìti", "Gèi-pi Mòrgan", "Tèc-cranch", "pi-ein-sì" (PNC), "Sìtizens", "pi-esse-dì due/tre", e "agente di intelligenza artificiale" al posto di "agente IA"; a schermo grafia corretta.
 Da NON dire: "Citi e JPMorgan non stornano le transazioni" come posizione ufficiale; "le banche non rimborseranno"; PSR già in vigore.
 
 ## Video 1 — "Cosa fanno le banche americane" (~50 s)

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A,B,C · career passport with stamps -->
+<div class="scene" id="A" style="background:#0d1022">
+ <div class="abs mono" id="Ak" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">CHRISTINE LAGARDE · LA CARRIERA</div>
+ <svg id="Ap" width="1080" height="900" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs serif" id="Ab" style="top:1290px;font-size:58px;color:#c9d6ea">prima: avvocata d'affari</div>
+</div>
+<div class="scene" id="B" style="background:#0d1022">
+ <div class="abs mono" id="Bk" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">CHRISTINE LAGARDE · LA CARRIERA</div>
+ <svg id="Bp" width="1080" height="900" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs bold" id="Bb" style="top:1290px;font-size:64px;color:#0d1022;background:#f2c14e;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PRIMA DONNA AL FMI</div>
+</div>
+<div class="scene" id="C" style="background:#0d1022">
+ <div class="abs mono" id="Ck" style="top:290px;font-size:28px;letter-spacing:4px;color:#8fa3c0">CHRISTINE LAGARDE · LA CARRIERA</div>
+ <svg id="Cp" width="1080" height="900" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs" id="Cb" style="top:1270px"><div style="display:flex;align-items:center;gap:24px;background:#f3ebde;border-radius:18px;padding:16px 30px">
+  <div class="mono" style="font-size:28px;font-weight:700;color:#5a4a3a;text-align:left;line-height:1.2">TASSO SUI<br>DEPOSITI, 2019</div><div class="bold" style="font-size:96px;color:#26405f;letter-spacing:-2px">−0,50%</div></div></div>
+</div>
+
+<!-- D,E · rate staircase -->
+<div class="scene" id="D" style="background:#121014">
+ <div class="abs mono" id="Dk" style="top:290px;font-size:26px;letter-spacing:3px;color:#bdb3a6">TASSO BCE SUI DEPOSITI · 2019–2026</div>
+ <svg id="Dc" width="1080" height="1080" style="position:absolute;left:0;top:350px"></svg>
+</div>
+<div class="scene" id="E" style="background:#121014">
+ <div class="abs mono" id="Ek" style="top:290px;font-size:26px;letter-spacing:3px;color:#bdb3a6">TASSO BCE SUI DEPOSITI · 2019–2026</div>
+ <svg id="Ec" width="1080" height="1080" style="position:absolute;left:0;top:350px"></svg>
+</div>
+
+<!-- F · departure date on a 2027 ruler -->
+<div class="scene" id="F" style="background:#f4f0e8">
+ <div class="abs mono" id="Fk" style="top:290px;font-size:28px;letter-spacing:3px;color:#8a7a6c">29 OTTOBRE 2026 · L'ANNUNCIO</div>
+ <div class="abs" id="Fp" style="top:380px"><div style="width:440px;border-radius:26px;overflow:hidden;box-shadow:0 18px 0 #d9cfbf;background:#fff">
+  <div class="mono" style="background:#c94f2a;color:#fff;font-size:40px;font-weight:700;padding:16px;letter-spacing:4px">FEBBRAIO 2027</div>
+  <div class="bold" style="font-size:250px;color:#141215;padding:20px 0 6px">7</div>
+  <div class="serif" style="font-size:46px;color:#8a7a6c;padding-bottom:26px">ultimo giorno alla BCE</div></div></div>
+ <svg id="Fr" width="1080" height="330" style="position:absolute;left:0;top:930px"></svg>
+ <div class="abs serif" id="Fm" style="top:1290px;font-size:54px;color:#5a4a3a">il comunicato non indica i motivi</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#0d1022">
+ <svg id="He" width="1080" height="420" style="position:absolute;left:0;top:300px"></svg>
+ <div class="abs bold" id="Ha" style="top:760px;font-size:118px;color:#fff;line-height:1">CHI DOPO<br><span style="color:#f2c14e">LAGARDE?</span></div>
+ <div class="abs bold" id="Hb" style="top:1060px;font-size:64px;color:#0d1022;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// ---- passport page with career stamps ----
+const STAMPS=[
+ {x:380,y:250,r:-8,c:'#c94f2a',city:'PARIGI',role:'MINISTRA DELL\'ECONOMIA',yrs:'2007 – 2011',w:440},
+ {x:700,y:470,r:6,c:'#26405f',city:'WASHINGTON',role:'DIRETTRICE GENERALE FMI',yrs:'2011 – 2019',w:470},
+ {x:440,y:700,r:-4,c:'#1f7a4d',city:'FRANCOFORTE',role:'PRESIDENTE BCE',yrs:'DAL 1/11/2019',w:520}];
+function passport(svg,t,n,t0){let h=`<rect x="120" y="20" width="840" height="860" rx="28" fill="#f3ebde"/>`;
+ for(let i=0;i<14;i++)h+=`<path d="M140 ${70+i*58} q 100 -18 200 0 t 200 0 t 200 0 t 200 0" stroke="#d8ccb8" stroke-width="2" fill="none"/>`;
+ h+=`<text x="160" y="76" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#9a8a78" letter-spacing="3">VISTI · CARRIERA PUBBLICA</text><text x="920" y="860" text-anchor="end" font-family="JetBrains Mono" font-size="22" fill="#9a8a78">pag. 07</text>`;
+ STAMPS.slice(0,n).forEach((s,i)=>{const k=i<n-1?1:P(t,t0,t0+.35);if(k<=0)return;const sc=1+1.6*(1-eo(k));const op=cl(k*3);const hw=s.w/2;
+  h+=`<g transform="translate(${s.x} ${s.y}) rotate(${s.r}) scale(${sc})" opacity="${op*.92}">
+   <rect x="${-hw}" y="-95" width="${s.w}" height="190" rx="22" fill="none" stroke="${s.c}" stroke-width="8"/>
+   <rect x="${-hw+14}" y="-81" width="${s.w-28}" height="162" rx="14" fill="none" stroke="${s.c}" stroke-width="3" stroke-dasharray="6 6"/>
+   <text y="-18" text-anchor="middle" font-family="Archivo Black" font-size="50" fill="${s.c}">${s.city}</text>
+   <text y="26" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="25" fill="${s.c}">${s.role}</text>
+   <text y="64" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="${s.c}">${s.yrs}</text></g>`});
+ svg.innerHTML=h;}
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);passport($('Ap'),t,1,3.0);words($('Ab'),t,.6,.1);};
+R.B=(t,d)=>{ap($('Bk'),t,0,.01,0);passport($('Bp'),t,2,1.6);pop($('Bb'),t,2.6,.45,-4,-2);};
+R.C=(t,d)=>{ap($('Ck'),t,0,.01,0);passport($('Cp'),t,3,1.4);pop($('Cb'),t,5.2,.45);};
+
+// ---- rate staircase (deposit facility, effective dates; month index from Nov 2019) ----
+const M=(y,m)=>(y-2019)*12+(m-1)-10;
+const RT=[[M(2019,11),-.5],[M(2022,7),0],[M(2022,9),.75],[M(2022,11),1.5],[M(2022,12),2],[M(2023,2),2.5],[M(2023,3),3],[M(2023,5),3.25],[M(2023,6),3.5],[M(2023,8),3.75],[M(2023,9),4],
+ [M(2024,6),3.75],[M(2024,9),3.5],[M(2024,10),3.25],[M(2024,12),3],[M(2025,2),2.75],[M(2025,3),2.5],[M(2025,4),2.25],[M(2025,6),2],[M(2026,6),2.25],[M(2026,9),2.5]];
+const END=M(2026,11);const CX=m=>110+m*(860/END),CY=v=>820-(v+.5)*150;
+function rateAt(m){let v=RT[0][1];for(const [mm,vv] of RT)if(mm<=m)v=vv;return v}
+function stair(svg,mHead,o){let h='';
+ if(o.band)h+=`<rect x="${CX(M(2026,3))}" y="80" width="${CX(END)-CX(M(2026,3))+10}" height="780" fill="#e2683c" opacity="${.18*o.band}"/><text x="${CX(M(2026,3))+60}" y="70" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#e2683c" opacity="${o.band}">SHOCK ENERGIA</text>`;
+ [-.5,0,1,2,3,4].forEach(v=>{h+=`<line x1="110" y1="${CY(v)}" x2="980" y2="${CY(v)}" stroke="${v===0?'#8a8590':'#2a2630'}" stroke-width="${v===0?3:2}" ${v===0?'stroke-dasharray="10 8"':''}/><text x="96" y="${CY(v)+9}" text-anchor="end" font-family="JetBrains Mono" font-size="26" fill="#8a8590">${fmt(v,1)}</text>`});
+ for(let y=2020;y<=2026;y++){const x=CX(M(y,1));h+=`<text x="${x}" y="${CY(-.5)+52}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#6e6873">${String(y).slice(2)}'</text><line x1="${x}" y1="${CY(-.5)+8}" x2="${x}" y2="${CY(-.5)+18}" stroke="#6e6873" stroke-width="2"/>`}
+ let p=`M${CX(0)} ${CY(-.5)}`,prev=-.5;for(const [mm,vv] of RT){if(mm>mHead)break;p+=` H${CX(mm)} V${CY(vv)}`;prev=vv}p+=` H${CX(mHead)}`;
+ h+=`<path d="${p}" stroke="${o.col||'#f2c14e'}" stroke-width="9" fill="none" stroke-linejoin="round"/>`;
+ const v=rateAt(mHead);h+=`<circle cx="${CX(mHead)}" cy="${CY(v)}" r="16" fill="#fff"/><text x="${Math.min(CX(mHead),850)}" y="${CY(v)-34}" text-anchor="middle" font-family="Archivo Black" font-size="58" fill="#fff">${fmt(v,2)}%</text>`;
+ svg.innerHTML=h+(o.extra||'');}
+function counter(label,n,c){return `<g transform="translate(540 960)"><rect x="-330" y="-62" width="660" height="110" rx="20" fill="${c}"/><text y="18" text-anchor="middle" font-family="Archivo Black" font-size="58" fill="#121014">${n} ${label}</text></g>`}
+R.D=(t,d)=>{ap($('Dk'),t,.1,.3,10);const a=eio(P(t,.4,2.0))*M(2022,6),b=P(t,2.2,6.6)*(M(2023,9)-M(2022,6)+.5);const m=t<2.2?a:M(2022,6)+b;
+ const nh=RT.slice(1,11).filter(r=>r[0]<=m).length;stair($('Dc'),m,{extra:nh?counter(nh===1?'RIALZO':'RIALZI',nh,'#ff7a5a'):''});};
+R.E=(t,d)=>{ap($('Ek'),t,0,.01,0);let m=M(2023,9)+.5;m+=P(t,.4,4.8)*(M(2025,6)-m+.5);if(t>6.5)m=M(2025,6)+.5+P(t,6.5,11.6)*(END-M(2025,6)-.5);
+ const nc=RT.slice(11,19).filter(r=>r[0]<=m).length,nh=RT.slice(19).filter(r=>r[0]<=m).length;
+ let ex=counter(nh?'RIALZI NEL 2026':'TAGLI',nh||nc,nh?'#ff7a5a':'#3ccf6e');
+ if(t>12.3)ex+=`<g opacity="${P(t,12.3,12.7)}"><rect x="290" y="1010" width="500" height="64" rx="14" fill="none" stroke="#f3ebde" stroke-width="3"/><text x="540" y="1053" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde">29/10: FERMI AL 2,50%</text></g>`;
+ stair($('Ec'),m,{band:P(t,6.0,6.8),extra:(nc?ex:'')});};
+
+// ---- F · 2027 ruler ----
+R.F=(t,d)=>{ap($('Fk'),t,.1,.3,10);pop($('Fp'),t,2.6,.5,-5,0);const sv=$('Fr');const X=i=>120+i*84;const mm='GFMAMGLASOND';let h='';
+ h+=`<line x1="100" y1="160" x2="1000" y2="160" stroke="#141215" stroke-width="4"/>`;
+ for(let i=0;i<11;i++)h+=`<line x1="${X(i)}" y1="145" x2="${X(i)}" y2="175" stroke="#141215" stroke-width="3"/><text x="${X(i)}" y="220" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#5a4a3a">${mm[i]}</text>`;
+ const k=eio(P(t,5.2,6.6));h+=`<rect x="${X(1)}" y="140" width="${(X(9)-X(1))*k}" height="40" fill="#c94f2a" opacity=".85"/>`;
+ h+=`<circle cx="${X(1)}" cy="160" r="20" fill="#c94f2a" opacity="${P(t,3.0,3.3)}"/>`;
+ const o=P(t,4.6,5.0);h+=`<g opacity="${o}"><circle cx="${X(9)}" cy="160" r="20" fill="#fff" stroke="#141215" stroke-width="4"/><text x="${X(9)}" y="110" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#5a4a3a">31/10 · FINE MANDATO</text></g>`;
+ h+=`<text x="${(X(1)+X(9))/2}" y="290" text-anchor="middle" font-family="Archivo Black" font-size="52" fill="#c94f2a" opacity="${P(t,6.4,6.8)}">QUASI 9 MESI PRIMA</text>`;
+ h+=`<text x="100" y="40" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#8a7a6c">2027</text>`;sv.innerHTML=h;words($('Fm'),t,8.6,.1);};
+
+R.H=(t,d)=>{const sv=$('He');const k=P(t,.1,1.4);
+ sv.innerHTML=`<g transform="translate(540 210)"><path id="Hep" d="M110 -110 A150 150 0 1 0 110 110" stroke="#e2683c" stroke-width="30" fill="none" stroke-linecap="round" stroke-dasharray="720" stroke-dashoffset="${720*(1-eio(k))}"/>
+  <path d="M-190 -35 H70 M-190 35 H50" stroke="#e2683c" stroke-width="26" stroke-linecap="round" opacity="${P(t,1.1,1.4)}"/></g>`;
+ pop($('Ha'),t,.3,.45);pop($('Hb'),t,2.4,.4,-6,-2);};
+</script></body></html>

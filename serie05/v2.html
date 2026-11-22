@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · receipt -->
+<div class="scene" id="A" style="background:#121014">
+ <div class="abs bold" id="Aa" style="top:290px;font-size:96px;color:#fff">INFLAZIONE <span style="color:#e2683c">5,5%</span></div>
+ <div class="abs serif" id="Ab" style="top:400px;font-size:54px;color:#bdb3a6">vuol dire questo</div>
+ <svg id="Ar" width="1080" height="840" style="position:absolute;left:0;top:500px"></svg>
+</div>
+
+<!-- B · 20 items, one goes -->
+<div class="scene" id="B" style="background:#0d1022">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:30px;letter-spacing:3px;color:#8fa3c0">1.000 € FERMI SUL CONTO</div>
+ <div class="abs" id="Bg" style="top:400px;display:grid;grid-template-columns:repeat(5,150px);gap:22px"></div>
+ <div class="abs bold" id="Bn" style="top:1180px;font-size:120px;color:#ff5a5a">≈ −5%</div>
+ <div class="abs serif" id="Bc" style="top:1320px;font-size:52px;color:#c9d6ea">di cose che ci compri</div>
+</div>
+
+<!-- C · race lanes -->
+<div class="scene" id="C" style="background:#f4f0e8">
+ <div class="abs bold" id="Ca" style="top:290px;font-size:84px;color:#141215;line-height:1">PREZZI VS<br><span style="color:#26405f">STIPENDI</span></div>
+ <svg id="Cr" width="1080" height="820" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs mono" id="Cs" style="top:1340px;font-size:22px;color:#8a7a6c">Istat, settembre 2026 · retribuzioni contrattuali orarie e IPCA</div>
+</div>
+
+<!-- D · bill + lens -->
+<div class="scene" id="D" style="background:#071410">
+ <div class="abs bold" id="Da" style="top:290px;font-size:84px;color:#fff">LE BOLLETTE</div>
+ <svg id="Dl" width="1080" height="680" style="position:absolute;left:0;top:400px"></svg>
+ <div class="abs" id="Dp" style="top:1110px"><div style="background:#f3ebde;border-radius:20px;padding:22px 34px;text-align:center">
+  <div class="mono" style="font-size:26px;color:#2d5a47;letter-spacing:2px;font-weight:700">PORTALE OFFERTE · ARERA</div>
+  <div class="sans" style="font-size:52px;font-weight:800;color:#071410">ilportaleofferte.it</div></div></div>
+ <div class="abs serif" id="Dc" style="top:1300px;font-size:44px;color:#bfe0d0">il sito pubblico per confrontare le tariffe</div>
+</div>
+
+<!-- E · piggy bank -->
+<div class="scene" id="E" style="background:#121014">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:76px;color:#fff">CHI RISPARMIA</div>
+ <div class="abs" id="Ec" style="top:390px;display:flex;gap:20px">
+  <div id="Ec1" class="sans" style="font-size:36px;font-weight:800;color:#121014;background:#f3ebde;border-radius:40px;padding:12px 28px">conti deposito</div>
+  <div id="Ec2" class="sans" style="font-size:36px;font-weight:800;color:#121014;background:#f3ebde;border-radius:40px;padding:12px 28px">titoli di Stato</div></div>
+ <svg id="Ep" width="1080" height="640" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs mono" id="Es" style="top:1330px;font-size:22px;color:#8a8590">Massimi delle offerte, settembre 2026 · Facile.it / QuiFinanza</div>
+</div>
+
+<!-- F · net vs inflation + disclaimer -->
+<div class="scene" id="F" style="background:#f4f0e8">
+ <div class="abs mono" id="Fk" style="top:300px;font-size:28px;letter-spacing:3px;color:#8a7a6c">ESEMPIO · CONTO VINCOLATO 12 MESI</div>
+ <svg id="Fb" width="1080" height="620" style="position:absolute;left:0;top:370px"></svg>
+ <div class="abs serif" id="Fs" style="top:1020px;font-size:56px;color:#26405f">scenari, non certezze</div>
+ <div class="abs" id="Fd" style="top:1140px"><div class="mono" style="font-size:30px;color:#141215;border:3px solid #141215;border-radius:12px;padding:14px 26px">⚠ Questo non è un consiglio finanziario.</div></div>
+</div>
+
+<!-- H · save + comment -->
+<div class="scene" id="H" style="background:#121014">
+ <svg id="Hs" width="1080" height="360" style="position:absolute;left:0;top:300px"></svg>
+ <div class="abs bold" id="Ha" style="top:700px;font-size:110px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hc" style="top:880px"><div style="width:880px;background:#f3ebde;border-radius:36px 36px 36px 6px;padding:30px 36px;text-align:left">
+  <div class="mono" style="font-size:26px;color:#8a7a6c;font-weight:700">SCRIVIMI NEI COMMENTI</div>
+  <div class="sans" id="Ht" style="font-size:46px;color:#121014;font-weight:700;margin-top:8px;min-height:60px"></div></div></div>
+ <div class="abs serif" id="Hb" style="top:1120px;font-size:58px;color:#bdb3a6">quale spesa ti è aumentata di più?</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// A: receipt printing
+const RL=[['pane e latte','…'],['bolletta luce','…'],['bolletta gas','…'],['pieno di benzina','…'],['spesa varia','…']];
+R.A=(t,d)=>{pop($('Aa'),t,.2,.4);words($('Ab'),t,2.2);
+ const k=eo(P(t,3.0,4.6));const H=640*k;let h=`<rect x="250" y="0" width="580" height="40" rx="20" fill="#3a3436"/><rect x="270" y="14" width="540" height="12" rx="6" fill="#0d0b0c"/>`;
+ h+=`<clipPath id="rc"><rect x="290" y="20" width="500" height="${H}"/></clipPath><g clip-path="url(#rc)"><path d="M290 20 H790 V${H+20} ${Array.from({length:20},(_,i)=>`L${790-(i+.5)*25} ${H+34} L${790-(i+1)*25} ${H+20}`).join(' ')} Z" fill="#f3ebde"/>`;
+ h+=`<text x="540" y="${H-560}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#121014">SCONTRINO · 1 ANNO</text>`;
+ RL.forEach(([l],i)=>{h+=`<text x="320" y="${H-490+i*56}" font-family="JetBrains Mono" font-size="28" fill="#5a4a3a">${l}</text><text x="760" y="${H-490+i*56}" text-anchor="end" font-family="JetBrains Mono" font-size="28" fill="#5a4a3a">· · ·</text>`});
+ h+=`<line x1="320" y1="${H-190}" x2="760" y2="${H-190}" stroke="#121014" stroke-width="3" stroke-dasharray="8 6"/>`;
+ const ka=P(t,5.0,5.4),kb=eback(P(t,6.9,7.4));
+ h+=`<text x="320" y="${H-130}" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#121014">2025</text><text x="760" y="${H-130}" text-anchor="end" font-family="Archivo Black" font-size="52" fill="#121014" opacity="${ka}">1.000,00 €</text>`;
+ if(kb>0)h+=`<line x1="520" y1="${H-148}" x2="770" y2="${H-148}" stroke="#c94f2a" stroke-width="6" opacity="${cl(kb)}"/>`;
+ h+=`<text x="320" y="${H-50}" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#c94f2a" opacity="${cl(kb)}">2026</text><g transform="translate(760 ${H-50}) scale(${kb})"><text text-anchor="end" font-family="Archivo Black" font-size="58" fill="#c94f2a">1.055,00 €</text></g></g>`;
+ $('Ar').innerHTML=h;};
+// B: 20 items
+const IT=['🍞','🥛','🧀','🍝','🍎','🧴','☕','🥚','🧻','🍅','🫒','🧃','🥕','🍌','🧼','🍪','🐟','🥖','🍋','🍫'];
+R.B=(t,d)=>{ap($('Bk'),t,.6,.35,10);$('Bg').innerHTML=IT.map((e,i)=>{const k=eback(P(t,.4+i*.04,.8+i*.04));const gone=i===19?eo(P(t,4.0,4.6)):0;
+ return `<div style="height:150px;border-radius:24px;background:${gone>0?'rgba(255,90,90,'+(.15*gone)+')':'#1c2238'};border:3px ${gone>0?'dashed #ff5a5a':'solid #2c3656'};display:flex;align-items:center;justify-content:center;font-size:80px;opacity:${cl(k)};transform:scale(${.3+.7*k})"><span style="opacity:${1-gone}">${e}</span></div>`}).join('');
+ pop($('Bn'),t,4.2,.45);ap($('Bc'),t,4.8,.4,20);};
+// C: lanes
+const LN=[['PREZZI (IPCA, SETTEMBRE)',4.2,'#c94f2a',.8],['SALARI · TUTTI',2.5,'#26405f',4.6],['SALARI · PRIVATO',2.3,'#5a7ea8',7.0]];
+R.C=(t,d)=>{ap($('Ca'),t,.2,.4,30);ap($('Cs'),t,5,.4,10);const x0=90,sc=190;let h='';
+ LN.forEach(([l,v,c,t0],i)=>{const y=40+i*200,k=eio(P(t,t0,t0+1.4)),w=v*sc*k;
+  h+=`<text x="${x0}" y="${y}" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#6b5a4c" opacity="${P(t,t0-.2,t0)}">${l}</text>
+  <rect x="${x0}" y="${y+20}" width="900" height="90" rx="45" fill="#e6dccb"/>
+  <rect x="${x0}" y="${y+20}" width="${Math.max(90*cl(k*5),w)}" height="90" rx="45" fill="${c}" opacity="${cl(k*5)}"/>
+  <text x="${x0+Math.max(90,w)-30}" y="${y+82}" text-anchor="end" font-family="Archivo Black" font-size="50" fill="#fff" opacity="${P(t,t0+1.1,t0+1.4)}">${fmt(v,1)}%</text>`});
+ const kg=P(t,8.0,8.5);if(kg>0){const xa=x0+2.3*sc,xb=x0+4.2*sc;h+=`<g opacity="${kg}"><line x1="${xa}" y1="660" x2="${xb}" y2="660" stroke="#c94f2a" stroke-width="5"/><line x1="${xa}" y1="640" x2="${xa}" y2="680" stroke="#c94f2a" stroke-width="5"/><line x1="${xb}" y1="40" x2="${xb}" y2="680" stroke="#c94f2a" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="${(xa+xb)/2}" y="730" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#c94f2a">≈ 2 PUNTI</text></g>`}
+ $('Cr').innerHTML=h;};
+// D: bill with lens
+R.D=(t,d)=>{pop($('Da'),t,.2,.4);const k=eio(P(t,2.4,3.6));let h=`<g transform="translate(540 330) rotate(${-4})"><rect x="-260" y="-300" width="520" height="600" rx="18" fill="#f3ebde"/>
+ <rect x="-260" y="-300" width="520" height="90" rx="18" fill="#2d5a47"/><text x="-220" y="-240" font-family="Archivo Black" font-size="40" fill="#f3ebde">BOLLETTA</text>`;
+ ['luce','gas','oneri','imposte'].forEach((l,i)=>{h+=`<text x="-220" y="${-140+i*70}" font-family="JetBrains Mono" font-size="30" fill="#5a4a3a">${l}</text><rect x="40" y="${-165+i*70}" width="${120+((i*53)%80)}" height="26" rx="6" fill="#d9ccb6"/>`});
+ h+=`<line x1="-220" y1="150" x2="220" y2="150" stroke="#071410" stroke-width="3"/><text x="-220" y="220" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="#071410">TOTALE</text><text x="220" y="225" text-anchor="end" font-family="Archivo Black" font-size="56" fill="#c94f2a">↑</text></g>`;
+ const lx=300+k*300,ly=520-k*220;h+=`<g transform="translate(${lx} ${ly})" opacity="${cl(k*3)}"><circle r="120" fill="rgba(191,224,208,.18)" stroke="#bfe0d0" stroke-width="16"/><line x1="85" y1="85" x2="170" y2="170" stroke="#bfe0d0" stroke-width="28" stroke-linecap="round"/></g>`;
+ $('Dl').innerHTML=h;pop($('Dp'),t,5.6,.45);ap($('Dc'),t,7.2,.4,20);};
+// E: piggy bank + coin + tag
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);pop($('Ec1'),t,4.3,.4,0,0,'');pop($('Ec2'),t,5.3,.4,0,0,'');ap($('Ec'),t,4.2,.01,0);ap($('Es'),t,10,.4,10);
+ let h=`<g transform="translate(380 400) scale(.85)"><ellipse rx="250" ry="185" fill="#e2683c"/><circle cx="215" cy="-30" r="70" fill="#e2683c"/><ellipse cx="270" cy="-20" rx="34" ry="40" fill="#c94f2a"/><circle cx="262" cy="-30" r="7" fill="#121014"/><circle cx="282" cy="-30" r="7" fill="#121014"/>
+ <circle cx="170" cy="-90" r="12" fill="#121014"/><path d="M120 -150 L170 -220 L200 -140 Z" fill="#c94f2a"/>
+ <rect x="-150" y="150" width="60" height="80" rx="14" fill="#c94f2a"/><rect x="90" y="150" width="60" height="80" rx="14" fill="#c94f2a"/><rect x="-70" y="-190" width="140" height="18" rx="9" fill="#7a2a14"/>
+ <path d="M-250 -20 C-300 -40 -300 -90 -260 -90" stroke="#c94f2a" stroke-width="14" fill="none" stroke-linecap="round"/></g>`;
+ for(let i=0;i<3;i++){const t0=1.0+i*.9,k=P(t,t0,t0+.6);if(k<=0||k>=1)continue;h+=`<g transform="translate(380 ${-30+k*240})"><ellipse rx="44" ry="${44*Math.abs(Math.cos(k*6))+6}" fill="#f2c14e" stroke="#a7791e" stroke-width="5"/></g>`}
+ const kt=eback(P(t,10.6,11.2));h+=`<g transform="translate(780 110) rotate(8) scale(${kt})"><path d="M-170 -80 H170 V80 H-170 L-220 0 Z" fill="#f3ebde"/><circle cx="-180" cy="0" r="12" fill="#121014"/>
+ <text x="20" y="-20" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#5a4a3a">FINO A</text><text x="20" y="42" text-anchor="middle" font-family="Archivo Black" font-size="60" fill="#121014">3,5%</text></g>`;
+ h+=`<text x="800" y="245" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#bdb3a6" opacity="${P(t,11.4,11.8)}">lordo · vincolo 12 mesi</text>`;
+ $('Ep').innerHTML=h;};
+// F: gross -> net vs inflation
+R.F=(t,d)=>{ap($('Fk'),t,.1,.3,10);const base=520,sc=80;let h=`<line x1="100" y1="${base}" x2="980" y2="${base}" stroke="#141215" stroke-width="5"/>`;
+ const kn=eio(P(t,.6,1.8));const v=3.5-0.91*kn;
+ [[260,'RENDIMENTO',v,'#26405f',.2,(kn>0?'netto (−26% tasse)':'lordo')],[760,'INFLAZIONE',5.5,'#c94f2a',3.4,'ottobre, Istat']].forEach(([x,l,val,c,t0,sub])=>{const k=eio(P(t,t0,t0+.8)),hh=val*sc*k;
+  h+=`<rect x="${x-130}" y="${base-hh}" width="260" height="${hh}" rx="12" fill="${c}"/><text x="${x}" y="${base-hh-24}" text-anchor="middle" font-family="Archivo Black" font-size="76" fill="${c}" opacity="${P(t,t0+.4,t0+.8)}">${fmt(val,1)}%</text>
+  <text x="${x}" y="${base+50}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#141215">${l}</text><text x="${x}" y="${base+94}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#6b5a4c">${sub}</text>`});
+ h+=`<text x="510" y="${base-180}" text-anchor="middle" font-family="Archivo Black" font-size="80" fill="#141215" opacity="${P(t,4.6,5)}">&lt;</text>`;
+ $('Fb').innerHTML=h;ap($('Fs'),t,8.6,.4,20);pop($('Fd'),t,10.3,.45);};
+R.H=(t,d)=>{const k=eback(P(t,.1,.5));$('Hs').innerHTML=`<g transform="translate(540 180) scale(${k})"><rect x="-110" y="-150" width="220" height="300" rx="20" fill="#e2683c"/><path d="M-60 -100 H60 V110 L0 60 L-60 110 Z" fill="#f3ebde"/></g>`;
+ pop($('Ha'),t,.25,.4);ap($('Hc'),t,1.1,.4,40);typeT($('Ht'),'la bolletta del gas…',t,1.4,16);words($('Hb'),t,1.9);};
+</script></body></html>

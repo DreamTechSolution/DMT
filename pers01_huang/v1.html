@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · diner table seen from above -->
+<div class="scene" id="A" style="background:#1a100c">
+ <div class="abs mono" id="Ak" style="top:290px;font-size:28px;letter-spacing:4px;color:#d9b08c">5 APRILE 1993 · CALIFORNIA</div>
+ <div class="abs serif" id="As" style="top:340px;font-size:58px;color:#f3ebde">un tavolo di un Denny's, a San Jose</div>
+ <svg id="At" width="1080" height="640" style="position:absolute;left:0;top:450px"></svg>
+ <div class="abs" id="An" style="top:1110px;display:flex;gap:16px"></div>
+ <div class="abs bold" id="Ab" style="top:1250px;font-size:120px;color:#3ccf6e">NASCE NVIDIA</div>
+</div>
+
+<!-- B · vertical timeline -->
+<div class="scene" id="B" style="background:#0d1022">
+ <div class="abs bold" id="Ba" style="top:290px;font-size:84px;color:#fff">JENSEN HUANG</div>
+ <svg id="Bt" width="1080" height="1000" style="position:absolute;left:0;top:410px"></svg>
+</div>
+
+<!-- C · chip cores + neural net -->
+<div class="scene" id="C" style="background:#071014">
+ <div class="abs mono" id="Ck" style="top:290px;font-size:30px;letter-spacing:4px;color:#8fc0d0">2006 · CUDA</div>
+ <div class="abs serif" id="Cs" style="top:340px;font-size:54px;color:#e9e1d6">le GPU diventano utili anche per la scienza</div>
+ <svg id="Cc" width="1080" height="420" style="position:absolute;left:0;top:430px"></svg>
+ <div class="abs mono" id="Ck2" style="top:880px;font-size:30px;letter-spacing:4px;color:#f2c14e">2012 · ALEXNET</div>
+ <svg id="Cn" width="1080" height="330" style="position:absolute;left:0;top:930px"></svg>
+ <div class="abs bold" id="Cb" style="top:1270px;font-size:54px;color:#fff;letter-spacing:-1px">L'ERA MODERNA DELL'IA</div>
+</div>
+
+<!-- D · value tower -->
+<div class="scene" id="D" style="background:#f4f0e8">
+ <div class="abs bold" id="Da" style="top:290px;font-size:76px;color:#141215">IL BOOM DELL'IA</div>
+ <svg id="Dv" width="1080" height="880" style="position:absolute;left:0;top:400px"></svg>
+ <div class="abs mono" id="Dd" style="top:1330px;font-size:24px;color:#8a7a6c">Fonti: Fortune, Reuters · Non è consulenza finanziaria.</div>
+</div>
+
+<!-- E · nameplate -->
+<div class="scene" id="E" style="background:#121014">
+ <div class="abs bold" id="Ed" style="top:290px;font-size:110px;color:#fff">12.11.2026</div>
+ <div class="abs mono" id="Ey" style="top:430px;font-size:34px;letter-spacing:4px;color:#bdb3a6">DOPO <span id="Eyn" style="color:#e2683c">0</span> ANNI</div>
+ <svg id="Ep" width="1080" height="400" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs" id="Ec" style="top:930px;display:flex;gap:20px">
+  <div id="Ec1" class="mono" style="font-size:32px;font-weight:700;color:#121014;background:#f3ebde;padding:14px 22px;border-radius:12px">✕ AMMINISTRATORE DELEGATO</div>
+  <div id="Ec2" class="mono" style="font-size:32px;font-weight:700;color:#121014;background:#f3ebde;padding:14px 22px;border-radius:12px">✕ CONSIGLIO</div></div>
+ <div class="abs mono" id="Ei" style="top:1040px;font-size:30px;font-weight:700;color:#e2683c;letter-spacing:3px">CON EFFETTO IMMEDIATO</div>
+ <div class="abs serif" id="Em" style="top:1150px;font-size:62px;color:#e9e1d6">il comunicato non indica i motivi</div>
+ <div class="abs mono" id="Es" style="top:1260px;font-size:22px;color:#8a8590">Fonte: comunicato Nvidia e modulo 8-K, 12/11/2026</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#0d1022">
+ <div class="abs bold" id="Ha" style="top:600px;font-size:120px;color:#fff;line-height:1">CHI GUIDA<br><span style="color:#3ccf6e">ADESSO?</span></div>
+ <div class="abs bold" id="Hb" style="top:960px;font-size:64px;color:#0d1022;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+function mug(x,y,k,rot){return `<g transform="translate(${x} ${y}) rotate(${rot}) scale(${k})"><circle r="58" fill="#f3ebde"/><circle r="44" fill="#3b2216"/><circle r="44" fill="none" stroke="#2a170e" stroke-width="6"/><rect x="52" y="-14" width="34" height="28" rx="12" fill="none" stroke="#f3ebde" stroke-width="12"/></g>`}
+R.A=(t,d)=>{ap($('Ak'),t,.2,.3,10);ap($('As'),t,2.6,.4,20);let h='';const kt=eo(P(t,.5,1.2));
+ h+=`<g opacity="${kt}"><rect x="90" y="40" width="900" height="560" rx="40" fill="#b23a2a"/><rect x="110" y="60" width="860" height="520" rx="30" fill="#c9a77c"/>`;
+ for(let i=0;i<9;i++)h+=`<line x1="110" y1="${90+i*58}" x2="970" y2="${90+i*58}" stroke="#b8946a" stroke-width="3"/>`;h+='</g>';
+ [[250,170,4.4,-20],[830,170,4.6,30],[540,500,4.8,90]].forEach(([x,y,t0,r])=>{const k=eback(P(t,t0,t0+.4));if(k>0)h+=mug(x,y,k,r)});
+ const kn=eo(P(t,5.2,5.6));if(kn>0){h+=`<g opacity="${kn}" transform="translate(540 300) rotate(-4)"><rect x="-190" y="-130" width="380" height="260" fill="#fbf8f2"/>
+  <path id="Achip" d="M-80 -60 h160 v120 h-160 z M-40 -20 h80 v40 h-40 z M-80 -30 h-40 M-80 0 h-40 M-80 30 h-40 M80 -30 h40 M80 0 h40 M80 30 h40 M-40 -60 v-30 M0 -60 v-30 M40 -60 v-30" stroke="#26405f" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="0" y="112" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#26405f">grafica 3D?</text></g>`}
+ $('At').innerHTML=h;if(kn>0)drawPath($('Achip'),t,5.5,7.3);
+ $('An').innerHTML=['Jensen Huang','Chris Malachowsky','Curtis Priem'].map((n,i)=>{const k=eback(P(t,7.6+i*.95,8.0+i*.95));return `<div class="sans" style="opacity:${cl(k*3)};transform:scale(${.3+.7*k});font-size:34px;font-weight:800;color:#1a100c;background:${i?'#f3ebde':'#f2c14e'};padding:12px 20px;border-radius:10px">${n}</div>`}).join('');
+ pop($('Ab'),t,10.8,.45);};
+const TL=[['1963','nato a Taiwan','cresciuto negli Stati Uniti',.6],['1993','amministratore delegato','di Nvidia, che ha co-fondato',3.6],['1999','si quota al Nasdaq','a 12 dollari per azione',5.8],['1999','presenta «la prima GPU»','GeForce 256: grafica per videogiochi',8.6]];
+R.B=(t,d)=>{pop($('Ba'),t,.1,.4);let h='';const kl=eio(P(t,.4,10));h+=`<line x1="200" y1="30" x2="200" y2="${30+880*kl}" stroke="#3a4a62" stroke-width="8" stroke-linecap="round"/>`;
+ TL.forEach(([y,a,b,t0],i)=>{const k=eback(P(t,t0,t0+.45)),yy=90+i*225;if(k<=0)return;
+  h+=`<g transform="translate(200 ${yy})"><circle r="${22*k}" fill="${i==3?'#3ccf6e':'#f2c14e'}"/><g opacity="${cl(k*2)}" transform="translate(${50-30*(1-k)} 0)"><text y="-28" font-family="Archivo Black" font-size="56" fill="${i==3?'#3ccf6e':'#f2c14e'}">${y}</text>
+   <text y="32" font-family="Inter" font-weight="800" font-size="42" fill="#fff">${a}</text><text y="80" font-family="Instrument Serif" font-style="italic" font-size="38" fill="#c9d6ea">${b}</text></g></g>`;
+  if(i==3){h+=`<g opacity="${cl(k*2)}" transform="translate(560 ${yy+175}) rotate(-6)"><rect x="-90" y="-50" width="200" height="110" rx="10" fill="#1f2a3a" stroke="#3ccf6e" stroke-width="4"/><circle cx="50" cy="5" r="34" fill="none" stroke="#3ccf6e" stroke-width="4"/><circle cx="50" cy="5" r="8" fill="#3ccf6e"/><rect x="-70" y="-25" width="60" height="60" rx="6" fill="#3ccf6e" opacity=".5"/><rect x="-80" y="60" width="160" height="12" fill="#f2c14e"/></g>`}});
+ $('Bt').innerHTML=h;};
+R.C=(t,d)=>{ap($('Ck'),t,.2,.3,10);ap($('Cs'),t,2.4,.4,20);let h='<g transform="translate(540 210)">';const N=10,S=30;
+ h+=`<rect x="-190" y="-190" width="380" height="380" rx="24" fill="#10222a" stroke="#8fc0d0" stroke-width="4"/>`;
+ for(let i=-3;i<=3;i++)h+=`<rect x="${i*44-6}" y="-214" width="12" height="24" fill="#8fc0d0"/><rect x="${i*44-6}" y="190" width="12" height="24" fill="#8fc0d0"/><rect x="-214" y="${i*44-6}" width="24" height="12" fill="#8fc0d0"/><rect x="190" y="${i*44-6}" width="24" height="12" fill="#8fc0d0"/>`;
+ for(let r=0;r<N;r++)for(let c=0;c<N;c++){const tt=2.6+(r+c)*.12;const on=P(t,tt,tt+.25);const fl=on>0?(.6+.4*Math.sin(t*8+r*c)):0;h+=`<rect x="${-150+c*S+2}" y="${-150+r*S+2}" width="${S-6}" height="${S-6}" rx="4" fill="${on>0?'#3ccf6e':'#1e3a44'}" opacity="${on>0?fl:1}"/>`}
+ h+='</g>';$('Cc').innerHTML=h;ap($('Ck2'),t,5.4,.3,10);
+ const L=[3,5,5,2],X=[220,430,650,860];let n='';const pts=L.map((m,i)=>Array.from({length:m},(_,j)=>[X[i],165+(j-(m-1)/2)*62]));
+ for(let i=0;i<3;i++){const k=P(t,6.0+i*.6,6.6+i*.6);pts[i].forEach(a=>pts[i+1].forEach(b=>{if(k>0)n+=`<line x1="${a[0]}" y1="${a[1]}" x2="${a[0]+(b[0]-a[0])*k}" y2="${a[1]+(b[1]-a[1])*k}" stroke="#f2c14e" stroke-width="2.5" opacity=".55"/>`}))}
+ pts.forEach((l,i)=>l.forEach(([x,y])=>{const k=eback(P(t,5.8+i*.6,6.2+i*.6));if(k>0)n+=`<circle cx="${x}" cy="${y}" r="${20*k}" fill="#071014" stroke="#f2c14e" stroke-width="5"/>`}));
+ $('Cn').innerHTML=n;pop($('Cb'),t,8.8,.45);};
+R.D=(t,d)=>{ap($('Da'),t,.2,.4,30);let h='';h+=`<line x1="80" y1="780" x2="1000" y2="780" stroke="#141215" stroke-width="4"/>`;
+ const k1=eback(P(t,2.2,2.7));if(k1>0)h+=`<g transform="translate(300 230) scale(${k1})"><circle r="120" fill="#f2c14e" stroke="#a7791e" stroke-width="10"/><text y="10" text-anchor="middle" font-family="Archivo Black" font-size="84" fill="#141215">N.1</text><text y="62" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#141215">AL MONDO</text>
+  <path d="M-70 110 L-100 230 L-40 200 L0 240 L10 120 Z M70 110 L100 230 L40 200 L0 240 L-10 120 Z" fill="#c94f2a"/></g>`;
+ const kl1=P(t,3.0,3.4);h+=`<g opacity="${kl1}"><text x="300" y="560" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">GIUGNO 2024</text><text x="300" y="610" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#5a4a3a">l'azienda più preziosa</text></g>`;
+ const kv=eio(P(t,6.4,9.0));const v=5.03*kv;const hh=v*100;if(kv>0){h+=`<rect x="640" y="${780-hh}" width="260" height="${hh}" rx="10" fill="#3ccf6e"/>`;
+  for(let i=1;i<=5;i++)if(i*100<hh)h+=`<line x1="640" y1="${780-i*100}" x2="900" y2="${780-i*100}" stroke="#2f8f4e" stroke-width="4"/>`;
+  h+=`<text x="770" y="${760-hh}" text-anchor="middle" font-family="Archivo Black" font-size="${kv>=1?64:54}" fill="#141215">${fmt(v*1000,0)} MLD $</text>`}
+ const kl2=P(t,9.2,9.6);h+=`<g opacity="${kl2}"><text x="770" y="830" text-anchor="middle" font-family="Archivo Black" font-size="40" fill="#141215">29 OTTOBRE 2025</text><text x="770" y="875" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#2f8f4e">la prima al mondo sopra i 5.000 mld</text></g>`;
+ $('Dv').innerHTML=h;ap($('Dd'),t,9.8,.4,10);};
+R.E=(t,d)=>{pop($('Ed'),t,.3,.45);ap($('Ey'),t,2.8,.3,10);$('Eyn').textContent=Math.round(33*eo(P(t,3.0,4.2)));
+ const k=P(t,4.4,5.4);let h=`<g transform="translate(540 220)"><path d="M-360 120 L-300 -60 H300 L360 120 Z" fill="#3b2a20"/><rect x="-300" y="-110" width="600" height="60" fill="#2a1d16"/><path d="M-300 -50 L-330 60 H330 L300 -50 Z" fill="#c9a77c"/>
+  <g opacity="${1-k}"><text y="5" text-anchor="middle" font-family="Archivo Black" font-size="56" fill="#1a100c">JENSEN HUANG</text><text y="50" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#5a4a3a">CEO · NVIDIA</text></g>
+  <g opacity="${P(t,5.2,5.6)}"><text y="40" text-anchor="middle" font-family="Archivo Black" font-size="120" fill="#8a1f12">?</text></g></g>`;
+ $('Ep').innerHTML=h;ap($('Ec'),t,5.4,.01,0);pop($('Ec1'),t,5.6,.4,0,0,'');pop($('Ec2'),t,6.6,.4,0,0,'');ap($('Ei'),t,7.6,.35,10);words($('Em'),t,8.8,.12);ap($('Es'),t,9.8,.4,10);};
+R.H=(t,d)=>{pop($('Ha'),t,.2,.45);pop($('Hb'),t,2.3,.4,-6,-2);};
+</script></body></html>

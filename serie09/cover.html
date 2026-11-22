@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#121014}
+#c{position:relative;width:1080px;height:1920px;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#221a1a 0%,#121014 65%)}
+.abs{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center}
+.bold{font-family:'Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-3px;line-height:.95}
+.serif{font-family:'Instrument Serif',serif;font-style:italic}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:700}
+/* safe area guide (not rendered): grid crop ~ y 240..1680 */
+.grain{position:absolute;inset:0;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>")}
+</style></head><body><div id="c">
+ <div class="abs mono" id="tag" style="top:420px;font-size:30px;letter-spacing:5px;color:#f3ebde;background:#e2683c;padding:12px 28px;border-radius:40px"></div>
+ <div class="abs bold" id="t1" style="top:540px;font-size:128px;color:#fff"></div>
+ <div class="abs bold" id="t2" style="top:680px;font-size:112px;color:#e2683c"></div>
+ <svg id="viz" width="1080" height="420" style="position:absolute;left:0;top:860px"></svg>
+ <div class="abs serif" style="top:1330px;font-size:60px;color:#bdb3a6">te lo spiega <span style="color:#e2683c;font-size:76px">Claudio</span></div>
+ <div class="grain"></div>
+</div>
+<script>
+const V={
+ p1:{tag:'PARTE 1 DI 2',t1:'SE UN AGENTE IA<br>SBAGLIA, CHI PAGA?',t2b:'COSA FANNO LE BANCHE USA',viz:'chat',fs:'80px',fs2:'56px'},
+ p2:{tag:'PARTE 2 DI 2',t1:'AGENTI IA E PAGAMENTI:<br>LE REGOLE UE',t2b:'E COSA FARE OGGI',viz:'rules',fs:'72px'}
+};
+const v=V[new URLSearchParams(location.search).get('v')||'p2'];
+tag.textContent=v.tag;t1.innerHTML=v.t1;
+// t1 is two lines -> push subtitle below it
+t1.style.top='500px';t1.style.fontSize='90px';t2.style.top='770px';t2.style.fontSize='64px';t2.style.letterSpacing='-1px';t2.textContent=v.t2b;if(v.fs)t1.style.fontSize=v.fs;if(v.fs2)t2.style.fontSize=v.fs2;
+let h='';
+if(v.viz==='chat'){
+ h+=`<g transform="translate(250 230)"><rect x="-70" y="-120" width="140" height="100" rx="26" fill="#9fb3c0"/><circle cx="-28" cy="-70" r="13" fill="#121014"/><circle cx="28" cy="-70" r="13" fill="#121014"/><line x1="0" y1="-120" x2="0" y2="-145" stroke="#9fb3c0" stroke-width="7"/><circle cy="-150" r="10" fill="#ff5a5a"/><rect x="-60" y="-10" width="120" height="100" rx="22" fill="#9fb3c0"/></g>
+ <rect x="390" y="70" width="560" height="120" rx="30" fill="#2c3a44"/><text x="420" y="148" font-family="Inter" font-weight="700" font-size="44" fill="#e9eef2">Pagato: <tspan fill="#ff5a5a">850,00 €</tspan></text>
+ <rect x="560" y="220" width="300" height="70" rx="14" fill="#3a1a1a"/><text x="710" y="267" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#ff5a5a">⚠ erano 85 €</text>`;
+}else{
+ h+=`<g transform="translate(270 210)"><rect x="-200" y="-150" width="400" height="300" rx="28" fill="#f3ebde"/><text y="-80" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#6b5a4c">AL MASSIMO</text><text y="40" text-anchor="middle" font-family="Archivo Black" font-size="120" fill="#121014">50 €</text><text y="110" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#c94f2a">salvo frode / colpa grave</text></g>`;
+ [['✕','password al chatbot','#c62828'],['✓','strumenti della banca','#1f7a45'],['✓','servizi autorizzati','#1f7a45']].forEach(([s,t2,c],i)=>{const y=90+i*110;
+  h+=`<circle cx="560" cy="${y}" r="38" fill="${c}"/><text x="560" y="${y+16}" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#fff">${s}</text><text x="616" y="${y+14}" font-family="Inter" font-weight="800" font-size="38" fill="#f3ebde">${t2}</text>`});
+}
+viz.innerHTML=h;
+window.ready=document.fonts.ready.then(()=>true);
+</script></body></html>

@@ -1,5 +1,6 @@
 # Serie 7 — "OpenAI: il capitale che gira in cerchio" — COPIONE
 Fonti: `../ricerche/T2_T3_openai_ipo.md` (CNBC, Fortune, Microsoft, WSJ, TechCrunch, AMD IR, Amazon, GeekWire, FT, Bloomberg/NYT). Disclaimer finanziario (v1 a schermo, v2 voce + schermo).
+Voce: grafia fonetica secondo `../PRONUNCIA.md` — inviati alla voce "Òracol" (v2 A), "servizi cloud, Èsciur" (v1 D), "Niù Iòrk Tàims" (v2 F); a schermo grafia corretta.
 Da NON dire: "Nvidia ha investito 100 mld" (→ annunciati 100, investiti 30); ricavi 70-81 mld come dato attuale; che i warrant AMD siano maturati.
 
 ## Video 1 — "Il cerchio" (~50 s)

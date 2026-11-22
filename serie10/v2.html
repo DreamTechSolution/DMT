@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · tree professione → attività → abilità -->
+<div class="scene" id="A" style="background:#071410">
+ <div class="abs bold" id="Aa" style="top:290px;font-size:80px;color:#fff">COME SI MISURA</div>
+ <svg id="At" width="1080" height="900" style="position:absolute;left:0;top:400px"></svg>
+ <div class="abs mono" id="As" style="top:1330px;font-size:24px;color:#6f9a86">metodo INAPP · Banca d'Italia</div>
+</div>
+
+<!-- B · potential vs adoption, surgeon -->
+<div class="scene" id="B" style="background:#071410">
+ <div class="abs" id="Bp" style="top:290px;display:flex;gap:24px;align-items:center">
+  <div class="bold" style="font-size:56px;color:#f3ebde;letter-spacing:-1px">POTENZIALE</div><div class="bold" style="font-size:80px;color:#e2683c">≠</div><div class="bold" style="font-size:56px;color:#6f9a86;letter-spacing:-1px">USO REALE</div></div>
+ <div class="abs serif" id="Bc" style="top:420px;font-size:60px;color:#8fc0a8">e conta la complementarità</div>
+ <svg id="Bs" width="1080" height="560" style="position:absolute;left:0;top:580px"></svg>
+ <div class="abs" id="Bv" style="top:1210px;display:flex;gap:30px">
+  <div id="Bv1" style="background:#0f3a26;border:3px solid #3ccf6e;border-radius:20px;padding:18px 30px"><div class="bold" style="font-size:60px;color:#3ccf6e;letter-spacing:-1px">✓ LO AIUTA</div></div>
+  <div id="Bv2" style="background:#2a1414;border:3px solid #ff5a5a;border-radius:20px;padding:18px 30px"><div class="bold" style="font-size:60px;color:#ff5a5a;letter-spacing:-1px">✕ NON OPERA</div></div></div>
+</div>
+
+<!-- C · who is more exposed -->
+<div class="scene" id="C" style="background:#f4f0e8">
+ <div class="abs bold" id="Ca" style="top:290px;font-size:84px;color:#141215;line-height:1">CHI È<br><span style="color:#c94f2a">PIÙ ESPOSTO?</span></div>
+ <div class="abs mono" id="Ck" style="top:500px;font-size:26px;letter-spacing:3px;color:#6b5a4c">SECONDO LA BANCA D'ITALIA</div>
+ <div class="abs" id="Cc" style="top:600px;display:flex;flex-direction:column;gap:30px;align-items:center"></div>
+</div>
+
+<!-- D · stairs down -->
+<div class="scene" id="D" style="background:#0c1a16">
+ <div class="abs bold" id="Da" style="top:290px;font-size:84px;color:#fff">IL RISCHIO VERO</div>
+ <svg id="Ds" width="1080" height="760" style="position:absolute;left:0;top:420px"></svg>
+ <div class="abs serif" id="Db" style="top:1220px;font-size:52px;color:#e9e1d6">chi lascia un lavoro sostituibile<br>tende a finire in uno pagato meno</div>
+</div>
+
+<!-- E · gauges -->
+<div class="scene" id="E" style="background:#071410">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:80px;color:#3ccf6e">LA BUONA NOTIZIA</div>
+ <div class="abs mono" id="Ek" style="top:400px;font-size:22px;letter-spacing:2px;color:#8fc0a8">BANCA D'ITALIA · STUDIO 2026 · LE IMPRESE CHE USANO L'IA</div>
+ <svg id="Eg" width="1080" height="760" style="position:absolute;left:0;top:470px"></svg>
+ <div class="abs mono" id="Es" style="top:1340px;font-size:22px;color:#6f9a86">Questioni di Economia e Finanza n. 1005, marzo 2026</div>
+</div>
+
+<!-- F · law 132/2025 -->
+<div class="scene" id="F" style="background:#121014">
+ <div class="abs bold" id="Fa" style="top:290px;font-size:84px;color:#fff">HAI DEI DIRITTI</div>
+ <div class="abs" id="Fd" style="top:420px"><div style="width:880px;background:#f4f0e8;border-radius:10px;padding:40px 46px;text-align:left;box-shadow:0 20px 60px rgba(0,0,0,.5)">
+  <div class="mono" style="font-size:24px;color:#6b5a4c;letter-spacing:3px;font-weight:700">GAZZETTA UFFICIALE</div>
+  <div class="bold" style="font-size:66px;color:#141215;letter-spacing:-2px;margin:10px 0 26px">LEGGE 132/2025</div>
+  <div style="height:12px;width:90%;background:#d9cfbf;border-radius:6px;margin-bottom:16px"></div><div style="height:12px;width:70%;background:#d9cfbf;border-radius:6px;margin-bottom:30px"></div>
+  <div id="F1" style="position:relative;margin-bottom:28px"><div id="F1h" style="position:absolute;left:-12px;top:-6px;bottom:-6px;background:#f2c14e;border-radius:8px;width:0"></div>
+   <div style="position:relative"><div class="mono" style="font-size:26px;font-weight:700;color:#c94f2a">ART. 11 · LAVORO</div>
+   <div class="sans" style="font-size:40px;font-weight:800;color:#141215;white-space:normal">il datore di lavoro deve informarti se usa l'IA</div></div></div>
+  <div id="F2" style="position:relative"><div id="F2h" style="position:absolute;left:-12px;top:-6px;bottom:-6px;background:#f2c14e;border-radius:8px;width:0"></div>
+   <div style="position:relative"><div class="mono" style="font-size:26px;font-weight:700;color:#c94f2a">ART. 13 · PROFESSIONI</div>
+   <div class="sans" style="font-size:40px;font-weight:800;color:#141215;white-space:normal">il professionista deve dirlo al cliente (l'IA solo come supporto)</div></div></div>
+ </div></div>
+</div>
+
+<!-- G · strategy + skills -->
+<div class="scene" id="G" style="background:#f4f0e8">
+ <div class="abs" id="Gs" style="top:300px"><div style="width:860px;border:4px solid #141215;border-radius:24px;padding:26px 34px;display:flex;align-items:center;gap:28px;text-align:left">
+  <svg width="90" height="120" viewBox="0 0 90 120"><path d="M10 6 h70 M10 114 h70 M18 6 c0 40 54 40 54 54 c0 14 -54 14 -54 54 M72 6 c0 40 -54 40 -54 54 c0 14 54 14 54 54" stroke="#141215" stroke-width="6" fill="none"/><path id="Gsand" d="M30 100 h30 l-15 -14 z" fill="#c94f2a"/></svg>
+  <div><div class="mono" style="font-size:26px;color:#6b5a4c;font-weight:700;letter-spacing:2px">PROSSIMO PASSO</div><div class="bold" style="font-size:52px;color:#141215;letter-spacing:-1px">STRATEGIA NAZIONALE</div>
+  <div class="mono" style="font-size:30px;font-weight:700;color:#fff;background:#c94f2a;display:inline-block;padding:6px 16px;border-radius:8px;margin-top:8px">ATTESA · NON ANCORA ADOTTATA</div></div></div></div>
+ <div class="abs mono" id="Gk" style="top:640px;font-size:28px;letter-spacing:3px;color:#6b5a4c">INTANTO, LA MOSSA PIÙ UTILE</div>
+ <div class="abs bold" id="Gm" style="top:700px;font-size:84px;color:#141215;line-height:1">IMPARA A USARLA<br><span style="color:#c94f2a">NEL TUO LAVORO</span></div>
+ <div class="abs" id="Gc" style="top:960px;display:flex;flex-direction:column;gap:16px;align-items:flex-start;left:110px;transform:none"></div>
+</div>
+
+<!-- H · save + comment -->
+<div class="scene" id="H" style="background:#071410">
+ <div class="abs" id="Hs" style="top:380px"><svg width="220" height="220" viewBox="0 0 220 220"><circle cx="110" cy="110" r="100" fill="#0f3a26" stroke="#3ccf6e" stroke-width="6"/><path id="Hbm" d="M75 55 h70 v115 l-35 -26 l-35 26 z" stroke="#f3ebde" stroke-width="10" fill="none" stroke-linejoin="round"/></svg></div>
+ <div class="abs bold" id="Ha" style="top:660px;font-size:120px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hq" style="top:850px"><div style="width:880px;background:#f4f0e8;border-radius:30px 30px 30px 6px;padding:30px 38px;text-align:left">
+  <div class="mono" style="font-size:24px;color:#6b5a4c;font-weight:700;letter-spacing:2px">DOMANDA PER TE</div>
+  <div class="sans" style="font-size:52px;font-weight:800;color:#141215;white-space:normal">L'IA la usi già nel tuo lavoro?</div></div></div>
+ <div class="abs" id="Hr" style="top:1130px;display:flex;gap:24px"><div class="bold" id="Hy" style="font-size:56px;color:#071410;background:#3ccf6e;padding:16px 36px 10px;border-radius:40px;letter-spacing:0">SÌ</div><div class="bold" id="Hn" style="font-size:56px;color:#071410;background:#f3ebde;padding:16px 36px 10px;border-radius:40px;letter-spacing:0">NON ANCORA</div></div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// A · tree
+function node(x,y,w,h,txt,fs,bg,fg,k){if(k<=0)return '';return `<g transform="translate(${x} ${y}) scale(${k})"><rect x="${-w/2}" y="${-h/2}" width="${w}" height="${h}" rx="${h/2}" fill="${bg}"/><text y="${fs*.36}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="${fs}" fill="${fg}">${txt}</text></g>`}
+const ACT=[200,540,880],SK=[[-95,0,95],[-95,0,95],[-95,0,95]],AIable=[[1,0,1],[0,1,0],[1,1,0]];
+R.A=(t,d)=>{ap($('Aa'),t,.2,.4,30);let h='';const kr=eback(P(t,1.9,2.3));
+ ACT.forEach((x,i)=>{const kl=eio(P(t,2.6+i*.2,3.2+i*.2));if(kl>0)h+=`<path d="M540 110 C540 200 ${x} 170 ${x} ${110+150*kl}" stroke="#8fc0a8" stroke-width="5" fill="none" opacity="${kl}"/>`;
+  SK[i].forEach((dx,j)=>{const kk=eio(P(t,4.8+i*.25+j*.1,5.3+i*.25+j*.1));if(kk>0)h+=`<line x1="${x}" y1="340" x2="${x+(dx*1.0)*kk}" y2="${340+220*kk}" stroke="#4f7a68" stroke-width="4"/>`})});
+ h+=node(540,90,520,110,'PROFESSIONE',50,'#f3ebde','#071410',kr);
+ ACT.forEach((x,i)=>{h+=node(x,300,300,84,'ATTIVITÀ '+(i+1),32,'#2f7a57','#fff',eback(P(t,3.0+i*.2,3.4+i*.2)));
+  SK[i].forEach((dx,j)=>{const kk=eback(P(t,5.3+i*.25+j*.1,5.7+i*.25+j*.1));if(kk<=0)return;const ai=AIable[i][j]&&t>7.6+i*.4+j*.15;
+   h+=`<g transform="translate(${x+dx} 600) scale(${kk})"><circle r="46" fill="${ai?'#e2683c':'#13241f'}" stroke="${ai?'#e2683c':'#8fc0a8'}" stroke-width="4"/>
+    <text y="12" text-anchor="middle" font-family="Archivo Black" font-size="30" fill="#fff">${ai?'IA':''}</text></g>`})});
+ h+=`<text x="540" y="740" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#8fc0a8" opacity="${P(t,5.6,6)}">ABILITÀ</text>`;
+ h+=`<g opacity="${P(t,8.2,8.6)}"><circle cx="300" cy="820" r="16" fill="#e2683c"/><text x="330" y="830" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#f3ebde">= l'IA la sa già svolgere</text></g>`;
+ $('At').innerHTML=h;ap($('As'),t,1.2,.4,10);};
+// B · scalpel + chip
+function scalpel(x,y,r){return `<g transform="translate(${x} ${y}) rotate(${r})"><rect x="-150" y="-14" width="200" height="28" rx="12" fill="#bfc8cc"/><rect x="-140" y="-6" width="170" height="4" fill="#8a969b"/><path d="M50 -14 L170 -2 Q180 4 150 14 L50 14 Z" fill="#e8eef0"/></g>`}
+function chip(x,y,s,glow){let h=`<g transform="translate(${x} ${y}) scale(${s})">`;for(let i=-2;i<=2;i++){h+=`<rect x="${i*22-5}" y="-86" width="10" height="20" fill="#8fc0a8"/><rect x="${i*22-5}" y="66" width="10" height="20" fill="#8fc0a8"/><rect x="-86" y="${i*22-5}" width="20" height="10" fill="#8fc0a8"/><rect x="66" y="${i*22-5}" width="20" height="10" fill="#8fc0a8"/>`}
+ return h+`<rect x="-70" y="-70" width="140" height="140" rx="16" fill="#13241f" stroke="#3ccf6e" stroke-width="${4+glow*4}"/><text y="16" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#3ccf6e">IA</text></g>`}
+R.B=(t,d)=>{pop($('Bp'),t,.3,.45);ap($('Bc'),t,4.3,.4,20);const k=eo(P(t,6.0,6.8)),kc=eio(P(t,8.3,9.2));let h='';
+ if(k>0)h+=`<g opacity="${k}"><circle cx="330" cy="220" r="${170*k}" fill="#0f2a20"/>${scalpel(330,220,-30+10*(1-k))}<text x="330" y="428" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#f3ebde">CHIRURGO</text></g>`;
+ if(kc>0)h+=`<g opacity="${kc}">${chip(560+180*kc,220,1,Math.sin(t*6)*.5+.5)}<path d="M600 220 h${110*kc}" stroke="#3ccf6e" stroke-width="5" stroke-dasharray="10 10"/><text x="740" y="450" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#3ccf6e">ASSISTENTE</text></g>`;
+ // exposure meter
+ const m=eo(P(t,6.6,7.6));if(m>0)h+=`<g opacity="${m}" transform="translate(150 510)"><rect width="360" height="26" rx="13" fill="#13241f" stroke="#8fc0a8" stroke-width="2"/><rect width="${330*m}" height="26" rx="13" fill="#e2683c"/><text x="180" y="-14" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#e2683c">MOLTO ESPOSTO</text></g>`;
+ $('Bs').innerHTML=h;ap($('Bv'),t,9.0,.01,0);pop($('Bv1'),t,9.1,.4,0,0,'');pop($('Bv2'),t,10.1,.4,0,0,'');};
+// C · tokens
+const TOK=[['🏢','CHI LAVORA NEI SERVIZI',3.0],['🎓','CHI È PIÙ QUALIFICATO',4.1],['👩','LE DONNE',5.1]];
+R.C=(t,d)=>{ap($('Ca'),t,.2,.4,30);ap($('Ck'),t,1.5,.35,10);$('Cc').innerHTML=TOK.map(([e,l,t0],i)=>{const k=eback(P(t,t0,t0+.45));return `<div style="opacity:${cl(k*3)};transform:scale(${.3+.7*k});width:860px;display:flex;align-items:center;gap:30px;background:${['#26405f','#c94f2a','#141215'][i]};border-radius:120px;padding:20px 30px">
+  <div style="width:130px;height:130px;border-radius:65px;background:#f4f0e8;display:flex;align-items:center;justify-content:center;font-size:76px">${e}</div><div class="bold" style="font-size:44px;color:#fff;letter-spacing:-1px">${l}</div></div>`}).join('');};
+// D · stairs
+R.D=(t,d)=>{ap($('Da'),t,.2,.4,30);let h='';
+ h+=`<rect x="120" y="260" width="420" height="500" fill="#2c4a40"/><rect x="540" y="470" width="420" height="290" fill="#1d332b"/>`;
+ h+=`<text x="330" y="330" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde">LAVORO SOSTITUIBILE</text><text x="750" y="540" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde" opacity="${P(t,3.0,3.4)}">LAVORO NUOVO</text>`;
+ const k=eio(P(t,1.6,3.4));const x=330+420*k,y=260-60*Math.sin(Math.PI*k)+210*eio(P(t,2.6,3.4));
+ h+=fig(x,y-60,2.4,'#f3ebde');
+ // pay bars
+ const pay1=300,kp=eo(P(t,3.4,4.4));h+=`<g transform="translate(0 0)"><rect x="180" y="420" width="${pay1}" height="60" rx="10" fill="#3ccf6e"/><text x="190" y="465" font-family="Archivo Black" font-size="36" fill="#0c1a16">€€€</text></g>`;
+ if(kp>0)h+=`<g opacity="${cl(kp*3)}"><rect x="600" y="610" width="${pay1-(130*kp)}" height="60" rx="10" fill="#e2683c"/><text x="610" y="655" font-family="Archivo Black" font-size="36" fill="#0c1a16">€€</text><text x="760" y="740" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#e2683c">PAGATO MENO</text></g>`;
+ $('Ds').innerHTML=h;ap($('Db'),t,3.2,.4,20);};
+function fig(x,y,s,c){return `<g transform="translate(${x} ${y}) scale(${s})"><circle cy="-20" r="11" fill="${c}"/><path d="M-17 20 v-10 a17 17 0 0 1 34 0 v10 z" fill="${c}"/></g>`}
+// E · gauges
+function gauge(cx,cy,val,lab,sub,col,k){let h=`<g transform="translate(${cx} ${cy})" opacity="${cl(k*3)}">`;
+ h+=`<path d="M-190 0 A190 190 0 0 1 190 0" stroke="#13241f" stroke-width="40" fill="none"/>`;
+ for(let i=0;i<=10;i++){const a=Math.PI*(1-i/10);h+=`<line x1="${Math.cos(a)*150}" y1="${-Math.sin(a)*150}" x2="${Math.cos(a)*130}" y2="${-Math.sin(a)*130}" stroke="#4f7a68" stroke-width="4"/>`}
+ const a=Math.PI*(1-val);h+=`<line x1="0" y1="0" x2="${Math.cos(a)*170}" y2="${-Math.sin(a)*170}" stroke="${col}" stroke-width="12" stroke-linecap="round"/><circle r="20" fill="${col}"/>`;
+ h+=`<text y="70" text-anchor="middle" font-family="Archivo Black" font-size="48" fill="#fff">${lab}</text><text y="122" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="42" fill="${col}">${sub}</text></g>`;return h}
+R.E=(t,d)=>{pop($('Ea'),t,.2,.4);ap($('Ek'),t,1.6,.4,10);const k1=P(t,4.0,4.4),k2=P(t,7.2,7.6);const v1=.5+.38*eback(P(t,4.8,6.0));const wob=.5+.04*Math.sin(t*5)*(1-P(t,7.5,9));
+ $('Eg').innerHTML=(k1>0?gauge(540,240,v1,'PRODUTTIVITÀ','aumenta','#3ccf6e',k1):'')+(k2>0?gauge(540,590,wob,'OCCUPAZIONE','nessun effetto netto negativo','#f2c14e',k2):'');ap($('Es'),t,2.0,.4,10);};
+// F · law
+R.F=(t,d)=>{pop($('Fa'),t,.2,.4);ap($('Fd'),t,1.6,.45,60);$('F1h').style.width=(eio(P(t,4.6,5.6))*104)+'%';$('F2h').style.width=(eio(P(t,8.0,9.0))*104)+'%';
+ $('F1').style.opacity=.35+.65*P(t,4.3,4.7);$('F2').style.opacity=.35+.65*P(t,7.7,8.1);};
+// G · strategy + checklist
+const CK=['prova gli strumenti di IA sulle tue attività','segui un corso, anche breve','scrivilo nel curriculum'];
+R.G=(t,d)=>{pop($('Gs'),t,.3,.45);$('Gsand').setAttribute('transform',`translate(0 ${-Math.abs(Math.sin(t*2))*4})`);ap($('Gk'),t,3.9,.35,10);pop($('Gm'),t,5.6,.45);
+ $('Gc').innerHTML=CK.map((c,i)=>{const t0=7.0+i*.7,k=eo(P(t,t0,t0+.35));return `<div style="opacity:${k};transform:translateX(${(1-k)*-40}px);display:flex;gap:20px;align-items:center">
+  <div style="width:56px;height:56px;border-radius:12px;border:4px solid #141215;display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:40px;color:#2f8f4e">${P(t,t0+.3,t0+.4)>0?'✓':''}</div>
+  <div class="sans" style="font-size:40px;font-weight:700;color:#141215">${c}</div></div>`}).join('');};
+// H
+R.H=(t,d)=>{const bm=$('Hbm');const k=P(t,.2,.6);bm.setAttribute('fill',k>.9?'#3ccf6e':'none');bm.setAttribute('stroke',k>.9?'#3ccf6e':'#f3ebde');
+ pop($('Hs'),t,.05,.4);pop($('Ha'),t,.25,.4);pop($('Hq'),t,1.4,.45);ap($('Hr'),t,2.3,.01,0);pop($('Hy'),t,2.4,.4,0,0,'');pop($('Hn'),t,2.7,.4,0,0,'');};
+</script></body></html>

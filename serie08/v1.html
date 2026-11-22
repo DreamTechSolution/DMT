@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A+B · the peak and the fall (one chart) -->
+<div class="scene" id="A" style="background:#100d08">
+ <div class="abs mono" id="Ak" style="top:300px;font-size:28px;letter-spacing:4px;color:#c9a56a">BITCOIN · PREZZO IN DOLLARI</div>
+ <svg id="Ac" width="1080" height="1060" style="position:absolute;left:0;top:370px"></svg>
+</div>
+<div class="scene" id="B" style="background:#100d08">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:28px;letter-spacing:4px;color:#c9a56a">BITCOIN · PREZZO IN DOLLARI</div>
+ <svg id="Bc" width="1080" height="1060" style="position:absolute;left:0;top:370px"></svg>
+ <div class="abs mono" id="Bs" style="top:1400px;font-size:22px;color:#8a7a5c">Fonti: CoinGecko, Reuters · prezzi al 22/11/2026</div>
+</div>
+
+<!-- C · November calendar -->
+<div class="scene" id="C" style="background:#141016">
+ <div class="abs bold" id="Ca" style="top:290px;font-size:110px;color:#fff">NOVEMBRE</div>
+ <div class="abs" id="Cg" style="top:440px;width:840px;display:grid;grid-template-columns:repeat(7,1fr);gap:14px"></div>
+ <div class="abs bold" id="Cv" style="top:1120px;font-size:190px;color:#ff5a5a">−21%</div>
+ <div class="abs mono" id="Cs" style="top:1330px;font-size:28px;color:#bdb3a6">1/11: 77.500 $ → 22/11: 60.800 $</div>
+</div>
+
+<!-- D · ETF tank draining -->
+<div class="scene" id="D" style="background:#0b1220">
+ <div class="abs mono" id="Dk" style="top:300px;font-size:30px;letter-spacing:4px;color:#8fa3c0">ETF SPOT USA SU BITCOIN</div>
+ <div class="abs serif" id="Db" style="top:350px;font-size:46px;color:#c9d6ea">fondi che lo comprano per conto degli investitori</div>
+ <svg id="Dt" width="1080" height="900" style="position:absolute;left:0;top:450px"></svg>
+ <div class="abs mono" id="Ds" style="top:1400px;font-size:22px;color:#6f819c">novembre 2026, fino al 20/11 · Farside Investors, SoSoValue</div>
+</div>
+
+<!-- E · three weights -->
+<div class="scene" id="E" style="background:#f4f0e8">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:120px;color:#141215">PERCHÉ?</div>
+ <div class="abs mono" id="Ek" style="top:420px;font-size:26px;letter-spacing:3px;color:#8a7a6c">SECONDO REUTERS · 20 NOVEMBRE 2026</div>
+ <svg id="Ew" width="1080" height="820" style="position:absolute;left:0;top:480px"></svg>
+ <div class="abs mono" id="Ed" style="top:1330px;font-size:24px;color:#8a7a6c">Non è consulenza finanziaria.</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#100d08">
+ <div class="abs mono" id="Hk" style="top:520px;font-size:34px;letter-spacing:5px;color:#c9a56a">IN ITALIA, DAL 2026</div>
+ <div class="abs bold" id="Ha" style="top:600px;font-size:150px;color:#fff;line-height:1">TASSE<br><span style="color:#f2a93b">AL 33%</span></div>
+ <div class="abs bold" id="Hb" style="top:960px;font-size:64px;color:#100d08;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// weekly prices (k$) from CoinGecko: 6/10/2025 record, then 23/11/2025 → 22/11/2026 weekly
+const PTS=[126.1,84.7,90.8,89.2,90.3,88.3,87.9,90.6,90.4,94.8,89.1,78.6,69.2,69.8,68.0,67.0,67.3,71.1,68.4,66.4,67.1,73.0,75.7,77.6,78.7,80.7,78.1,76.7,73.8,60.9,64.4,64.3,60.0,63.1,63.8,64.8,64.3,62.8,64.9,63.0,77.1,78.2,79.8,77.3,81.2,84.4,84.7,82.9,81.4,80.8,77.5,75.8,64.1,60.1,60.8];
+const X0=130,X1=950,Yv=v=>930-(v-40)*8.2; // 40k..130k
+const px=i=>X0+(i===0?0:60+(i-1)*(X1-X0-60)/(PTS.length-2));
+function coin(x,y,r,crack){return `<g transform="translate(${x} ${y})"><circle r="${r}" fill="#f2a93b"/><circle r="${r*.8}" fill="none" stroke="#c97f1c" stroke-width="${r*.08}"/>
+ <text y="${r*.36}" text-anchor="middle" font-family="Archivo Black" font-size="${r*1.05}" fill="#100d08">₿</text>${crack?`<path d="M${-r*.15} ${-r} L${r*.12} ${-r*.3} L${-r*.12} ${r*.2} L${r*.15} ${r}" stroke="#100d08" stroke-width="${r*.12}" fill="none"/>`:''}</g>`}
+function grid(){let h='';[60,80,100,120].forEach(v=>{h+=`<line x1="${X0}" y1="${Yv(v)}" x2="${X1}" y2="${Yv(v)}" stroke="#2c261c" stroke-width="2"/><text x="${X1+10}" y="${Yv(v)+10}" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#6d6048">${v}k</text>`});return h}
+function line(k){const n=Math.max(1,Math.floor(k*(PTS.length-1)));let d=`M${px(0)} ${Yv(PTS[0])}`;for(let i=1;i<=n;i++)d+=` L${px(i)} ${Yv(PTS[i])}`;return [d,n]}
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);let h=grid();
+ // rising approach to the peak
+ const k=eio(P(t,.4,2.6));const y0=Yv(60),yP=Yv(126.1);h+=`<path d="M${X0-60} ${y0} Q ${X0-30} ${y0-80} ${X0} ${y0+(yP-y0)*k}" stroke="#f2a93b" stroke-width="9" fill="none" stroke-linecap="round"/>`;
+ if(k>=1){const f=eback(P(t,2.6,3.1));h+=`<g transform="translate(${X0} ${yP}) scale(${f})"><line x1="0" y1="0" x2="0" y2="-120" stroke="#f3ebde" stroke-width="6"/><path d="M0 -120 L90 -98 L0 -76 Z" fill="#e2683c"/></g>`;
+  h+=coin(X0,yP,46*f,false);
+  h+=`<g opacity="${P(t,3.4,3.8)}"><text x="${X0+120}" y="${yP-50}" font-family="Archivo Black" font-size="56" fill="#f3ebde">RECORD</text><text x="${X0+120}" y="${yP+30}" font-family="Archivo Black" font-size="${84}" fill="#f2a93b">~${fmt(126000*ex(P(t,3.6,5.0)))} $</text>
+  <text x="${X0+120}" y="${yP+90}" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#bdb3a6">6 ottobre 2025</text></g>`}
+ $('Ac').innerHTML=h;};
+R.B=(t,d)=>{ap($('Bk'),t,0,.01,0);let h=grid();const k=P(t,.3,4.2);const [dd,n]=line(eio(k));
+ h+=`<path d="${dd}" stroke="#f2a93b" stroke-width="7" fill="none" stroke-linejoin="round"/>`;
+ h+=`<line x1="${X0}" y1="${Yv(63)}" x2="${X1}" y2="${Yv(63)}" stroke="#f3ebde" stroke-dasharray="10 10" stroke-width="3" opacity="${P(t,4.5,5)}"/><text x="${X0+10}" y="${Yv(63)+50}" text-anchor="start" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde" opacity="${P(t,4.5,5)}">METÀ DEL RECORD ≈ 63k</text>`;
+ h+=`<g opacity=".5">${coin(X0,Yv(126.1),30,false)}</g>`;
+ const cx=px(n),cy=Yv(PTS[n]);h+=coin(cx,cy,40,k>=1);
+ const v=126000+(60800-126000)*eio(P(t,.3,4.2));
+ h+=`<text x="540" y="${Yv(40)-20}" text-anchor="middle" font-family="Archivo Black" font-size="96" fill="${k>=1?'#ff5a5a':'#fff'}">${fmt(v)} $</text>`;
+ if(t>2.2)h+=`<text x="540" y="${Yv(40)+40}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#bdb3a6" opacity="${P(t,2.2,2.6)}">21/11: minimo sotto 56.000 $ · 22/11: ~60.800 $</text>`;
+ if(k>=1){const f=eback(P(t,5.6,6.1));h+=`<g transform="translate(620 ${Yv(110)}) scale(${f})"><rect x="-200" y="-75" width="400" height="120" rx="20" fill="#ff5a5a"/><text y="20" text-anchor="middle" font-family="Archivo Black" font-size="96" fill="#100d08">−52%</text></g>`}
+ $('Bc').innerHTML=h;ap($('Bs'),t,6.4,.4,10);};
+const NOV=[77.5,78.3,76.7,77.4,80.4,76.0,75.8,75.8,74.7,75.3,73.7,74.0,71.4,68.3,64.1,65.3,64.8,64.9,63.0,61.9,58.8,60.8];
+R.C=(t,d)=>{pop($('Ca'),t,.1,.4);const g=$('Cg');let h='';['L','M','M','G','V','S','D'].forEach(x=>h+=`<div class="mono" style="font-size:24px;color:#8a8590;text-align:center">${x}</div>`);
+ for(let i=0;i<6;i++)h+='<div></div>'; // 1 Nov 2026 is Sunday
+ for(let dd=1;dd<=30;dd++){const k=P(t,.3+dd*.055,.5+dd*.055);const has=dd<=22;const ch=has?(NOV[dd-1]-77.5)/77.5:0;const red=Math.min(1,-ch/.22);
+  const bg=!has?'#1f1b22':`rgb(${Math.round(60+195*red)},${Math.round(60-10*red)},${Math.round(60-10*red)})`;
+  h+=`<div style="height:92px;border-radius:14px;background:${bg};opacity:${has?.25+.75*k:.5};display:flex;align-items:center;justify-content:center;transform:scale(${has?.8+.2*eback(k):1})" class="mono"><span style="font-size:30px;font-weight:700;color:${has?'#fff':'#4a4550'}">${dd}</span></div>`}
+ g.innerHTML=h;g.style.transform='translateX(-50%)';pop($('Cv'),t,1.7,.4);ap($('Cs'),t,2.1,.4,10);};
+R.D=(t,d)=>{ap($('Dk'),t,.1,.3,10);words($('Db'),t,2.6,.07);const k=eio(P(t,4.6,7.6));let h='';
+ const TX=340,TY=40,TW=400,TH=520,lvl=TH-30-(TH-60)*(1-.55*k);
+ h+=`<defs><clipPath id="tk"><rect x="${TX}" y="${TY}" width="${TW}" height="${TH}" rx="40"/></clipPath></defs>`;
+ h+=`<g clip-path="url(#tk)"><rect x="${TX}" y="${TY+lvl}" width="${TW}" height="${TH}" fill="#f2a93b"/><path d="M${TX} ${TY+lvl} q 50 ${-14+8*Math.sin(t*4)} 100 0 t 100 0 t 100 0 t 100 0 V ${TY+lvl+20} H ${TX} Z" fill="#ffc46b"/></g>`;
+ h+=`<rect x="${TX}" y="${TY}" width="${TW}" height="${TH}" rx="40" fill="none" stroke="#c9d6ea" stroke-width="8"/>`;
+ for(let i=0;i<8;i++){const yy=TY+40+i*60;h+=`<line x1="${TX+TW-50}" y1="${yy}" x2="${TX+TW-14}" y2="${yy}" stroke="#c9d6ea" stroke-width="4" opacity=".6"/>`}
+ h+=`<text x="${TX+TW/2}" y="${TY+120}" text-anchor="middle" font-family="Archivo Black" font-size="64" fill="#0b1220" opacity="${k>.2?0:1}">ETF</text>`;
+ // tap and drops
+ h+=`<rect x="${TX+TW/2-24}" y="${TY+TH}" width="48" height="50" fill="#c9d6ea"/><rect x="${TX+TW/2-60}" y="${TY+TH+40}" width="120" height="26" rx="8" fill="#c9d6ea"/>`;
+ if(t>4.4&&t<8.2)for(let i=0;i<6;i++){const ph=((t*1.6+i/6)%1);h+=`<circle cx="${TX+TW/2}" cy="${TY+TH+80+ph*130}" r="${12-ph*4}" fill="#f2a93b" opacity="${1-ph}"/>`}
+ const v=3.5*eio(P(t,4.6,7.6));
+ h+=`<text x="540" y="${TY+TH+230}" text-anchor="middle" font-family="Archivo Black" font-size="${110}" fill="#ff5a5a" opacity="${P(t,4.5,4.8)}">−${fmt(v,1)} MLD $</text>`;
+ $('Dt').innerHTML=h;ap($('Ds'),t,7.6,.4,10);};
+const WTS=[['dubbi sugli investimenti','nell\'intelligenza artificiale',2.4],['costo del denaro','in salita',5.6],['rischi normativi','negli Stati Uniti',7.4]];
+R.E=(t,d)=>{pop($('Ea'),t,.1,.4);ap($('Ek'),t,.6,.3,10);let h='';const by=640;
+ const tot=WTS.reduce((s,w)=>s+eo(P(t,w[2],w[2]+.5)),0);const sag=tot*14;
+ h+=`<path d="M120 ${by} Q 540 ${by+sag*2} 960 ${by}" stroke="#141215" stroke-width="12" fill="none"/><path d="M540 ${by+sag} L470 ${by+170} H610 Z" fill="#141215"/><rect x="380" y="${by+170}" width="320" height="22" rx="8" fill="#141215"/>`;
+ WTS.forEach(([a,b,t0],i)=>{const k=P(t,t0,t0+.5);if(k<=0)return;const x=230+i*310;const yEnd=by+sag*(1-Math.pow((x-540)/420,2))*2-10;const y=yEnd-(1-eo(k))*500;
+  h+=`<g transform="translate(${x} ${y})" opacity="${cl(k*3)}"><path d="M-40 -150 a40 40 0 0 1 80 0" stroke="#c94f2a" stroke-width="18" fill="none"/><path d="M-110 0 L-80 -150 H80 L110 0 Z" fill="#c94f2a"/>
+   <text y="-60" text-anchor="middle" font-family="Archivo Black" font-size="56" fill="#f4f0e8">${i+1}</text></g>
+   <g opacity="${P(t,t0+.4,t0+.8)}"><circle cx="150" cy="${40+i*125}" r="30" fill="#c94f2a"/><text x="150" y="${52+i*125}" text-anchor="middle" font-family="Archivo Black" font-size="34" fill="#f4f0e8">${i+1}</text><text x="200" y="${40+i*125}" font-family="Inter" font-weight="800" font-size="38" fill="#141215">${a}</text><text x="200" y="${84+i*125}" font-family="Instrument Serif" font-style="italic" font-size="38" fill="#6b5a4c">${b}</text></g>`});
+ $('Ew').innerHTML=h;ap($('Ed'),t,8.4,.4,10);};
+R.H=(t,d)=>{ap($('Hk'),t,.1,.35,20);pop($('Ha'),t,.6,.45);pop($('Hb'),t,3.4,.4,-6,-2);};
+</script></body></html>
