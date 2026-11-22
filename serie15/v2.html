@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs2.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
+<script src="engine.js"></script>
+<style>.rc{width:480px;background:#fffdf7;padding:26px 26px 34px;text-align:left;font-family:'JetBrains Mono';font-weight:700;color:#141215;
+ -webkit-mask:radial-gradient(circle 12px at 50% 100%,transparent 11px,#000 12px) 0 0/34px 100%;}
+.rl{display:flex;justify-content:space-between;font-size:31px;padding:14px 0;border-bottom:2px dashed #d8cfbf}</style>
+</head><body><div id="stage">
+
+<!-- A · tax donuts -->
+<div class="scene" id="A" style="background:#0a1424">
+ <div class="abs bold" id="Aa" style="top:290px;font-size:110px;color:#fff">LE TASSE</div>
+ <div class="abs serif" id="Ab" style="top:410px;font-size:50px;color:#c9d6ea">sugli interessi</div>
+ <svg id="Ad" width="1080" height="800" style="position:absolute;left:0;top:520px"></svg>
+</div>
+
+<!-- B · stamp duty -->
+<div class="scene" id="B" style="background:#f4f0e8">
+ <div class="abs bold" id="Ba" style="top:290px;font-size:66px;color:#141215">SU ENTRAMBI, DI SOLITO</div>
+ <svg id="Bs" width="1080" height="900" style="position:absolute;left:0;top:420px"></svg>
+ <div class="abs mono" id="Bz" style="top:1360px;font-size:22px;color:#8a7a6c">imposta di bollo 2 per mille · DPR 642/1972, Tariffa art. 13 c. 2-ter</div>
+</div>
+
+<!-- C · receipts -->
+<div class="scene" id="C" style="background:#1a1612">
+ <div class="abs" id="Ct" style="top:280px"><div class="mono" style="font-size:30px;font-weight:700;color:#141215;background:#f2c14e;padding:10px 24px;border-radius:40px;letter-spacing:3px">TASSI DI ESEMPIO</div></div>
+ <div class="abs bold" id="Ca" style="top:370px;font-size:56px;color:#fff;letter-spacing:-1px">10.000 € · 1 ANNO · 4% LORDO</div>
+ <div class="abs" id="Cr" style="top:480px;display:flex;gap:30px;align-items:flex-start">
+  <div class="rc" id="R1"><div class="bold" style="font-size:44px;text-align:center;margin-bottom:12px">BTP</div>
+   <div class="rl" id="R1a"><span>interessi lordi</span><span>400 €</span></div>
+   <div class="rl" id="R1b"><span>tasse 12,5%</span><span style="color:#c94f2a">−50 €</span></div>
+   <div class="rl" id="R1c"><span>bollo 0,2%</span><span style="color:#c94f2a">−20 €</span></div>
+   <div id="R1d" style="display:flex;justify-content:space-between;font-size:50px;padding-top:22px"><span>NETTO</span><span style="color:#1f8a4c">330 €</span></div></div>
+  <div class="rc" id="R2"><div class="bold" style="font-size:44px;text-align:center;margin-bottom:12px">CONTO DEP.</div>
+   <div class="rl" id="R2a"><span>interessi lordi</span><span>400 €</span></div>
+   <div class="rl" id="R2b"><span>tasse 26%</span><span style="color:#c94f2a">−104 €</span></div>
+   <div class="rl" id="R2c"><span>bollo 0,2%</span><span style="color:#c94f2a">−20 €</span></div>
+   <div id="R2d" style="display:flex;justify-content:space-between;font-size:50px;padding-top:22px"><span>NETTO</span><span style="color:#1f8a4c">276 €</span></div></div>
+ </div>
+ <div class="abs serif" id="Cd" style="top:1150px;font-size:44px;color:#f3ebde">differenza: 54 € a parità di tasso lordo</div>
+ <div class="abs mono" id="Cz" style="top:1240px;font-size:22px;color:#8a7a5c;line-height:1.5">esempio semplificato: BTP comprato alla pari e tenuto, nessuna commissione</div>
+</div>
+
+<!-- D · seesaw + lock -->
+<div class="scene" id="D" style="background:#0a1424">
+ <div class="abs mono" id="Dk" style="top:290px;font-size:30px;letter-spacing:3px;color:#f2c14e">BTP VENDUTO PRIMA DELLA SCADENZA</div>
+ <svg id="Ds" width="1080" height="500" style="position:absolute;left:0;top:340px"></svg>
+ <div class="abs serif" id="Db" style="top:820px;font-size:46px;color:#c9d6ea">il prezzo può essere più basso di quanto l'hai pagato</div>
+ <div class="abs" id="Dl" style="top:950px"><div style="width:880px;display:flex;gap:30px;align-items:center;text-align:left;background:#14223a;border:3px solid #8fa3c0;border-radius:24px;padding:26px 32px">
+  <svg width="120" height="140" viewBox="0 0 120 140"><path d="M28 64 V40 a32 32 0 0 1 64 0 V64" stroke="#f3ebde" stroke-width="12" fill="none"/><rect x="10" y="60" width="100" height="76" rx="14" fill="#f2c14e"/><circle cx="60" cy="94" r="10" fill="#0a1424"/></svg>
+  <div><div class="mono" style="font-size:28px;color:#8fa3c0;letter-spacing:2px">CONTO DEPOSITO VINCOLATO</div><div class="sans" style="font-size:42px;font-weight:800;color:#fff;white-space:normal">soldi bloccati fino alla scadenza</div></div></div></div>
+</div>
+
+<!-- E · shield vs pillar -->
+<div class="scene" id="E" style="background:#f4f0e8">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:110px;color:#141215">LE GARANZIE</div>
+ <svg id="Eg" width="1080" height="900" style="position:absolute;left:0;top:430px"></svg>
+</div>
+
+<!-- F · ISEE -->
+<div class="scene" id="F" style="background:#0a1424">
+ <div class="abs bold" id="Fa" style="top:300px;font-size:110px;color:#fff">IN PIÙ</div>
+ <div class="abs" id="Fc" style="top:470px"><div style="width:860px;background:#f3ebde;border-radius:24px;padding:30px 36px;text-align:left">
+  <div class="mono" style="font-size:30px;color:#8a7a6c;letter-spacing:3px">ISEE</div>
+  <div class="sans" style="font-size:46px;font-weight:800;color:#141215;margin-top:8px">titoli di Stato <span style="color:#1f8a4c">esclusi</span></div>
+  <div style="margin-top:26px;height:60px;border-radius:30px;background:#d8cfbf;position:relative;overflow:hidden"><div id="Fb" style="position:absolute;left:0;top:0;bottom:0;background:#1f8a4c"></div></div>
+  <div class="mono" style="display:flex;justify-content:space-between;font-size:28px;color:#5a4a3a;margin-top:10px"><span>0 €</span><span id="Fv" style="font-weight:700;color:#1f8a4c">fino a 50.000 €</span></div></div></div>
+ <div class="abs mono" id="Fs" style="top:1000px;font-size:22px;color:#6f819c">MEF – Dipartimento del Tesoro, FAQ BTP Valore</div>
+</div>
+
+<!-- G · compass -->
+<div class="scene" id="G" style="background:#f4f0e8">
+ <div class="abs bold" id="Ga" style="top:290px;font-size:96px;color:#141215;line-height:1">DIPENDE DAL TUO<br><span style="color:#c94f2a">ORIZZONTE</span></div>
+ <svg id="Gc" width="1080" height="420" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs" id="G1" style="top:930px"><div class="sans" style="font-size:40px;font-weight:800;color:#f4f0e8;background:#26405f;border-radius:40px;padding:16px 34px">quando ti servono quei soldi?</div></div>
+ <div class="abs" id="G2" style="top:1040px"><div class="sans" style="font-size:40px;font-weight:800;color:#f4f0e8;background:#26405f;border-radius:40px;padding:16px 34px">quanto sopporti le oscillazioni?</div></div>
+ <div class="abs" id="Gd" style="top:1200px"><div class="mono" style="font-size:28px;color:#141215;border:3px solid #141215;border-radius:12px;padding:12px 24px">⚠ Questo non è un consiglio finanziario.</div></div>
+</div>
+
+<!-- H · save + comment -->
+<div class="scene" id="H" style="background:#0a1424">
+ <div class="abs" id="Hs" style="top:380px"><svg width="220" height="260" viewBox="0 0 220 260"><path id="Hbm" d="M40 20 h140 v210 l-70 -46 l-70 46 z" stroke="#f3ebde" stroke-width="12" fill="none" stroke-linejoin="round"/><text id="Hbt" x="110" y="132" text-anchor="middle" font-family="Archivo Black" font-size="84" fill="#f3ebde">€</text></svg></div>
+ <div class="abs bold" id="Ha" style="top:690px;font-size:120px;color:#fff">SALVA IL VIDEO</div>
+ <div class="abs" id="Hc" style="top:880px"><div style="width:880px;background:#14223a;border:2px solid #3a4a62;border-radius:30px;padding:28px 34px;text-align:left;display:flex;gap:22px">
+  <div style="width:76px;height:76px;border-radius:38px;background:linear-gradient(135deg,#f2c14e,#3ccf6e);flex:none"></div>
+  <div><div class="sans" style="font-size:30px;font-weight:700;color:#fff">tu <span style="font-weight:400;color:#8fa3c0">· adesso</span></div>
+  <div class="sans" id="Ht" style="font-size:40px;color:#f3ebde;margin-top:6px;min-height:52px"></div></div></div></div>
+ <div class="abs serif" id="Hb" style="top:1110px;font-size:58px;color:#c9d6ea">i tuoi risparmi dove li tieni?</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+function arc(cx,cy,r,f){const a=f*Math.PI*2-Math.PI/2;const x=cx+r*Math.cos(a),y=cy+r*Math.sin(a);return `M${cx} ${cy-r} A${r} ${r} 0 ${f>.5?1:0} 1 ${x} ${y}`}
+R.A=(t,d)=>{pop($('Aa'),t,2.4,.4);ap($('Ab'),t,2.8,.4,10);let h='';
+ [['TITOLI DI STATO','12,5%',.125,270,'#3ccf6e',4.0],['CONTO DEPOSITO','26%',.26,810,'#ff5a5a',7.4]].forEach(([n,v,f,x,c,t0])=>{const o=P(t,t0-1.2,t0-.8);const k=eio(P(t,t0,t0+1.0));
+  h+=`<g opacity="${o}"><circle cx="${x}" cy="300" r="190" fill="none" stroke="#1b2a42" stroke-width="80"/>${k>0?`<path d="${arc(x,300,190,Math.max(.001,f*k))}" stroke="${c}" stroke-width="80" fill="none"/>`:''}
+   <text x="${x}" y="330" text-anchor="middle" font-family="Archivo Black" font-size="${v.length>4?84:96}" fill="${c}" opacity="${P(t,t0+.5,t0+.9)}">${v}</text>
+   <text x="${x}" y="580" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#fff">${n}</text></g>`});
+ h+=`<text x="540" y="700" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#8fa3c0" opacity="${P(t,8.6,9)}">la fetta che va al fisco</text>`;
+ $('Ad').innerHTML=h;};
+function stamp(x,y,s,rot){let p='';for(let i=0;i<14;i++)p+=`<circle cx="${-150+i*23}" cy="-110" r="9" fill="#f4f0e8"/><circle cx="${-150+i*23}" cy="110" r="9" fill="#f4f0e8"/>`;for(let i=0;i<10;i++)p+=`<circle cx="-155" cy="${-100+i*22}" r="9" fill="#f4f0e8"/><circle cx="155" cy="${-100+i*22}" r="9" fill="#f4f0e8"/>`;
+ return `<g transform="translate(${x} ${y}) rotate(${rot}) scale(${s})"><rect x="-155" y="-110" width="310" height="220" fill="#c94f2a"/>${p}<rect x="-125" y="-82" width="250" height="164" fill="none" stroke="#f4f0e8" stroke-width="4"/>
+ <text y="-22" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#f4f0e8">BOLLO</text><text y="40" text-anchor="middle" font-family="Archivo Black" font-size="64" fill="#f4f0e8">0,20%</text><text y="72" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#f4f0e8">ALL'ANNO</text></g>`}
+R.B=(t,d)=>{ap($('Ba'),t,.1,.4,30);let h='';
+ [['BTP','dossier titoli',270,.5],['CONTO','DEPOSITO',810,.9]].forEach(([a,b,x,t0])=>{const k=eback(P(t,t0,t0+.4));if(k<=0)return;h+=`<g transform="translate(${x} 330) scale(${k})"><rect x="-210" y="-260" width="420" height="520" rx="26" fill="#fff" stroke="#141215" stroke-width="5"/><text y="160" text-anchor="middle" font-family="Archivo Black" font-size="56" fill="#141215">${a}</text><text y="215" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="42" fill="#5a4a3a">${b}</text></g>`});
+ [[270,2.6,-8],[810,3.1,7]].forEach(([x,t0,r])=>{const k=P(t,t0,t0+.25);if(k<=0)return;const s=1+.8*(1-eo(k));h+=`<g opacity="${cl(k*3)}">${stamp(x,200,s,r)}</g>`});
+ $('Bs').innerHTML=h;ap($('Bz'),t,3.8,.4,10);};
+R.C=(t,d)=>{pop($('Ct'),t,1.2,.4);ap($('Ca'),t,3.2,.4,20);ap($('Cr'),t,0,.01,0);
+ const show=(id,t0)=>{const el=$(id);const k=eo(P(t,t0,t0+.3));el.style.opacity=k;el.style.transform=`translateY(${(1-k)*16}px)`};
+ [['R1',6.0],['R2',9.2]].forEach(([r,t0])=>{const k=eo(P(t,t0-.6,t0-.1));$(r).style.opacity=k;$(r).style.transform=`translateY(${(1-k)*-60}px)`;show(r+'a',t0);show(r+'b',t0+.4);show(r+'c',t0+.8);show(r+'d',t0+1.3);});
+ ap($('Cd'),t,10.9,.4,10);ap($('Cz'),t,11.1,.4,10);};
+R.D=(t,d)=>{ap($('Dk'),t,.1,.3,10);let h='';const tilt=14*eio(P(t,6.6,7.6));
+ h+=`<path d="M540 330 L480 440 H600 Z" fill="#8fa3c0"/><g transform="translate(540 320) rotate(${tilt})"><rect x="-400" y="-12" width="800" height="24" rx="12" fill="#f3ebde"/>
+  <g transform="translate(-300 -12)"><rect x="-130" y="-120" width="260" height="120" rx="18" fill="#ff5a5a"/><text y="-48" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#0a1424">TASSI ↑</text></g>
+  <g transform="translate(300 -12)"><rect x="-130" y="-120" width="260" height="120" rx="18" fill="#f2c14e"/><text y="-48" text-anchor="middle" font-family="Archivo Black" font-size="46" fill="#0a1424">PREZZO ↓</text></g></g>`;
+ $('Ds').innerHTML=h;$('Ds').style.opacity=P(t,1.4,1.8);ap($('Db'),t,4.2,.4,20);ap($('Dl'),t,9.6,.45,40);};
+R.E=(t,d)=>{pop($('Ea'),t,.1,.4);let h='';const s=eback(P(t,1.8,2.3));
+ if(s>0)h+=`<g transform="translate(290 260) scale(${s})"><path d="M0 -230 L190 -160 V20 C190 140 90 210 0 250 C-90 210 -190 140 -190 20 V-160 Z" fill="#26405f"/><path d="M0 -190 L150 -134 V20 C150 116 72 172 0 206 C-72 172 -150 116 -150 20 V-134 Z" fill="none" stroke="#c9d6ea" stroke-width="5"/>
+  <text y="-70" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#c9d6ea">FITD</text><text y="10" text-anchor="middle" font-family="Archivo Black" font-size="54" fill="#fff" opacity="${P(t,5.6,6)}">100.000 €</text>
+  <text y="70" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#c9d6ea" opacity="${P(t,6.4,6.8)}">per persona</text><text y="112" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#c9d6ea" opacity="${P(t,6.8,7.2)}">e per banca</text></g>
+  <text x="290" y="580" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215" opacity="${s>0?1:0}">CONTO DEPOSITO</text><text x="290" y="630" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#5a4a3a" opacity="${P(t,2.6,3)}">Fondo interbancario di</text><text x="290" y="668" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#5a4a3a" opacity="${P(t,2.6,3)}">tutela dei depositi</text>`;
+ const c=eback(P(t,8.6,9.1));if(c>0)h+=`<g transform="translate(800 260) scale(${c})"><rect x="-150" y="-230" width="300" height="40" rx="6" fill="#c94f2a"/><rect x="-120" y="-190" width="240" height="20" fill="#c94f2a"/>${[-80,-27,27,80].map(x=>`<rect x="${x-18}" y="-170" width="36" height="340" fill="#c94f2a"/>`).join('')}<rect x="-150" y="170" width="300" height="50" rx="6" fill="#c94f2a"/></g>
+  <text x="800" y="580" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">BTP</text><text x="800" y="630" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#5a4a3a" opacity="${P(t,9.4,9.8)}">dipende dalla solidità</text><text x="800" y="668" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#5a4a3a" opacity="${P(t,9.4,9.8)}">dello Stato italiano</text>`;
+ h+=`<text x="540" y="790" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="22" fill="#8a7a6c" opacity="${P(t,10,10.4)}">Fonti: FITD (fitd.it), MEF</text>`;
+ $('Eg').innerHTML=h;};
+R.F=(t,d)=>{pop($('Fa'),t,.1,.4);ap($('Fc'),t,.6,.4,30);$('Fb').style.width=(100*eio(P(t,2.8,3.8)))+'%';$('Fv').style.opacity=P(t,3.4,3.7);ap($('Fs'),t,3.8,.3,10);};
+R.G=(t,d)=>{ap($('Ga'),t,1.6,.4,30);let h='';const a=-60+Math.sin(t*2.2)*40*Math.exp(-t/4)+40*eio(P(t,2,4));
+ h+=`<g transform="translate(540 210)"><circle r="190" fill="#fff" stroke="#141215" stroke-width="8"/>${['N','E','S','O'].map((c,i)=>`<text x="${Math.sin(i*Math.PI/2)*145}" y="${-Math.cos(i*Math.PI/2)*145+16}" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#8a7a6c">${c}</text>`).join('')}
+  <g transform="rotate(${a})"><path d="M0 -150 L22 0 L-22 0 Z" fill="#c94f2a"/><path d="M0 150 L22 0 L-22 0 Z" fill="#141215"/></g><circle r="16" fill="#141215"/></g>`;
+ $('Gc').innerHTML=h;pop($('G1'),t,4.4,.4);pop($('G2'),t,6.2,.4);pop($('Gd'),t,8.0,.45);};
+R.H=(t,d)=>{const bm=$('Hbm');const k=P(t,.2,.6);bm.setAttribute('fill',k>.9?'#f2c14e':'none');bm.setAttribute('stroke',k>.9?'#f2c14e':'#f3ebde');$('Hbt').setAttribute('fill',k>.9?'#0a1424':'#f3ebde');
+ pop($('Hs'),t,.05,.4);pop($('Ha'),t,.25,.4);ap($('Hc'),t,.9,.4,40);typeT($('Ht'),'conto deposito…',t,1.2,14);words($('Hb'),t,1.8);};
+</script></body></html>

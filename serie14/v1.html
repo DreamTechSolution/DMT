@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · Supreme Court bench 6-3 -->
+<div class="scene" id="A" style="background:#0d1022">
+ <div class="abs mono" id="Ak" style="top:300px;font-size:28px;letter-spacing:4px;color:#8fa3c0">20 FEBBRAIO 2026 · CORTE SUPREMA USA</div>
+ <svg id="As" width="1080" height="760" style="position:absolute;left:0;top:380px"></svg>
+ <div class="abs serif" id="Ab" style="top:1180px;font-size:56px;color:#f3ebde">con la legge d'emergenza (IEEPA)</div>
+ <div class="abs bold" id="Ac" style="top:1265px;font-size:66px;color:#e2683c">NIENTE DAZI</div>
+</div>
+
+<!-- B · stamp 10% + 150 days strip -->
+<div class="scene" id="B" style="background:#f4f0e8">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:28px;letter-spacing:4px;color:#8a7a6c">DAL 24 FEBBRAIO · DAZIO GLOBALE</div>
+ <svg id="Bs" width="1080" height="1060" style="position:absolute;left:0;top:370px"></svg>
+</div>
+
+<!-- C · car with price tag -->
+<div class="scene" id="C" style="background:#121014">
+ <div class="abs mono" id="Ck" style="top:300px;font-size:28px;letter-spacing:4px;color:#bdb3a6">AUTO EUROPEE NEGLI USA</div>
+ <svg id="Cs" width="1080" height="1060" style="position:absolute;left:0;top:370px"></svg>
+</div>
+
+<!-- D · split-flap board -->
+<div class="scene" id="D" style="background:#071410">
+ <div class="abs bold" id="Da" style="top:290px;font-size:84px;color:#f3ebde">DAL 24 LUGLIO</div>
+ <div class="abs serif" id="Db" style="top:390px;font-size:48px;color:#9fc7b4">nuovi dazi, con un'altra legge</div>
+ <div class="abs" id="Dg" style="top:520px;width:960px"></div>
+ <div class="abs mono" id="Ds" style="top:1390px;font-size:22px;color:#6f9a86">USTR · Sezione 301 e 232 · per l'UE il 10% include il dazio ordinario</div>
+</div>
+
+<!-- E · China truce timeline + rare earths + 35% -->
+<div class="scene" id="E" style="background:#140c0c">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:96px;color:#fff">E LA CINA?</div>
+ <svg id="Es" width="1080" height="1060" style="position:absolute;left:0;top:400px"></svg>
+</div>
+
+<!-- H · tear-off calendar + part 2 -->
+<div class="scene" id="H" style="background:#0d1022">
+ <svg id="Hs" width="1080" height="700" style="position:absolute;left:0;top:330px"></svg>
+ <div class="abs serif" id="Ha" style="top:1060px;font-size:60px;color:#c9d6ea">perché riguarda anche te?</div>
+ <div class="abs bold" id="Hb" style="top:1180px;font-size:64px;color:#0d1022;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+// A · nine seats in an arc, six orange (majority) and three grey, then 6-3 and a gavel
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);let h='';
+ h+=`<path d="M120 470 H960 V500 H120 Z" fill="#26405f"/><path d="M90 500 H990 V530 H90 Z" fill="#1b2b44"/>`;
+ for(let i=0;i<9;i++){const ang=Math.PI*(1-(i+.5)/9);const x=540+Math.cos(ang)*380,y=430-Math.sin(ang)*250;
+  const k=eback(P(t,1.2+i*.08,1.6+i*.08));if(k<=0)continue;const maj=[0,1,2,3,4,5].includes(i)?true:false;
+  const on=t>3.4;const c=on?(i<6?'#e2683c':'#5a6478'):'#c9d6ea';
+  h+=`<g transform="translate(${x} ${y}) scale(${k})"><rect x="-34" y="-20" width="68" height="90" rx="14" fill="${c}"/><circle cy="-48" r="26" fill="${c}"/></g>`}
+ const s=eback(P(t,3.4,3.9));
+ if(s>0)h+=`<g transform="translate(470 680) scale(${s})"><text text-anchor="middle" y="40" font-family="Archivo Black" font-size="170" fill="#fff">6–3</text></g>`;
+ // gavel strikes at ~5
+ const g=P(t,4.9,5.3),hit=t>5.3;const rot=hit?0:-40+40*eio(g);
+ if(t>4.7)h+=`<g transform="translate(860 640) rotate(${rot})"><rect x="-120" y="-14" width="200" height="28" rx="10" fill="#c9a36b"/><rect x="60" y="-48" width="70" height="96" rx="14" fill="#8a5a2b"/></g>
+  <rect x="820" y="680" width="160" height="26" rx="8" fill="#8a5a2b"/>`;
+ if(hit)h+=`<g opacity="${1-P(t,5.3,5.9)}" stroke="#f2c14e" stroke-width="6">${[0,1,2,3,4].map(i=>{const a=Math.PI*(1.1+i*.2);return `<line x1="${900+Math.cos(a)*70}" y1="${680+Math.sin(a)*70}" x2="${900+Math.cos(a)*120}" y2="${680+Math.sin(a)*120}"/>`}).join('')}</g>`;
+ $('As').innerHTML=h;ap($('Ab'),t,5.4,.4,20);pop($('Ac'),t,7.0,.45,-3,0);};
+
+// B · crossed 15% (announced), 10% stamp, then 150-day strip
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);let h='';
+ const a=eo(P(t,3.6,4.0));
+ if(a>0)h+=`<g opacity="${a}" transform="translate(780 140) rotate(8)"><text text-anchor="middle" font-family="Archivo Black" font-size="120" fill="#b8ab9b">15%</text>
+  <text text-anchor="middle" y="50" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#8a7a6c">annunciato</text>
+  <line x1="-130" y1="-30" x2="${-130+260*P(t,4.6,5.0)}" y2="${-30-50*P(t,4.6,5.0)}" stroke="#c94f2a" stroke-width="12" stroke-linecap="round"/></g>`;
+ const s=P(t,1.6,1.9);if(s>0){const sc=t<1.9?2.4-1.4*s:1;const sh=t>1.9&&t<2.2?(Math.sin(t*90)*4):0;
+  h+=`<g transform="translate(${360+sh} 250) rotate(-10) scale(${sc})" opacity="${cl(s*3)}"><rect x="-230" y="-150" width="460" height="300" rx="26" fill="none" stroke="#c94f2a" stroke-width="16"/>
+  <rect x="-206" y="-126" width="412" height="252" rx="16" fill="none" stroke="#c94f2a" stroke-width="5"/>
+  <text text-anchor="middle" y="60" font-family="Archivo Black" font-size="190" fill="#c94f2a">10%</text></g>
+  <text x="360" y="470" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#8a7a6c" opacity="${P(t,5.2,5.6)}">APPLICATO: 10%</text>`;}
+ // 150-day strip: 150 thin ticks
+ const k=P(t,6.6,8.8);if(t>6.4){h+=`<text x="540" y="640" text-anchor="middle" font-family="Archivo Black" font-size="76" fill="#141215" opacity="${P(t,6.4,6.8)}">MAX 150 GIORNI</text>`;
+  for(let i=0;i<150;i++){const x=100+i*5.85;const on=i/150<k;h+=`<rect x="${x}" y="700" width="3.6" height="${i%30===0?120:90}" fill="${on?'#e2683c':'#d8cfc2'}"/>`}
+  h+=`<text x="100" y="870" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#141215">24 FEB</text><text x="980" y="870" text-anchor="end" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#141215" opacity="${P(t,8.6,9)}">24 LUG</text>
+  <text x="540" y="950" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="42" fill="#5a4a3a" opacity="${P(t,7.6,8)}">senza voto del Congresso</text>`;}
+ $('Bs').innerHTML=h;};
+
+// C · car silhouette with hanging tag 15 -> 25 (threat) -> stamp -> 15 (for now)
+function car(){return `<g transform="translate(540 560)"><path d="M-380 40 Q-380 -10 -330 -20 L-200 -40 Q-120 -130 0 -132 Q120 -132 200 -50 L330 -36 Q390 -26 390 30 L390 70 H-380 Z" fill="#26405f"/>
+ <path d="M-170 -46 Q-100 -110 -10 -112 V-46 Z M20 -112 Q110 -110 170 -46 H20 Z" fill="#8fa3c0"/>
+ <circle cx="-220" cy="80" r="64" fill="#0b0b0e"/><circle cx="-220" cy="80" r="28" fill="#5a6478"/><circle cx="230" cy="80" r="64" fill="#0b0b0e"/><circle cx="230" cy="80" r="28" fill="#5a6478"/>
+ <rect x="350" y="0" width="30" height="18" rx="6" fill="#f2c14e"/></g>`}
+R.C=(t,d)=>{ap($('Ck'),t,.1,.3,10);let h=car();
+ const threat=t>2.0&&t<8.2,back=t>=8.2;const sw=Math.sin(t*3)*4;
+ const val=threat?'25%':'15%',col=threat?'#ff5a5a':'#3ccf6e';const pk=threat?eback(P(t,2.0,2.4)):back?eback(P(t,8.2,8.6)):eback(P(t,.4,.8));
+ h+=`<g transform="translate(700 250) rotate(${sw})"><line x1="0" y1="0" x2="-40" y2="240" stroke="#bdb3a6" stroke-width="4"/>
+  <g transform="translate(0 0) scale(${.6+.4*pk})"><path d="M-150 -80 H120 L170 0 L120 80 H-150 Z" fill="${col}"/><circle cx="125" cy="0" r="12" fill="#121014"/>
+  <text x="-25" y="34" text-anchor="middle" font-family="Archivo Black" font-size="96" fill="#121014">${val}</text></g></g>`;
+ if(threat)h+=`<text x="300" y="160" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="#ff5a5a" opacity="${P(t,2.4,2.8)}">MINACCIA · 1° MAGGIO</text>`;
+ const st=P(t,5.8,6.1);if(st>0){const sc=t<6.1?2-st:1;h+=`<g transform="translate(540 860) rotate(-6) scale(${sc})" opacity="${cl(st*3)}"><rect x="-330" y="-70" width="660" height="140" rx="18" fill="none" stroke="#f2c14e" stroke-width="10"/>
+  <text text-anchor="middle" y="-2" font-family="Archivo Black" font-size="58" fill="#f2c14e">SÌ DELL'EUROPA</text><text text-anchor="middle" y="48" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#f2c14e">PARLAMENTO 16/6 · CONSIGLIO 25/6</text></g>`}
+ if(back)h+=`<text x="300" y="160" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="52" fill="#3ccf6e" opacity="${P(t,8.4,8.8)}">per ora</text>`;
+ $('Cs').innerHTML=h;};
+
+// D · split-flap rows
+const ROWS=[['MERCI UE · MAGGIOR PARTE','10%','#f2c14e',4.4],['AUTO','15%','#f3ebde',8.0],['FARMACI BREVETTATI','15%','#f3ebde',9.2],['ACCIAIO E ALLUMINIO','FINO A 50%','#ff5a5a',11.0]];
+const GL='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%';
+function flap(s,t,t0){return s.split('').map((c,i)=>{if(c===' '||c==='·')return c;const dn=t0+.25+i*.03;return t>=dn?c:GL[Math.floor(rnd(i*13+Math.floor(t*20))*GL.length)]}).join('')}
+R.D=(t,d)=>{ap($('Da'),t,.2,.4,30);ap($('Db'),t,1.0,.4,20);ap($('Ds'),t,11.8,.4,10);
+ $('Dg').innerHTML=ROWS.map(([l,v,c,t0])=>{if(t<t0)return '';const o=cl((t-t0)*5);return `<div style="opacity:${o};display:flex;justify-content:space-between;align-items:center;background:#0e211a;border:2px solid #24493a;border-radius:16px;padding:32px 28px;margin-bottom:36px">
+  <div class="mono" style="font-size:34px;font-weight:700;color:#cfe3d8;letter-spacing:2px">${flap(l,t,t0)}</div>
+  <div class="bold" style="font-size:${v.length>4?56:84}px;color:${c};letter-spacing:0;background:#071410;padding:10px 18px 4px;border-radius:10px">${flap(v,t,t0+.2)}</div></div>`}).join('');};
+
+// E · truce timeline with sliding deadline, rare earth tiles, 35%
+R.E=(t,d)=>{pop($('Ea'),t,.1,.4);let h='';
+ const X0=130,X1=950;const xs=[X0,470,X1];
+ if(t>1.0){h+=`<line x1="${X0}" y1="120" x2="${X1}" y2="120" stroke="#5a4a4a" stroke-width="6"/>`;
+  const ext=eio(P(t,2.4,3.6));const xe=xs[1]+(xs[2]-xs[1])*ext;
+  h+=`<line x1="${X0}" y1="120" x2="${xe}" y2="120" stroke="#e2683c" stroke-width="12" stroke-linecap="round"/>`;
+  h+=`<circle cx="${X0}" cy="120" r="16" fill="#f3ebde"/><text x="${X0}" y="70" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#bdb3a6">OTT 2025</text><text x="${X0}" y="190" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#bdb3a6">tregua</text>`;
+  h+=`<circle cx="${xs[1]}" cy="120" r="12" fill="#8a7a6c"/><text x="${xs[1]}" y="70" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#8a7a6c">10 NOV</text>`;
+  if(t>1.8)h+=`<text x="${xs[1]}" y="190" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#e2683c" opacity="${P(t,1.8,2.2)}">prorogata il 9/11</text>`;
+  if(ext>0)h+=`<g transform="translate(${xe} 120)"><circle r="22" fill="#e2683c"/></g><text x="${X1}" y="70" text-anchor="end" font-family="Archivo Black" font-size="40" fill="#fff" opacity="${P(t,3.2,3.6)}">10 GEN 2027</text>`;}
+ // rare earth tiles
+ const RE=[['Nd','60','neodimio'],['Dy','66','disprosio'],['Tb','65','terbio'],['Sm','62','samario']];
+ RE.forEach(([s,n,nm],i)=>{const k=eback(P(t,5.0+i*.15,5.4+i*.15));if(k<=0)return;const x=120+i*220;
+  h+=`<g transform="translate(${x+90} 380) scale(${k})"><rect x="-90" y="-90" width="180" height="180" rx="16" fill="#2a1a12" stroke="#f2c14e" stroke-width="5"/>
+  <text x="-70" y="-56" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#f2c14e">${n}</text><text y="34" text-anchor="middle" font-family="Archivo Black" font-size="84" fill="#f3ebde">${s}</text>
+  <text y="74" text-anchor="middle" font-family="JetBrains Mono" font-size="20" fill="#bdb3a6">${nm}</text></g>`});
+ if(t>6.0)h+=`<text x="540" y="540" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="46" fill="#f3ebde" opacity="${P(t,6.0,6.4)}">terre rare: limiti all'export sospesi</text>`;
+ // 35%
+ const c=eback(P(t,9.0,9.5));if(c>0)h+=`<g transform="translate(540 760) scale(${c})"><rect x="-400" y="-130" width="800" height="250" rx="28" fill="#e2683c"/>
+  <text text-anchor="middle" y="20" font-family="Archivo Black" font-size="150" fill="#140c0c">≈35%</text>
+  <text text-anchor="middle" y="85" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#140c0c">DAZIO MEDIO USA SULLE MERCI CINESI</text></g>
+  <text x="540" y="940" text-anchor="middle" font-family="JetBrains Mono" font-size="22" fill="#8a7a6c" opacity="${P(t,10,10.4)}">PIIE, 35,2% al 22/8/2026 · MOFCOM, USTR</text>`;
+ $('Es').innerHTML=h;};
+
+// H · tear-off calendar page 10 GEN
+R.H=(t,d)=>{let h='';const k=eback(P(t,.2,.6));
+ h+=`<g transform="translate(540 330) scale(${k})"><rect x="-260" y="-300" width="520" height="600" rx="34" fill="#f3ebde"/><rect x="-260" y="-300" width="520" height="150" rx="34" fill="#e2683c"/><rect x="-260" y="-190" width="520" height="40" fill="#e2683c"/>
+  <text text-anchor="middle" y="-200" font-family="Archivo Black" font-size="76" fill="#f3ebde">GENNAIO</text>
+  <text text-anchor="middle" y="150" font-family="Archivo Black" font-size="300" fill="#0d1022">10</text>
+  <text text-anchor="middle" y="250" font-family="JetBrains Mono" font-weight="700" font-size="34" fill="#8a7a6c">2027 · SCADE LA TREGUA</text>
+  ${[-160,-60,40,140].map(x=>`<circle cx="${x}" cy="-300" r="16" fill="#0d1022"/>`).join('')}</g>`;
+ $('Hs').innerHTML=h;words($('Ha'),t,.4);pop($('Hb'),t,3.6,.4,-6,-2);};
+</script></body></html>

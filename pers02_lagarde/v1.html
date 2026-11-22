@@ -88,14 +88,14 @@ function stair(svg,mHead,o){let h='';
  for(let y=2020;y<=2026;y++){const x=CX(M(y,1));h+=`<text x="${x}" y="${CY(-.5)+52}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#6e6873">${String(y).slice(2)}'</text><line x1="${x}" y1="${CY(-.5)+8}" x2="${x}" y2="${CY(-.5)+18}" stroke="#6e6873" stroke-width="2"/>`}
  let p=`M${CX(0)} ${CY(-.5)}`,prev=-.5;for(const [mm,vv] of RT){if(mm>mHead)break;p+=` H${CX(mm)} V${CY(vv)}`;prev=vv}p+=` H${CX(mHead)}`;
  h+=`<path d="${p}" stroke="${o.col||'#f2c14e'}" stroke-width="9" fill="none" stroke-linejoin="round"/>`;
- const v=rateAt(mHead);h+=`<circle cx="${CX(mHead)}" cy="${CY(v)}" r="16" fill="#fff"/><text x="${Math.min(CX(mHead),850)}" y="${CY(v)-34}" text-anchor="middle" font-family="Archivo Black" font-size="58" fill="#fff">${fmt(v,2)}%</text>`;
+ const v=rateAt(mHead);h+=`<circle cx="${CX(mHead)}" cy="${CY(v)}" r="16" fill="#fff"/><text x="${CX(mHead)>760?CX(mHead)+20:CX(mHead)}" y="${CY(v)-(CX(mHead)>760?90:34)}" text-anchor="${CX(mHead)>760?'end':'middle'}" font-family="Archivo Black" font-size="58" fill="#fff">${fmt(v,2)}%</text>`;
  svg.innerHTML=h+(o.extra||'');}
 function counter(label,n,c){return `<g transform="translate(540 960)"><rect x="-330" y="-62" width="660" height="110" rx="20" fill="${c}"/><text y="18" text-anchor="middle" font-family="Archivo Black" font-size="58" fill="#121014">${n} ${label}</text></g>`}
 R.D=(t,d)=>{ap($('Dk'),t,.1,.3,10);const a=eio(P(t,.4,2.0))*M(2022,6),b=P(t,2.2,6.6)*(M(2023,9)-M(2022,6)+.5);const m=t<2.2?a:M(2022,6)+b;
  const nh=RT.slice(1,11).filter(r=>r[0]<=m).length;stair($('Dc'),m,{extra:nh?counter(nh===1?'RIALZO':'RIALZI',nh,'#ff7a5a'):''});};
 R.E=(t,d)=>{ap($('Ek'),t,0,.01,0);let m=M(2023,9)+.5;m+=P(t,.4,4.8)*(M(2025,6)-m+.5);if(t>6.5)m=M(2025,6)+.5+P(t,6.5,11.6)*(END-M(2025,6)-.5);
  const nc=RT.slice(11,19).filter(r=>r[0]<=m).length,nh=RT.slice(19).filter(r=>r[0]<=m).length;
- let ex=counter(nh?'RIALZI NEL 2026':'TAGLI',nh||nc,nh?'#ff7a5a':'#3ccf6e');
+ let ex=counter(nh?(nh===1?'RIALZO NEL 2026':'RIALZI NEL 2026'):(nc===1?'TAGLIO':'TAGLI'),nh||nc,nh?'#ff7a5a':'#3ccf6e');
  if(t>12.3)ex+=`<g opacity="${P(t,12.3,12.7)}"><rect x="290" y="1010" width="500" height="64" rx="14" fill="none" stroke="#f3ebde" stroke-width="3"/><text x="540" y="1053" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#f3ebde">29/10: FERMI AL 2,50%</text></g>`;
  stair($('Ec'),m,{band:P(t,6.0,6.8),extra:(nc?ex:'')});};
 

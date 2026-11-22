@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="engine.js"></script>
+<style>.flap{display:inline-block;width:118px;height:170px;margin:0 5px;background:#1b2536;border-radius:12px;position:relative;overflow:hidden;font-family:'Archivo Black';font-size:130px;line-height:170px;color:#f3ebde;text-align:center}
+.flap:after{content:'';position:absolute;left:0;right:0;top:84px;height:3px;background:#0a1424}
+.flap.n{width:70px}.flap.p{width:150px}</style>
+</head><body><div id="stage">
+
+<!-- A · split-flap board -->
+<div class="scene" id="A" style="background:#0a1424">
+ <div class="abs mono" id="Ak" style="top:300px;font-size:30px;letter-spacing:4px;color:#8fa3c0">19 NOVEMBRE 2026 · CHIUSURA</div>
+ <div class="abs mono" id="A1" style="top:420px;font-size:40px;font-weight:700;color:#f2c14e;letter-spacing:3px">BTP A 10 ANNI · RENDIMENTO</div>
+ <div class="abs" id="Af1" style="top:490px"></div>
+ <div class="abs mono" id="A2" style="top:780px;font-size:40px;font-weight:700;color:#f2c14e;letter-spacing:3px">SPREAD CON LA GERMANIA</div>
+ <div class="abs" id="Af2" style="top:850px"></div>
+ <div class="abs serif" id="A3" style="top:1060px;font-size:42px;color:#8fa3c0">punti base: 107 pb = 1,07 punti percentuali in più</div>
+ <div class="abs mono" id="As" style="top:1380px;font-size:22px;color:#6f819c">Fonte: ANSA, 20/11/2026</div>
+</div>
+
+<!-- B · what a BTP is -->
+<div class="scene" id="B" style="background:#f4f0e8">
+ <div class="abs bold" id="Ba" style="top:290px;font-size:96px;color:#141215">COS'È UN BTP?</div>
+ <svg id="Bs" width="1080" height="900" style="position:absolute;left:0;top:500px"></svg>
+</div>
+
+<!-- C · thermometer -->
+<div class="scene" id="C" style="background:#160e0e">
+ <div class="abs mono" id="Ck" style="top:300px;font-size:30px;letter-spacing:4px;color:#e2683c">PERCHÉ RENDE COSÌ TANTO?</div>
+ <div class="abs bold" id="Ca" style="top:360px;font-size:100px;color:#fff">1 · INFLAZIONE</div>
+ <svg id="Ct" width="1080" height="900" style="position:absolute;left:0;top:490px"></svg>
+</div>
+
+<!-- D · ECB stairs -->
+<div class="scene" id="D" style="background:#0a1424">
+ <div class="abs bold" id="Da" style="top:290px;font-size:100px;color:#fff">2 · LA BCE</div>
+ <div class="abs serif" id="Db" style="top:410px;font-size:50px;color:#c9d6ea">nel 2026 ha alzato i tassi due volte</div>
+ <svg id="Ds" width="1080" height="820" style="position:absolute;left:0;top:500px"></svg>
+ <div class="abs mono" id="Dz" style="top:1380px;font-size:22px;color:#6f819c">BCE · tasso sui depositi · invariato il 29/10/2026</div>
+</div>
+
+<!-- E · spread bars -->
+<div class="scene" id="E" style="background:#f4f0e8">
+ <div class="abs bold" id="Ea" style="top:290px;font-size:100px;color:#141215">3 · LO SPREAD</div>
+ <div class="abs mono" id="Ek" style="top:410px;font-size:26px;letter-spacing:2px;color:#8a7a6c">RENDIMENTO A 10 ANNI · 20/11/2026, CHIUSURA</div>
+ <svg id="Eb" width="1080" height="800" style="position:absolute;left:0;top:460px"></svg>
+ <div class="abs serif" id="Ec" style="top:1250px;font-size:44px;color:#5a4a3a;white-space:normal;width:900px">il "premio" che l'Italia paga perché i mercati la vedono più rischiosa</div>
+ <div class="abs mono" id="Ed" style="top:1400px;font-size:22px;color:#8a7a6c">Fonte: ANSA · Non è consulenza finanziaria.</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#0a1424">
+ <div class="abs bold" id="Ha" style="top:560px;font-size:130px;color:#fff;line-height:1">BTP<br><span style="color:#f2c14e;font-size:100px">O CONTO</span><br><span style="color:#f2c14e;font-size:100px">DEPOSITO?</span></div>
+ <div class="abs bold" id="Hb" style="top:1000px;font-size:64px;color:#0a1424;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+function flaps(el,txt,t,t0){let h='';[...txt].forEach((c,i)=>{const settle=t0+i*.18;let ch=c;const isNum=/[0-9]/.test(c);
+  if(t<settle&&isNum)ch=t<t0-.6?' ':String(Math.floor(rnd(Math.floor(t*14)+i*7)*10));
+  h+=`<span class="flap${c==='%'?' p':/[, ]/.test(c)?' n':''}" style="${c===' '?'background:none;width:30px':''};opacity:${cl((t-t0+.8)*3)}">${ch===' '?'':ch}</span>`});el.innerHTML=h;el.style.transform='translateX(-50%)';}
+R.A=(t,d)=>{ap($('Ak'),t,.1,.3,10);ap($('A1'),t,1.2,.3,10);flaps($('Af1'),'4,47%',t,3.0);ap($('A2'),t,5.0,.3,10);flaps($('Af2'),'107 pb',t,6.2);ap($('A3'),t,7.4,.4,10);ap($('As'),t,7.6,.4,10);};
+R.B=(t,d)=>{pop($('Ba'),t,.1,.4);let h='';
+ // you -> state
+ const p=eo(P(t,1.6,2.1)),s=eo(P(t,2.0,2.5));
+ h+=`<g transform="translate(210 170)" opacity="${p}"><circle cy="-60" r="44" fill="#141215"/><path d="M-70 80 Q-70 0 0 0 Q70 0 70 80 Z" fill="#141215"/><text y="140" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">TU</text></g>`;
+ h+=`<g transform="translate(870 170)" opacity="${s}"><path d="M-110 -40 L0 -110 L110 -40 Z" fill="#26405f"/>${[-80,-40,0,40,80].map(x=>`<rect x="${x-12}" y="-34" width="24" height="104" fill="#26405f"/>`).join('')}<rect x="-115" y="70" width="230" height="20" fill="#26405f"/><text y="140" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#26405f">STATO</text></g>`;
+ const m=eio(P(t,2.4,3.4));if(m>0){const x=320+300*m;h+=`<line x1="320" y1="150" x2="${x}" y2="150" stroke="#c94f2a" stroke-width="8" stroke-dasharray="16 12"/><g transform="translate(${x} 150)"><rect x="-80" y="-36" width="160" height="72" rx="12" fill="#3ccf6e"/><text y="14" text-anchor="middle" font-family="Archivo Black" font-size="36" fill="#0a1424">PRESTITO</text></g>`}
+ // timeline with coupons
+ const L=eio(P(t,3.6,4.4));h+=`<line x1="120" y1="560" x2="${120+840*L}" y2="560" stroke="#141215" stroke-width="6"/>`;
+ h+=`<text x="120" y="640" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#5a4a3a" opacity="${L}">oggi</text>`;
+ for(let i=1;i<=6;i++){const x=120+i*105,k=eback(P(t,4.2+i*.22,4.6+i*.22));if(k<=0)continue;h+=`<g transform="translate(${x} 560) scale(${k})"><circle r="34" fill="#f2c14e" stroke="#a7791e" stroke-width="5"/><text y="12" text-anchor="middle" font-family="Archivo Black" font-size="32" fill="#141215">€</text></g>`;
+  h+=`<text x="${x}" y="${640}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#8a7a6c" opacity="${k>0?1:0}">+6m</text>`}
+ h+=`<text x="540" y="470" text-anchor="middle" font-family="Inter" font-weight="800" font-size="40" fill="#a7791e" opacity="${P(t,5.0,5.4)}">CEDOLA (interessi) ogni 6 mesi</text>`;
+ const f=eback(P(t,6.8,7.3));if(f>0)h+=`<g transform="translate(910 560) scale(${f})"><rect x="-100" y="-70" width="200" height="140" rx="18" fill="#3ccf6e"/><text y="-8" text-anchor="middle" font-family="Archivo Black" font-size="34" fill="#0a1424">TORNA</text><text y="34" text-anchor="middle" font-family="Archivo Black" font-size="28" fill="#0a1424">IL CAPITALE</text></g><text x="910" y="700" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#5a4a3a" opacity="${f}">scadenza</text>`;
+ $('Bs').innerHTML=h;};
+R.C=(t,d)=>{ap($('Ck'),t,.1,.3,10);pop($('Ca'),t,2.6,.4);let h='';const TX=360,TB=640,TT=60,H=TB-TT;const Y=v=>TB-v/7*H;
+ const v=4.2+(5.5-4.2)*eio(P(t,4.6,6.6));const on=P(t,3.4,3.8);
+ h+=`<g opacity="${on}"><rect x="${TX-50}" y="${TT-30}" width="100" height="${H+60}" rx="50" fill="#2a1c1c" stroke="#f3ebde" stroke-width="6"/><circle cx="${TX}" cy="${TB+70}" r="90" fill="#ff5a5a" stroke="#f3ebde" stroke-width="6"/>
+  <rect x="${TX-30}" y="${Y(v)}" width="60" height="${TB+40-Y(v)}" fill="#ff5a5a"/>`;
+ for(let i=0;i<=7;i++)h+=`<line x1="${TX+60}" y1="${Y(i)}" x2="${TX+90}" y2="${Y(i)}" stroke="#bdb3a6" stroke-width="4"/><text x="${TX+100}" y="${Y(i)+10}" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#8a7a6c">${i}%</text>`;
+ h+=`</g>`;
+ h+=`<text x="${TX+250}" y="${Y(v)+30}" font-family="Archivo Black" font-size="150" fill="#ff5a5a" opacity="${P(t,4.6,4.9)}">${fmt(v,1)}%</text>`;
+ h+=`<text x="${TX+260}" y="${Y(v)+90}" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#bdb3a6" opacity="${P(t,5.6,6)}">ottobre 2026</text><text x="${TX+260}" y="${Y(v)+145}" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#bdb3a6" opacity="${P(t,5.6,6)}">(settembre: 4,2%)</text>`;
+ const e=eback(P(t,7.6,8.0));if(e>0)h+=`<g transform="translate(${TX+300} ${Y(v)+290}) scale(${e})"><path d="M10 -70 L-40 10 H0 L-14 70 L40 -14 H0 Z" fill="#f2c14e"/><text x="60" y="-10" font-family="Inter" font-weight="800" font-size="44" fill="#f2c14e">spinta</text><text x="60" y="45" font-family="Inter" font-weight="800" font-size="44" fill="#f2c14e">dall'energia</text></g>`;
+ h+=`<text x="540" y="890" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="22" fill="#8a7a6c" opacity="${P(t,8,8.4)}">Istat, prezzi al consumo (NIC), dati definitivi 17/11/2026</text>`;
+ $('Ct').innerHTML=h;};
+const ST=[['2,00%','inizio 2026',0],['2,25%','giugno',1],['2,50%','settembre',2]];
+R.D=(t,d)=>{pop($('Da'),t,.1,.4);words($('Db'),t,2.0,.08);let h='';const sx=150,sw=260,base=640,sh=150;
+ ST.forEach(([v,l,i])=>{const t0=[1.0,5.0,6.6][i];const k=eo(P(t,t0,t0+.5));const top=base-(i+1)*sh;
+  h+=`<rect x="${sx+i*sw}" y="${base-(i+1)*sh*k}" width="${sw-10}" height="${(i+1)*sh*k}" fill="${i===2?'#f2c14e':'#26405f'}"/>`;
+  h+=`<g opacity="${P(t,t0+.3,t0+.6)}"><text x="${sx+i*sw+(sw-10)/2}" y="${top-24}" text-anchor="middle" font-family="Archivo Black" font-size="64" fill="${i===2?'#f2c14e':'#c9d6ea'}">${v}</text><text x="${sx+i*sw+(sw-10)/2}" y="${base+60}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="42" fill="#c9d6ea">${l}</text></g>`});
+ // ball hopping
+ const hop=(a,b)=>P(t,a,b);let bx=sx+(sw-10)/2,by=base-sh-150;const h1=hop(5.2,5.8),h2=hop(6.8,7.4);
+ if(h1>0){bx+=sw*h1;by=base-sh-150-sh*h1-120*Math.sin(h1*Math.PI)}if(h2>0){bx+=sw*h2;by=base-2*sh-150-sh*h2-120*Math.sin(h2*Math.PI)}
+ h+=`<circle cx="${bx}" cy="${by+30}" r="30" fill="#e2683c" opacity="${P(t,1.3,1.6)*(1-P(t,7.5,7.8))}"/>`;
+ h+=`<text x="540" y="${base+150}" text-anchor="middle" font-family="Inter" font-weight="800" font-size="40" fill="#fff" opacity="${P(t,8.0,8.4)}">tasso sui depositi: 2,50%</text>`;
+ $('Ds').innerHTML=h;ap($('Dz'),t,8.6,.4,10);};
+R.E=(t,d)=>{pop($('Ea'),t,.1,.4);ap($('Ek'),t,.8,.3,10);let h='';const base=640,sc=130;
+ [['ITALIA','BTP',4.4,'#26405f',260,1.6],['GERMANIA','Bund',3.3,'#8a8590',820,2.2]].forEach(([n,b,v,c,x,t0])=>{const k=eio(P(t,t0,t0+.8));const hh=v*sc*k;
+  h+=`<rect x="${x-110}" y="${base-hh}" width="220" height="${hh}" rx="10" fill="${c}"/><text x="${x}" y="${base-hh-24}" text-anchor="middle" font-family="Archivo Black" font-size="72" fill="${c}" opacity="${P(t,t0+.6,t0+.9)}">${fmt(v,1)}%</text>
+  <text x="${x}" y="${base+60}" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">${n}</text><text x="${x}" y="${base+105}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="38" fill="#5a4a3a">${b} 10 anni</text>`});
+ const g=eo(P(t,3.6,4.2));if(g>0){const y1=base-4.4*sc,y2=base-3.3*sc;h+=`<line x1="380" y1="${y1}" x2="${380+330*g}" y2="${y1}" stroke="#c94f2a" stroke-width="4" stroke-dasharray="10 8"/><line x1="${710}" y1="${y2}" x2="${710}" y2="${y2}" />
+  <path d="M540 ${y1} V ${y1+(y2-y1)*g}" stroke="#c94f2a" stroke-width="10"/><line x1="500" y1="${y1}" x2="580" y2="${y1}" stroke="#c94f2a" stroke-width="8"/><line x1="500" y1="${y1+(y2-y1)*g}" x2="580" y2="${y1+(y2-y1)*g}" stroke="#c94f2a" stroke-width="8"/>
+  <text x="540" y="${y2+80}" text-anchor="middle" font-family="Archivo Black" font-size="50" fill="#c94f2a" opacity="${g}">SPREAD</text><text x="540" y="${y2+140}" text-anchor="middle" font-family="Archivo Black" font-size="50" fill="#c94f2a" opacity="${g}">≈ 110 pb</text>`}
+ $('Eb').innerHTML=h;ap($('Ec'),t,5.4,.4,20);ap($('Ed'),t,6.6,.4,10);};
+R.H=(t,d)=>{pop($('Ha'),t,.2,.45);pop($('Hb'),t,2.4,.4,-6,-2);};
+</script></body></html>

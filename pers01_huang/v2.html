@@ -47,8 +47,8 @@
 <!-- E · waffle 10x10 -->
 <div class="scene" id="E" style="background:#121014">
  <div class="abs bold" id="Ea" style="top:290px;font-size:68px;color:#fff;line-height:1">HAI UN ETF<br><span style="color:#e2683c">MSCI WORLD?</span></div>
- <svg id="Ew" width="1080" height="820" style="position:absolute;left:0;top:480px"></svg>
- <div class="abs mono" id="Es" style="top:1330px;font-size:22px;color:#8a8590">Fonte: MSCI, scheda MSCI World al 30/10/2026</div>
+ <svg id="Ew" width="1080" height="900" style="position:absolute;left:0;top:480px"></svg>
+ <div class="abs mono" id="Es" style="top:1385px;font-size:22px;color:#8a8590">Fonte: MSCI, scheda MSCI World al 30/10/2026</div>
 </div>
 
 <!-- F · watch list -->
@@ -107,7 +107,7 @@ R.E=(t,d)=>{ap($('Ea'),t,.2,.4,30);let h='';const S=58,G=8,x0=540-(10*S+9*G)/2,y
  const kL=P(t,5.6,6.0),kA=P(t,8.6,9.0);
  h+=`<g opacity="${kL}"><rect x="${x0}" y="690" width="40" height="40" rx="8" fill="#3ccf6e"/><text x="${x0+56}" y="722" font-family="Archivo Black" font-size="40" fill="#3ccf6e">NVIDIA 5,25%</text></g>`;
  h+=`<g opacity="${kA}"><rect x="${x0}" y="750" width="40" height="40" rx="8" fill="#8fa3c0"/><text x="${x0+56}" y="782" font-family="Archivo Black" font-size="40" fill="#8fa3c0">APPLE 5,65%</text></g>`;
- h+=`<text x="540" y="${y0-0}" font-size="0"></text><text x="${x0+660}" y="782" text-anchor="end" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#bdb3a6" opacity="${P(t,2.4,2.8)}">1 quadratino = 1% dell'indice</text>`;$('Ew').innerHTML=h;ap($('Es'),t,6.0,.4,10);};
+ h+=`<text x="540" y="${y0+830}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="34" fill="#bdb3a6" opacity="${P(t,2.4,2.8)}">1 quadratino = 1% dell'indice</text>`;$('Ew').innerHTML=h;ap($('Es'),t,6.0,.4,10);};
 const WL=[['🔎','IL NOME DEL NUOVO CEO','il consiglio cerca dentro e fuori',2.5],['⚖️','L\'INDAGINE DELLA SEC','riportata dalla stampa, non è un\'accusa',4.2]];
 R.F=(t,d)=>{ap($('Fa'),t,.2,.4,30);$('Fl').innerHTML=WL.map(([e,a,b,t0])=>{const k=eback(P(t,t0,t0+.45));const blink=Math.floor(t*2.5)%2;return `<div style="opacity:${cl(k*3)};transform:scale(${.4+.6*k});width:880px;background:#10222a;border:3px solid #8fc0d0;border-radius:26px;padding:28px 32px;display:flex;gap:28px;align-items:center;text-align:left">
   <div style="position:relative;font-size:90px">${e}<div style="position:absolute;right:-6px;top:4px;width:26px;height:26px;border-radius:13px;background:${blink?'#ff5a5a':'#5a1a1a'}"></div></div>
