@@ -52,3 +52,11 @@ Nel TESTO DA DARE ALLA VOCE si usa la grafia fonetica qui sotto. Nel testo A SCH
 **Regola generale (verificata il 22/11 con trascrizione automatica):** sigle e nomi inglesi si scrivono NORMALI; la grafia fonetica con trattini (x-y-z) peggiora la pronuncia. Usarla solo se il controllo con trascrizione mostra un errore, e poi ricontrollare. Ogni clip nuova va trascritta (faster-whisper, italiano) prima del render.
 
 Regole: numeri scritti in lettere; percentuali "per cento"; date "il 17 novembre".
+
+## Errori ricorrenti trovati il 22-23/11 (verificati con confronto parola per parola)
+- **"chi" letto "ci"**: succede soprattutto dopo "Ma" o a inizio frase ("Ma chi compra" → "Macci"). Se ricapita dopo un nuovo tentativo, riformulare senza "chi" (es. "Se compri…", "I grandi investitori, che…").
+- **Prima parola mangiata**: "Poi", "Scenari", "E hai" a inizio clip escono storpiati. Meglio iniziare con una parola piena ("Sono scenari…", "Hai anche…").
+- **"rete neurale"** esce "neutrale"; **"consiglio di amministrazione"** esce "administrazione"; **"premier"** esce "premiè": riformulare ("presidente del Consiglio").
+- **"finisce sui prezzi"** dopo "dazi": artefatto ripetuto ("specia"); riformulato.
+- **IPO** va bene scritto normale, ma va ricontrollata ogni clip: nella stessa voce una volta è corretta e una volta esce "Ipio".
+- Procedura: ogni clip nuova passa da `tools/check_voice.py`; se DIFF su una parola reale, nuovo tentativo; se sbaglia due volte, si riformula.
