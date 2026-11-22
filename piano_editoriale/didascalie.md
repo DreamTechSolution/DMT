@@ -151,3 +151,42 @@ Hai perso la parte 1? È nel profilo.
 📲 Salvalo e mandalo a chi ne ha bisogno.
 
 #Cybersecurity #Truffe #SicurezzaOnline #Password #Phishing
+
+---
+
+## Comprare all'IPO conviene? — Parte 1
++34% in pochi minuti. Ma chi ha guadagnato davvero? 🚀
+
+▪️ Anthropic: quotata a 83 $, apre a 111,50 $. Il giorno dopo scende fino a 83,05 $, 5 centesimi sopra il prezzo di partenza.
+▪️ SpaceX: quotata a 135 $ a giugno, primo giorno a 161 $. Il 20 novembre era sotto il prezzo di partenza.
+
+Il "botto" del primo giorno va soprattutto a chi riceve le azioni al prezzo di quotazione, cioè i grandi investitori. Il piccolo risparmiatore di solito compra dopo, a prezzi già saliti.
+
+👉 Cosa dicono 45 anni di dati? Te lo spiego nella parte 2.
+
+Fonti: CNBC, StockAnalysis.
+Contenuto informativo, non è consulenza finanziaria.
+
+#IPO #Borsa #Investire #SpaceX #Anthropic
+
+---
+
+## Comprare all'IPO conviene? — Parte 2
+Cosa dicono 45 anni di quotazioni (e perché il botto non è per te) 📊
+
+📈 Su 9.345 IPO americane dal 1980, il primo giorno il titolo sale in media del 19% (Jay Ritter, University of Florida).
+📉 Chi compra alla chiusura del primo giorno e tiene 3 anni fa in media il 20,5% peggio del mercato.
+🏦 Chi ha le azioni al prezzo di quotazione fa solo il 3,3% peggio.
+⚠️ Aziende piccole, con meno di 10 milioni di ricavi: −52% rispetto al mercato.
+🔓 Lock-up: dopo circa 6 mesi gli investitori iniziali possono vendere. In media −1,5% in 3 giorni e +40% di scambi.
+🚀 SpaceX: −9% il 22 ottobre con lo sblocco di 1,3 miliardi di azioni. Il prossimo sblocco è l'8 dicembre.
+
+Sono medie, non destini: alcune IPO hanno moltiplicato il loro valore.
+
+Hai perso la parte 1? È nel profilo.
+💬 Quale quotazione vuoi che analizzi?
+
+Fonti: Jay Ritter, "IPO Statistics" (2026); Field & Hanka, Journal of Finance (2001); CNBC.
+Contenuto informativo, non è consulenza finanziaria.
+
+#IPO #Investire #Borsa #FinanzaPersonale #Risparmio
