@@ -22,6 +22,14 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--dark)}
 #prog i{display:block;height:100%;width:0;background:var(--orange)}
 </style></head><body><div id="stage">
 
+<!-- I · series signature intro (same as part 1) -->
+<div class="scene" id="I" style="background:var(--dark)">
+ <div class="abs bold" id="Ia" style="top:700px;font-size:150px;color:#fff">LO SAPEVI?</div>
+ <div class="abs serif" id="Ib" style="top:900px;font-size:76px;color:#bdb3a6">te lo spiega</div>
+ <div class="abs serif" id="Ic" style="top:975px;font-size:150px;color:var(--orange)">Claudio</div>
+ <svg width="1080" height="1920" style="position:absolute;inset:0;overflow:visible"><path id="Iu" d="M330 1150 C 450 1128, 640 1122, 760 1136 C 800 1141, 790 1156, 740 1158" stroke="#e2683c" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
+</div>
+
 <!-- A · hook + agenda -->
 <div class="scene" id="A" style="background:var(--dark)">
  <div id="tape" class="mono" style="position:absolute;top:300px;left:0;white-space:nowrap;font-size:40px;font-weight:700;color:#f3ebde;opacity:.9"></div>
@@ -163,7 +171,7 @@ function rnd(s){let x=Math.sin(s*12.9898)*43758.5453;return x-Math.floor(x)}
 const fmt=(v,d=0)=>v.toFixed(d).replace('.',',');
 
 // ===== timing table: scene windows + cue points (absolute seconds). Retime here only. =====
-const T=window.TIMING||{
+const T0={
  A:[0,5.2], B:[5.2,22], C:[22,38], D:[38,52], E:[52,69], F:[69,89], G:[89,99], H:[99,105.5],
  cue:{ Ab:1.6, Ac:3.0,
   Bbar:8.5, B21:12.5, Bc:15.5, Bd:16.5, Be:19,
@@ -173,7 +181,10 @@ const T=window.TIMING||{
   F1:70.5, F2:72, F3:73.5, F4:75, Flock:77.5, Fd:85.5,
   Gscale:89.5, Gb:93.5, Gc:96.5,
   Ha:99.5, Htype:101.5 } };
-const SC=[['A',...T.A],['B',...T.B],['C',...T.C],['D',...T.D],['E',...T.E],['F',...T.F],['G',...T.G],['H',...T.H]];
+// intro occupies [0, INTRO]; everything else is shifted after it
+const INTRO=2.9;const T=window.TIMING||(()=>{const o={I:[0,INTRO],cue:{}};for(const k in T0){if(k==='cue')continue;o[k]=T0[k].map(v=>v+INTRO)}
+ for(const k in T0.cue)o.cue[k]=T0.cue[k]+INTRO;return o})();
+const SC=[['I',...T.I],['A',...T.A],['B',...T.B],['C',...T.C],['D',...T.D],['E',...T.E],['F',...T.F],['G',...T.G],['H',...T.H]];
 const DUR=T.H[1];
 const Q=T.cue;
 
@@ -187,10 +198,13 @@ function words(el,t,t0,per=.09){if(!wcache[el.id]){wcache[el.id]=1;el.innerHTML=
 function typeT(el,txt,t,t0,cps=28){const n=Math.floor(Math.max(0,t-t0)*cps);el.innerHTML=txt.slice(0,n)+(n<txt.length&&t>=t0?'<span style="opacity:'+(Math.floor(t*3)%2)+'">▍</span>':'')}
 
 const R={};
+// I
+R.I=t=>{const lt=t-T.I[0];pop($('Ia'),lt,.05,.4,-6);words($('Ib'),lt,.85,.1);pop($('Ic'),lt,1.3,.45,4);
+ const u=$('Iu');const L=u.getTotalLength();u.style.strokeDasharray=L;u.style.strokeDashoffset=L*(1-eio(P(lt,1.55,2.0)));};
 // A
 const TAPE='ANT ▲ $111,50 apertura   ·   IPO $83   ·   NASDAQ   ·   980 MLN AZIONI   ·   81,3 MLD RACCOLTI   ·   ';
-R.A=t=>{const tp=$('tape');if(!tp.textContent)tp.textContent=TAPE.repeat(4);tp.style.transform=`translateX(${-((t*140)%1400)}px)`;tp.style.opacity=.85*eo(P(t,0,.4));
- words($('Aa'),t,.15,.1);ap($('Ab'),t,Q.Ab,.4,50);ap($('Ac'),t,Q.Ac-.1,.3,0);
+R.A=t=>{const t0A=T.A[0];const tp=$('tape');if(!tp.textContent)tp.textContent=TAPE.repeat(4);tp.style.transform=`translateX(${-((t*140)%1400)}px)`;tp.style.opacity=.85*eo(P(t,t0A,t0A+.4));
+ words($('Aa'),t,t0A+.15,.1);ap($('Ab'),t,Q.Ab,.4,50);ap($('Ac'),t,Q.Ac-.1,.3,0);
  document.querySelectorAll('#A .ag').forEach((r,i)=>{const k=eo(P(t,Q.Ac+i*.22,Q.Ac+i*.22+.35));r.style.opacity=k;r.style.transform=`translateX(${(1-k)*-50}px)`});};
 // B
 R.B=t=>{ap($('Bk'),t,T.B[0]+.1,.3,10);words($('Ba'),t,T.B[0]+.3);ap($('Bbar'),t,Q.Bbar-.4,.4,40);

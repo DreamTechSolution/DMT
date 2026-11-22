@@ -22,10 +22,12 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:var(--dark)}
  <svg id="burst" width="1080" height="1920" style="position:absolute;inset:0"></svg>
 </div>
 
-<!-- S1 MA CHE ROBA -->
+<!-- S1 series signature intro -->
 <div class="scene" id="s1" style="background:var(--dark)">
- <div class="abs bold" id="s1a" style="top:720px;font-size:170px;color:#fff">MA CHE<br>ROBA</div>
- <div class="abs serif" id="s1b" style="top:1060px;font-size:150px;color:var(--orange)">è?!</div>
+ <div class="abs bold" id="s1a" style="top:700px;font-size:150px;color:#fff">LO SAPEVI?</div>
+ <div class="abs serif" id="s1b" style="top:900px;font-size:76px;color:#bdb3a6">te lo spiega</div>
+ <div class="abs serif" id="s1c" style="top:975px;font-size:150px;color:var(--orange)">Claudio</div>
+ <svg width="1080" height="1920" style="position:absolute;inset:0;overflow:visible"><path id="s1u" d="M330 1150 C 450 1128, 640 1122, 760 1136 C 800 1141, 790 1156, 740 1158" stroke="#e2683c" stroke-width="7" fill="none" stroke-linecap="round"/></svg>
 </div>
 
 <!-- S2 IN BORSA -->
@@ -161,9 +163,9 @@ function rnd(s){let x=Math.sin(s*12.9898)*43758.5453;return x-Math.floor(x)}
 
 // [id, start, end]
 // timed to the ElevenLabs voiceover (VO at 0.8s, atempo 1.12)
-const S=[['s0',0,0.75],['s1',0.75,2.0],['s2',2.0,5.0],['s3',5.0,8.15],['s4',8.15,13.15],['s5',13.15,18.45],
- ['s6',18.45,19.9],['s7',19.9,29.9],['s8',29.9,32.55],['s9',32.55,35.4],['s10',35.4,40.3],['s11',40.3,45.0]];
-const DUR=45.0;
+const S=[['s0',0,0.75],['s1',0.75,2.9],['s2',2.9,5.9],['s3',5.9,9.05],['s4',9.05,14.05],['s5',14.05,19.35],
+ ['s6',19.35,20.8],['s7',20.8,30.8],['s8',30.8,33.45],['s9',33.45,36.3],['s10',36.3,41.2],['s11',41.2,45.9]];
+const DUR=45.9;
 
 // "appear" helper: blur + rise + fade
 function ap(el,t,t0,d=.35,dy=40,sc=1){const k=eo(P(t,t0,t0+d));el.style.opacity=k;
@@ -183,8 +185,8 @@ R.s0=lt=>{const svg=$('burst');let h='';const cx=540,cy=900;
   h+=`<line x1="${cx+Math.cos(a)*r1}" y1="${cy+Math.sin(a)*r1}" x2="${cx+Math.cos(a)*r2}" y2="${cy+Math.sin(a)*r2}" stroke="#e2683c" stroke-width="14" stroke-linecap="round"/>`}
  const rr=eo(P(lt,.4,.9));if(rr>0){for(let j=0;j<3;j++){const r=60+rr*(200+j*60);h+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="#e9e1d6" stroke-opacity="${(1-rr)*.6}" stroke-width="${4-j}"/>`}}
  svg.innerHTML=h;};
-R.s1=lt=>{pop($('s1a'),lt,.05,.4);pop($('s1b'),lt,.4,.45,-15);
- const sh=lt>.05&&lt<.35?Math.sin(lt*120)*6:0;$('s1').style.transform=`translate(${sh}px,${-sh}px)`;};
+R.s1=lt=>{pop($('s1a'),lt,0,.4,-6);words($('s1b'),lt,.82,.1);pop($('s1c'),lt,1.3,.45,4);
+ const u=$('s1u');const L=u.getTotalLength();u.style.strokeDasharray=L;u.style.strokeDashoffset=L*(1-eio(P(lt,1.55,2.0)));};
 R.s2=lt=>{words($('s2a'),lt,.05);ap($('s2b'),lt,.7,.4,60);pop($('s2c'),lt,1.55,.4,-18);
  const c=$('s2c');if(lt>1.55)c.style.transform+=' rotate(-4deg)';ap($('s2d'),lt,2.0,.4,20);};
 R.s3=lt=>{const n=$('s3n');const k=eback(P(lt,.05,.6));n.style.transform=`translateX(-50%) translateY(${(1-k)*-260}px)`;n.style.opacity=cl(lt*5);
