@@ -20,3 +20,12 @@ Data verifica: 2026-11-22. NB regola di pagina: mai "bruciati", usare "liquidati
 
 ## Fonti
 federalreserve.gov/publications/files/financial-stability-report-20261113.pdf · cnbc.com/2026/11/13/ai-risks-financial-system-federal-reserve.html · cnbc.com/2026/11/12/colette-kress-nvidia-cfo-interim-ceo-candidate.html · cnbc.com/2026/11/13/nvidia-nvda-stock-jensen-huang-transition.html · investing.com (Reuters, indagine SEC e -14%) · cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html · cnbc.com/2026/11/17/investors-lower-tech-stock-exposure-in-biggest-exit-since-2006.html · msci.com (factsheet MSCI World 30/10/2026) · ishares.com (SWDA)
+
+## Aggiunta 22/11 — perché scendono i mercati (CNBC, "S&P 500 correction: five forces behind the market sell-off", 20/11/2026)
+1. Quotazione di Anthropic vista come momento di incassare (83 $ → oltre 115 $ → 88,91 $ a fine settimana); Nasdaq -10% nella settimana, la peggiore da marzo 2020.
+2. Guai di Nvidia: -14% venerdì dopo la notizia Reuters sull'indagine SEC sulla contabilità; quasi -40% a novembre; dimissioni di Huang; -23% nella settimana.
+3. L'S&P 500 ha rotto la media mobile a 200 giorni → vendite automatiche dei fondi che seguono la tendenza (CTA).
+4. Inflazione: petrolio sopra 83 $ con il conflitto con l'Iran; CPI e PPI lontani dal 2%; Fed +25 pb a settembre, pausa a ottobre; Treasury 10 anni sopra il 5% in settimana; Waller: possibile +50 pb a dicembre; mercati attendono rialzi a dicembre e gennaio.
+5. Crescita degli utili in frenata: ricavi Anthropic Q3 +47% (da +144% nel Q2); CoreWeave -71% dal massimo.
+- S&P 500 e Dow chiudono "in correzione, oltre il 10% sotto i record" (CNBC). Una fonte secondaria cita -11,6% (record 7.818,93 del 6/10).
+Fonte: cnbc.com/2026/11/20/sp-500-correction-market-sell-off.html

@@ -3,7 +3,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="durs1.js"></script>
-<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script>window.ORDER=['I','A','B','C','D','E','F','G','H'];</script>
 <script src="engine.js"></script>
 </head><body><div id="stage">
 
@@ -81,6 +81,13 @@
  <svg id="tags" width="1080" height="900" style="position:absolute;left:0;top:400px"></svg>
 </div>
 
+<!-- G · five reasons (CNBC) -->
+<div class="scene" id="G" style="background:#16121a">
+ <div class="abs bold" id="Ga" style="top:290px;font-size:130px;color:#fff">PERCHÉ?</div>
+ <div class="abs mono" id="Gb" style="top:440px;font-size:26px;color:var(--orange);letter-spacing:4px">SECONDO CNBC · 5 MOTIVI</div>
+ <div id="Grows" style="position:absolute;left:80px;top:510px;width:920px"></div>
+</div>
+
 <!-- H · teaser -->
 <div class="scene" id="H" style="background:var(--dark)">
  <svg id="etf" width="1080" height="600" style="position:absolute;left:0;top:340px">
@@ -120,7 +127,7 @@ R.E=(t,d)=>{words($('Ea'),t,.25);ap($('Eb'),t,1.0,.4,10);
  $('t37').setAttribute('y',580-h37);$('t37').style.opacity=P(t,2.6,2.9);$('t12').setAttribute('y',580-h12);$('t12').style.opacity=P(t,4.2,4.5);
  pop($('Etag'),t,5.6,.45,-6,-1.5);};
 R.F=(t,d)=>{words($('Fa'),t,.15);const sv=$('tags');let h='';
- [[300,'S&P 500','−10%','dal record · correzione',.6],[780,'NASDAQ','−18%','dal record del 6/10',4.4]].forEach(([x,n,v,s,t0])=>{const k=P(t,t0,t0+.9);if(k<=0)return;
+ [[300,'S&P 500','−10%','e oltre, dal record',.6],[780,'NASDAQ','−18%','dal record del 6/10',4.4]].forEach(([x,n,v,s,t0])=>{const k=P(t,t0,t0+.9);if(k<=0)return;
   const sw=Math.sin((t-t0)*5)*14*Math.exp(-(t-t0)*1.6);const y=-300+eback(cl(k*1.2))*300;
   h+=`<g transform="translate(${x} ${y}) rotate(${sw})"><line x1="0" y1="-400" x2="0" y2="40" stroke="#bdb3a6" stroke-width="3"/>
    <path d="M-190 40 h380 v330 a24 24 0 0 1 -24 24 h-332 a24 24 0 0 1 -24 -24 z" fill="#f3ebde"/><circle cx="0" cy="80" r="16" fill="#121014"/>
@@ -128,6 +135,15 @@ R.F=(t,d)=>{words($('Fa'),t,.15);const sv=$('tags');let h='';
    <text y="290" text-anchor="middle" font-family="Archivo Black" font-size="110" fill="#c94f2a">${v}</text>
    <text y="350" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#6b5a4c">${s}</text></g>`});
  sv.innerHTML=h;};
+const REAS=[['La quotazione di Anthropic','vista come il momento di incassare',5.25],['I guai di Nvidia','uscita di Huang e indagine della SEC',10.4],['Rotta la tendenza di lungo periodo','scattano le vendite automatiche',12.65],['Inflazione e tassi','petrolio, Iran, Fed verso nuovi rialzi',18.9],['Utili dell\'IA in frenata','crescono meno di prima',25.9]];
+R.G=(t,d)=>{pop($('Ga'),t,.25,.45,-5);ap($('Gb'),t,2.4,.4,10);
+ let cur=-1;REAS.forEach((r,i)=>{if(t>=r[2])cur=i});
+ $('Grows').innerHTML=REAS.map(([a,b,t0],i)=>{const k=eo(P(t,t0,t0+.45));const act=i===cur;const seen=t>=t0;
+  return `<div style="display:flex;gap:26px;align-items:center;margin-bottom:22px;padding:22px 28px;border-radius:22px;
+   background:${act?'#e2683c':seen?'#2a2430':'#1e1a22'};border:2px solid ${act?'#e2683c':'#3a3340'};opacity:${seen?1:.35};transform:translateX(${(1-k)*(seen?-60:0)}px) scale(${act?1.02:1})">
+   <div style="flex:none;width:84px;height:84px;border-radius:42px;background:${act?'#fff':'#3a3340'};color:${act?'#c94f2a':'#f3ebde'};display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:46px">${i+1}</div>
+   <div><div class="sans" style="font-size:40px;font-weight:800;color:#fff">${a}</div>
+   <div class="sans" style="font-size:28px;color:${act?'#fff3ea':'#a59cab'};margin-top:4px">${b}</div></div></div>`}).join('');};
 R.H=(t,d)=>{const b=$('box');const k=eback(P(t,.1,.6));b.setAttribute('transform',`translate(540 340) scale(${k}) translate(-540 -340)`);
  const q=$('q');q.style.opacity=P(t,.6,.9);q.setAttribute('transform',`translate(0 ${Math.sin(t*4)*8})`);
  ap($('Ha'),t,.3,.4,40);pop($('Hb'),t,1.9,.4,-6,-2);ap($('Hd'),t,2.3,.4,10);};

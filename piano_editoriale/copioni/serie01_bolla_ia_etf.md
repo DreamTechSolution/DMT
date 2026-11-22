@@ -2,7 +2,7 @@
 Fonti: `../ricerche/T1_bolla_ia_etf_fed.md`. Ogni sezione = una scena (voce generata frase per frase).
 Disclaimer: video 1 in didascalia + riga a schermo; video 2 a voce, a schermo e in didascalia.
 
-## Video 1 — "Cos'è successo" (~50 s)
+## Video 1 — "Cos'è successo e perché" (~85 s)
 | Sez. | Voce | A schermo (elemento nuovo) |
 |---|---|---|
 | I | Lo sapevi? Te lo spiega Claudio. | Sigla |
@@ -11,7 +11,8 @@ Disclaimer: video 1 in didascalia + riga a schermo; video 2 a voce, a schermo e 
 | C | Nvidia aveva già perso circa millesettecento miliardi di valore da inizio ottobre. | Torre di monete che si accorcia: −1.700 mld $ |
 | D | Il 17 novembre il Wall Street Journal parla di un'indagine della SEC. Il 20, Reuters scrive che riguarda la contabilità. Nessuna accusa formale, ma quel giorno il titolo perde il quattordici per cento. | Due ritagli di giornale + timbro "INDAGINE ≠ ACCUSA" + −14% |
 | E | I grandi gestori scappano: l'esposizione al tecnologico passa dal trentasette al dodici per cento. Il taglio più forte dal 2006. | Due barre 37% → 12% con etichetta "come nel 2006" |
-| F | Venerdì l'S&P 500 chiude in correzione, dieci per cento sotto il record. Il Nasdaq è a meno diciotto. | Due cartellini prezzo: S&P −10%, Nasdaq −18% |
+| F | Venerdì l'S&P 500 chiude in correzione, oltre il dieci per cento sotto il record. Il Nasdaq è a meno diciotto. | Due cartellini prezzo: S&P −10% e oltre, Nasdaq −18% |
+| G | Ma perché stanno scendendo così tanto? Secondo CNBC, per cinque motivi. Uno: la quotazione di Anthropic, vista da molti come il momento di incassare sull'IA. Due: i guai di Nvidia. Tre: l'S&P 500 ha rotto la sua tendenza di lungo periodo, e sono scattate le vendite automatiche. Quattro: l'inflazione, spinta dal petrolio e dal conflitto con l'Iran, spinge la Fed verso nuovi rialzi dei tassi. Cinque: gli utili delle aziende dell'IA crescono meno di prima. | "PERCHÉ?" + 5 schede numerate che si accendono una alla volta (fonte: CNBC, 20/11) |
 | H | E il tuo ETF sul mondo? Te lo spiego nella parte due. | Icona ETF con punto interrogativo + "PARTE 2 →" |
 
 ## Video 2 — "Cosa significa per i tuoi risparmi" (~90 s)
