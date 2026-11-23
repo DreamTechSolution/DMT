@@ -36,6 +36,7 @@
   </div>
   <div id="Btag" class="mono" style="display:inline-block;margin-top:14px;font-size:28px;background:#ffd34d;color:#141215;padding:8px 16px;border-radius:8px;opacity:0">AD INTERIM · ex direttrice finanziaria</div>
  </div></div>
+ <div class="abs" id="Bback" style="top:1010px"><div class="mono" style="font-size:34px;font-weight:700;background:#3ccf6e;color:#141215;padding:12px 24px;border-radius:10px">22/11 · HUANG RICHIAMATO</div></div>
  <div class="abs" id="Bstamp" style="top:860px"><div class="bold" style="font-size:72px;color:#ff5a5a;border:8px solid #ff5a5a;padding:14px 30px 6px;border-radius:14px;letter-spacing:0">EFFETTO IMMEDIATO</div></div>
 </div>
 
@@ -111,7 +112,7 @@ R.B=(t,d)=>{ap($('Bk'),t,.2,.3,10);ap($('Bbox'),t,.3,.45,60);
  drawPath($('Bsp'),t,1.6,2.1);$('Bold').style.opacity=1-P(t,4.6,5.0);
  const kn=eo(P(t,4.9,5.4));$('Bnew').style.opacity=kn;$('Bnew').style.transform=`translateY(${(1-kn)*30}px)`;
  $('Bstrike').style.opacity=1-P(t,4.6,5.0);$('Btag').style.opacity=P(t,6.6,7.0);
- pop($('Bstamp'),t,3.0,.4,-10,-3);if(t>4.6)$('Bstamp').style.opacity=1-P(t,4.6,5.0);};
+ pop($('Bstamp'),t,3.0,.4,-10,-3);pop($('Bback'),t,8.6,.45,-4,-2);if(t>4.6)$('Bstamp').style.opacity=1-P(t,4.6,5.0);};
 R.C=(t,d)=>{words($('Ca'),t,.25,.07);const sv=$('coins');let h='';
  for(let c=0;c<7;c++){const full=14,keep=Math.round(full*(0.45+0.15*rnd(c+3)));for(let i=0;i<full;i++){const y=600-i*38,x=150+c*120;
   let op=1,dy=0,col='#e2683c',top='#f0a088';

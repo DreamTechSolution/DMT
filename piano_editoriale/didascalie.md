@@ -42,7 +42,7 @@ Contenuto informativo, non è consulenza finanziaria.
 ## Bolla IA ed ETF — Parte 1
 Wall Street è passata dai record alla correzione in sei settimane. Ecco cosa è successo 📉
 
-▪️ 12 novembre: Jensen Huang lascia la guida di Nvidia. Colette Kress è amministratrice delegata ad interim.
+▪️ 12 novembre: Jensen Huang lascia la guida di Nvidia, Colette Kress ad interim. (Aggiornamento: il 22 novembre il consiglio lo ha richiamato.)
 ▪️ Nvidia ha perso circa 1.700 miliardi di valore da inizio ottobre.
 ▪️ 20 novembre: secondo Reuters la SEC indaga sulla contabilità di Nvidia. Un'indagine non è un'accusa. Quel giorno il titolo perde il 14%.
 ▪️ I grandi gestori tagliano il tech dal 37% al 12%, come non succedeva dal 2006.
