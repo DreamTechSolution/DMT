@@ -4,7 +4,7 @@
 import sys,subprocess,numpy as np,difflib,re,unicodedata,os,urllib.request
 from faster_whisper import WhisperModel
 m=WhisperModel("small",device="cpu",compute_type="int8")
-B="https://d8j0ntlcm91z4.cloudfront.net/user_3CU9WWB8j10xBgW5vzXZFWFrVTO/hf_20261122_"
+B="https://d8j0ntlcm91z4.cloudfront.net/user_3CU9WWB8j10xBgW5vzXZFWFrVTO/hf_"
 NUM=re.compile(r'\d|^(uno|due|tre|quattro|cinque|sei|sette|otto|nove|dieci|venti|trenta|quaranta|cento|mila|mille|virgola|per)$|^(vent|trent|quarant|cinquant|sessant|settant|ottant|novant|duemila|cent|dodic|tredic|quattordic|quindic|sedic|diciass|diciott|dician|novemila|settemila)')
 def norm(s):
     s=unicodedata.normalize('NFD',s.lower()); s=''.join(c for c in s if unicodedata.category(c)!='Mn')

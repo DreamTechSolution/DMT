@@ -20,21 +20,22 @@ Contenuto informativo, non è consulenza finanziaria.
 ---
 
 ## Anthropic in Borsa — Parte 2
-Anthropic è in Borsa. Ecco cosa cambia davvero, punto per punto 👇
+Usi Claude? Anthropic è appena entrata in Borsa, e questo può cambiare quanto paghi 👇
 
-01 Come guadagna: quasi l'80% dei ricavi arriva da aziende e sviluppatori. Gli abbonamenti come il tuo valgono circa un quinto.
-02 I numeri: 33 miliardi di ricavi nei primi 9 mesi del 2026, 13 volte l'anno prima. La perdita di 104 miliardi è in gran parte contabile.
-03 Il nodo: quasi 900 miliardi di impegni per il calcolo, oltre 400 non cancellabili.
-04 Per te: oggi il prezzo di Claude non cambia, ma con i conti pubblici ogni trimestre sono possibili limiti più stretti o piani più cari. Sono scenari, non certezze.
-05 Se pensi di investire: titolo volatile e molte azioni ancora bloccate (lock-up).
+01 Come guadagna: quasi l'80% dei ricavi arriva da aziende e sviluppatori che pagano a consumo. Gli abbonamenti come il tuo valgono circa un quinto. E solo 5 clienti fanno un quarto del fatturato.
+02 I numeri: 33 miliardi di ricavi nei primi 9 mesi del 2026, 13 volte l'anno prima. La perdita è di 104 miliardi, ma circa 94 sono voci contabili, non soldi usciti dalla cassa.
+03 Il nodo: quasi 900 miliardi di impegni per la potenza di calcolo, oltre 400 non cancellabili. Il prospetto lo dice chiaro: può schiacciare i margini.
+04 Per te: oggi il prezzo di Claude non cambia. Ma ogni trimestre i conti saranno pubblici e gli azionisti chiederanno margini. Scenari possibili: limiti d'uso più stretti, piani a più livelli, funzioni migliori per chi paga di più. Sono scenari, non certezze.
+05 Se pensi di investire: quotata a 83 $, aperta a 111 $, il giorno dopo già sotto i 90 $. E molte azioni degli investitori iniziali sono ancora bloccate (lock-up).
 
-Hai perso la parte 1? È nel profilo.
+📲 Mandalo a chi usa Claude ogni giorno.
 💬 Quale azienda vuoi che analizzi dopo?
+Hai perso la parte 1? È nel profilo.
 
 Fonti: CNBC, prospetto S-1 di Anthropic (sintesi Dealroom e analisti), Morningstar.
 Contenuto informativo, non è consulenza finanziaria.
 
-#Anthropic #IPO #Investire #IntelligenzaArtificiale #FinanzaPersonale
+#Anthropic #Claude #IPO #IntelligenzaArtificiale #FinanzaPersonale
 
 ---
 
