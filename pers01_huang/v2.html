@@ -50,7 +50,7 @@
 <div class="scene" id="E" style="background:#121014">
  <div class="abs mono" id="Ek" style="top:290px;font-size:28px;letter-spacing:4px;color:#bdb3a6">TITOLO NVIDIA · VARIAZIONE IN UN GIORNO</div>
  <svg id="Ev" width="1080" height="920" style="position:absolute;left:0;top:360px"></svg>
- <div class="abs mono" id="Es" style="top:1300px;font-size:22px;color:#8a8590;white-space:normal;width:900px">23/11: dato all'apertura · Fonti: CNBC, CNN, Reuters · Non è consulenza finanziaria.</div>
+ <div class="abs mono" id="Es" style="top:1300px;font-size:22px;color:#8a8590;white-space:normal;width:900px">Variazioni alla chiusura · Fonti: CNBC, Motley Fool · Non è consulenza finanziaria.</div>
 </div>
 
 <!-- F · waffle 10x10 -->
@@ -101,11 +101,11 @@ R.C=(t,d)=>{ap($('Ck'),t,.1,.3,10);let h='';const k=eback(P(t,.4,.9));
 R.D=(t,d)=>{pop($('D0'),t,.05,.35);pop($('D1'),t,.6,.45);pop($('D2'),t,3.0,.45);};
 R.E=(t,d)=>{ap($('Ek'),t,.1,.3,10);let h='';const base=520,sc=11;
  h+=`<line x1="120" y1="${base}" x2="960" y2="${base}" stroke="#8a8590" stroke-width="4"/>`;
- const kU=eio(P(t,1.6,3.4)),kD=eio(P(t,6.2,7.4));
+ const kU=eio(P(t,2.4,4.2)),kD=eio(P(t,8.8,10.0));
  const bar=(x,v,k,c,lab,date,up)=>{const hgt=Math.abs(v)*sc*k;const y=up?base-hgt:base;return `<rect x="${x}" y="${y}" width="260" height="${hgt}" rx="14" fill="${c}"/>`+(k>.05?`<text x="${x+130}" y="${up?y-30:y+hgt+80}" text-anchor="middle" font-family="Archivo Black" font-size="${up?96:76}" fill="${c}">${lab}</text>`:'')+`<text x="${x+130}" y="${up?base+60:base-24}" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#c9d6ea" opacity="${cl(k*3)}">${date}</text>`};
- h+=bar(200,-14,kD,'#ff5a5a','−14%','20 NOV',false);h+=bar(620,32,kU,'#3ccf6e','+30%','23 NOV',true);
- h+=`<text x="750" y="${base+120}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#bdb3a6" opacity="${P(t,3.4,3.8)}">oltre, all'apertura</text>`;
- $('Ev').innerHTML=h;ap($('Es'),t,4.0,.4,10);};
+ h+=bar(200,-14,kD,'#ff5a5a','−14%','20 NOV',false);h+=bar(620,31.5,kU,'#3ccf6e','+31,5%','23 NOV',true);
+ h+=`<text x="750" y="${base+120}" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="40" fill="#bdb3a6" opacity="${P(t,5.4,5.8)}">il rialzo più forte dal 2003</text>`;
+ $('Ev').innerHTML=h;ap($('Es'),t,6.0,.4,10);};
 function seg(x,y,S,i,a,b,c){const lo=Math.max(a,i),hi=Math.min(b,i+1);if(hi<=lo)return '';return `<rect x="${x+S*(lo-i)}" y="${y}" width="${S*(hi-lo)}" height="${S}" rx="6" fill="${c}"/>`}
 R.F=(t,d)=>{ap($('Fa'),t,.2,.4,30);let h='';const S=58,G=8,x0=540-(10*S+9*G)/2,y0=20;const nv=5.25;
  for(let i=0;i<100;i++){const r=Math.floor(i/10),c=i%10;const x=x0+c*(S+G),y=y0+r*(S+G);const k=eo(P(t,1.6+i*.012,1.9+i*.012));if(k<=0)continue;

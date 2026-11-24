@@ -29,14 +29,14 @@ Si è dimesso il 12 novembre. Il 22 il consiglio lo ha richiamato. Ecco perché,
 02 Perché: secondo il comunicato il consiglio si è detto convinto della sua trasparenza e della sua capacità di guidare Nvidia, e ha sentito i vertici del governo USA: il suo ritorno non rappresenta un rischio per la sicurezza nazionale.
 03 Il contesto: un comitato di soli consiglieri indipendenti indaga su notizie secondo cui Huang sarebbe stato bersaglio di un'operazione di intelligence straniera. L'indagine continua e Huang dice di collaborare.
 04 Chi resta: Colette Kress torna direttrice finanziaria, Harvey C. Jones resta presidente del consiglio.
-05 In Borsa: all'apertura del 23 novembre il titolo è salito di oltre il 30%. Il 20 novembre, nel giorno peggiore, aveva perso il 14%.
+05 In Borsa: il 23 novembre il titolo ha chiuso a +31,5%, il rialzo più forte dal 2003. Il 20 novembre, nel giorno peggiore, aveva perso il 14%.
 06 Perché ti riguarda: se hai un ETF MSCI World hai già Nvidia, che al 30 ottobre pesava oltre il 5% dell'indice.
 07 Da tenere d'occhio: le conclusioni dell'indagine interna e le indagini delle autorità USA, che secondo Nvidia sono ancora in corso. Un'indagine non è un'accusa.
 
 💬 Tu lo avresti richiamato? Sì o no nei commenti.
 Hai perso la parte 1? È nel profilo.
 
-Fonti: comunicato Nvidia e modulo 8-K (22-23/11/2026), CNBC, CNN, MSCI (scheda MSCI World al 30/10/2026).
+Fonti: comunicato Nvidia e modulo 8-K (22-23/11/2026), CNBC, Motley Fool, MSCI (scheda MSCI World al 30/10/2026).
 Contenuto informativo, non è consulenza finanziaria. I rendimenti passati non garantiscono quelli futuri.
 
 #Nvidia #JensenHuang #ETF #Borsa #FinanzaPersonale
