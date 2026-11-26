@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="durs1.js"></script>
+<script>window.ORDER=['I','A','B','C','D','E','H'];</script>
+<script src="hook.js"></script>
+<script src="engine.js"></script>
+</head><body><div id="stage">
+
+<!-- A · the bet -->
+<div class="scene" id="A" style="background:#0f1420">
+ <div class="abs bold" id="Ad" style="top:300px;font-size:150px;color:#fff">16.09.1992</div>
+ <div class="abs serif" id="Aw" style="top:470px;font-size:64px;color:#c9d6ea">un fondo scommette contro la sterlina</div>
+ <svg id="Ag" width="1080" height="620" style="position:absolute;left:0;top:560px"></svg>
+ <div class="abs" id="Av" style="top:1210px"><div class="bold" style="font-size:72px;color:#3ccf6e;border:8px solid #3ccf6e;padding:12px 30px 4px;border-radius:14px;letter-spacing:0">QUELLA SERA VINCE</div></div>
+</div>
+
+<!-- B · the peg -->
+<div class="scene" id="B" style="background:#f2ece1">
+ <div class="abs mono" id="Bk" style="top:300px;font-size:30px;font-weight:700;letter-spacing:5px;color:#c94f2a">SISTEMA EUROPEO DEI CAMBI · SME</div>
+ <svg id="Bs" width="1080" height="700" style="position:absolute;left:0;top:380px"></svg>
+ <div class="abs" id="Br" style="top:1100px"><div class="mono" style="font-size:36px;font-weight:700;background:#141215;color:#f2ece1;padding:14px 26px;border-radius:12px">🇬🇧 IN RECESSIONE</div></div>
+ <div class="abs bold" id="Bh" style="top:1220px;font-size:76px;color:#c94f2a;letter-spacing:-2px">CAMBIO TROPPO ALTO ↑</div>
+</div>
+
+<!-- C · short selling steps -->
+<div class="scene" id="C" style="background:#0f1420">
+ <div class="abs mono" id="Ck" style="top:300px;font-size:28px;font-weight:700;letter-spacing:4px;color:#8fa3c0">GEORGE SOROS · FONDO QUANTUM</div>
+ <div class="abs bold" id="Ca" style="top:370px;font-size:92px;color:#fff;line-height:1">VENDERE<br>ALLO SCOPERTO</div>
+ <div class="abs" id="Cl" style="top:600px;display:flex;flex-direction:column;gap:30px"></div>
+</div>
+
+<!-- D · the rates -->
+<div class="scene" id="D" style="background:#141215">
+ <div class="abs mono" id="Dk" style="top:300px;font-size:30px;font-weight:700;letter-spacing:5px;color:#bdb3a6">16 SETTEMBRE · TASSI UK</div>
+ <div class="abs bold" id="Dn" style="top:380px;font-size:300px;color:#fff;letter-spacing:-8px"><span id="Dv">10</span>%</div>
+ <div class="abs" id="Dt" style="top:720px;display:flex;flex-direction:column;gap:22px"></div>
+ <svg id="Da" width="1080" height="300" style="position:absolute;left:0;top:1060px"></svg>
+</div>
+
+<!-- E · the exit -->
+<div class="scene" id="E" style="background:#0f1420">
+ <div class="abs mono" id="Ek" style="top:300px;font-size:30px;font-weight:700;letter-spacing:5px;color:#8fa3c0">SERA · LONDRA ESCE DALLO SME</div>
+ <svg id="Es" width="1080" height="420" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs" id="E1" style="top:820px"><div style="width:860px;background:#123326;border:4px solid #3ccf6e;border-radius:24px;padding:24px 32px;text-align:left"><div class="mono" style="font-size:28px;font-weight:700;color:#3ccf6e;letter-spacing:2px">SOROS</div><div class="bold" style="font-size:80px;color:#fff;letter-spacing:-2px">≈ +1 MLD $</div></div></div>
+ <div class="abs" id="E2" style="top:1060px"><div style="width:860px;background:#3a1616;border:4px solid #ff5a5a;border-radius:24px;padding:24px 32px;text-align:left"><div class="mono" style="font-size:28px;font-weight:700;color:#ff8a7a;letter-spacing:2px">TESORO INGLESE</div><div class="bold" style="font-size:80px;color:#fff;letter-spacing:-2px">−3,3 MLD £</div></div></div>
+ <div class="abs mono" id="Ef" style="top:1300px;font-size:22px;color:#8fa3c0">Costo: stima del Tesoro rivista nel 2005 · Guadagno: ricostruzioni di stampa</div>
+</div>
+
+<!-- H · teaser -->
+<div class="scene" id="H" style="background:#141215">
+ <div class="abs bold" id="Ha" style="top:520px;font-size:84px;color:#fff;line-height:1">L'ECONOMIA INGLESE<br><span style="color:#e2683c">È CROLLATA?</span></div>
+ <div class="abs serif" id="Hb" style="top:800px;font-size:70px;color:#f3ebde">e la Thailandia, cinque anni dopo?</div>
+ <div class="abs bold" id="Hc" style="top:960px;font-size:64px;color:#141215;background:#f3ebde;padding:14px 30px 8px;border-radius:12px;letter-spacing:0">PARTE 2 →</div>
+</div>
+
+<div class="grain"></div><div class="vig"></div>
+</div>
+<script>
+function coin(x,y,r,sym,fill,txt,rot=0){return `<g transform="translate(${x} ${y}) rotate(${rot})"><circle r="${r}" fill="${fill}" stroke="#00000033" stroke-width="8"/><circle r="${r*.8}" fill="none" stroke="#00000022" stroke-width="4"/><text y="${r*.36}" text-anchor="middle" font-family="Archivo Black" font-size="${r*1.05}" fill="${txt}">${sym}</text></g>`}
+R.A=(t,d)=>{pop($('Ad'),t,.1,.4,-3,0);words($('Aw'),t,1.0,.08);let h='';
+ const kb=eback(P(t,2.2,2.7));if(kb>0)h+=`<g transform="translate(300 300) scale(${kb})">${[0,1,2,3,4,5].map(i=>`<rect x="-120" y="${120-i*46}" width="240" height="40" rx="10" fill="#3ccf6e" stroke="#123326" stroke-width="4"/>`).join('')}<text y="230" text-anchor="middle" font-family="Archivo Black" font-size="56" fill="#3ccf6e">≈10 MLD $</text></g>`;
+ const kp=eback(P(t,3.2,3.7));const shake=t>5.5&&t<7?Math.sin(t*60)*6:0;if(kp>0)h+=`<g transform="translate(${760+shake} 300) scale(${kp})">${coin(0,0,170,'£','#d9b45a','#5a4210')}</g>`;
+ const kc=P(t,5.6,6.4);if(kc>0)h+=`<path d="M${760-40} ${150} L${760+10} ${260} L${760-30} ${330} L${760+40} ${450}" stroke="#0f1420" stroke-width="${14*kc}" fill="none" stroke-linecap="round"/>`;
+ const ka=eio(P(t,4.2,5.2));h+=`<path d="M420 300 L${420+180*ka} 300" stroke="#ff5a5a" stroke-width="14" stroke-linecap="round" opacity="${cl(ka*3)}"/><path d="M${600*1+0} 300 l-30 -26 v52z" fill="#ff5a5a" opacity="${P(t,5.0,5.2)}"/>`;
+ $('Ag').innerHTML=h;pop($('Av'),t,6.6,.45,-6,-2);};
+R.B=(t,d)=>{ap($('Bk'),t,.1,.3,10);let h='';const k1=eback(P(t,.8,1.3)),k2=eback(P(t,1.6,2.1)),kch=eio(P(t,2.6,3.6));
+ if(k1>0)h+=`<g transform="translate(270 300) scale(${k1})">${coin(0,0,150,'£','#d9b45a','#5a4210')}<text y="230" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">STERLINA</text></g>`;
+ if(k2>0)h+=`<g transform="translate(810 300) scale(${k2})">${coin(0,0,150,'DM','#b8c2cc','#2a323a')}<text y="230" text-anchor="middle" font-family="Archivo Black" font-size="44" fill="#141215">MARCO</text></g>`;
+ for(let i=0;i<7;i++){const x=430+i*36;if(i/7<kch)h+=`<ellipse cx="${x}" cy="300" rx="24" ry="14" fill="none" stroke="#5a5560" stroke-width="9"/>`}
+ const up=eio(P(t,8.0,9.0));h=`<g transform="translate(0 ${-70*up})">`+h.replace(/<g transform="translate\(810/,'</g><g transform="translate(810');
+ $('Bs').innerHTML=h;pop($('Br'),t,5.6,.45,-4,0);pop($('Bh'),t,8.0,.45);};
+const ST=[['1','PRENDI IN PRESTITO','sterline',2.6,'#8fc0d0'],['2','VENDI SUBITO','al prezzo di oggi',4.0,'#f2c14e'],['3','RICOMPRI PIÙ BASSO','e restituisci: la differenza è tua',5.6,'#3ccf6e']];
+R.C=(t,d)=>{ap($('Ck'),t,.1,.3,10);pop($('Ca'),t,1.2,.4);
+ $('Cl').innerHTML=ST.map(([n,a,b,t0,c])=>{const k=eback(P(t,t0,t0+.45));return `<div style="opacity:${cl(k*3)};transform:scale(${.4+.6*k});width:880px;background:#17202e;border:3px solid ${c};border-radius:24px;padding:24px 30px;display:flex;gap:28px;align-items:center;text-align:left">
+  <div class="bold" style="font-size:96px;color:${c};letter-spacing:0;width:80px">${n}</div><div><div class="bold" style="font-size:52px;color:#fff;letter-spacing:-1px">${a}</div><div class="serif" style="font-size:42px;color:${c}">${b}</div></div></div>`}).join('');};
+R.D=(t,d)=>{ap($('Dk'),t,.1,.3,10);pop($('Dn'),t,.2,.4);const v=t<2.2?10:t<4.2?(t<3.0?Math.round(10+2*eo(P(t,2.2,3.0))):12):Math.round(12+3*eo(P(t,4.2,5.0)));$('Dv').textContent=v;
+ $('Dn').style.color=t>4.2?'#ff8a7a':'#fff';
+ const rows=[['MATTINA','dal 10 al 12%','#f3ebde',2.2],['POMERIGGIO','annunciato il 15%','#ff8a7a',4.2]];
+ $('Dt').innerHTML=rows.map(([a,b,c,t0])=>{const k=eo(P(t,t0,t0+.4));return `<div style="opacity:${k};transform:translateY(${(1-k)*30}px);display:flex;gap:24px;align-items:baseline"><span class="mono" style="font-size:34px;font-weight:700;color:#8a8590;letter-spacing:3px;width:280px;text-align:right">${a}</span><span class="bold" style="font-size:56px;color:${c};letter-spacing:-1px">${b}</span></div>`}).join('');
+ let h='';const ks=P(t,6.2,6.6);if(ks>0){h+=`<text x="540" y="60" text-anchor="middle" font-family="Archivo Black" font-size="60" fill="#ff5a5a" opacity="${ks}">IL MERCATO NON CI CREDE</text>`;
+  for(let i=0;i<6;i++){const k=P(t,6.6+i*.12,7.2+i*.12);if(k<=0)continue;const x=160+i*150;h+=`<g transform="translate(${x} ${120+140*eo(k)})" opacity="${1-P(k,.85,1)}"><text text-anchor="middle" font-family="Archivo Black" font-size="64" fill="#d9b45a">£</text><path d="M0 14 v40 m-16 -16 l16 16 l16 -16" stroke="#ff5a5a" stroke-width="6" fill="none"/></g>`}}
+ $('Da').innerHTML=h;};
+R.E=(t,d)=>{ap($('Ek'),t,.1,.3,10);let h='';const kb=eio(P(t,.6,1.6));
+ h+=`<g transform="translate(${270-90*kb} 180) rotate(${-14*kb})">${coin(0,0,120,'£','#d9b45a','#5a4210')}</g><g transform="translate(${810+60*kb} 180)">${coin(0,0,120,'DM','#b8c2cc','#2a323a')}</g>`;
+ for(let i=0;i<6;i++){const x=440+i*40;const off=i<3?-kb*(60+i*20):kb*(40+i*10);h+=`<ellipse cx="${x+off}" cy="${180+kb*(i%2?40:-30)}" rx="22" ry="13" fill="none" stroke="#5a5560" stroke-width="8" opacity="${1-kb*.6}"/>`}
+ const kd=eio(P(t,2.4,3.6));h+=`<g transform="translate(${180-90*kb} ${180+140*kd})" opacity="${P(t,2.4,2.8)}"><path d="M0 120 v${60*kd} m-22 -22 l22 22 l22 -22" stroke="#ff5a5a" stroke-width="10" fill="none"/></g>`;
+ $('Es').innerHTML=h;pop($('E1'),t,4.2,.45);pop($('E2'),t,7.6,.45);ap($('Ef'),t,9.4,.4,10);};
+R.H=(t,d)=>{pop($('Ha'),t,.2,.45);words($('Hb'),t,3.0,.1);pop($('Hc'),t,5.0,.4,-6,-2);};
+</script></body></html>

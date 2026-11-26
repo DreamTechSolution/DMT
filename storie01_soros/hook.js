@@ -1,0 +1,1 @@
+window.HOOKS={"1": {"t1": "1992: BATTERE LA<br>BANCA D'INGHILTERRA", "t2": "LA SCOMMESSA DI SOROS", "fs": null}, "2": {"t1": "SOROS HA DISTRUTTO<br>DUE ECONOMIE?", "t2": "IL MITO E LA LEZIONE", "fs": null}};
