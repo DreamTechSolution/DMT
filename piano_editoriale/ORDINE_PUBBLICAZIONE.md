@@ -37,3 +37,15 @@ Il giorno della pubblicazione: ricontrollare cifre e date nel video; dopo la par
 | 30 | Agenti IA e pagamenti — parte 2 | ven 8/1 | 1:19 | `serie09/out/serie09_parte2.mp4` |
 | 31 | Chi c'è dietro: Dario Amodei — parte 1 | lun 11/1 | 1:06 | `pers04_amodei/out/pers04_amodei_parte1.mp4` |
 | 32 | Chi c'è dietro: Dario Amodei — parte 2 | mar 12/1 | 1:15 | `pers04_amodei/out/pers04_amodei_parte2.mp4` |
+
+## Alternanza attuale / sempreverde (decisa il 26/11) — un argomento al giorno, parte 1 alle 13:00 e parte 2 alle 20:00
+| Giorno | Tipo | Argomento | Stato |
+|---|---|---|---|
+| gio 26/11 | ATTUALE | Deutsche Bank | pronto |
+| ven 27/11 | SEMPREVERDE | Comprare all'IPO conviene? | pronto |
+| sab 28/11 | ATTUALE | Bolla IA ed ETF | da aggiornare il 27 (rimbalzo dopo Huang) |
+| dom 29/11 | SEMPREVERDE | Soros: la sterlina e il baht | bozza copione da approvare |
+| lun 30/11 | ATTUALE | Crypto: Bitcoin e tasse al 33% | ricontrollare prezzo il 29 |
+| mar 1/12 | SEMPREVERDE | L'IA ti ruberà il lavoro? | pronto |
+| mer 2/12 | ATTUALE | da scegliere (notizia della settimana) | |
+| gio 3/12 | SEMPREVERDE | BlackRock | da produrre |
