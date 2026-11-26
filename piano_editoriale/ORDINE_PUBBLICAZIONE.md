@@ -6,17 +6,17 @@ Il giorno della pubblicazione: ricontrollare cifre e date nel video; dopo la par
 | # | Video | Data | Durata | File |
 |---|---|---|---|---|
 | 01 | Anthropic in Borsa — parte 1 | dom 22/11 ✅ pubblicato | 0:49 | `anthropic-ipo-reel/out/anthropic_ipo_reel.mp4` |
-| 02 | Anthropic in Borsa — parte 2 | lun 23/11 | 1:42 | `anthropic-ipo-reel/ep2/anthropic_ipo_parte2.mp4` |
-| 03 | Chi c'è dietro: Jensen Huang — parte 1 | mar 24/11 (notizia del ritorno) | 1:13 | `pers01_huang/out/pers01_parte1.mp4` |
-| 04 | Chi c'è dietro: Jensen Huang — parte 2 | mer 25/11 | 1:14 | `pers01_huang/out/pers01_parte2.mp4` |
-| 05 | Comprare all'IPO conviene? — parte 1 | gio 26/11 | 0:42 | `serie04/out/serie04_parte1.mp4` |
-| 06 | Comprare all'IPO conviene? — parte 2 | ven 27/11 | 1:14 | `serie04/out/serie04_parte2.mp4` |
+| 02 | Anthropic in Borsa — parte 2 | lun 23/11 ✅ pubblicato | 1:42 | `anthropic-ipo-reel/ep2/anthropic_ipo_parte2.mp4` |
+| 03 | Chi c'è dietro: Jensen Huang — parte 1 | mar 24/11 ✅ pubblicato | 1:13 | `pers01_huang/out/pers01_parte1.mp4` |
+| 04 | Chi c'è dietro: Jensen Huang — parte 2 | mar 24/11 ✅ pubblicato (sera) | 1:14 | `pers01_huang/out/pers01_parte2.mp4` |
+| 05 | Comprare all'IPO conviene? — parte 1 | da riprogrammare (saltato il 26/11) | 0:42 | `serie04/out/serie04_parte1.mp4` |
+| 06 | Comprare all'IPO conviene? — parte 2 | da riprogrammare | 1:14 | `serie04/out/serie04_parte2.mp4` |
 | 07 | Bolla IA ed ETF — parte 1 | sab 28/11 | 1:26 | `serie01/out/serie01_parte1.mp4` |
 | 08 | Bolla IA ed ETF — parte 2 | dom 29/11 | 1:15 | `serie01/out/serie01_parte2.mp4` |
 | 09 | Attacchi informatici — parte 1 | lun 30/11 | 0:56 | `serie03/out/serie03_parte1.mp4` |
 | 10 | Attacchi informatici — parte 2 | mar 1/12 | 0:52 | `serie03/out/serie03_parte2.mp4` |
-| 11 | Il tesoretto di Deutsche Bank — parte 1 | gio 3/12 | 0:53 | `serie02/out/serie02_parte1.mp4` |
-| 12 | Il tesoretto di Deutsche Bank — parte 2 | ven 4/12 | 1:16 | `serie02/out/serie02_parte2.mp4` |
+| 11 | Il tesoretto di Deutsche Bank — parte 1 | gio 26/11 (13:00) | 0:53 | `serie02/out/serie02_parte1.mp4` |
+| 12 | Il tesoretto di Deutsche Bank — parte 2 | gio 26/11 (20:00) | 1:16 | `serie02/out/serie02_parte2.mp4` |
 | 13 | OpenAI, il capitale circolare — parte 1 | lun 7/12 | 0:54 | `serie07/out/serie07_parte1.mp4` |
 | 14 | OpenAI, il capitale circolare — parte 2 | mar 8/12 | 1:25 | `serie07/out/serie07_parte2.mp4` |
 | 15 | BTP o conto deposito? — parte 1 | mer 9/12 (tredicesima) | 0:55 | `serie15/out/serie15_parte1.mp4` |

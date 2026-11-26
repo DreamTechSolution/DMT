@@ -81,3 +81,20 @@ Ritmo: 2 serie a settimana (4 Reel) + 1 personaggio ogni 2 settimane + Lampo qua
 ## 7. Budget
 - Voce Marcus: ~8-10 crediti per serie, ~5 per un Lampo. Saldo attuale ~65 crediti → circa 6 serie (fino a metà dicembre).
 - Il calendario completo fino a fine anno richiede ~100 crediti: servono altri crediti Higgsfield, oppure Enea per le serie meno di punta.
+
+## Nuovo filone (richiesta del 26/11): "Storie di banche e fondi"
+Formato: 2 parti — p1 "come è nata / cosa è successo", p2 "perché conta oggi / per te". Solo fatti verificati su fonti primarie (documenti societari, banche centrali, storici economici).
+| # | Argomento | Gancio | Note di verifica |
+|---|---|---|---|
+| S1 | BlackRock | Nata nel 1988 in un ufficio di Blackstone, oggi gestisce più soldi di quasi ogni Stato | Masse gestite: ultimo dato trimestrale ufficiale |
+| S2 | Vanguard | L'azienda "di proprietà dei suoi fondi" che ha inventato il fondo indicizzato per tutti (1976) | Struttura mutualistica, Bogle |
+| S3 | Citigroup / Citibank | Dal 1812 a New York, al salvataggio pubblico del 2008 | Importi del salvataggio da fonti del Tesoro USA |
+| S4 | Soros e la sterlina (1992) | "L'uomo che ha battuto la Banca d'Inghilterra" | Correggere il mito: il Regno Unito esce dallo SME, non "crolla l'economia" |
+| S5 | Crisi asiatica 1997 (Thailandia) | Il baht cade il 2 luglio 1997 | Soros fu uno degli speculatori, non la causa unica: cambio fisso, debito in dollari, deficit |
+| S6 | Lehman Brothers | Il fallimento più grande della storia USA (15/9/2008) | |
+| S7 | LTCM | Due Nobel e un fondo salvato dalla Fed (1998) | |
+| S8 | Monte dei Paschi | La banca più antica del mondo ancora attiva (1472) | |
+| S9 | JPMorgan e il panico del 1907 | Un uomo che salva Wall Street | |
+| S10 | Credit Suisse 2023 / SVB 2023 | Come muore una banca in pochi giorni | |
+| S11 | Madoff | Il più grande schema Ponzi della storia | Solo fatti processuali |
+| S12 | Archegos / Melvin-GameStop | Fondi che saltano in una settimana | |
