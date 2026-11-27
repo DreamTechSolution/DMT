@@ -8,4 +8,4 @@ const {chromium}=require('playwright');const path=require('path');
 await p.goto('file://'+path.resolve('v$N.html'));await p.evaluate(()=>window.ready);const W=await p.evaluate(()=>TIMING.W);
 let i=0;for(const k of Object.keys(W)){if(k==='I')continue;await p.evaluate(t=>render(t),W[k][1]-0.4);await p.screenshot({path:'$T/s_'+String(i++).padStart(2,'0')+'.png'})}
 console.log('duration',await p.evaluate(()=>DUR));await b.close()})();"
-ffmpeg -v error -y -pattern_type glob -i "$T/s_*.png" -vf "scale=240:-1,tile=9x1" -frames:v 1 "$OUT"; rm -rf $T
+ffmpeg -v error -y -pattern_type glob -i "$T/s_*.png" -vf "scale=240:-1,tile=12x1" -frames:v 1 "$OUT"; rm -rf $T

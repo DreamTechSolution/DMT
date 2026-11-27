@@ -3,7 +3,7 @@
 <link href="../fonts/fonts.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="durs2.js"></script>
-<script>window.ORDER=['I','A','B','C','D','E','F','H'];</script>
+<script>window.ORDER=['I','A','R','B','C','T','K','D','J','E','G','F','H'];</script>
 <script src="hook.js"></script>
 <script src="engine.js"></script>
 </head><body><div id="stage">
@@ -54,6 +54,44 @@
  <div class="abs serif" id="Hb" style="top:830px;font-size:62px;color:#bdb3a6">quale storia vuoi dopo?</div>
  <div class="abs" id="Hc" style="top:960px;display:flex;gap:18px"></div>
 </div>
+
+<!-- R · money market fund -->
+<div class="scene" id="R" style="background:#101418">
+ <div class="abs mono" id="Rk" style="top:300px;font-size:30px;font-weight:700;letter-spacing:5px;color:#8fc0d0">16 SETTEMBRE · IL FONDO "SICURO"</div>
+ <div class="abs" id="Rc" style="top:380px"><div style="width:860px;background:#1c2a34;border:3px solid #8fc0d0;border-radius:22px;padding:24px 30px;text-align:left"><div class="mono" style="font-size:26px;font-weight:700;color:#8fc0d0;letter-spacing:2px">RESERVE PRIMARY FUND · VALORE DELLA QUOTA</div><div class="bold" style="font-size:110px;color:#fff;letter-spacing:-3px"><span id="Rv">1,000</span> $</div></div></div>
+ <div class="abs serif" id="Rw" style="top:700px;font-size:52px;color:#f2c14e">aveva titoli Lehman</div>
+ <div class="abs bold" id="Ro" style="top:820px;font-size:90px;color:#ff5a5a;letter-spacing:-2px">−400+ MLD $</div>
+ <div class="abs serif" id="Ros" style="top:930px;font-size:46px;color:#bdb3a6">escono dai fondi monetari</div>
+ <div class="abs" id="Rg" style="top:1060px"><div class="mono" style="font-size:34px;font-weight:700;background:#3ccf6e;color:#101418;padding:12px 24px;border-radius:10px">19/9 · IL TESORO LI GARANTISCE</div></div>
+ <div class="abs mono" id="Rs" style="top:1180px;font-size:22px;color:#8fc0d0">Fonti: Yale Program on Financial Stability, Tesoro USA</div>
+</div>
+<!-- T · TARP final cost -->
+<div class="scene" id="T" style="background:#f2ece1">
+ <div class="abs bold" id="Ta" style="top:290px;font-size:80px;color:#141215;line-height:1">IL CONTO FINALE<br><span style="color:#c94f2a">DEL PIANO</span></div>
+ <svg id="Tb" width="1080" height="640" style="position:absolute;left:0;top:520px"></svg>
+ <div class="abs mono" id="Ts" style="top:1200px;font-size:22px;color:#6b5a4c">Fonti: Tesoro USA, Congressional Budget Office (2024)</div>
+</div>
+<!-- K · Fed to zero -->
+<div class="scene" id="K" style="background:#0e0c0f">
+ <div class="abs mono" id="Kk" style="top:300px;font-size:30px;font-weight:700;letter-spacing:5px;color:#bdb3a6">DICEMBRE 2008 · FED</div>
+ <div class="abs bold" id="Kn" style="top:380px;font-size:210px;color:#fff;letter-spacing:-6px">0–0,25%</div>
+ <svg id="Ks" width="1080" height="380" style="position:absolute;left:0;top:660px"></svg>
+ <div class="abs serif" id="Kt" style="top:1080px;font-size:56px;color:#f2c14e">l'epoca del denaro quasi gratis</div>
+</div>
+<!-- J · Italy -->
+<div class="scene" id="J" style="background:#f2ece1">
+ <div class="abs bold" id="Ja" style="top:290px;font-size:110px;color:#141215">E IN ITALIA?</div>
+ <div class="abs" id="Jd" style="top:470px"><div style="width:760px;background:#fff;border:4px solid #141215;border-radius:12px;padding:30px 34px;text-align:left;transform:rotate(-2deg)"><div class="mono" style="font-size:28px;font-weight:700;color:#8a7a6c;letter-spacing:3px">OBBLIGAZIONE</div><div class="bold" style="font-size:66px;color:#141215;letter-spacing:-1px">LEHMAN BROTHERS</div><div class="serif" style="font-size:46px;color:#3ccf6e">«è sicura»</div></div></div>
+ <div class="abs" id="Jx" style="top:700px"><div class="bold" style="font-size:96px;color:#c94f2a;border:10px solid #c94f2a;padding:8px 30px 0;border-radius:14px;transform:rotate(8deg);letter-spacing:0">INSOLVENTE</div></div>
+ <div class="abs bold" id="Jc" style="top:900px;font-size:66px;color:#141215;line-height:1.05">CENTINAIA DI CAUSE<br><span style="color:#c94f2a">CONTRO LE BANCHE</span></div>
+ <div class="abs mono" id="Js" style="top:1100px;font-size:22px;color:#6b5a4c">Fonti: Codacons via InvestireOggi, Altroconsumo</div>
+</div>
+<!-- G · Basel III -->
+<div class="scene" id="G" style="background:#0f1a17">
+ <div class="abs mono" id="Gk" style="top:300px;font-size:30px;font-weight:700;letter-spacing:5px;color:#3ccf6e">DOPO LA CRISI · BASILEA III</div>
+ <svg id="Gs" width="1080" height="700" style="position:absolute;left:0;top:360px"></svg>
+ <div class="abs serif" id="Gt" style="top:1080px;font-size:56px;color:#f3ebde">più capitale proprio, <span style="color:#3ccf6e">per assorbire le perdite</span></div>
+</div>
 <div class="grain"></div><div class="vig"></div>
 </div>
 <script>
@@ -78,4 +116,14 @@ R.F=(t,d)=>{pop($('Fa'),t,.1,.4);$('Fl').innerHTML=FL.map(([e,a,c,t0])=>{const k
 R.H=(t,d)=>{const bm=$('Hbm');const k=P(t,.2,.6);bm.setAttribute('fill',k>.9?'#ff5a5a':'none');bm.setAttribute('stroke',k>.9?'#ff5a5a':'#f3ebde');
  pop($('Hs'),t,.05,.4);pop($('Ha'),t,.25,.4);words($('Hb'),t,1.3,.1);
  $('Hc').innerHTML=['BlackRock','Madoff','LTCM','…'].map((n,i)=>{const kk=eback(P(t,2.1+i*.2,2.5+i*.2));return `<div class="mono" style="opacity:${cl(kk*3)};transform:scale(${.3+.7*kk});font-size:38px;font-weight:700;color:#0e0c0f;background:${i==3?'#ff5a5a':'#f3ebde'};padding:14px 24px;border-radius:40px">${n}</div>`}).join('');};
+
+R.R=(t,d)=>{ap($('Rk'),t,.1,.3,10);pop($('Rc'),t,.5,.45);$('Rv').textContent=t<3.2?'1,00':'< 1,00';$('Rv').style.color=t>3.2?'#ff5a5a':'#fff';words($('Rw'),t,5.0,.1);pop($('Ro'),t,8.2,.4);words($('Ros'),t,9.0,.08);pop($('Rg'),t,12.6,.45,-3,0);ap($('Rs'),t,13.6,.4,10);};
+R.T=(t,d)=>{pop($('Ta'),t,.1,.4);let h='';const bar=(x,v,lab,sub,c,t0)=>{const k=eio(P(t,t0,t0+1.0));const H=v*0.62*k;return `<rect x="${x}" y="${520-H}" width="240" height="${H}" rx="14" fill="${c}"/><text x="${x+120}" y="${500-H}" text-anchor="middle" font-family="Archivo Black" font-size="58" fill="${c}" opacity="${cl(k*3)}">${lab}</text><text x="${x+120}" y="580" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="28" fill="#141215" opacity="${cl(k*3)}">${sub}</text>`};
+ h+=bar(200,700,'700','AUTORIZZATI','#8a7a6c',1.0);h+=bar(640,31,'31','COSTO FINALE','#c94f2a',7.6);
+ h+=`<text x="540" y="640" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="44" fill="#2f8f4e" opacity="${P(t,4.0,4.4)}">sulle banche il Tesoro ci guadagna</text><text x="1000" y="80" text-anchor="end" font-family="JetBrains Mono" font-weight="700" font-size="24" fill="#6b5a4c">miliardi di $</text>`;$('Tb').innerHTML=h;ap($('Ts'),t,9.0,.4,10);};
+R.K=(t,d)=>{ap($('Kk'),t,.1,.3,10);pop($('Kn'),t,.8,.45);let h='';const k=eio(P(t,1.2,4.0));const pts=[[0,.05],[.25,.1],[.45,.2],[.6,.55],[.75,.92],[1,.95]];let p='';pts.forEach(([x,y],i)=>{if(x<=k)p+=(i?'L':'M')+(140+800*x)+' '+(40+260*y)});
+ h+=`<path d="${p}" stroke="#f2c14e" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="140" y="340" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#8a8590">2007: 5,25%</text><text x="940" y="340" text-anchor="end" font-family="JetBrains Mono" font-weight="700" font-size="26" fill="#8a8590" opacity="${P(t,3.6,4.0)}">DIC 2008: ~0%</text>`;$('Ks').innerHTML=h;words($('Kt'),t,5.4,.1);};
+R.J=(t,d)=>{pop($('Ja'),t,.1,.4);pop($('Jd'),t,1.4,.45,-4,-2);pop($('Jx'),t,4.8,.4,14,8);pop($('Jc'),t,7.2,.45);ap($('Js'),t,8.4,.4,10);};
+R.G=(t,d)=>{ap($('Gk'),t,.1,.3,10);let h='';const k=eio(P(t,2.6,4.6));const cap=8+30*k;
+ h+=`<g transform="translate(540 330)"><rect x="-300" y="-260" width="600" height="520" rx="20" fill="#17202e" stroke="#8fc0d0" stroke-width="5"/><rect x="-300" y="${260-520*cap/100}" width="600" height="${520*cap/100}" rx="20" fill="#3ccf6e"/><text y="${260-520*cap/100+70}" text-anchor="middle" font-family="Archivo Black" font-size="54" fill="#0f1a17">CAPITALE</text><text y="-200" text-anchor="middle" font-family="JetBrains Mono" font-weight="700" font-size="30" fill="#8fc0d0">BILANCIO DELLA BANCA</text></g>`;$('Gs').innerHTML=h;words($('Gt'),t,5.6,.1);};
 </script></body></html>

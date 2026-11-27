@@ -19,17 +19,20 @@ Fonti: Time, Harvard Business School (archivio Lehman), testimonianza di A. Valu
 Come il fallimento di una banca è diventato una crisi mondiale, e cosa ha cambiato per te 👇
 
 📉 15 settembre 2008: la Borsa americana perde oltre il 4%. Il giorno dopo il governo salva AIG con 85 miliardi di dollari.
+💵 Lo stesso giorno il Reserve Primary Fund, un fondo monetario considerato sicurissimo, scende sotto 1 dollaro per quota: aveva titoli Lehman. Dai fondi monetari escono oltre 400 miliardi di dollari, finché il 19 settembre il Tesoro li garantisce.
 🏦 Le banche smettono di prestarsi soldi: nessuno sa quali abbiano in pancia titoli tossici. È qui che un fallimento diventa una crisi mondiale.
-🏛️ 3 ottobre 2008: il Congresso approva un piano da 700 miliardi di dollari (TARP).
+🏛️ 3 ottobre 2008: il Congresso approva un piano da 700 miliardi di dollari (TARP). Alla fine costa molto meno: sulle banche il Tesoro ci guadagna, e il costo totale è di circa 31 miliardi (Congressional Budget Office).
+📉 A dicembre la Fed porta i tassi tra 0 e 0,25%: inizia l'epoca del denaro quasi gratis.
 🧾 Il conto: disoccupazione USA al 10% (ottobre 2009), economia mondiale in recessione nel 2009, PIL italiano oltre −5%.
-🛡️ L'Europa cambia le regole: la garanzia sui depositi sale fino agli attuali 100.000 € per persona e per banca (prima del 2008 il minimo era 20.000 €).
+🇮🇹 E in Italia: risparmiatori con obbligazioni Lehman presentate come sicure. In centinaia fanno causa alle banche che gliele avevano vendute.
+🛡️ L'Europa alza la garanzia sui depositi fino agli attuali 100.000 € per persona e per banca. E con Basilea III le banche devono tenere molto più capitale proprio.
 
 💡 Le lezioni: tanto debito trasforma una piccola perdita in un disastro. E se un prodotto finanziario è troppo complicato da spiegare, è un segnale d'allarme.
 
 💬 Quale storia vuoi dopo? BlackRock, Madoff, LTCM…
 Hai perso la parte 1? È nel profilo.
 
-Fonti: Tesoro USA (TARP e AIG), BLS, FMI, Istat, direttiva UE 2009/14/CE.
+Fonti: Tesoro USA (TARP, AIG, garanzia fondi monetari), Congressional Budget Office (2024), Yale Program on Financial Stability, Federal Reserve, BLS, FMI, Istat, Codacons, Altroconsumo, direttiva UE 2009/14/CE.
 Contenuto informativo, non è consulenza finanziaria.
 
 #LehmanBrothers #Crisi2008 #StorieDiFinanza #Risparmio #Economia
