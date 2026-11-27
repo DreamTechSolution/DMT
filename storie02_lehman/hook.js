@@ -1,0 +1,1 @@
+window.HOOKS={"1": {"t1": "LEHMAN BROTHERS:<br>FALLITA IN UN WEEKEND", "t2": "LA CRISI DEL 2008", "fs": null}, "2": {"t1": "COME UN FALLIMENTO<br>DIVENTA UNA CRISI", "t2": "E COSA È CAMBIATO PER TE", "fs": null}};
