@@ -49,3 +49,14 @@ Il giorno della pubblicazione: ricontrollare cifre e date nel video; dopo la par
 | mar 1/12 | SEMPREVERDE | L'IA ti ruberà il lavoro? | pronto |
 | mer 2/12 | ATTUALE | da scegliere (notizia della settimana) | |
 | gio 3/12 | SEMPREVERDE | BlackRock | da produrre |
+
+## Settimana 28/11 – 4/12 (rivista il 28/11) — parte 1 ore 13:00, parte 2 ore 20:00
+| Giorno | Tipo | Argomento | Note |
+|---|---|---|---|
+| sab 28/11 | SEMPREVERDE (richiesto nei commenti) | Lehman Brothers e crisi 2008 | rispondere al commento con il Reel |
+| dom 29/11 | ATTUALE | Inflazione al 5,5% | prima del dato Istat di novembre (inizio dicembre) |
+| lun 30/11 | SEMPREVERDE | Comprare all'IPO conviene? | pronto |
+| mar 1/12 | ATTUALE | Crypto: Bitcoin e tasse al 33% | aggiornare il prezzo il 30/11 |
+| mer 2/12 | SEMPREVERDE | L'IA ti ruberà il lavoro? | pronto |
+| gio 3/12 | ATTUALE | Deutsche Bank (se non già pubblicata) oppure Bolla IA aggiornata | decidere il 2/12 |
+| ven 4/12 | SEMPREVERDE | BlackRock | da produrre il 1-2/12 |
